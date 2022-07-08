@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="../common/minireset.css" />
     <title>LUSH</title>
     <style>
+      @font-face {
+        font-family: "lush";
+        src: url("./common/Lush.ttf") format("truetype");
+      }
       /* PC버전 */
       @media (min-width: 1280px) {
         body {
@@ -53,6 +57,7 @@
           display: block;
           color: #fff;
           text-align: center;
+          font-size: 1.2rem;
         }
         #login {
           width: 5%;
@@ -65,6 +70,7 @@
           height: 100%;
           line-height: 5;
           text-align: center;
+          font-size: 1.2rem;
         }
         #list {
           display: none;
@@ -73,9 +79,9 @@
         /* main banner */
         #main_banner {
           width: 100%;
-          height: 85vh;
+          height: 90vh;
           background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-            url(./images/메인이미지2.jpg) no-repeat;
+            url(./images/메인이미지2.jpg) no-repeat 50% 50%;
           background-size: cover;
           display: grid;
           place-items: center;
@@ -86,8 +92,8 @@
           text-align: center;
         }
         #main_banner_txt h1 {
-          font-size: 6rem;
-          font-weight: 800;
+          font-size: 5rem;
+          font-weight: 900;
           margin-bottom: 1vh;
         }
         #main_banner_txt #hashtag {
@@ -96,7 +102,7 @@
         }
         #main_banner_txt #hashtag p {
           font-size: 1.8rem;
-          font-weight: 300;
+          font-weight: 200;
           margin: 5vh;
         }
         #main_banner_txt button {
@@ -107,6 +113,7 @@
           background-color: transparent;
           color: #fff;
           padding: 1vh 3vw;
+          font-weight: 600;
         }
         #side_btn {
           width: 100%;
@@ -177,7 +184,7 @@
 
         /* main weekly best */
         #main_weekly_best {
-          margin-top: 10vh;
+          margin-top: 12vh;
           display: flex;
           flex-wrap: wrap;
         }
@@ -189,8 +196,11 @@
         #main_weekly_txt h1 {
           text-align: center;
           font-size: 2.5rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          margin-bottom: 5vh;
         }
-
         #main_weekly_contnent {
           display: flex;
           justify-content: center;
@@ -206,11 +216,11 @@
         }
         .main_weekly_product figcaption {
           font-size: 1.2rem;
-          font-weight: 400;
+          font-weight: 500;
         }
         .main_weekly_filter {
           width: 100%;
-          height: 95%;
+          height: 93%;
           background-color: rgba(0, 0, 0, 0.4);
           position: absolute;
           top: 0;
@@ -258,6 +268,7 @@
 
           display: flex;
           flex-wrap: wrap;
+          overflow: hidden;
         }
         #main_keyword_txt,
         #main_keyword_keyword,
@@ -265,11 +276,17 @@
         #main_keyword_btn {
           width: 100%;
         }
+        #main_keyword_txt {
+          height: 10vh;
+        }
         #main_keyword_txt h1 {
           text-align: center;
           font-size: 2.5rem;
           color: #fff;
           line-height: 5;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
         }
 
         #main_keyword_keyword {
@@ -286,12 +303,12 @@
         #keyword_btn li a {
           display: block;
           color: #fff;
-          height: 30px;
+          height: 50px;
           border: 2px solid #fff;
-          border-radius: 12px;
-          font-size: 1.1rem;
-          line-height: 1.5;
-          font-weight: 800;
+          border-radius: 25px;
+          font-size: 1.2rem;
+          line-height: 2.5;
+          font-weight: 700;
         }
         #keyword_btn li:first-child a {
           background-color: #fff;
@@ -299,39 +316,289 @@
         }
 
         #main_keyword_content {
-          height: 45%;
-          display: flex;
-          overflow: hidden;
-          /* transform: translateX(-200px); */
-          overflow-x: auto;
-          flex-shrink: 1;
+          display: grid;
+          grid: minmax(350px, 450px) / repeat(6, minmax(350px, 500px));
+          grid-gap: 2%;
+          transform: translateX(-10%);
         }
         .main_keyword_product {
-          width: 500px;
-          height: 500px;
+          width: 100%;
+          height: 100%;
           background-color: #fff;
-          margin: 15px;
         }
         .main_keyword_product figure {
           text-align: center;
         }
         .main_keyword_product img {
-          /* width: 75%; */
+          width: 80%;
         }
         .main_keyword_product figcaption {
           text-align: center;
         }
         .main_keyword_product figcaption h2 {
-          font-size: 1.6rem;
+          font-size: 1.8rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
         }
         .main_keyword_product figcaption p {
-          font-size: 0.9rem;
+          font-size: 1.1rem;
           margin-top: 1vh;
+          font-weight: 300;
+          color: #808080;
         }
         .main_keyword_product figcaption p:last-child {
-          font-size: 1.1rem;
+          font-size: 1.4rem;
           margin-top: 3vh;
           margin-bottom: 0;
+          color: #000;
+        }
+        #main_keyword_btn {
+          text-align: center;
+        }
+        #main_keyword_btn button {
+          width: 15px;
+          height: 15px;
+          background-color: #000;
+          border: #fff 1px solid;
+          border-radius: 50%;
+          margin: 1px;
+        }
+        #main_keyword_btn button:first-child {
+          background-color: #fff;
+        }
+
+        /* main_new_product */
+
+        #main_new_product_txt h1 {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-top: 17vh;
+          margin-bottom: 9vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        #main_new_product_content {
+          display: grid;
+          grid: repeat(2, minmax(200px, 475px)) / repeat(
+              4,
+              minmax(200px, 475px)
+            );
+        }
+        #main_new_product_content img {
+          width: 100%;
+        }
+        #main_new_product1 {
+          grid-row: 1 /3;
+          grid-column: 1/3;
+        }
+
+        /* main_icon_content */
+
+        #main_icon_content {
+          margin-top: 13vh;
+          margin-bottom: 13vh;
+        }
+        #main_icon_list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #main_icon_list li {
+          height: 100%;
+          padding: 1vw;
+          border-right: #eee 1px solid;
+        }
+        #main_icon_list li img {
+          width: 100%;
+        }
+        #main_icon_list li:last-child {
+          border: none;
+        }
+
+        /* main_environment_content */
+
+        #main_environment {
+          width: 100%;
+        }
+        #main_environment_content {
+          width: 100%;
+          display: grid;
+          grid: repeat(2, minmax(500px, 1fr)) / repeat(2, minmax(200px, 1fr));
+        }
+        #main_environment_content img {
+          width: 100%;
+        }
+        .main_environment_txt {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .main_environment_txt p {
+          width: 100%;
+          margin-bottom: 1vh;
+          font-size: 1.2rem;
+          line-height: 1.7;
+          font-weight: 200;
+        }
+        .main_environment_txt p:first-child {
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        .main_environment_txt h1 {
+          font-size: 4.5rem;
+          margin-bottom: 3vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          line-height: 1.1;
+        }
+        .main_environment_txt button {
+          background-color: #fff;
+          border: 2px #000 solid;
+          padding: 0.5vw 2vw;
+          margin-top: 3vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 1.2rem;
+        }
+
+        #main_environment_content div:nth-child(2) {
+          background-color: #000;
+          color: #fff;
+        }
+        #main_environment_content div:nth-child(2) button {
+          background-color: #000;
+          border: 1px #fff solid;
+          color: #fff;
+        }
+
+        /* main_campaign */
+        #main_campaign_content {
+          padding: 7.5%;
+          background-color: #000;
+          height: 150vh;
+          color: #fff;
+          display: grid;
+          grid: minmax(10vh, 20vh) minmax(100vh, 100vh) / repeat(
+              2,
+              minmax(300px, 1fr)
+            );
+        }
+        #main_campaign_content h1 {
+          grid-row: 1/2;
+          grid-column: 1/2;
+          font-size: 2rem;
+          line-height: 2;
+          font-weight: 800;
+        }
+        #main_campaign_content p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          font-weight: 100;
+        }
+        #main_campaign_content p:first-child {
+          margin-top: 1%;
+        }
+        #main_campaign_content p:last-child {
+          margin-top: 3%;
+        }
+        #main_campaign_content div:last-child {
+          grid-row: 2/3;
+          grid-column: 1/3;
+        }
+        #main_compaign_video {
+          margin-top: 15vh;
+        }
+        #main_compaign_video iframe {
+          width: 100%;
+          height: 100%;
+        }
+
+        /* main_email_content */
+
+        #main_email {
+          display: flex;
+        }
+
+        #main_email_content,
+        #main_email_formgroup {
+          width: 50%;
+          height: 90vh;
+          display: flex;
+          justify-content: center;
+          padding-top: 15vh;
+        }
+        #main_email_content {
+          background-color: #f8f9fa;
+        }
+        #main_email_txtgroup h1 {
+          font-size: 2.5rem;
+          font-weight: 900;
+        }
+        .main_email_txt h3 {
+          font-size: 1.3rem;
+          font-weight: 500;
+          margin-top: 10%;
+          margin-bottom: 1%;
+        }
+        .main_email_txt p {
+          font-size: 1rem;
+        }
+        .main_email_txt p:nth-child(2) {
+          font-size: 1.3rem;
+          font-weight: 200;
+        }
+
+        #main_email_form {
+          width: 75%;
+        }
+        #main_email_form div {
+          width: 100%;
+          height: 5vh;
+          background-color: #f7f7f7;
+          margin-bottom: 1vh;
+          color: #ccd2dd;
+          padding: 2%;
+        }
+        #main_email_form div:nth-child(4) {
+          height: 40vh;
+        }
+        #main_email_form button {
+          width: 100%;
+          height: 5vh;
+          color: #fff;
+          background-color: #000;
+          font-size: 1.2rem;
+        }
+
+        #footer_content {
+          width: 100%;
+          height: 15vh;
+          background-color: #000;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          padding-top: 2vh;
+          padding-bottom: 2vh;
+        }
+        #left_content {
+          width: 50%;
+        }
+        #left_content p:last-child {
+          margin-top: 1%;
+        }
+        #left_content a {
+          text-decoration: none;
+          color: #fff;
+        }
+        #right_content {
+          width: 50%;
         }
       }
     </style>
@@ -372,6 +639,7 @@
             <div id="right_btn"></div>
           </div>
         </div>
+
         <div id="main_weekly_best">
           <div id="main_weekly_txt">
             <h1>WEEKLY BEST PRODUCT</h1>
@@ -491,22 +759,202 @@
             <div class="main_keyword_product">
               <figure>
                 <img
-                  src="./images/product_images/bathbam1.png"
-                  alt="bathbam1"
+                  src="./images/product_images/bathbam5.png"
+                  alt="bathbam5"
                 />
                 <figcaption>
-                  <h2>SEX BOMB</h2>
-                  <p>#로맨틱 #섹시한밤 #일랑일랑꽃</p>
-                  <p>￦14,000</p>
+                  <h2>GODDESS</h2>
+                  <p>#욕조가득은빛물결 #관능적인향기</p>
+                  <p>￦20,000</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam6.jpg"
+                  alt="bathbam6"
+                />
+                <figcaption>
+                  <h2>ROSE JAM</h2>
+                  <p>#버블룬 #장미의부드러운거품</p>
+                  <p>￦17,000</p>
                 </figcaption>
               </figure>
             </div>
           </div>
-          <div id="main_keyword_btn"></div>
+          <div id="main_keyword_btn">
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
+        </div>
+
+        <div id="main_new_product">
+          <div id="main_new_product_txt">
+            <h1>WHAT'S NEW PRODUCT?</h1>
+          </div>
+          <div id="main_new_product_content">
+            <div id="main_new_product1">
+              <img
+                src="./images/product_images/product_bg_01.jpg"
+                alt="product_01"
+              />
+            </div>
+            <div id="main_new_product2">
+              <img
+                src="./images/product_images/product_bg_02.jpg"
+                alt="product_01"
+              />
+            </div>
+            <div id="main_new_product3">
+              <img
+                src="./images/product_images/product_bg_03.jpg"
+                alt="product_01"
+              />
+            </div>
+            <div id="main_new_product4">
+              <img
+                src="./images/product_images/product_bg_04.jpg"
+                alt="product_01"
+              />
+            </div>
+            <div id="main_new_product5">
+              <img
+                src="./images/product_images/product_bg_05.jpg"
+                alt="product_01"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="main_icon">
+          <div id="main_icon_content">
+            <ul id="main_icon_list">
+              <li><img src="./images/icon/icon1.png" alt="icon1" /></li>
+              <li><img src="./images/icon/icon2.png" alt="icon2" /></li>
+              <li><img src="./images/icon/icon3.png" alt="icon3" /></li>
+              <li><img src="./images/icon/icon4.png" alt="icon4" /></li>
+              <li><img src="./images/icon/icon5.png" alt="icon5" /></li>
+              <li><img src="./images/icon/icon6.png" alt="icon6" /></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="main_environment">
+          <div id="main_environment_content">
+            <div><img src="./images/introduce_01.jpg" alt="introduce1" /></div>
+            <div class="main_environment_txt">
+              <div id="main_environment_txt1">
+                <p>LUSH</p>
+                <h1>AGAINST<br />ANIMAL TESTING</h1>
+                <p>
+                  러쉬는 어떤 이유에서도 제품을 동물실험 하지 않고, 동물실험을
+                  거친<br />
+                  원재료조차 사용하지 않습니다. 직접 구매팀을 운영하며, 엄격한
+                  기준을<br />
+                  바탕으로 윤리적인 공정 여부를 확인합니다.
+                </p>
+                <button type="button">MORE VIEW</button>
+              </div>
+            </div>
+            <div class="main_environment_txt">
+              <div id="main_environment_txt2">
+                <p>LUSH</p>
+                <h1>NAKED<br />PRODUCT</h1>
+                <p>
+                  러쉬는 배쓰 밤, 샤워 젤리, 고체 샴푸와 같은 기발하고 혁신적인
+                  제품을 <br />
+                  선보입니다. 특히 불필요한 포장을 없앤 고체 형태의 다양한
+                  ‘네이키드’<br />
+                  제품을 개발하며 화장품 산업에서 혁명을 일으켜 왔습니다.
+                </p>
+                <button type="button">MORE VIEW</button>
+              </div>
+            </div>
+            <div><img src="./images/introduce_02.jpg" alt="introduce2" /></div>
+          </div>
+        </div>
+
+        <div id="main_campaign">
+          <div id="main_campaign_content">
+            <h1>
+              서부 토바(West Toba), 야생 동물을 지켜낼 보호 둥지<br />
+              #WestTobaForest #수마트라 #오랑우탄 <br />
+              #멸종위기종 #러쉬캠페인
+            </h1>
+            <div>
+              <p>
+                SOS는 멸종 위기에 처한 수마트라 오랑우탄과 타파눌리 오랑우탄,
+                그들의 안식<br />
+                처인 숲, 그리고 북부 수마트라의 생태계를 보호하는 단체입니다.
+              </p>
+              <p>
+                SOS는 서부 토바 숲의 장기 보존과 재생을 위한 후원금을 모으고자
+                합니다.
+              </p>
+            </div>
+            <div id="main_compaign_video">
+              <iframe
+                src="https://www.youtube.com/embed/IpEcGVfOPDM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div id="main_email">
+          <div id="main_email_content">
+            <div id="main_email_txtgroup">
+              <h1>
+                매주 월요일 오후, 구독자님을 위한 제품과 <br />
+                브랜드 이야기를 전해드립니다.
+              </h1>
+              <div class="main_email_txt">
+                <h3>ADRESS</h3>
+                <p>
+                  서울특별시 강남구 학동로 336 (중앙빌딩) 1층 주식회사
+                  러쉬코리아
+                </p>
+              </div>
+              <div class="main_email_txt">
+                <h3>TEL</h3>
+                <p>1644-2357</p>
+                <p>상담전화 13:00~16:00(평일)</p>
+                <p>상담톡 10:00~16:00(평일)</p>
+              </div>
+              <div class="main_email_txt">
+                <h3>EMAIL</h3>
+                <p>webmaster@lush.co.kr</p>
+              </div>
+            </div>
+          </div>
+          <div id="main_email_formgroup">
+            <div id="main_email_form">
+              <div>이름</div>
+              <div>이메일</div>
+              <div>휴대전화</div>
+              <div>LUSH에 하고싶은 한마디를 남겨주세요!</div>
+              <button type="button">개인정보 동의 후 전송</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div id="footer_content">
+        <div id="left_content">
+          <p>COPYRIGHT © 2022 REDESIGNED BY HYUNBEE CHO ALL RIGHTS RESERVED.</p>
+          <p><a href="">포트폴리오 더보기</a></p>
+        </div>
+        <div id="right_content">
+          <p>EMAIL : vvv3349@naver.com</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
