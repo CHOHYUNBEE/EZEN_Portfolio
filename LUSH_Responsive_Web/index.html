@@ -14,70 +14,41 @@
         font-family: "lush";
         src: url("./common/Lush.ttf") format("truetype");
       }
-      /* PC버전 */
-      @media (min-width: 1280px) {
-        body {
-          font-family: "pretendard", system-ui, -apple-system,
-            BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-            "Open Sans", "Helvetica Neue", sans-serif;
+      body {
+        font-family: "pretendard", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+      }
+      header{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
         }
-        .header_content {
-          width: 100%;
-          height: 10vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: #000;
-          color: #fff;
-        }
-        #logo {
-          font-size: 3rem;
-          font-weight: 900;
-          width: 10%;
-          margin-left: 30px;
-        }
-        #gnb_content {
-          width: 85%;
-          height: 100%;
-        }
-        #gnb {
-          list-style: none;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        #gnb li {
-          width: 10%;
-          height: 100%;
-        }
-        #gnb li a {
-          height: 100%;
-          line-height: 6;
-          display: block;
-          color: #fff;
-          text-align: center;
-          font-size: 1.2rem;
-        }
-        #login {
-          width: 5%;
-          text-align: right;
-          height: 100%;
-        }
-        #login a {
-          display: block;
-          color: #fff;
-          height: 100%;
-          line-height: 5;
-          text-align: center;
-          font-size: 1.2rem;
-        }
-        #list {
-          display: none;
-        }
-
-        /* main banner */
-        #main_banner {
+      .header_content {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+      }
+      #logo {
+        font-size: 3rem;
+        font-weight: 900;
+        width: 10%;
+        margin-left: 30px;
+      }
+      #gnb,
+      #login {
+        display: none;
+      }
+      #list{
+        display: block;
+      }
+      #main_banner {
           width: 100%;
           height: 90vh;
           background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
@@ -87,12 +58,13 @@
           place-items: center;
           position: relative;
         }
+
         #main_banner_txt {
           color: #fff;
           text-align: center;
         }
         #main_banner_txt h1 {
-          font-size: 5rem;
+          font-size: 3.5rem;
           font-weight: 900;
           margin-bottom: 1vh;
         }
@@ -101,7 +73,7 @@
           justify-content: center;
         }
         #main_banner_txt #hashtag p {
-          font-size: 1.8rem;
+          font-size: 1.5rem;
           font-weight: 200;
           margin: 5vh;
         }
@@ -114,12 +86,18 @@
           color: #fff;
           padding: 1vh 3vw;
           font-weight: 600;
+          cursor: pointer;
+        }
+        #main_banner_txt button:hover {
+          background-color: #fff;
+          color: #000;
         }
         #side_btn {
           width: 100%;
           position: absolute;
           display: flex;
           justify-content: space-between;
+          cursor: pointer;
         }
         #left_btn {
           left: 0;
@@ -135,6 +113,10 @@
           height: 50px;
           border-radius: 5% 0 0 5%;
           position: relative;
+        }
+        #left_btn:hover,
+        #right_btn:hover {
+          background-color: rgba(0, 0, 0, 0.8);
         }
 
         #left_btn::before {
@@ -182,12 +164,517 @@
           top: 54%;
         }
 
-        /* main weekly best */
+        /* main_weekly_best */
+
         #main_weekly_best {
           margin-top: 12vh;
           display: flex;
           flex-wrap: wrap;
         }
+        
+        #main_weekly_txt,
+        #main_weekly_contnent,
+        #main_weekly_btn {
+          width: 100%;
+        }
+        #main_weekly_txt h1 {
+          text-align: center;
+          font-size: 2rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          margin-bottom: 5vh;
+         
+        }
+        #main_weekly_contnent {
+          display: flex;
+          justify-content: center;
+        }
+        .main_weekly_product {
+          text-align: center;
+          width: 30%;
+          margin: 1vw;
+          position: relative;
+        }
+        .main_weekly_product img {
+          width: 100%;
+        }
+        .main_weekly_product figcaption {
+          font-size: 1rem;
+          font-weight: 500;
+height: 5vh;
+display: grid;
+place-items: center;
+        }
+        .main_weekly_filter {
+          width: 100%;
+          height: 80%;
+          background-color: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+        }
+        .main_weekly_filter:hover {
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_weekly_filter .more_btn {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #eee;
+          font-size: 1.5rem;
+          line-height: 1.2;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        #main_weekly_btn {
+          text-align: center;
+          margin-top: 2vh;
+          margin-bottom: 7vh;
+        }
+        #main_weekly_btn button:first-child {
+          width: 16px;
+          height: 16px;
+          background-color: #000;
+          border-radius: 50%;
+          cursor: pointer;
+          transform: scale(90%);
+        }
+        #main_weekly_btn button:last-child {
+          width: 15px;
+          height: 15px;
+          background-color: #fff;
+          border: #000 solid 1px;
+          border-radius: 50%;
+          cursor: pointer;
+          transform: scale(90%);
+        }
+
+/* main_keyword_ranking */
+
+#main_keyword_ranking {
+          width: 100%;
+          height: 100vh;
+          background-color: #000;
+
+          display: flex;
+          flex-wrap: wrap;
+          overflow: hidden;
+        }
+        #main_keyword_txt,
+        #main_keyword_keyword,
+        #main_keyword_content,
+        #main_keyword_btn {
+          width: 100%;
+        }
+        #main_keyword_txt {
+          height: 10vh;
+        }
+        #main_keyword_txt h1 {
+          text-align: center;
+          font-size: 2rem;
+          color: #fff;
+          line-height: 5;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+
+        #main_keyword_keyword {
+          text-align: center;
+        }
+        #keyword_btn {
+          display: flex;
+          justify-content: center;
+        }
+        #keyword_btn li {
+          width: 12%;
+          margin: 1vw;
+        }
+        #keyword_btn li a {
+          display: block;
+          color: #fff;
+          height: 40px;
+          border: 2px solid #fff;
+          border-radius: 25px;
+          font-size: 1rem;
+          line-height: 2.5;
+          font-weight: 700;
+        }
+        #keyword_btn li a:active {
+          background-color: #fff;
+          color: #000;
+        }
+        #keyword_btn li:first-child a {
+          background-color: #fff;
+          color: #000;
+        }
+
+        #main_keyword_content {
+          display: grid;
+          grid: repeat(2, minmax(250px, 350px)) / repeat(3, minmax(300px, 450px));
+          grid-gap: 4%;
+          margin-bottom: 2vh;
+        }
+        .main_keyword_product {
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+        }
+        .main_keyword_product {
+          animation: main_keyword_product_mobile_ani 4s ease-in-out forwards infinite;
+        }
+        @keyframes main_keyword_product_ani {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-110%);
+          }
+        }
+        @keyframes main_keyword_product_mobile_ani {
+          0% {
+            transform: translateX(5%);
+          }
+          100% {
+            transform: translateX(-80%);
+          }
+        }
+        @keyframes color_ani {
+          0% {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+          100% {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        @keyframes main_banner_ani {
+          0% {
+            transform:scale(0%);
+          }
+          100% {
+            transform: scale(100%);
+          }
+        }
+        .main_keyword_product figure {
+          text-align: center;
+          cursor: pointer;
+        }
+        .main_keyword_product img {
+          width: 70%;
+        }
+        .main_keyword_product figcaption {
+          text-align: center;
+        }
+        .main_keyword_product figcaption h2 {
+          font-size: 1.3rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        .main_keyword_product figcaption p {
+          font-size: 1rem;
+          margin-top: 1vh;
+          font-weight: 300;
+          color: #808080;
+        }
+        .main_keyword_product figcaption p:last-child {
+          font-size: 1.2rem;
+          margin-top: 3vh;
+          margin-bottom: 0;
+          color: #000;
+        }
+        #main_keyword_btn {
+          text-align: center;
+        }
+        #main_keyword_btn button {
+          width: 15px;
+          height: 15px;
+          background-color: #000;
+          border: #fff 1px solid;
+          border-radius: 50%;
+          margin: 1px;
+          cursor: pointer;
+          transform: scale(80%);
+        }
+        #main_keyword_btn button:first-child {
+          background-color: #fff;
+        }
+
+
+         /* main_new_product */
+
+         #main_new_product_txt h1 {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-top: 17vh;
+          margin-bottom: 9vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        #main_new_product_content {
+          display: grid;
+          grid: repeat(4, minmax(300px, 400px)) / repeat(
+              2,
+              minmax(300px, 475px)
+            );
+        }
+        #main_new_product_content .main_new_product_main img:first-child {
+          width: 100%;
+          height: 100%;
+        }
+        #main_new_product3 {
+          grid-row: 3 /5;
+          grid-column: 1/3;
+        }
+
+        .main_new_product_main {
+          position: relative;
+          cursor: pointer;
+        }
+        .main_new_product_side{
+          position: relative;
+        }
+        .main_new_product_side h1{
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+            font-size: 3rem;
+            position: absolute;
+            bottom:15%;
+            left: 5%;
+            color: #fff;
+            display: none;
+        }
+        .main_new_product_side img{    
+          width: 10%;
+          position: absolute;
+            bottom:5%;
+            left: 5%;
+            display: none;
+        }
+        .main_new_product_main:hover .main_new_product_side {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_new_product_main:hover .main_new_product_side h1,.main_new_product_main:hover .main_new_product_side img{
+          display: block;
+        }
+
+
+
+      /* PC버전 */
+      @media (min-width: 1280px) {
+        .header_content {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+      }
+        #gnb_content {
+          width: 85%;
+          height: 100%;
+        }
+        #gnb {
+          list-style: none;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #gnb li {
+          width: 10%;
+          height: 100%;
+        }
+        #gnb li a {
+          height: 100%;
+          line-height: 6;
+          display: block;
+          color: #fff;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        #gnb li a:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #login {
+          display: block;
+          width: 5%;
+          text-align: right;
+          height: 100%;
+        }
+        #login a {
+          display: block;
+          color: #fff;
+          height: 100%;
+          line-height: 5;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        #list {
+          display: none;
+          width: 20%;
+        }
+
+        #main_banner_txt h1 {
+          font-size: 5rem;
+          animation: main_banner_ani .8s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag {
+          transform: scale(0%);
+          animation: main_banner_ani .8s .5s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag p {
+          font-size: 1.8rem;
+          font-weight: 200;
+          margin: 5vh;
+        }
+        #main_banner_txt button {
+          transform: scale(0%);
+          animation: main_banner_ani .8s 1s ease-out forwards 1;
+        }
+
+        /* main banner */
+        /* #main_banner {
+          width: 100%;
+          height: 90vh;
+          background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(./images/메인이미지2.jpg) no-repeat 50% 50%;
+          background-size: cover;
+          display: grid;
+          place-items: center;
+          position: relative;
+        } */
+        /* #main_banner_txt {
+          color: #fff;
+          text-align: center;
+        }
+        #main_banner_txt h1 {
+          font-size: 5rem;
+          font-weight: 900;
+          margin-bottom: 1vh;
+          animation: main_banner_ani .8s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag {
+          display: flex;
+          justify-content: center;
+          transform: scale(0%);
+          animation: main_banner_ani .8s .5s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag p {
+          font-size: 1.8rem;
+          font-weight: 200;
+          margin: 5vh;
+        }
+        #main_banner_txt button {
+          font-size: 1.2rem;
+          margin-top: 5vh;
+          margin-bottom: 5vh;
+          border: #fff 2px solid;
+          background-color: transparent;
+          color: #fff;
+          padding: 1vh 3vw;
+          font-weight: 600;
+          cursor: pointer;
+          transform: scale(0%);
+          animation: main_banner_ani .8s 1s ease-out forwards 1;
+        }
+        #main_banner_txt button:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #side_btn {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+        #left_btn {
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
+          border-radius: 0 5% 5% 0;
+          position: relative;
+        }
+        #right_btn {
+          background-color: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
+          border-radius: 5% 0 0 5%;
+          position: relative;
+        }
+        #left_btn:hover,
+        #right_btn:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #left_btn::before {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(135deg);
+          position: absolute;
+          left: 30%;
+          top: 31%;
+        }
+        #left_btn::after {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(45deg);
+          position: absolute;
+          left: 30%;
+          top: 54%;
+        }
+        #right_btn::before {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(-135deg);
+          position: absolute;
+          right: 30%;
+          top: 31%;
+        }
+        #right_btn::after {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(-45deg);
+          position: absolute;
+          right: 30%;
+          top: 54%;
+        } */
+
+        /* main weekly best */
+        /* #main_weekly_best {
+          margin-top: 12vh;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
         #main_weekly_txt,
         #main_weekly_contnent,
         #main_weekly_btn {
@@ -200,6 +687,7 @@
             "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
             "Helvetica Neue", sans-serif;
           margin-bottom: 5vh;
+         
         }
         #main_weekly_contnent {
           display: flex;
@@ -221,10 +709,14 @@
         .main_weekly_filter {
           width: 100%;
           height: 93%;
-          background-color: rgba(0, 0, 0, 0.4);
+          background-color: rgba(0, 0, 0, 0.2);
           position: absolute;
           top: 0;
           left: 0;
+          cursor: pointer;
+        }
+        .main_weekly_filter:hover {
+          animation: color_ani 0.3s ease-in-out forwards 1;
         }
         .main_weekly_filter .more_btn {
           width: 50px;
@@ -238,6 +730,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
+          
         }
         #main_weekly_btn {
           text-align: center;
@@ -250,6 +743,7 @@
           background-color: #000;
           border-radius: 50%;
           margin-right: 1px;
+          cursor: pointer;
         }
         #main_weekly_btn button:last-child {
           width: 15px;
@@ -257,9 +751,27 @@
           background-color: #fff;
           border: #000 solid 1px;
           border-radius: 50%;
+          cursor: pointer;
+        } */
+
+        .main_weekly_filter {
+          height: 93%;
+        }
+        .main_weekly_product figcaption {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        #main_weekly_btn button:first-child,#main_weekly_btn button:last-child {
+          transform: scale(100%);
+        }
+        .main_weekly_filter .more_btn {
+          width: 50px;
+          height: 50px;
+          font-size: 2rem;
+          line-height: 1.5;  
         }
 
-        /* main_keyword_ranking */
+        /* main_keyword_ranking
 
         #main_keyword_ranking {
           width: 100%;
@@ -310,6 +822,10 @@
           line-height: 2.5;
           font-weight: 700;
         }
+        #keyword_btn li a:active {
+          background-color: #fff;
+          color: #000;
+        }
         #keyword_btn li:first-child a {
           background-color: #fff;
           color: #000;
@@ -319,15 +835,42 @@
           display: grid;
           grid: minmax(350px, 450px) / repeat(6, minmax(350px, 500px));
           grid-gap: 2%;
-          transform: translateX(-10%);
         }
         .main_keyword_product {
           width: 100%;
           height: 100%;
           background-color: #fff;
         }
+        .main_keyword_product {
+          animation: main_keyword_product_ani 5s ease-in-out forwards infinite;
+        }
+        @keyframes main_keyword_product_ani {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-110%);
+          }
+        }
+        @keyframes color_ani {
+          0% {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+          100% {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        @keyframes main_banner_ani {
+          0% {
+            transform:scale(0%);
+          }
+          100% {
+            transform: scale(100%);
+          }
+        }
         .main_keyword_product figure {
           text-align: center;
+          cursor: pointer;
         }
         .main_keyword_product img {
           width: 80%;
@@ -363,12 +906,60 @@
           border: #fff 1px solid;
           border-radius: 50%;
           margin: 1px;
+          cursor: pointer;
         }
         #main_keyword_btn button:first-child {
           background-color: #fff;
+        } */
+
+        .main_keyword_product {
+          animation: main_keyword_product_ani 5s ease-in-out forwards infinite;
         }
 
-        /* main_new_product */
+        #main_keyword_txt h1 {
+          font-size: 2.5rem;
+        }
+
+        #keyword_btn li {
+          width: 5%;
+          margin: 1vw;
+        }
+        #keyword_btn li a {
+          display: block;
+          color: #fff;
+          height: 50px;
+          border: 2px solid #fff;
+          border-radius: 25px;
+          font-size: 1.2rem;
+          line-height: 2.5;
+          font-weight: 700;
+        }
+
+        #main_keyword_content {
+          display: grid;
+          grid: minmax(350px, 450px) / repeat(6, minmax(350px, 500px));
+          grid-gap: 2%;
+        }
+
+        .main_keyword_product img {
+          width: 80%;
+        }
+
+        .main_keyword_product figcaption h2 {
+          font-size: 1.8rem;
+        }
+        .main_keyword_product figcaption p {
+          font-size: 1.1rem;
+        }
+        .main_keyword_product figcaption p:last-child {
+          font-size: 1.4rem;
+        }
+
+        #main_keyword_btn button {
+          transform: scale(100%);
+        }
+
+        /* main_new_product
 
         #main_new_product_txt h1 {
           text-align: center;
@@ -386,13 +977,70 @@
               minmax(200px, 475px)
             );
         }
-        #main_new_product_content img {
+        #main_new_product_content .main_new_product_main img:first-child {
           width: 100%;
         }
         #main_new_product1 {
           grid-row: 1 /3;
           grid-column: 1/3;
         }
+
+        .main_new_product_main {
+          position: relative;
+          cursor: pointer;
+        }
+        .main_new_product_side{
+          position: relative;
+        }
+        .main_new_product_side h1{
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+            font-size: 3rem;
+            position: absolute;
+            bottom:15%;
+            left: 5%;
+            color: #fff;
+            display: none;
+        }
+        .main_new_product_side img{    
+          width: 10%;
+          position: absolute;
+            bottom:5%;
+            left: 5%;
+            display: none;
+        }
+        .main_new_product_main:hover .main_new_product_side {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_new_product_main:hover .main_new_product_side h1,.main_new_product_main:hover .main_new_product_side img{
+          display: block;
+        } */
+
+        #main_new_product_txt h1 {
+          font-size: 2.5rem;
+        }
+         #main_new_product_content {
+          display: grid;
+          grid: repeat(2, minmax(200px, 475px)) / repeat(
+              4,
+              minmax(200px, 475px)
+            );
+        }
+        #main_new_product1 {
+          grid-row: 1 /3;
+          grid-column: 1/3;
+        }
+        #main_new_product3 {
+          grid-row: 2 /3;
+          grid-column: 3/4;
+        }
+
 
         /* main_icon_content */
 
@@ -465,6 +1113,16 @@
             "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
             "Helvetica Neue", sans-serif;
           font-size: 1.2rem;
+          cursor: pointer;
+        }
+
+        #main_environment_content div:nth-child(2) button:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #main_environment_content div:nth-child(3) button:hover {
+          background-color: #000;
+          color: #fff;
         }
 
         #main_environment_content div:nth-child(2) {
@@ -557,16 +1215,22 @@
         #main_email_form {
           width: 75%;
         }
-        #main_email_form div {
+        #main_email_form input::placeholder{
+          color: #ccd2dd;
+        }
+        #main_email_form input {
+          border: none;
           width: 100%;
           height: 5vh;
           background-color: #f7f7f7;
           margin-bottom: 1vh;
-          color: #ccd2dd;
+          color: #000;
           padding: 2%;
         }
-        #main_email_form div:nth-child(4) {
+        #main_email_form input:nth-child(4) {
           height: 40vh;
+          vertical-align: top;
+          
         }
         #main_email_form button {
           width: 100%;
@@ -574,6 +1238,11 @@
           color: #fff;
           background-color: #000;
           font-size: 1.2rem;
+        }
+        #main_email_form button:hover {
+          background-color: #fff;
+          color: #000;
+          font-weight: bold;
         }
 
         #footer_content {
@@ -617,7 +1286,7 @@
           </ul>
         </div>
         <div id="login"><a href="#">LOGIN</a></div>
-        <div id="list"><img src="" /></div>
+        <div id="list"><img src="./images/icon/icons8-list-96.png" /></div>
       </div>
     </header>
     <main>
@@ -795,35 +1464,43 @@
             <h1>WHAT'S NEW PRODUCT?</h1>
           </div>
           <div id="main_new_product_content">
-            <div id="main_new_product1">
+            <div class="main_new_product_main" id="main_new_product1">
               <img
                 src="./images/product_images/product_bg_01.jpg"
                 alt="product_01"
               />
+              <div class="main_new_product_side">
+                <h1>MASK OF MAGNAMINTY</h1>
+                <img src="./images/icon/icons8-arrow-96.png">
+              </div>
             </div>
-            <div id="main_new_product2">
+            <div class="main_new_product_main" id="main_new_product2">
               <img
                 src="./images/product_images/product_bg_02.jpg"
                 alt="product_01"
               />
+              <div class="main_new_product_side"><h1>ROSE JAM</h1><img src="./images/icon/icons8-arrow-96.png"></div>
             </div>
-            <div id="main_new_product3">
+            <div class="main_new_product_main" id="main_new_product3">
               <img
                 src="./images/product_images/product_bg_03.jpg"
                 alt="product_01"
               />
+              <div class="main_new_product_side"><h1>DREAM CREAM</h1><img src="./images/icon/icons8-arrow-96.png"></div>
             </div>
-            <div id="main_new_product4">
+            <div class="main_new_product_main" id="main_new_product4">
               <img
                 src="./images/product_images/product_bg_04.jpg"
                 alt="product_01"
               />
+              <div class="main_new_product_side"><h1>GIFT BOX</h1><img src="./images/icon/icons8-arrow-96.png"></div>
             </div>
-            <div id="main_new_product5">
+            <div class="main_new_product_main" id="main_new_product5">
               <img
                 src="./images/product_images/product_bg_05.jpg"
                 alt="product_01"
               />
+              <div class="main_new_product_side"><h1>MARILYN</h1><img src="./images/icon/icons8-arrow-96.png"></div>
             </div>
           </div>
         </div>
@@ -896,11 +1573,12 @@
             </div>
             <div id="main_compaign_video">
               <iframe
-                src="https://www.youtube.com/embed/IpEcGVfOPDM"
+                src="https://www.youtube.com/embed/IpEcGVfOPDM?autoplay=1&mute=1"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
+                
               ></iframe>
             </div>
           </div>
@@ -934,10 +1612,10 @@
           </div>
           <div id="main_email_formgroup">
             <div id="main_email_form">
-              <div>이름</div>
-              <div>이메일</div>
-              <div>휴대전화</div>
-              <div>LUSH에 하고싶은 한마디를 남겨주세요!</div>
+              <input type="text" placeholder="이름"></input>
+              <input type="email" placeholder="이메일"></input>
+              <input type="tel" placeholder="휴대전화"></input>
+              <input type="text" placeholder="LUSH에 하고싶은 한마디를 남겨주세요!"></input>
               <button type="button">개인정보 동의 후 전송</button>
             </div>
           </div>
@@ -949,7 +1627,7 @@
       <div id="footer_content">
         <div id="left_content">
           <p>COPYRIGHT © 2022 REDESIGNED BY HYUNBEE CHO ALL RIGHTS RESERVED.</p>
-          <p><a href="">포트폴리오 더보기</a></p>
+          <p><a href="https://github.com/CHOHYUNBEE/EZEN_Portfolio" target="_blank">포트폴리오 더보기</a></p>
         </div>
         <div id="right_content">
           <p>EMAIL : vvv3349@naver.com</p>
