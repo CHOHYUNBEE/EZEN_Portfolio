@@ -378,7 +378,7 @@ place-items: center;
         }
         .main_keyword_product figcaption p {
           font-size: 1rem;
-          margin-top: 1vh;
+          margin-top: 1vh; 
           font-weight: 300;
           color: #808080;
         }
@@ -419,9 +419,9 @@ place-items: center;
         }
         #main_new_product_content {
           display: grid;
-          grid: repeat(4, minmax(300px, 400px)) / repeat(
+          grid: repeat(4, minmax(300px, 475px)) / repeat(
               2,
-              minmax(300px, 475px)
+              minmax(300px, 950px)
             );
         }
         #main_new_product_content .main_new_product_main img:first-child {
@@ -470,6 +470,32 @@ place-items: center;
           display: block;
         }
 
+
+        /* main_icon_content */
+
+        #main_icon_content {
+          margin-top: 13vh;
+          margin-bottom: 13vh;
+          display: grid;
+          place-content: center;
+        }
+        #main_icon_list {
+          width: 80%;
+          display: grid;
+          grid: repeat(2,minmax(50px,1fr)) / repeat(3,minmax(50px,1fr));
+          margin: 0 auto;
+        }
+        #main_icon_list li {
+          height: 100%;
+          padding: 1vw;
+          border-right: #eee 1px solid;
+        }
+        #main_icon_list li img {
+          width: 100%;
+        }
+        #main_icon_list li:last-child {
+          border: none;
+        }
 
 
       /* PC버전 */
@@ -1044,7 +1070,7 @@ place-items: center;
 
         /* main_icon_content */
 
-        #main_icon_content {
+        /* #main_icon_content {
           margin-top: 13vh;
           margin-bottom: 13vh;
         }
@@ -1063,7 +1089,7 @@ place-items: center;
         }
         #main_icon_list li:last-child {
           border: none;
-        }
+        } */
 
         /* main_environment_content */
 
