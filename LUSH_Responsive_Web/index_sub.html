@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="../common/minireset.css" />
+    <title>LUSH</title>
+    <style>
+      @font-face {
+        font-family: "lush";
+        src: url("./common/Lush.ttf") format("truetype");
+      }
+      body {
+        font-family: "pretendard", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+      }
+      header{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        }
+      .header_content {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+      }
+      #logo {
+        font-size: 2rem;
+        font-weight: 900;
+        width: 10%;
+        margin-left: 30px;
+      }
+      #gnb,
+      #login {
+        display: none;
+      }
+      #list{
+        display: block;
+        text-align: right;
+        margin-right: 10px;
+      }
+      #list img{
+        width: 60%;
+      }
+      #main_banner {
+          width: 100%;
+          height: 90vh;
+          background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(./images/메인이미지2.jpg) no-repeat 50% 50%;
+          background-size: cover;
+          display: grid;
+          place-items: center;
+          position: relative;
+        }
+
+        #main_banner_txt {
+          color: #fff;
+          text-align: center;
+        }
+        #main_banner_txt h1 {
+          font-size: 2.5rem;
+          font-weight: 900;
+          margin-bottom: 1vh;
+        }
+        #main_banner_txt #hashtag {
+          display: flex;
+          justify-content: center;
+        }
+        #main_banner_txt #hashtag p {
+          font-size: 1.2rem;
+          font-weight: 200;
+          margin: 5vh;
+        }
+        #main_banner_txt button {
+          font-size: 1.2rem;
+          margin-top: 5vh;
+          margin-bottom: 5vh;
+          border: #fff 2px solid;
+          background-color: transparent;
+          color: #fff;
+          padding: 1vh 3vw;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        #main_banner_txt button:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #side_btn {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+        #left_btn {
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
+          border-radius: 0 5% 5% 0;
+          position: relative;
+        }
+        #right_btn {
+          background-color: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
+          border-radius: 5% 0 0 5%;
+          position: relative;
+        }
+        #left_btn:hover,
+        #right_btn:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #left_btn::before {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(135deg);
+          position: absolute;
+          left: 30%;
+          top: 31%;
+        }
+        #left_btn::after {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(45deg);
+          position: absolute;
+          left: 30%;
+          top: 54%;
+        }
+        #right_btn::before {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(-135deg);
+          position: absolute;
+          right: 30%;
+          top: 31%;
+        }
+        #right_btn::after {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(-45deg);
+          position: absolute;
+          right: 30%;
+          top: 54%;
+        }
+
+        /* main_weekly_best */
+
+        #main_weekly_best {
+          margin-top: 12vh;
+          display: flex;
+          flex-wrap: wrap;
+          overflow: hidden;
+        }
+        
+        #main_weekly_txt,
+        #main_weekly_contnent,
+        #main_weekly_btn {
+          width: 100%;
+        }
+        #main_weekly_txt h1 {
+          text-align: center;
+          font-size: 2rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          margin-bottom: 5vh;
+         
+        }
+        #main_weekly_contnent {
+          display: grid;
+          grid:1fr / repeat(3,minmax(195px,475px))
+        }
+        .main_weekly_product {
+          text-align: center;
+          width: 95%;
+          margin: 1vw;
+          position: relative;
+        }
+        .main_weekly_product img {
+          width: 100%;
+        }
+        .main_weekly_product figcaption {
+          font-size: 1rem;
+          font-weight: 500;
+          height: 5vh;
+          display: grid;
+          place-items: center;
+        }
+        .main_weekly_filter {
+          width: 100%;
+          height: 80%;
+          background-color: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+        }
+        .main_weekly_filter:hover {
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_weekly_filter .more_btn {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: #eee;
+          font-size: 1.5rem;
+          line-height: 1.2;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        #main_weekly_btn {
+          text-align: center;
+          margin-top: 2vh;
+          margin-bottom: 7vh;
+        }
+        #main_weekly_btn button:first-child {
+          width: 16px;
+          height: 16px;
+          background-color: #000;
+          border-radius: 50%;
+          cursor: pointer;
+          transform: scale(90%);
+        }
+        #main_weekly_btn button:last-child {
+          width: 15px;
+          height: 15px;
+          background-color: #fff;
+          border: #000 solid 1px;
+          border-radius: 50%;
+          cursor: pointer;
+          transform: scale(90%);
+        }
+
+/* main_keyword_ranking */
+
+      #main_keyword_ranking {
+          width: 100%;
+          height: 110vh;
+          background-color: #000;
+
+          display: flex;
+          flex-wrap: wrap;
+          overflow: hidden;
+        }
+        #main_keyword_txt,
+        #main_keyword_keyword,
+        #main_keyword_content,
+        #main_keyword_btn {
+          width: 100%;
+        }
+        #main_keyword_txt {
+          height: 10vh;
+          margin-bottom: 1vh;
+        }
+        #main_keyword_txt h1 {
+          text-align: center;
+          font-size: 2rem;
+          color: #fff;
+          line-height: 5;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+
+        #main_keyword_keyword {
+          text-align: center;
+        }
+        #keyword_btn {
+          display: grid;
+          grid: 1fr /repeat(7,minmax(70px,200px));
+          gap: 2%;
+          margin-left: 5px;
+        }
+        #keyword_btn li {
+          width: 100%;
+        }
+        #keyword_btn li a {
+          display: block;
+          color: #fff;
+          height: 40px;
+          border: 2px solid #fff;
+          border-radius: 25px;
+          font-size: 1rem;
+          line-height: 2.5;
+          font-weight: 700;
+        }
+        #keyword_btn li a:active {
+          background-color: #fff;
+          color: #000;
+        }
+        #keyword_btn li:first-child a {
+          background-color: #fff;
+          color: #000;
+        }
+
+        #main_keyword_content {
+          display: grid;
+          grid: repeat(2, minmax(150px, 250px)) / repeat(3, minmax(200px, 450px));
+          grid-gap: 4%;
+          margin-bottom: 2vh;
+        }
+        .main_keyword_product {
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+        }
+        .main_keyword_product {
+          animation: main_keyword_product_mobile_ani 5s ease-in-out forwards infinite;
+        }
+        @keyframes main_keyword_product_ani {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-110%);
+          }
+        }
+        @keyframes main_keyword_product_mobile_ani {
+          0% {
+            transform: translateX(10%);
+          }
+          100% {
+            transform: translateX(-120%);
+          }
+        }
+        @keyframes color_ani {
+          0% {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+          100% {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        @keyframes main_banner_ani {
+          0% {
+            transform:scale(0%);
+          }
+          100% {
+            transform: scale(100%);
+          }
+        }
+        .main_keyword_product figure {
+          text-align: center;
+          cursor: pointer;
+        }
+        .main_keyword_product img {
+          width: 60%;
+        }
+        .main_keyword_product figcaption {
+          text-align: center;
+        }
+        .main_keyword_product figcaption h2 {
+          font-size: 1.2rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        .main_keyword_product figcaption p {
+          font-size: 0.9rem;
+          margin-top: 1vh; 
+          font-weight: 300;
+          color: #808080;
+        }
+        .main_keyword_product figcaption p:last-child {
+          font-size: 1.1rem;
+          margin-top: 3vh;
+          margin-bottom: 0;
+          color: #000;
+        }
+        #main_keyword_btn {
+          text-align: center;
+        }
+        #main_keyword_btn button {
+          width: 15px;
+          height: 15px;
+          background-color: #000;
+          border: #fff 1px solid;
+          border-radius: 50%;
+          margin: 1px;
+          cursor: pointer;
+          transform: scale(80%);
+        }
+        #main_keyword_btn button:first-child {
+          background-color: #fff;
+        }
+
+
+         /* main_new_product */
+
+         #main_new_product_txt h1 {
+          text-align: center;
+          font-size: 2rem;
+          margin-top: 12vh;
+          margin-bottom: 9vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        #main_new_product_content {
+          display: grid;
+          grid: repeat(4, 0.5fr)/ repeat(
+              2,
+              0.5fr
+            );
+        }
+        #main_new_product_content .main_new_product_main img:first-child {
+          width: 100%;
+          height: 100%;
+        }
+        #main_new_product3 {
+          grid-row: 3 /5;
+          grid-column: 1/3;
+        }
+
+        .main_new_product_main {
+          position: relative;
+          cursor: pointer;
+        }
+        .main_new_product_side{
+          position: relative;
+        }
+        .main_new_product_side h1{
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+            font-size: 1.5rem;
+            position: absolute;
+            bottom:15%;
+            left: 5%;
+            color: #fff;
+            display: none;
+        }
+        .main_new_product_side img{    
+          width: 10%;
+          position: absolute;
+            bottom:5%;
+            left: 5%;
+            display: none;
+        }
+        .main_new_product_main:hover .main_new_product_side {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_new_product_main:hover .main_new_product_side h1,.main_new_product_main:hover .main_new_product_side img{
+          display: block;
+        }
+
+
+        /* main_icon_content */
+
+        #main_icon_content {
+          margin-top: 13vh;
+          margin-bottom: 13vh;
+          display: grid;
+          place-content: center;
+        }
+        #main_icon_list {
+          width: 80%;
+          display: grid;
+          grid: repeat(2,minmax(50px,1fr)) / repeat(3,minmax(50px,1fr));
+          margin: 0 auto;
+        }
+        #main_icon_list li {
+          height: 100%;
+          padding: 1vw;
+          border-right: #eee 1px solid;
+        }
+        #main_icon_list li img {
+          width: 100%;
+        }
+        #main_icon_list li:last-child {
+          border: none;
+        }
+
+         /* main_environment_content */
+
+         #main_environment {
+          width: 100%;
+        }
+        #main_environment_content {
+          width: 100%;
+          display: grid;
+          grid: repeat(4, minmax(200px, 247px)) /1fr ;
+        }
+        #main_environment_content img {
+          width: 100%;
+        }
+        .main_environment_txt {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .main_environment_txt p {
+          width: 100%;
+          margin-bottom: 0.5vh;
+          font-size: 0.7rem;
+          line-height: 1.6;
+          font-weight: 300;
+        }
+        .main_environment_txt p:first-child {
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        .main_environment_txt h1 {
+          font-size: 1.8rem;
+          margin-bottom:2vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          line-height: 1.1;
+        }
+        .main_environment_txt button {
+          background-color: #fff;
+          border: 2px #000 solid;
+          padding: 0.5vw 2vw;
+          margin-top: 1vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 0.7rem;
+          cursor: pointer;
+        }
+
+        #main_environment_content div:nth-child(4){
+          grid-row: 3/4;
+        }
+        #main_environment_content div:nth-child(2) button:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #main_environment_content div:nth-child(3) button:hover {
+          background-color: #000;
+          color: #fff;
+        }
+
+        #main_environment_content div:nth-child(2) {
+          background-color: #000;
+          color: #fff;
+        }
+        #main_environment_content div:nth-child(2) button {
+          background-color: #000;
+          border: 1px #fff solid;
+          color: #fff;
+        }
+
+        /* main_campaign_content */
+        #main_campaign_content {
+          padding: 7.5%;
+          background-color: #000;
+          height: 80vh;
+          color: #fff;
+          display: grid;
+          grid: minmax(10vh, 20vh) minmax(10vh, 20vh) minmax(100vh, 100vh) / 1fr;
+        }
+        #main_campaign_content h1 {
+          font-size: 1.2rem;
+          line-height: 2;
+          font-weight: 800;
+          margin-top: 3vh;
+        }
+        #main_campaign_content p {
+          font-size: 0.9rem;
+          font-weight: 100;
+        }
+        #main_campaign_content p:first-child {
+          margin-top: 13vh;
+        }
+        #main_campaign_content p:last-child {
+          margin-top: 3%;
+        }
+        #main_compaign_video {
+          margin-top: 20vh;
+        }
+        #main_compaign_video iframe {
+          width: 100%;
+          height: 300px;
+        }
+
+        /* email */
+        
+        #main_email_content,
+        #main_email_formgroup {
+          width: 100%;
+          height: 50vh;
+          display: flex;
+          justify-content: center;
+        }
+        #main_email_content {
+          background-color: #f8f9fa;
+          padding: 5%;
+        }
+        #main_email_txtgroup h1 {
+          font-size:1.3rem;
+          font-weight: 900;
+          margin-top: 3vh;
+        }
+        .main_email_txt h3 {
+          font-size: 1.1rem;
+          font-weight: 500;
+          margin-top: 10%;
+          margin-bottom: 1%;
+        }
+        .main_email_txt p {
+          font-size: 0.8rem;
+        }
+        .main_email_txt p:nth-child(2) {
+          font-size: 1rem;
+          font-weight: 200;
+        }
+        #main_email_formgroup{
+          padding-top: 5vh;
+        }
+
+        #main_email_form {
+          width: 90%;
+        }
+        #main_email_form input::placeholder{
+          color: #ccd2dd;
+        }
+        #main_email_form input {
+          border: none;
+          width: 100%;
+          height: 5vh;
+          background-color: #f7f7f7;
+          margin-bottom: 1vh;
+          color: #000;
+          padding: 1%;
+        }
+        #main_email_form input:nth-child(4) {
+          height: 40vh;
+          vertical-align: top;
+        }
+        #main_email_form button {
+          width: 100%;
+          height: 5vh;
+          color: #fff;
+          background-color: #000;
+          font-size: 1em;
+        }
+        #main_email_form button:hover {
+          background-color: #fff;
+          color: #000;
+          font-weight: bold;
+        }
+
+        #footer_content {
+          width: 100%;
+          height: 15vh;
+          background-color: #000;
+          color: #fff;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          margin-top: 25vh;
+          padding:2vw
+        }
+        #left_content {
+          width: 50%;
+          font-size: 0.7rem;
+        }
+        #left_content p:last-child {
+          margin-top: 1%;
+        }
+        #left_content a {
+          text-decoration: none;
+          color: #fff;
+          
+        }
+        #right_content {
+          width: 50%;
+          font-size: 0.7rem;
+        }
+      /* PC버전 */
+      @media (min-width: 1280px) {
+        
+        .header_content {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000;
+        color: #fff;
+      }
+        #gnb_content {
+          width: 85%;
+          height: 100%;
+        }
+        #gnb {
+          list-style: none;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #gnb li {
+          width: 10%;
+          height: 100%;
+        }
+        #gnb li a {
+          height: 100%;
+          line-height: 6;
+          display: block;
+          color: #fff;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        #gnb li a:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #login {
+          display: block;
+          width: 5%;
+          text-align: right;
+          height: 100%;
+        }
+        #login a {
+          display: block;
+          color: #fff;
+          height: 100%;
+          line-height: 5;
+          text-align: center;
+          font-size: 1.2rem;
+        }
+        #list {
+          display: none;
+          width: 20%;
+        }
+        #logo {
+          font-size: 3rem;
+        }
+
+        #main_banner_txt h1 {
+          font-size: 5rem;
+          animation: main_banner_ani .8s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag {
+          transform: scale(0%);
+          animation: main_banner_ani .8s .5s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag p {
+          font-size: 1.8rem;
+          font-weight: 200;
+          margin: 5vh;
+        }
+        #main_banner_txt button {
+          transform: scale(0%);
+          animation: main_banner_ani .8s 1s ease-out forwards 1;
+        }
+
+        /* main banner */
+        /* #main_banner {
+          width: 100%;
+          height: 90vh;
+          background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+            url(./images/메인이미지2.jpg) no-repeat 50% 50%;
+          background-size: cover;
+          display: grid;
+          place-items: center;
+          position: relative;
+        } */
+        /* #main_banner_txt {
+          color: #fff;
+          text-align: center;
+        }
+        #main_banner_txt h1 {
+          font-size: 5rem;
+          font-weight: 900;
+          margin-bottom: 1vh;
+          animation: main_banner_ani .8s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag {
+          display: flex;
+          justify-content: center;
+          transform: scale(0%);
+          animation: main_banner_ani .8s .5s ease-out forwards 1;
+        }
+        #main_banner_txt #hashtag p {
+          font-size: 1.8rem;
+          font-weight: 200;
+          margin: 5vh;
+        }
+        #main_banner_txt button {
+          font-size: 1.2rem;
+          margin-top: 5vh;
+          margin-bottom: 5vh;
+          border: #fff 2px solid;
+          background-color: transparent;
+          color: #fff;
+          padding: 1vh 3vw;
+          font-weight: 600;
+          cursor: pointer;
+          transform: scale(0%);
+          animation: main_banner_ani .8s 1s ease-out forwards 1;
+        }
+        #main_banner_txt button:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #side_btn {
+          width: 100%;
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+        }
+        #left_btn {
+          left: 0;
+          background-color: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
+          border-radius: 0 5% 5% 0;
+          position: relative;
+        }
+        #right_btn {
+          background-color: rgba(0, 0, 0, 0.4);
+          width: 50px;
+          height: 50px;
+          border-radius: 5% 0 0 5%;
+          position: relative;
+        }
+        #left_btn:hover,
+        #right_btn:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        #left_btn::before {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(135deg);
+          position: absolute;
+          left: 30%;
+          top: 31%;
+        }
+        #left_btn::after {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(45deg);
+          position: absolute;
+          left: 30%;
+          top: 54%;
+        }
+        #right_btn::before {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(-135deg);
+          position: absolute;
+          right: 30%;
+          top: 31%;
+        }
+        #right_btn::after {
+          content: "";
+          width: 20px;
+          width: 20px;
+          border: #eee solid 3px;
+          border-radius: 5%;
+          transform: rotate(-45deg);
+          position: absolute;
+          right: 30%;
+          top: 54%;
+        } */
+
+        /* main weekly best */
+        /* #main_weekly_best {
+          margin-top: 12vh;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        #main_weekly_txt,
+        #main_weekly_contnent,
+        #main_weekly_btn {
+          width: 100%;
+        }
+        #main_weekly_txt h1 {
+          text-align: center;
+          font-size: 2.5rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          margin-bottom: 5vh;
+         
+        }
+        #main_weekly_contnent {
+          display: flex;
+          justify-content: center;
+        }
+        .main_weekly_product {
+          text-align: center;
+          width: 30%;
+          margin: 1vw;
+          position: relative;
+        }
+        .main_weekly_product img {
+          width: 100%;
+        }
+        .main_weekly_product figcaption {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        .main_weekly_filter {
+          width: 100%;
+          height: 93%;
+          background-color: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+        }
+        .main_weekly_filter:hover {
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_weekly_filter .more_btn {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background-color: #eee;
+          font-size: 2rem;
+          line-height: 1.5;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          
+        }
+        #main_weekly_btn {
+          text-align: center;
+          margin-top: 2vh;
+          margin-bottom: 7vh;
+        }
+        #main_weekly_btn button:first-child {
+          width: 16px;
+          height: 16px;
+          background-color: #000;
+          border-radius: 50%;
+          margin-right: 1px;
+          cursor: pointer;
+        }
+        #main_weekly_btn button:last-child {
+          width: 15px;
+          height: 15px;
+          background-color: #fff;
+          border: #000 solid 1px;
+          border-radius: 50%;
+          cursor: pointer;
+        } */
+
+        #main_weekly_txt h1 {
+          font-size: 2.5rem;
+        }
+        #main_weekly_contnent {
+          display: flex;
+          justify-content: center;
+        }
+
+        .main_weekly_filter {
+          height: 93%;
+        }
+        .main_weekly_product figcaption {
+          font-size: 1.2rem;
+          font-weight: 500;
+        }
+        #main_weekly_btn button:first-child,#main_weekly_btn button:last-child {
+          transform: scale(100%);
+        }
+        .main_weekly_filter .more_btn {
+          width: 50px;
+          height: 50px;
+          font-size: 2rem;
+          line-height: 1.5;  
+        }
+
+        /* main_keyword_ranking
+
+        #main_keyword_ranking {
+          width: 100%;
+          height: 100vh;
+          background-color: #000;
+
+          display: flex;
+          flex-wrap: wrap;
+          overflow: hidden;
+        }
+        #main_keyword_txt,
+        #main_keyword_keyword,
+        #main_keyword_content,
+        #main_keyword_btn {
+          width: 100%;
+        }
+        #main_keyword_txt {
+          height: 10vh;
+        }
+        #main_keyword_txt h1 {
+          text-align: center;
+          font-size: 2.5rem;
+          color: #fff;
+          line-height: 5;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+
+        #main_keyword_keyword {
+          text-align: center;
+        }
+        #keyword_btn {
+          display: flex;
+          justify-content: center;
+        }
+        #keyword_btn li {
+          width: 5%;
+          margin: 1vw;
+        }
+        #keyword_btn li a {
+          display: block;
+          color: #fff;
+          height: 50px;
+          border: 2px solid #fff;
+          border-radius: 25px;
+          font-size: 1.2rem;
+          line-height: 2.5;
+          font-weight: 700;
+        }
+        #keyword_btn li a:active {
+          background-color: #fff;
+          color: #000;
+        }
+        #keyword_btn li:first-child a {
+          background-color: #fff;
+          color: #000;
+        }
+
+        #main_keyword_content {
+          display: grid;
+          grid: minmax(350px, 450px) / repeat(6, minmax(350px, 500px));
+          grid-gap: 2%;
+        }
+        .main_keyword_product {
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+        }
+        .main_keyword_product {
+          animation: main_keyword_product_ani 5s ease-in-out forwards infinite;
+        }
+        @keyframes main_keyword_product_ani {
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-110%);
+          }
+        }
+        @keyframes color_ani {
+          0% {
+            background-color: rgba(0, 0, 0, 0.2);
+          }
+          100% {
+            background-color: rgba(0, 0, 0, 0.6);
+          }
+        }
+        @keyframes main_banner_ani {
+          0% {
+            transform:scale(0%);
+          }
+          100% {
+            transform: scale(100%);
+          }
+        }
+        .main_keyword_product figure {
+          text-align: center;
+          cursor: pointer;
+        }
+        .main_keyword_product img {
+          width: 80%;
+        }
+        .main_keyword_product figcaption {
+          text-align: center;
+        }
+        .main_keyword_product figcaption h2 {
+          font-size: 1.8rem;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        .main_keyword_product figcaption p {
+          font-size: 1.1rem;
+          margin-top: 1vh;
+          font-weight: 300;
+          color: #808080;
+        }
+        .main_keyword_product figcaption p:last-child {
+          font-size: 1.4rem;
+          margin-top: 3vh;
+          margin-bottom: 0;
+          color: #000;
+        }
+        #main_keyword_btn {
+          text-align: center;
+        }
+        #main_keyword_btn button {
+          width: 15px;
+          height: 15px;
+          background-color: #000;
+          border: #fff 1px solid;
+          border-radius: 50%;
+          margin: 1px;
+          cursor: pointer;
+        }
+        #main_keyword_btn button:first-child {
+          background-color: #fff;
+        } */
+
+
+        .main_keyword_product {
+          animation: main_keyword_product_ani 5s ease-in-out forwards infinite;
+        }
+
+        #main_keyword_txt h1 {
+          font-size: 2.5rem;
+        }
+        #keyword_btn {
+          display: flex;
+          justify-content: center;
+        }
+        #keyword_btn li {
+          width: 7%;
+          /* margin: 1vw; */
+        }
+        #keyword_btn li a {
+          display: block;
+          color: #fff;
+          height: 50px;
+          border: 2px solid #fff;
+          border-radius: 25px;
+          font-size: 1.2rem;
+          line-height: 2.5;
+          font-weight: 700;
+        }
+
+        #main_keyword_content {
+          display: grid;
+          grid: minmax(350px, 450px) / repeat(6, minmax(350px, 500px));
+          grid-gap: 2%;
+        }
+
+        .main_keyword_product img {
+          width: 80%;
+        }
+
+        .main_keyword_product figcaption h2 {
+          font-size: 1.8rem;
+        }
+        .main_keyword_product figcaption p {
+          font-size: 1.1rem;
+        }
+        .main_keyword_product figcaption p:last-child {
+          font-size: 1.4rem;
+        }
+
+        #main_keyword_btn button {
+          transform: scale(100%);
+        }
+
+        /* main_new_product
+
+        #main_new_product_txt h1 {
+          text-align: center;
+          font-size: 2.5rem;
+          margin-top: 17vh;
+          margin-bottom: 9vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        #main_new_product_content {
+          display: grid;
+          grid: repeat(2, minmax(200px, 475px)) / repeat(
+              4,
+              minmax(200px, 475px)
+            );
+        }
+        #main_new_product_content .main_new_product_main img:first-child {
+          width: 100%;
+        }
+        #main_new_product1 {
+          grid-row: 1 /3;
+          grid-column: 1/3;
+        }
+
+        .main_new_product_main {
+          position: relative;
+          cursor: pointer;
+        }
+        .main_new_product_side{
+          position: relative;
+        }
+        .main_new_product_side h1{
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+            font-size: 3rem;
+            position: absolute;
+            bottom:15%;
+            left: 5%;
+            color: #fff;
+            display: none;
+        }
+        .main_new_product_side img{    
+          width: 10%;
+          position: absolute;
+            bottom:5%;
+            left: 5%;
+            display: none;
+        }
+        .main_new_product_main:hover .main_new_product_side {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: color_ani 0.3s ease-in-out forwards 1;
+        }
+        .main_new_product_main:hover .main_new_product_side h1,.main_new_product_main:hover .main_new_product_side img{
+          display: block;
+        } */
+
+        #main_new_product_txt h1 {
+          font-size: 2.5rem;
+        }
+         #main_new_product_content {
+          display: grid;
+          grid: repeat(2, 0.5fr) / repeat(
+              4,
+              0.25fr
+            );
+        }
+        #main_new_product1 {
+          grid-row: 1 /3;
+          grid-column: 1/3;
+        }
+        #main_new_product3 {
+          grid-row: 2 /3;
+          grid-column: 3/4;
+        }
+
+        .main_new_product_side h1{
+          font-size: 3rem;
+        }
+
+        /* main_icon_content */
+
+        /* #main_icon_content {
+          margin-top: 13vh;
+          margin-bottom: 13vh;
+        }
+        #main_icon_list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        #main_icon_list li {
+          height: 100%;
+          padding: 1vw;
+          border-right: #eee 1px solid;
+        }
+        #main_icon_list li img {
+          width: 100%;
+        }
+        #main_icon_list li:last-child {
+          border: none;
+        } */
+        #main_icon_list{
+          width: 100%;
+        }
+        #main_icon_list li {
+          height: 100%;
+          padding: 1vw;
+        }
+        #main_icon_list li img {
+          width: 100%;
+        }
+
+        #main_icon_list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        /* main_environment_content */
+
+        /* #main_environment {
+          width: 100%;
+        }
+        #main_environment_content {
+          width: 100%;
+          display: grid;
+          grid: repeat(2, minmax(500px, 1fr)) / repeat(2, minmax(200px, 1fr));
+        }
+        #main_environment_content img {
+          width: 100%;
+        }
+        .main_environment_txt {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        .main_environment_txt p {
+          width: 100%;
+          margin-bottom: 1vh;
+          font-size: 1.2rem;
+          line-height: 1.7;
+          font-weight: 200;
+        }
+        .main_environment_txt p:first-child {
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+        }
+        .main_environment_txt h1 {
+          font-size: 4.5rem;
+          margin-bottom: 3vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          line-height: 1.1;
+        }
+        .main_environment_txt button {
+          background-color: #fff;
+          border: 2px #000 solid;
+          padding: 0.5vw 2vw;
+          margin-top: 3vh;
+          font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont,
+            "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 1.2rem;
+          cursor: pointer;
+        }
+
+        #main_environment_content div:nth-child(2) button:hover {
+          background-color: #fff;
+          color: #000;
+        }
+        #main_environment_content div:nth-child(3) button:hover {
+          background-color: #000;
+          color: #fff;
+        }
+
+        #main_environment_content div:nth-child(2) {
+          background-color: #000;
+          color: #fff;
+        }
+        #main_environment_content div:nth-child(2) button {
+          background-color: #000;
+          border: 1px #fff solid;
+          color: #fff;
+        } */
+
+        #main_environment_content {
+          width: 100%;
+          display: grid;
+          grid: repeat(2, minmax(500px, 1fr)) / repeat(2, minmax(200px, 1fr));
+        }
+        .main_environment_txt p {
+          margin-bottom: 1vh;
+          font-size: 1.2rem;
+          line-height: 1.7;
+          font-weight: 200;
+        }
+        .main_environment_txt h1 {
+          font-size: 4.5rem;
+          margin-bottom: 3vh;
+          line-height: 1.1;
+        }
+        .main_environment_txt button {
+          font-size: 1.2rem;
+        }
+        #main_environment_content div:nth-child(4){
+          grid-row: 2/3;
+          grid-column: 2/3;
+        }
+        /* main_campaign */
+        /* #main_campaign_content {
+          padding: 7.5%;
+          background-color: #000;
+          height: 150vh;
+          color: #fff;
+          display: grid;
+          grid: minmax(10vh, 20vh) minmax(100vh, 100vh) / repeat(
+              2,
+              minmax(300px, 1fr)
+            );
+        }
+        #main_campaign_content h1 {
+          grid-row: 1/2;
+          grid-column: 1/2;
+          font-size: 2rem;
+          line-height: 2;
+          font-weight: 800;
+        }
+        #main_campaign_content p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          font-weight: 100;
+        }
+        #main_campaign_content p:first-child {
+          margin-top: 1%;
+        }
+        #main_campaign_content p:last-child {
+          margin-top: 3%;
+        }
+        #main_campaign_content div:last-child {
+          grid-row: 2/3;
+          grid-column: 1/3;
+        }
+        #main_compaign_video {
+          margin-top: 15vh;
+        }
+        #main_compaign_video iframe {
+          width: 100%;
+          height: 100%;
+        } */
+
+        #main_campaign_content {
+          height: 150vh;
+          display: grid;
+          grid: minmax(10vh, 20vh) minmax(100vh, 100vh) / repeat(
+              2,
+              minmax(300px, 1fr)
+            );
+        }
+        #main_campaign_content h1 {
+          grid-row: 1/2;
+          grid-column: 1/2;
+          font-size: 2rem;
+          margin: 0;
+        }
+        #main_campaign_content p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          font-weight: 100;
+          margin: 0;
+        }
+        #main_campaign_content p:first-child {
+          margin-top: 1%;
+        }
+        #main_campaign_content p:last-child {
+          margin-top: 3%;
+        }
+        #main_campaign_content div:last-child {
+          grid-row: 2/3;
+          grid-column: 1/3;
+        }
+        #main_compaign_video {
+          margin-top: 15vh;
+        }
+        #main_compaign_video iframe {
+          width: 100%;
+          height: 100%;
+        }
+
+
+        /* main_email_content */
+/* 
+        #main_email {
+          display: flex;
+        }
+
+        #main_email_content,
+        #main_email_formgroup {
+          width: 50%;
+          height: 90vh;
+          display: flex;
+          justify-content: center;
+          padding-top: 15vh;
+        }
+        #main_email_content {
+          background-color: #f8f9fa;
+        }
+        #main_email_txtgroup h1 {
+          font-size: 2.5rem;
+          font-weight: 900;
+        }
+        .main_email_txt h3 {
+          font-size: 1.3rem;
+          font-weight: 500;
+          margin-top: 10%;
+          margin-bottom: 1%;
+        }
+        .main_email_txt p {
+          font-size: 1rem;
+        }
+        .main_email_txt p:nth-child(2) {
+          font-size: 1.3rem;
+          font-weight: 200;
+        }
+
+        #main_email_form {
+          width: 75%;
+        }
+        #main_email_form input::placeholder{
+          color: #ccd2dd;
+        }
+        #main_email_form input {
+          border: none;
+          width: 100%;
+          height: 5vh;
+          background-color: #f7f7f7;
+          margin-bottom: 1vh;
+          color: #000;
+          padding: 2%;
+        }
+        #main_email_form input:nth-child(4) {
+          height: 40vh;
+          vertical-align: top;
+          
+        }
+        #main_email_form button {
+          width: 100%;
+          height: 5vh;
+          color: #fff;
+          background-color: #000;
+          font-size: 1.2rem;
+        }
+        #main_email_form button:hover {
+          background-color: #fff;
+          color: #000;
+          font-weight: bold;
+        } */
+
+        #main_email {
+          display: flex;
+        }
+
+        #main_email_content,
+        #main_email_formgroup {
+          width: 50%;
+          height: 90vh;
+          padding-top: 15vh;
+        }
+        #main_email_txtgroup h1 {
+          font-size: 2.5rem;
+        }
+        .main_email_txt h3 {
+          font-size: 1.3rem;
+        }
+        .main_email_txt p {
+          font-size: 1rem;
+        }
+        .main_email_txt p:nth-child(2) {
+          font-size: 1.3rem;
+        }
+        #main_email_form input {
+          border: none;
+          width: 100%;
+          height: 5vh;
+          background-color: #f7f7f7;
+          margin-bottom: 1vh;
+          color: #000;
+          padding: 2%;
+        }
+        #main_email_form input:nth-child(4) {
+          height: 40vh;
+          vertical-align: top;
+          
+        }
+        #main_email_form button {
+          height: 5vh;
+          font-size: 1.2rem;
+        }
+
+        #footer_content {
+          padding-top: 2vh;
+          padding-bottom: 2vh;
+          margin: 0;
+        }
+        #left_content {
+          width: 50%;
+          font-size: 1rem;
+        }
+        #right_content {
+          width: 50%;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header_content">
+        <div id="logo">LUSH</div>
+        <div id="gnb_content">
+          <ul id="gnb">
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">SPA</a></li>
+            <li><a href="#">EVENT</a></li>
+          </ul>
+        </div>
+        <div id="login"><a href="#">LOGIN</a></div>
+        <div id="list"><img src="./images/icon/icons8-list-96.png" /></div>
+      </div>
+    </header>
+    <main>
+      <div id="main_content">
+        <div id="main_banner">
+          <div id="main_banner_txt">
+            <h1>
+              건강한 원재료가 주는<br />
+              순한 촉촉함
+            </h1>
+            <div id="hashtag">
+              <p>#드림크림</p>
+              <p>#셀프프리저빙</p>
+            </div>
+            <button type="button">자세히보기</button>
+          </div>
+          <div id="side_btn">
+            <div id="left_btn"></div>
+            <div id="right_btn"></div>
+          </div>
+        </div>
+
+        <div id="main_weekly_best">
+          <div id="main_weekly_txt">
+            <h1>WEEKLY BEST PRODUCT</h1>
+          </div>
+          <div id="main_weekly_contnent">
+            <div class="main_weekly_product">
+              <figure>
+                <img
+                  src="./images/product_images/product_01.jpg"
+                  alt="제품이미지1"
+                />
+                <figcaption>더피 보디 스프레이</figcaption>
+              </figure>
+              <div class="main_weekly_filter">
+                <div class="more_btn">+</div>
+              </div>
+            </div>
+            <div class="main_weekly_product">
+              <figure>
+                <img
+                  src="./images/product_images/product_02.jpg"
+                  alt="제품이미지2"
+                />
+                <figcaption>마스크 오브 매그너민트 125g/315g</figcaption>
+              </figure>
+              <div class="main_weekly_filter">
+                <div class="more_btn">+</div>
+              </div>
+            </div>
+            <div class="main_weekly_product">
+              <figure>
+                <img
+                  src="./images/product_images/product_03.jpg"
+                  alt="제품이미지3"
+                />
+                <figcaption>대디-오 100g/250g/500g/1000g</figcaption>
+              </figure>
+              <div class="main_weekly_filter">
+                <div class="more_btn">+</div>
+              </div>
+            </div>
+          </div>
+          <div id="main_weekly_btn">
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
+        </div>
+
+        <div id="main_keyword_ranking">
+          <div id="main_keyword_txt">
+            <h1>KEYWORD RANKING</h1>
+          </div>
+          <div id="main_keyword_keyword">
+            <ul id="keyword_btn">
+              <li><a href="#">배쓰</a></li>
+              <li><a href="#">샤워</a></li>
+              <li><a href="#">바디</a></li>
+              <li><a href="#">페이스</a></li>
+              <li><a href="#">헤어</a></li>
+              <li><a href="#">메이크업</a></li>
+              <li><a href="#">퍼퓸</a></li>
+            </ul>
+          </div>
+          <div id="main_keyword_content">
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam1.png"
+                  alt="bathbam1"
+                />
+                <figcaption>
+                  <h2>SEX BOMB</h2>
+                  <p>#로맨틱 #섹시한밤 #일랑일랑꽃</p>
+                  <p>￦14,000</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam2.png"
+                  alt="bathbam2"
+                />
+                <figcaption>
+                  <h2>INTERGALACTIC</h2>
+                  <p>#배쓰밤 #환상적인우주느낌</p>
+                  <p>￦17,000</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam3.png"
+                  alt="bathbam3"
+                />
+                <figcaption>
+                  <h2>THE COMPOTER</h2>
+                  <p>#영화속주인공처럼 #거품입욕로망</p>
+                  <p>￦19,000</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam4.png"
+                  alt="bathbam4"
+                />
+                <figcaption>
+                  <h2>SLEEPY</h2>
+                  <p>#버블바 #라벤더와통카</p>
+                  <p>￦19,000</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam5.png"
+                  alt="bathbam5"
+                />
+                <figcaption>
+                  <h2>GODDESS</h2>
+                  <p>#욕조가득은빛물결 #관능적인향기</p>
+                  <p>￦20,000</p>
+                </figcaption>
+              </figure>
+            </div>
+            <div class="main_keyword_product">
+              <figure>
+                <img
+                  src="./images/product_images/bathbam6.jpg"
+                  alt="bathbam6"
+                />
+                <figcaption>
+                  <h2>ROSE JAM</h2>
+                  <p>#버블룬 #장미의부드러운거품</p>
+                  <p>￦17,000</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div id="main_keyword_btn">
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
+        </div>
+
+        <div id="main_new_product">
+          <div id="main_new_product_txt">
+            <h1>WHAT'S NEW PRODUCT?</h1>
+          </div>
+          <div id="main_new_product_content">
+            <div class="main_new_product_main" id="main_new_product1">
+              <img
+                src="./images/product_images/product_bg_01.jpg"
+                alt="product_01"
+              />
+              <div class="main_new_product_side">
+                <h1>MASK OF MAGNAMINTY</h1>
+                <img src="./images/icon/icons8-arrow-96.png">
+              </div>
+            </div>
+            <div class="main_new_product_main" id="main_new_product2">
+              <img
+                src="./images/product_images/product_bg_02.jpg"
+                alt="product_01"
+              />
+              <div class="main_new_product_side"><h1>ROSE JAM</h1><img src="./images/icon/icons8-arrow-96.png"></div>
+            </div>
+            <div class="main_new_product_main" id="main_new_product3">
+              <img
+                src="./images/product_images/product_bg_03.jpg"
+                alt="product_01"
+              />
+              <div class="main_new_product_side"><h1>DREAM CREAM</h1><img src="./images/icon/icons8-arrow-96.png"></div>
+            </div>
+            <div class="main_new_product_main" id="main_new_product4">
+              <img
+                src="./images/product_images/product_bg_04.jpg"
+                alt="product_01"
+              />
+              <div class="main_new_product_side"><h1>GIFT BOX</h1><img src="./images/icon/icons8-arrow-96.png"></div>
+            </div>
+            <div class="main_new_product_main" id="main_new_product5">
+              <img
+                src="./images/product_images/product_bg_05.jpg"
+                alt="product_01"
+              />
+              <div class="main_new_product_side"><h1>MARILYN</h1><img src="./images/icon/icons8-arrow-96.png"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="main_icon">
+          <div id="main_icon_content">
+            <ul id="main_icon_list">
+              <li><img src="./images/icon/icon1.png" alt="icon1" /></li>
+              <li><img src="./images/icon/icon2.png" alt="icon2" /></li>
+              <li><img src="./images/icon/icon3.png" alt="icon3" /></li>
+              <li><img src="./images/icon/icon4.png" alt="icon4" /></li>
+              <li><img src="./images/icon/icon5.png" alt="icon5" /></li>
+              <li><img src="./images/icon/icon6.png" alt="icon6" /></li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="main_environment">
+          <div id="main_environment_content">
+            <div><img src="./images/introduce_01.jpg" alt="introduce1" /></div>
+            <div class="main_environment_txt">
+              <div id="main_environment_txt1">
+                <p>LUSH</p>
+                <h1>AGAINST<br />ANIMAL TESTING</h1>
+                <p>
+                  러쉬는 어떤 이유에서도 제품을 동물실험 하지 않고, 동물실험을
+                  거친<br />
+                  원재료조차 사용하지 않습니다. 직접 구매팀을 운영하며, 엄격한
+                  기준을<br />
+                  바탕으로 윤리적인 공정 여부를 확인합니다.
+                </p>
+                <button type="button">MORE VIEW</button>
+              </div>
+            </div>
+            <div class="main_environment_txt">
+              <div id="main_environment_txt2">
+                <p>LUSH</p>
+                <h1>NAKED<br />PRODUCT</h1>
+                <p>
+                  러쉬는 배쓰 밤, 샤워 젤리, 고체 샴푸와 같은 기발하고 혁신적인
+                  제품을 <br />
+                  선보입니다. 특히 불필요한 포장을 없앤 고체 형태의 다양한
+                  ‘네이키드’<br />
+                  제품을 개발하며 화장품 산업에서 혁명을 일으켜 왔습니다.
+                </p>
+                <button type="button">MORE VIEW</button>
+              </div>
+            </div>
+            <div><img src="./images/introduce_02.jpg" alt="introduce2" /></div>
+          </div>
+        </div>
+
+        <div id="main_campaign">
+          <div id="main_campaign_content">
+            <h1>
+              서부 토바(West Toba), 야생 동물을 지켜낼 보호 둥지<br />
+              #WestTobaForest #수마트라 #오랑우탄 <br />
+              #멸종위기종 #러쉬캠페인
+            </h1>
+            <div>
+              <p>
+                SOS는 멸종 위기에 처한 수마트라 오랑우탄과 타파눌리 오랑우탄,
+                그들의 안식<br />
+                처인 숲, 그리고 북부 수마트라의 생태계를 보호하는 단체입니다.
+              </p>
+              <p>
+                SOS는 서부 토바 숲의 장기 보존과 재생을 위한 후원금을 모으고자
+                합니다.
+              </p>
+            </div>
+            <div id="main_compaign_video">
+              <iframe
+                src="https://www.youtube.com/embed/IpEcGVfOPDM?autoplay=1&mute=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                
+              ></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div id="main_email">
+          <div id="main_email_content">
+            <div id="main_email_txtgroup">
+              <h1>
+                매주 월요일 오후, 구독자님을 위한 제품과 <br />
+                브랜드 이야기를 전해드립니다.
+              </h1>
+              <div class="main_email_txt">
+                <h3>ADRESS</h3>
+                <p>
+                  서울특별시 강남구 학동로 336 (중앙빌딩) 1층 주식회사
+                  러쉬코리아
+                </p>
+              </div>
+              <div class="main_email_txt">
+                <h3>TEL</h3>
+                <p>1644-2357</p>
+                <p>상담전화 13:00~16:00(평일)</p>
+                <p>상담톡 10:00~16:00(평일)</p>
+              </div>
+              <div class="main_email_txt">
+                <h3>EMAIL</h3>
+                <p>webmaster@lush.co.kr</p>
+              </div>
+            </div>
+          </div>
+          <div id="main_email_formgroup">
+            <div id="main_email_form">
+              <input type="text" placeholder="이름"></input>
+              <input type="email" placeholder="이메일"></input>
+              <input type="tel" placeholder="휴대전화"></input>
+              <input type="text" placeholder="LUSH에 하고싶은 한마디를 남겨주세요!"></input>
+              <button type="button">개인정보 동의 후 전송</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footer_content">
+        <div id="left_content">
+          <p>COPYRIGHT © 2022 REDESIGNED BY HYUNBEE CHO ALL RIGHTS RESERVED.</p>
+          <p><a href="https://github.com/CHOHYUNBEE/EZEN_Portfolio" target="_blank">포트폴리오 더보기</a></p>
+        </div>
+        <div id="right_content">
+          <p>EMAIL : vvv3349@naver.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
