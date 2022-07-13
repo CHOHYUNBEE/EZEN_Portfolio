@@ -236,7 +236,7 @@ header {
   background-color: #000;
   border-radius: 50%;
   cursor: pointer;
-  transform: scale(90%);
+  transform: scale(0.9);
 }
 #main_weekly_btn button:last-child {
   width: 15px;
@@ -245,7 +245,7 @@ header {
   border: #000 solid 1px;
   border-radius: 50%;
   cursor: pointer;
-  transform: scale(90%);
+  transform: scale(0.9);
 }
 /* MAIN WEEKLY PRODUCT */
 
@@ -359,7 +359,7 @@ header {
   border-radius: 50%;
   margin: 1px;
   cursor: pointer;
-  transform: scale(80%);
+  transform: scale(0.8);
 }
 #main_keyword_btn button:first-child {
   background-color: #fff;
@@ -675,10 +675,10 @@ header {
 }
 @keyframes main_banner_ani {
   0% {
-    transform: scale(0%);
+    transform: scale(0);
   }
   100% {
-    transform: scale(100%);
+    transform: scale(1);
   }
 }
 /* ANIMATION EVENT*/
