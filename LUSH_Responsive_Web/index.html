@@ -11,16 +11,17 @@
     <link rel="stylesheet" href="./css/style_mobile.css" />
     <link rel="stylesheet" href="./css/style_tablet.css" />
     <link rel="stylesheet" href="./css/style_pc.css" />
+    <script src="./js/product.js"></script>
     <title>LUSH</title>
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <div class="header_content">
-        <div id="logo">LUSH</div>
+      <div class="header_content" id="header_content">
+        <div id="logo"><a href="">LUSH</a></div>
         <div id="gnb_content">
           <ul id="gnb">
-            <li><a href="#">PRODUCT</a></li>
+            <li><a href="./html/productPage.html">PRODUCT</a></li>
             <li><a href="#">COMPANY</a></li>
             <li><a href="#">SHOP</a></li>
             <li><a href="#">SPA</a></li>
@@ -43,14 +44,14 @@
               순한 촉촉함
             </h1>
             <div id="hashtag">
-              <p>#드림크림</p>
-              <p>#셀프프리저빙</p>
+              <p class="hashtag1">#드림크림</p>
+              <p class="hashtag2">#셀프프리저빙</p>
             </div>
             <button type="button">자세히보기</button>
           </div>
           <div id="side_btn">
-            <div id="left_btn"></div>
-            <div id="right_btn"></div>
+            <div id="left_btn" onclick="bannerchange('left')"></div>
+            <div id="right_btn" onclick="bannerchange('right')"></div>
           </div>
         </div>
         <!-- MAIN WEEKLY PRODUCT -->
@@ -398,5 +399,46 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      // banner 변경 이벤트
+      var num = 0;
+      function bannerchange(direction) {
+        const imgurl = [
+          "mainbackground2",
+          "mainbackground3",
+          "mainbackground1",
+        ];
+        const imgh1 = [
+          "건강한 원재료가 주는 <br> 순한 촉촉함",
+          "온몸의 감각을 깨워주는 <br> 카마스파",
+          "동물대체시험법 제정안 <br>  통과 서명 해주세요",
+        ];
+
+        const imgp1 = ["#드림크림", "#스파트리트먼트", "#동물보호"];
+        const imgp2 = ["#셀프프리저빙", "#아유르베다", "#제정안통과"];
+
+        if (direction == "right") {
+          num++;
+        } else if (direction == "left") {
+          num--;
+        }
+        if (num >= 0 && num <= 2) {
+        } else if (num < 0) {
+          num = 2;
+        } else {
+          num = 0;
+        }
+        document.getElementById(
+          "main_banner"
+        ).style.background = ` linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/${imgurl[num]}.jpg)  no-repeat 50% 50% / cover`;
+        document.getElementById(
+          "main_banner_txt"
+        ).innerHTML = `<h1>${imgh1[num]}</h1>`;
+        document.getElementsByClassName("hashtag").innerText = "222";
+        // document.getElementById("hashtag2").innerHTML = `<p>${imgp2[num]}</p>`;
+        // <p>${imgp2[num]}</p>
+      }
+    </script>
   </body>
 </html>

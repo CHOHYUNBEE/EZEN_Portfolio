@@ -1,7 +1,7 @@
 /* PC버전 */
 @media (min-width: 1280px) {
   /* HEADER */
-  #logo {
+  #logo a {
     font-size: 3rem;
   }
   #gnb li {

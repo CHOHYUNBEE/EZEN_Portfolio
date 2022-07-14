@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#footer_content {
+  width: 100%;
+  height: 15vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 25vh;
+  padding: 2vw;
+}
+#left_content {
+  width: 50%;
+  font-size: 0.7rem;
+}
+#left_content p:last-child {
+  margin-top: 1%;
+}
+#left_content a {
+  text-decoration: none;
+  color: #fff;
+}
+#right_content {
+  width: 50%;
+  font-size: 0.7rem;
+}

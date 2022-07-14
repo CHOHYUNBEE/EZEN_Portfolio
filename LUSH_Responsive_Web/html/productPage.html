@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
+    />
+    <title>product</title>
+    <link rel="stylesheet" href="../../common/minireset.css" />
+    <link rel="stylesheet" href="../css/headerfooter.css" />
+    <script src="../js/product.js"></script>
+    <style>
+      body {
+        font-family: "pretendard", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+      }
+      header {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+      .header_content {
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        color: #fff;
+        border-bottom: #ddd 0.5px solid;
+        box-shadow: #ddd 0 0 3px 1px;
+      }
+      #gnb_content {
+        width: 85%;
+        height: 100%;
+      }
+      #gnb {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #gnb li {
+        width: 15%;
+        height: 100%;
+      }
+      #gnb li a {
+        height: 100%;
+        line-height: 5;
+        display: block;
+        color: #fff;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      #gnb li a:hover {
+        background-color: #fff;
+        color: #000;
+      }
+      #login {
+        display: block;
+        width: 5%;
+        text-align: right;
+        height: 100%;
+        margin-right: 10px;
+      }
+      #login a {
+        display: block;
+        color: #fff;
+        height: 100%;
+        line-height: 5;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      #list {
+        display: none;
+        width: 20%;
+      }
+      #logo a {
+        font-size: 3rem;
+        font-weight: 900;
+        width: 10%;
+        margin-left: 30px;
+        color: #fff;
+      }
+      #main_banner {
+        height: 60vh;
+        background: url(../images/product_banner/bath_product.jpg) no-repeat 50%
+          50%;
+        background-size: cover;
+        transform: translateY(-100px);
+      }
+      #content_txt {
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #content_txt h1 {
+        font-weight: 900;
+        font-size: 3rem;
+        margin-bottom: 2vh;
+      }
+      #content_txt p {
+        font-size: 1.2rem;
+        color: #eee;
+      }
+      #main_keyword {
+        margin-bottom: 5vh;
+      }
+      #keyword_btn {
+        display: grid;
+        grid: 1fr / repeat(7, minmax(70px, 100px));
+        gap: 1%;
+        margin-left: 5px;
+        justify-content: center;
+        margin-top: 10vh;
+      }
+      #keyword_btn li {
+        width: 100%;
+      }
+      #keyword_btn li a {
+        text-align: center;
+        display: block;
+        color: rgb(61, 61, 61);
+        height: 40px;
+        border-radius: 25px;
+        font-size: 1.2rem;
+        line-height: 2;
+        font-weight: 500;
+      }
+      #keyword_btn li a:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      #keyword_btn li:first-child a {
+        border: 2px solid rgb(61, 61, 61);
+      }
+
+      #main_product_list_group {
+        display: flex;
+        place-content: center;
+      }
+      #main_product_list {
+        width: 80%;
+        display: grid;
+        grid: repeat(2, minmax(350px, 1fr)) / repeat(4, minmax(200px, 1fr));
+        gap: 1.5%;
+      }
+      .main_product {
+        width: 100%;
+        height: 100%;
+      }
+      #main_product_list figure {
+        width: 100%;
+        height: 50vh;
+        background-color: #f8f9fa;
+        margin-bottom: 5vh;
+        position: relative;
+      }
+      #main_product_list figure img {
+        width: 70%;
+        position: absolute;
+        top: 8%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #main_product_list figcaption {
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding-top: 2vh;
+      }
+      #main_product_list figcaption span {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+      #main_product_list figcaption p {
+        font-size: 0.9rem;
+        margin-top: 0.5vh;
+        font-weight: 300;
+        color: #000;
+      }
+      #main_product_list figcaption p:last-child {
+        font-size: 1.1rem;
+        margin-top: 1vh;
+        font-weight: 400;
+      }
+
+      #main_product_btn {
+        margin-top: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #main_product_btn img {
+        width: 15px;
+      }
+      #main_product_btn div:first-child img {
+        transform: rotate(180deg);
+      }
+      #main_product_btn_ul {
+        width: 10%;
+      }
+      #main_product_btn_list {
+        display: flex;
+        justify-content: center;
+      }
+      #main_product_btn_list li {
+        border-right: #000 solid 1px;
+        padding: 0 10%;
+      }
+      #main_product_btn_list li a {
+        display: block;
+        font-size: 1.3rem;
+        color: #000;
+      }
+      #main_product_btn_list li:last-child {
+        border: none;
+      }
+      #footer_content {
+        margin-top: 10vh;
+      }
+      #left_content,
+      #right_content {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header_content" id="header_content">
+        <div id="logo"><a href="../index.html">LUSH</a></div>
+        <div id="gnb_content">
+          <ul id="gnb">
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">SHOP</a></li>
+            <li><a href="#">SPA</a></li>
+            <li><a href="#">EVENT</a></li>
+          </ul>
+        </div>
+        <div id="login"><a href="#">LOGIN</a></div>
+        <div id="list">
+          <img src="./images/icon/icons8-list-96.png" alt="listicon" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="main_content">
+        <div id="main_banner">
+          <div class="header_content_txt">
+            <div id="content_txt">
+              <h1>배쓰</h1>
+              <p>당신에게 향기로운 입욕을 선물합니다.</p>
+            </div>
+          </div>
+        </div>
+        <div id="main_keyword">
+          <ul id="keyword_btn">
+            <li><a href="#">배쓰</a></li>
+            <li><a href="#">샤워</a></li>
+            <li><a href="#">바디</a></li>
+            <li><a href="#">페이스</a></li>
+            <li><a href="#">헤어</a></li>
+            <li><a href="#">메이크업</a></li>
+            <li><a href="#">퍼퓸</a></li>
+          </ul>
+        </div>
+        <div id="main_product_list_group">
+          <div id="main_product_list">
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath01-removebg-preview.png"
+              />
+              <figcaption>
+                <span>오랑우탄</span>
+                <p>#배쓰밤 #SOS #오랑우탄</p>
+                <p>￦ 16,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath02-removebg-preview.png"
+              />
+              <figcaption>
+                <span>럭스</span>
+                <p>#배쓰밤 #럭셔리</p>
+                <p>￦ 20,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath03-removebg-preview.png"
+              />
+              <figcaption>
+                <span>레이크스</span>
+                <p>#배쓰밤 #자연이떠오르는</p>
+                <p>￦ 17,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath04-removebg-preview.png"
+              />
+              <figcaption>
+                <span>블랙 로즈</span>
+                <p>#배쓰밤 #화려그자체</p>
+                <p>￦ 18,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath05-removebg-preview.png"
+              />
+              <figcaption>
+                <span>다이아몬드 더스트</span>
+                <p>#배쓰밤 #화려한소용돌이</p>
+                <p>￦ 21,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath06-removebg-preview.png"
+              />
+              <figcaption>
+                <span>유니콘 푸프</span>
+                <p>#배쓰밤 #신비로운유니콘</p>
+                <p>￦ 18,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath07-removebg-preview.png"
+              />
+              <figcaption>
+                <span>토비스 매직 카우</span>
+                <p>#배쓰밤 #고객의메시지</p>
+                <p>￦ 13,000</p>
+              </figcaption>
+            </figure>
+            <figure class="main_product">
+              <img
+                src="../images/product_images/bath/bath08-removebg-preview.png"
+              />
+              <figcaption>
+                <span>킵 잇 플러피 퍼품 버블 보틀</span>
+                <p>#버블보틀 #감미로운힐링아이템</p>
+                <p>￦ 28,000</p>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <div id="main_product_btn">
+          <div><img src="../images/icon/play.png" /></div>
+          <div id="main_product_btn_ul">
+            <ul id="main_product_btn_list">
+              <li><a href="#"> 1</a></li>
+              <li><a href="#"> 2</a></li>
+              <li><a href="#"> 3</a></li>
+            </ul>
+          </div>
+          <div><img src="../images/icon/play.png" /></div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer_content">
+        <div id="left_content">
+          <p>COPYRIGHT © 2022 REDESIGNED BY HYUNBEE CHO ALL RIGHTS RESERVED.</p>
+          <p>
+            <a
+              href="https://github.com/CHOHYUNBEE/EZEN_Portfolio"
+              target="_blank"
+              >포트폴리오 더보기</a
+            >
+          </p>
+        </div>
+        <div id="right_content">
+          <p>EMAIL : vvv3349@naver.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

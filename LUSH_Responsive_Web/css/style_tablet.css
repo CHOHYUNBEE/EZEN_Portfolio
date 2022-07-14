@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
+    background-color: transparent;
     color: #fff;
   }
   #gnb_content {
@@ -55,7 +55,7 @@
     display: none;
     width: 20%;
   }
-  #logo {
+  #logo a {
     font-size: 2.5rem;
   }
   /* HEADER */
