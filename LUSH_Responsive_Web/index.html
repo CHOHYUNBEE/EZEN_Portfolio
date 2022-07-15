@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/style_tablet.css" />
     <link rel="stylesheet" href="./css/style_pc.css" />
     <script src="./js/product.js"></script>
+
     <title>LUSH</title>
   </head>
   <body>
@@ -53,11 +54,17 @@
             <div id="left_btn" onclick="bannerchange('left')"></div>
             <div id="right_btn" onclick="bannerchange('right')"></div>
           </div>
+          <div id="bottom_btn">
+            <a href="#test"
+              ><img src="./images/icon/icons8-arrow-96 - down.png" alt="arrow"
+            /></a>
+          </div>
         </div>
+
         <!-- MAIN WEEKLY PRODUCT -->
         <div id="main_weekly_best">
           <div id="main_weekly_txt">
-            <h1>WEEKLY BEST PRODUCT</h1>
+            <h1 id="test">WEEKLY BEST PRODUCT</h1>
           </div>
           <div id="main_weekly_contnent">
             <div class="main_weekly_product">
@@ -109,13 +116,27 @@
           </div>
           <div id="main_keyword_keyword">
             <ul id="keyword_btn">
-              <li><a href="#">배쓰</a></li>
-              <li><a href="#">샤워</a></li>
-              <li><a href="#">바디</a></li>
-              <li><a href="#">페이스</a></li>
-              <li><a href="#">헤어</a></li>
-              <li><a href="#">메이크업</a></li>
-              <li><a href="#">퍼퓸</a></li>
+              <li>
+                <a id="btnbath" href="#" onclick="gobath()">배쓰</a>
+              </li>
+              <li>
+                <a id="btnshower" href="#" onclick="goshower()">샤워</a>
+              </li>
+              <li>
+                <a id="btnbody" href="#" onclick="gobody()">바디</a>
+              </li>
+              <li>
+                <a id="btnface" href="#" onclick="goface()">페이스</a>
+              </li>
+              <li>
+                <a id="btnhair" href="#" onclick="gohair()">헤어</a>
+              </li>
+              <li>
+                <a id="btnmakeup" href="#" onclick="gomakeup()">메이크업</a>
+              </li>
+              <li>
+                <a id="btnperfume" href="#" onclick="goperfume()">퍼퓸</a>
+              </li>
             </ul>
           </div>
           <div id="main_keyword_content">
@@ -399,7 +420,7 @@
         </div>
       </div>
     </footer>
-
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
       // banner 변경 이벤트
       var num = 0;
@@ -433,12 +454,57 @@
           "main_banner"
         ).style.background = ` linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/${imgurl[num]}.jpg)  no-repeat 50% 50% / cover`;
         document.getElementById(
-          "main_banner_txt"
-        ).innerHTML = `<h1>${imgh1[num]}</h1>`;
-        document.getElementsByClassName("hashtag").innerText = "222";
-        // document.getElementById("hashtag2").innerHTML = `<p>${imgp2[num]}</p>`;
-        // <p>${imgp2[num]}</p>
+          "main_banner"
+        ).innerHTML = `<div id="main_banner_txt" >
+                <h1>${imgh1[num]}</h1>
+                  <div id="hashtag">
+                    <p>${imgp1[num]}</p>
+                    <p>${imgp2[num]}</p>
+                  </div>
+                  <button type="button">자세히보기</button>
+                </div>
+                <div id="side_btn">
+                  <div id="left_btn" onclick="bannerchange('left')"></div>
+                  <div id="right_btn" onclick="bannerchange('right')"></div>
+                </div>
+                <div id="bottom_btn">
+                  <a href="#main_weekly_best"
+                    ><img src="./images/icon/icons8-arrow-96 - down.png" alt="arrow"
+                  /></a>
+                </div>`;
       }
+      // 데이터 보내기
+
+      function gobath() {
+        var name = document.getElementById("btnbath").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+      function goshower() {
+        var name = document.getElementById("btnshower").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+      function gobody() {
+        var name = document.getElementById("btnbody").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+      function goface() {
+        var name = document.getElementById("btnface").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+      function gohair() {
+        var name = document.getElementById("btnhair").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+      function gomakeup() {
+        var name = document.getElementById("btnmakeup").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+      function goperfume() {
+        var name = document.getElementById("btnperfume").innerHTML.toString();
+        location.href = "./html/productPage.html?" + name;
+      }
+
+      console.log(name);
     </script>
   </body>
 </html>
