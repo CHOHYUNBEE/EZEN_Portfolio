@@ -117,108 +117,52 @@
           <div id="main_keyword_keyword">
             <ul id="keyword_btn">
               <li>
-                <a id="btnbath" href="#" onclick="gobath()">배쓰</a>
+                <a id="btnbath" href="#main_keyword_ranking" onclick="gobath()"
+                  >배쓰</a
+                >
               </li>
               <li>
-                <a id="btnshower" href="#" onclick="goshower()">샤워</a>
+                <a
+                  id="btnshower"
+                  href="#main_keyword_ranking"
+                  onclick="goshower()"
+                  >샤워</a
+                >
               </li>
               <li>
-                <a id="btnbody" href="#" onclick="gobody()">바디</a>
+                <a id="btnbody" href="#main_keyword_ranking" onclick="gobody()"
+                  >바디</a
+                >
               </li>
               <li>
-                <a id="btnface" href="#" onclick="goface()">페이스</a>
+                <a id="btnface" href="#main_keyword_ranking" onclick="goface()"
+                  >페이스</a
+                >
               </li>
               <li>
-                <a id="btnhair" href="#" onclick="gohair()">헤어</a>
+                <a id="btnhair" href="#main_keyword_ranking" onclick="gohair()"
+                  >헤어</a
+                >
               </li>
               <li>
-                <a id="btnmakeup" href="#" onclick="gomakeup()">메이크업</a>
+                <a
+                  id="btnmakeup"
+                  href="#main_keyword_ranking"
+                  onclick="gomakeup()"
+                  >메이크업</a
+                >
               </li>
               <li>
-                <a id="btnperfume" href="#" onclick="goperfume()">퍼퓸</a>
+                <a
+                  id="btnperfume"
+                  href="#main_keyword_ranking"
+                  onclick="goperfume()"
+                  >퍼퓸</a
+                >
               </li>
             </ul>
           </div>
-          <div id="main_keyword_content">
-            <div class="main_keyword_product">
-              <figure>
-                <img
-                  src="./images/product_images/bathbam1.png"
-                  alt="bathbam1"
-                />
-                <figcaption>
-                  <h2>SEX BOMB</h2>
-                  <p>#로맨틱 #섹시한밤 #일랑일랑꽃</p>
-                  <p>￦14,000</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="main_keyword_product">
-              <figure>
-                <img
-                  src="./images/product_images/bathbam2.png"
-                  alt="bathbam2"
-                />
-                <figcaption>
-                  <h2>INTERGALACTIC</h2>
-                  <p>#배쓰밤 #환상적인우주느낌</p>
-                  <p>￦17,000</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="main_keyword_product">
-              <figure>
-                <img
-                  src="./images/product_images/bathbam3.png"
-                  alt="bathbam3"
-                />
-                <figcaption>
-                  <h2>THE COMPOTER</h2>
-                  <p>#영화속주인공처럼 #거품입욕로망</p>
-                  <p>￦19,000</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="main_keyword_product">
-              <figure>
-                <img
-                  src="./images/product_images/bathbam4.png"
-                  alt="bathbam4"
-                />
-                <figcaption>
-                  <h2>SLEEPY</h2>
-                  <p>#버블바 #라벤더와통카</p>
-                  <p>￦19,000</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="main_keyword_product">
-              <figure>
-                <img
-                  src="./images/product_images/bathbam5.png"
-                  alt="bathbam5"
-                />
-                <figcaption>
-                  <h2>GODDESS</h2>
-                  <p>#욕조가득은빛물결 #관능적인향기</p>
-                  <p>￦20,000</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="main_keyword_product">
-              <figure>
-                <img
-                  src="./images/product_images/bathbam6.jpg"
-                  alt="bathbam6"
-                />
-                <figcaption>
-                  <h2>ROSE JAM</h2>
-                  <p>#버블룬 #장미의부드러운거품</p>
-                  <p>￦17,000</p>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+          <div id="main_keyword_content"></div>
           <div id="main_keyword_btn">
             <button type="button"></button>
             <button type="button"></button>
@@ -420,8 +364,11 @@
         </div>
       </div>
     </footer>
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/product_list.js"></script>
     <script>
+      window.onload = function () {
+        gobath();
+      };
       // banner 변경 이벤트
       var num = 0;
       function bannerchange(direction) {
@@ -477,34 +424,85 @@
 
       function gobath() {
         var name = document.getElementById("btnbath").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnbath").style.background = "#fff";
+        document.getElementById("btnbath").style.color = "#000";
       }
       function goshower() {
         var name = document.getElementById("btnshower").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnshower").style.background = "#fff";
+        document.getElementById("btnshower").style.color = "#000";
       }
       function gobody() {
         var name = document.getElementById("btnbody").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        // location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnbody").style.background = "#fff";
+        document.getElementById("btnbody").style.color = "#000";
       }
       function goface() {
         var name = document.getElementById("btnface").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnface").style.background = "#fff";
+        document.getElementById("btnface").style.color = "#000";
       }
       function gohair() {
         var name = document.getElementById("btnhair").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnhair").style.background = "#fff";
+        document.getElementById("btnhair").style.color = "#000";
       }
       function gomakeup() {
         var name = document.getElementById("btnmakeup").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnmakeup").style.background = "#fff";
+        document.getElementById("btnmakeup").style.color = "#000";
       }
       function goperfume() {
         var name = document.getElementById("btnperfume").innerHTML.toString();
-        location.href = "./html/productPage.html?" + name;
+        change_product_list(name);
+        document.getElementById("btnperfume").style.background = "#fff";
+        document.getElementById("btnperfume").style.color = "#000";
       }
 
-      console.log(name);
+      function change_product_list(product) {
+        const btn_list = [
+          "btnbath",
+          "btnshower",
+          "btnbody",
+          "btnface",
+          "btnhair",
+          "btnmakeup",
+          "btnperfume",
+        ];
+
+        for (let i = 0; i < 7; i++) {
+          document.getElementById(`${btn_list[i]}`).style.backgroundColor =
+            "#000";
+          document.getElementById(`${btn_list[i]}`).style.color = "#fff";
+        }
+        const find_product_list = product_list.find(function (data) {
+          return data.id == `${product}`;
+        });
+        var txt = "";
+        for (let i = 0; i < 6; i++) {
+          txt += `
+          <div class="main_keyword_product">
+                <figure>
+                <img
+                  src="${find_product_list.info[i].img}"
+                  alt="${find_product_list.info[i].product_name}"
+                />
+                <figcaption>
+                  <h2>${find_product_list.info[i].product_name}</h2>
+                  <p>${find_product_list.info[i].explanation}</p>
+                  <p>${find_product_list.info[i].price}</p>
+                </figcaption>
+              </figure> </div>`;
+        }
+        document.getElementById("main_keyword_content").innerHTML = txt;
+      }
     </script>
   </body>
 </html>
