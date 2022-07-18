@@ -20,12 +20,29 @@
   .main_weekly_filter {
     height: 93%;
   }
+  #main_weekly_txt h1 {
+    font-size: 3rem;
+  }
   /* MAIN WEEKLY PRODUCT */
 
   /* MAIN KEYWORD */
+  #main_keyword_txt h1 {
+    font-size: 3rem;
+  }
+  #keyword_btn {
+    margin-top: 10vh;
+  }
+  #keyword_btn li a {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+
   /* MAIN KEYWORD */
 
   /* MAIN NEW PRODUCT */
+  #main_new_product_txt h1 {
+    font-size: 3rem;
+  }
   .main_new_product_side h1 {
     font-size: 3rem;
   }

@@ -30,9 +30,7 @@
           </ul>
         </div>
         <div id="login"><a href="#">LOGIN</a></div>
-        <div id="list">
-          <img src="./images/icon/icons8-list-96.png" alt="listicon" />
-        </div>
+        <div id="list" onclick="list_btn()"></div>
       </div>
     </header>
     <main>
@@ -243,7 +241,9 @@
         <!-- MAIN ENVIRONMENT -->
         <div id="main_environment">
           <div id="main_environment_content">
-            <div><img src="./images/introduce_01.jpg" alt="introduce1" /></div>
+            <div class="main_environment_img" id="main_environment_img1">
+              <!-- <img src="./images/introduce_01.jpg" alt="introduce1" /> -->
+            </div>
             <div class="main_environment_txt">
               <div id="main_environment_txt1">
                 <p>LUSH</p>
@@ -272,7 +272,9 @@
                 <button type="button">MORE VIEW</button>
               </div>
             </div>
-            <div><img src="./images/introduce_02.jpg" alt="introduce2" /></div>
+            <div class="main_environment_img" id="main_environment_img2">
+              <!-- <img src="./images/introduce_02.jpg" alt="introduce2" /> -->
+            </div>
           </div>
         </div>
         <!-- MAIN CAMPAIGN -->
@@ -502,6 +504,21 @@
               </figure> </div>`;
         }
         document.getElementById("main_keyword_content").innerHTML = txt;
+      }
+
+      // ./html/productPage.html
+      function list_btn() {
+        document.getElementById("list").innerHTML = `<ul id=''>
+          <li><img src="./images/icon/icons8-menu-90.png" alt="listicon" />
+            <ul>
+              <li><a href="#">PRODUCT</a></li>
+              <li><a href="#">COMPANY</a></li>
+              <li><a href="#">SHOP</a></li>
+              <li><a href="#">SPA</a></li>
+              <li><a href="#">EVENT</a></li>
+            </ul>
+          </li>
+         </ul>`;
       }
     </script>
   </body>

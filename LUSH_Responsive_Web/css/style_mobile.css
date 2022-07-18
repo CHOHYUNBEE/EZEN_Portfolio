@@ -40,20 +40,34 @@ header {
 #login {
   display: none;
 }
-#list {
+#list #listbox {
   display: block;
   text-align: right;
-  margin-right: 10px;
+  margin-right: 15px;
+
+  position: relative;
 }
-#list img {
-  width: 60%;
+#listbox1 {
+  position: absolute;
+  top: 0px;
+  left: -100px;
+  background-color: #fff;
+}
+#listbox1 li {
+  width: 100px;
+}
+#listbox1 li a {
+  color: #000;
+}
+#listbox img {
+  width: 50%;
 }
 /* HEADER */
 
 /* MAIN BANNER */
 #main_banner {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(../images/mainbackground2.jpg) no-repeat 50% 50%;
   background-size: cover;
@@ -69,7 +83,7 @@ header {
   text-align: center;
 }
 #main_banner_txt h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   margin-bottom: 1vh;
 }
@@ -78,18 +92,18 @@ header {
   justify-content: center;
 }
 #main_banner_txt #hashtag p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 200;
   margin: 5vh;
 }
 #main_banner_txt button {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 5vh;
   margin-bottom: 5vh;
   border: #fff 2px solid;
   background-color: transparent;
   color: #fff;
-  padding: 1vh 3vw;
+  padding: 1vh 5vw;
   font-weight: 600;
   cursor: pointer;
 }
@@ -170,16 +184,14 @@ header {
 #bottom_btn {
   position: absolute;
   bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 45%;
   cursor: pointer;
-  animation: arrow_bottom_ani 1s ease-in-out forwards infinite;
+  animation: arrow_bottom_ani 0.8s ease-in-out forwards infinite;
 }
 #bottom_btn img {
   width: 50%;
 }
 #bottom_btn:hover {
-  transform: translateX(-50%);
   animation: none;
 }
 #bottom_btn img a {
@@ -189,7 +201,7 @@ header {
 
 /* MAIN WEEKLY PRODUCT */
 #main_weekly_best {
-  margin-top: 12vh;
+  /* margin-top: 12vh; */
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
@@ -201,7 +213,7 @@ header {
 }
 #main_weekly_txt h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin-bottom: 5vh;
@@ -234,6 +246,7 @@ header {
   top: 0;
   left: 0;
   cursor: pointer;
+  display: none;
 }
 .main_weekly_filter:hover {
   animation: color_ani 0.3s ease-in-out forwards 1;
@@ -257,12 +270,13 @@ header {
   margin-bottom: 7vh;
 }
 #main_weekly_btn button:first-child {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   background-color: #000;
+  border: #000 solid 1px;
   border-radius: 50%;
   cursor: pointer;
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 #main_weekly_btn button:last-child {
   width: 15px;
@@ -271,7 +285,7 @@ header {
   border: #000 solid 1px;
   border-radius: 50%;
   cursor: pointer;
-  transform: scale(0.9);
+  transform: scale(0.8);
 }
 /* MAIN WEEKLY PRODUCT */
 
@@ -297,11 +311,12 @@ header {
 }
 #main_keyword_txt h1 {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #fff;
   line-height: 5;
   font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-top: 2vh;
 }
 #main_keyword_keyword {
   text-align: center;
@@ -311,7 +326,14 @@ header {
   grid: 1fr / repeat(7, minmax(70px, 200px));
   gap: 2%;
   margin-left: 5px;
+  overflow-x: scroll;
+  scrollbar-width: 5px;
+  scrollbar-color: red;
 }
+#keyword_btn::-webkit-scrollbar {
+  display: none;
+}
+
 #keyword_btn li {
   width: 100%;
 }
@@ -396,9 +418,9 @@ header {
 /* MAIN NEW PRODUCT */
 #main_new_product_txt h1 {
   text-align: center;
-  font-size: 2rem;
-  margin-top: 12vh;
-  margin-bottom: 9vh;
+  font-size: 1.7rem;
+  margin-top: 8vh;
+  margin-bottom: 7vh;
   font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -424,7 +446,7 @@ header {
 .main_new_product_side h1 {
   font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   position: absolute;
   bottom: 15%;
   left: 5%;
@@ -473,6 +495,9 @@ header {
 #main_icon_list li img {
   width: 100%;
 }
+#main_icon_list li:nth-child(3) {
+  border: none;
+}
 #main_icon_list li:last-child {
   border: none;
 }
@@ -485,7 +510,7 @@ header {
 #main_environment_content {
   width: 100%;
   display: grid;
-  grid: repeat(4, minmax(300px, 1fr)) / 1fr;
+  grid: repeat(4, minmax(200px, 1fr)) / 1fr;
 }
 #main_environment_content img {
   width: 100%;
@@ -495,7 +520,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 10%;
 }
 .main_environment_txt p {
   width: 100%;
@@ -503,6 +528,12 @@ header {
   font-size: 1rem;
   line-height: 1.6;
   font-weight: 300;
+}
+#main_environment_img1 {
+  background: url(../images/introduce_01.jpg) 50% 50% / cover;
+}
+#main_environment_img2 {
+  background: url(../images/introduce_02.jpg) 50% 50% / cover;
 }
 .main_environment_txt p:first-child {
   font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -518,11 +549,11 @@ header {
 .main_environment_txt button {
   background-color: #fff;
   border: 2px #000 solid;
-  padding: 0.5vw 2vw;
+  padding: 1vw 3vw;
   margin-top: 3vh;
   font-family: "lush", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 #main_environment_content div:nth-child(4) {
@@ -714,13 +745,10 @@ header {
 }
 @keyframes arrow_bottom_ani {
   0% {
-    transform: scale(1) translateX(-50%);
-  }
-  50% {
-    transform: scale(0.8) translateX(-50%);
+    transform: translateY(0%);
   }
   100% {
-    transform: scale(1) translateX(-50%);
+    transform: translateY(50%);
   }
 }
 /* ANIMATION EVENT*/

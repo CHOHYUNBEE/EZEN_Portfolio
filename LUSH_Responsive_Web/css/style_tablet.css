@@ -61,6 +61,9 @@
   /* HEADER */
 
   /* MAIN BANNER */
+  #main_banner {
+    height: 90vh;
+  }
   #main_banner_txt h1 {
     font-size: 5rem;
     animation: main_banner_ani 0.8s ease-out forwards 1;
@@ -81,6 +84,9 @@
   /* MAIN BANNER */
 
   /* MAIN WEEKLY PRODUCT */
+  #main_weekly_best {
+    margin-top: 4vh;
+  }
   #main_weekly_txt h1 {
     font-size: 2.5rem;
   }
@@ -90,6 +96,7 @@
   }
   .main_weekly_filter {
     height: 90%;
+    display: block;
   }
   .main_weekly_product figcaption {
     font-size: 1.2rem;
@@ -113,10 +120,13 @@
   }
   #main_keyword_txt h1 {
     font-size: 2.5rem;
+    margin-top: 5vh;
   }
   #keyword_btn {
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    margin-top: 7vh;
   }
   #keyword_btn li {
     width: 7%;
@@ -156,6 +166,8 @@
   /* MAIN NEW PRODUCT */
   #main_new_product_txt h1 {
     font-size: 2.5rem;
+    margin-top: 13vh;
+    margin-bottom: 12vh;
   }
   #main_new_product_content {
     display: grid;
@@ -193,6 +205,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  #main_icon_list li:nth-child(3) {
+    border-right: #eee 1px solid;
   }
   /* MAIN ICON */
 
