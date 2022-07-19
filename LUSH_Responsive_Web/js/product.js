@@ -13,12 +13,8 @@ function hasScrolled() {
   if (nowScrollTop == 0) {
     document.getElementById("header_content").style.backgroundColor =
       "transparent";
-    // document.getElementById("header_content").style.borderBottom =
-    //   "1px solid #fff";
-    // document.getElementById("header_content").style.boxShadow =
-    //   "#ddd 0 0 3px 1px";
   } else {
-    document.getElementById("header_content").style.backgroundColor = "black";
+    document.getElementById("header_content").style.backgroundColor = "#000";
     document.getElementById("header_content").style.borderBottom = "none";
     document.getElementById("header_content").style.boxShadow = "none";
   }
