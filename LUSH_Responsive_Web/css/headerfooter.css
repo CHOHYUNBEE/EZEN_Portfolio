@@ -1,5 +1,66 @@
 @charset "UTF-8";
 
+/* HEADER */
+.header_content {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+}
+#gnb_content {
+  width: 85%;
+  height: 100%;
+}
+#gnb {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gnb li {
+  width: 15%;
+  height: 100%;
+}
+#gnb li a {
+  height: 100%;
+  line-height: 5;
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#gnb li a:hover {
+  background-color: #fff;
+  color: #000;
+}
+#login {
+  display: block;
+  width: 5%;
+  text-align: right;
+  height: 100%;
+  margin-right: 10px;
+}
+#login a {
+  display: block;
+  color: #fff;
+  height: 100%;
+  line-height: 5;
+  text-align: center;
+  font-size: 1.2rem;
+}
+#list {
+  display: none;
+  width: 20%;
+}
+#logo a {
+  font-size: 2.5rem;
+}
+
+/* FOOTER */
 #footer_content {
   width: 100%;
   height: 15vh;
@@ -26,3 +87,5 @@
   width: 50%;
   font-size: 0.7rem;
 }
+
+
