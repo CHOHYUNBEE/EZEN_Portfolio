@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* PC버전 */
 @media (min-width: 1280px) {
   /* HEADER */
@@ -6,6 +7,13 @@
   }
   #gnb li {
     width: 10%;
+  }
+
+  #main_banner_txt h1 {
+    font-size: 4rem;
+  }
+  #main_banner_txt #hashtag p {
+    font-size: 1.8rem;
   }
   /* HEADER */
 
@@ -35,6 +43,9 @@
   #keyword_btn li a {
     font-size: 1.5rem;
     line-height: 2;
+  }
+  #main_keyword_content {
+    animation: main_keyword_product_ani 10s ease-in-out forwards infinite;
   }
 
   /* MAIN KEYWORD */

@@ -1,0 +1,256 @@
+@charset "UTF-8";
+body {
+  font-family: "pretendard", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.header_content {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  position: relative;
+}
+#logo a {
+  font-size: 2rem;
+  font-weight: 900;
+  width: 10%;
+  margin-left: 30px;
+  color: #fff;
+}
+#gnb,
+#login {
+  display: none;
+}
+#list {
+  display: block;
+  margin-right: 15px;
+  text-align: right;
+}
+#listbox {
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #000;
+  animation: list_ani 1s ease-in-out forwards 1;
+  z-index: -1;
+}
+#listbox li {
+  width: 100%;
+  height: 60px;
+  padding-left: 5vw;
+  text-align: left;
+  border-bottom: #ddd solid 1px;
+}
+#listbox li a {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 3.5;
+}
+#list img {
+  width: 80%;
+}
+
+/* banner */
+#main_banner {
+  height: 60vh;
+  background: url(../images/product_banner/bath_product.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  transform: translateY(-100px);
+}
+#content_txt {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#content_txt h1 {
+  font-weight: 900;
+  font-size: 2.2rem;
+  margin-bottom: 2vh;
+}
+#content_txt p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #eee;
+}
+
+/* keyword */
+#main_keyword {
+  transform: translateY(-90%);
+  overflow: hidden;
+}
+#keyword_btn {
+  display: grid;
+  grid: 1fr / repeat(7, minmax(70px, 100px));
+  gap: 1%;
+  margin-left: 3vw;
+  margin-top: 5vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+#keyword_btn::-webkit-scrollbar {
+  display: none;
+}
+#keyword_btn li {
+  width: 100%;
+}
+#keyword_btn li a {
+  text-align: center;
+  display: block;
+  color: rgb(61, 61, 61);
+  height: 40px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  line-height: 2;
+  font-weight: 500;
+}
+#keyword_btn li a:hover {
+  background-color: #000;
+  color: #fff;
+}
+#keyword_btn li:first-child a {
+  border: 2px solid rgb(61, 61, 61);
+}
+
+/* product */
+#main_product_list_group {
+  display: flex;
+  justify-content: center;
+}
+#main_product_list {
+  width: 90%;
+  display: grid;
+  grid: repeat(4, minmax(300px, 1fr)) / repeat(2, minmax(180px, 1fr));
+  gap: 3%;
+  justify-content: center;
+}
+.main_product {
+  width: 100%;
+  height: 100%;
+}
+#main_product_list figure {
+  width: 100%;
+  height: 40vh;
+  background-color: #f8f9fa;
+  position: relative;
+}
+#main_product_list figure img {
+  width: 80%;
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main_product_list figcaption {
+  width: 100%;
+  background-color: #fff;
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-top: 2vh;
+  padding-left: 3vw;
+}
+#main_product_list figcaption span {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+#main_product_list figcaption p {
+  font-size: 0.9rem;
+  margin-top: 0.5vh;
+  font-weight: 300;
+  color: #000;
+}
+#main_product_list figcaption p:last-child {
+  font-size: 1rem;
+  margin-top: 1vh;
+  font-weight: 400;
+}
+
+/* product more btn */
+#main_product_btn {
+  margin-top: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_product_btn div {
+  margin: 5vw;
+}
+#main_product_btn img {
+  width: 15px;
+}
+#main_product_btn div:first-child img {
+  transform: rotate(180deg);
+}
+#main_product_btn_ul {
+  width: 10%;
+}
+#main_product_btn_list {
+  display: flex;
+  justify-content: center;
+}
+#main_product_btn_list li {
+  border-right: #000 solid 1px;
+  padding: 0 20%;
+}
+#main_product_btn_list li a {
+  display: block;
+  font-size: 1.3rem;
+  color: #000;
+}
+#main_product_btn_list li:last-child {
+  border: none;
+}
+
+/* footer */
+#footer_content {
+  margin-top: 3vh;
+}
+#left_content,
+#right_content {
+  font-size: 0.5rem;
+}
+#left_content p:last-child {
+  margin-top: 3vh;
+}
+
+/* animation */
+@keyframes list_ani {
+  0% {
+    position: absolute;
+    top: -400%;
+    left: 0;
+  }
+  100% {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+@keyframes list_close_ani {
+  0% {
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+  100% {
+    position: absolute;
+    top: -400%;
+    left: 0;
+  }
+}
