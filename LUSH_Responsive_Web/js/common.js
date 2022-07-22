@@ -1,5 +1,6 @@
 // list 이미지 클릭 시 이벤트
 var didScroll;
+let use_list = false;
 //스크롤 이벤트
 window.onscroll = function (e) {
   didScroll = true;
@@ -11,8 +12,12 @@ window.onscroll = function (e) {
 function hasScrolled() {
   var nowScrollTop = window.scrollY;
   if (nowScrollTop == 0) {
-    document.getElementById("header_content").style.backgroundColor =
-      "transparent";
+    if (use_list == true) {
+      document.getElementById("header_content").style.backgroundColor = "#000";
+    } else {
+      document.getElementById("header_content").style.backgroundColor =
+        "transparent";
+    }
   } else {
     document.getElementById("header_content").style.backgroundColor = "#000";
     document.getElementById("header_content").style.borderBottom = "none";
@@ -24,7 +29,7 @@ let count = 1;
 function list_btn() {
   if (count % 2 == 1) {
     document.getElementById("header_content").innerHTML = `
-      <div id="logo"><a href="">LUSH</a></div>
+      <div id="logo"><a href="./index.html">LUSH</a></div>
         <div id="gnb_content">
           <ul id="gnb">
             <li><a href="./html/productPage.html">PRODUCT</a></li>
@@ -48,6 +53,7 @@ function list_btn() {
     document.getElementById("header_content").style.backgroundColor = "#000";
     document.getElementById("list").innerHTML =
       '<img src="./images/icon/icons8-cancel-64.png" alt="listicon" />';
+    use_list = true;
     count++;
   } else {
     document.getElementById("listbox").style.animation =
@@ -55,5 +61,6 @@ function list_btn() {
     document.getElementById("list").innerHTML =
       '<img src="./images/icon/icons8-menu-90.png" alt="listicon" />';
     count--;
+    use_list = false;
   }
 }

@@ -1,4 +1,6 @@
 window.onload = function () {
+  hasScrolled();
+  console.log(use_list);
   let count = 1;
   temp = location.href.split("?");
   name = decodeURI(temp[1]);
@@ -17,7 +19,7 @@ function load_product_event(product) {
       id: "bath",
       url: "../images/product_banner/bath_product.jpg",
       name: "배쓰",
-      explanation: "당신에게 향기로운 입욕을 선물합니다.",
+      explanation: "당신에게 향기로운 입욕을 선물합니다",
     },
     {
       id: "shower",
@@ -166,11 +168,13 @@ function list_btn() {
     document.getElementById("list").innerHTML =
       '<img src="../images/icon/icons8-cancel-64.png" alt="listicon" />';
     count++;
+    use_list = true;
   } else {
     document.getElementById("listbox").style.animation =
       "list_close_ani 1s ease-in-out forwards 1";
     document.getElementById("list").innerHTML =
       '<img src="../images/icon/icons8-menu-90.png" alt="listicon" />';
     count--;
+    use_list = false;
   }
 }

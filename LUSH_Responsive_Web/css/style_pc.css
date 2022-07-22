@@ -2,12 +2,6 @@
 /* PC버전 */
 @media (min-width: 1280px) {
   /* HEADER */
-  #logo a {
-    font-size: 3rem;
-  }
-  #gnb li {
-    width: 10%;
-  }
 
   #main_banner_txt h1 {
     font-size: 4rem;
@@ -20,6 +14,12 @@
   /* MAIN BANNER */
   #main_banner {
     height: 90vh;
+  }
+  #bottom_btn img {
+    width: 3%;
+  }
+  #list {
+    display: none;
   }
 
   /* MAIN BANNER */

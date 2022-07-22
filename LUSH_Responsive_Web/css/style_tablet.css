@@ -82,6 +82,9 @@
     transform: scale(0);
     animation: main_banner_ani 0.8s 1s ease-out forwards 1;
   }
+  #bottom_btn img {
+    width: 6%;
+  }
   /* MAIN BANNER */
 
   /* MAIN WEEKLY PRODUCT */

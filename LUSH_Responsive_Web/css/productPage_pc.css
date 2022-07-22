@@ -27,6 +27,7 @@
   }
   #main_product_list figcaption {
     height: 10vh;
+    padding-left: 1vw;
   }
   #main_product_list figcaption span {
     font-size: 1.5rem;
