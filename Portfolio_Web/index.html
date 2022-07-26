@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
+    />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="../common/minireset.css" />
+    <style>
+      /* common */
+      body {
+        /* Wargate */
+        font-family: Noto Sans KR, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+      }
+      .noto_font {
+      }
+      .wargate_font {
+        font-family: Wargate, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+          "Helvetica Neue", sans-serif;
+        font-weight: bold;
+      }
+
+      /* header */
+      header {
+        background-color: #000;
+        color: #fff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+      }
+      #logo {
+        width: 20%;
+        font-size: 2.5rem;
+        padding-left: 1vw;
+        text-transform: uppercase;
+      }
+      #gnb {
+        display: flex;
+        width: 60%;
+      }
+      #gnb li {
+        width: 12%;
+      }
+      #gnb li a {
+        display: block;
+        text-decoration: none;
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+      }
+      #register {
+        width: 20%;
+        padding-right: 1vw;
+        text-align: right;
+      }
+      #register img {
+        width: 30px;
+        margin-left: 1vw;
+      }
+
+      /* main */
+      /* banner */
+      #main_banner {
+        display: flex;
+        height: 40vh;
+      }
+      #main_logo {
+        width: 50%;
+        font-size: 3.5rem;
+        padding-left: 1vw;
+        background-color: #0045ff;
+        color: #fff;
+        padding: 1vw;
+      }
+      #main_content_list {
+        width: 50%;
+        background-color: #1cff59;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        justify-content: space-between;
+        padding: 1vw;
+      }
+      #content_list_header,
+      #content_list_footer {
+        width: 100%;
+      }
+      #content_list_footer {
+        display: flex;
+        justify-content: space-between;
+      }
+      #main_content_list h3 {
+        font-size: 1.8rem;
+      }
+      #main_content_list h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      #content_list_footer img {
+        width: 100px;
+        height: 100px;
+      }
+      #main_content_list {
+      }
+      /* #ff4eff #dfdfdf */
+    </style>
+  </head>
+  <body>
+    <header>
+      <div id="logo" class="wargate_font">Portfolio</div>
+      <ul id="gnb">
+        <li><a href="#">About Me</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Skill</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div id="register">
+        <img src="./images/icons8-github-90.png" alt="github" />
+        <img src="./images/icons8-instagram-100.png" alt="instagram" />
+        <img src="./images/icons8-mail-100.png" alt="mail" />
+      </div>
+    </header>
+    <main>
+      <!-- banner -->
+      <div id="main_banner">
+        <div id="main_logo" class="wargate_font">
+          I AM A<br />
+          FRONT-END<br />
+          DEVELOPER<br />
+          HYUNBEE CHO
+        </div>
+        <div id="main_content_list">
+          <div id="content_list_header">
+            <h3>INTRODUCE</h3>
+            <h2>자기소개</h2>
+          </div>
+          <div id="content_list_footer">
+            <h2>
+              새로운 것을 좋아하며 꾸준한 노력과 <br />열정을 가진 프론트엔드
+              개발자
+            </h2>
+            <img src="./images/arrow.png" alt="arrow_black" />
+          </div>
+        </div>
+      </div>
+
+      <!-- flow text -->
+      <div></div>
+
+      <!-- work List -->
+      <div></div>
+
+      <!-- send Email -->
+      <div></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
