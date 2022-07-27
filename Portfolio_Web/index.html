@@ -17,13 +17,14 @@
           "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
           "Helvetica Neue", sans-serif;
       }
+
       .noto_font {
       }
       .wargate_font {
-        font-family: Wargate, system-ui, -apple-system, BlinkMacSystemFont,
+        font-family: wargate, system-ui, -apple-system, BlinkMacSystemFont,
           "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
           "Helvetica Neue", sans-serif;
-        font-weight: bold;
+        /* font-weight: bold; */
       }
 
       /* header */
@@ -69,14 +70,15 @@
       /* banner */
       #main_banner {
         display: flex;
-        height: 40vh;
+        height: 50vh;
       }
       #main_logo {
         width: 50%;
-        font-size: 3.5rem;
+        font-size: 5rem;
         padding-left: 1vw;
         background-color: #0045ff;
         color: #fff;
+        line-height: 1;
         padding: 1vw;
       }
       #main_content_list {
@@ -87,6 +89,7 @@
         flex-flow: column;
         justify-content: space-between;
         padding: 1vw;
+        position: relative;
       }
       #content_list_header,
       #content_list_footer {
@@ -95,21 +98,197 @@
       #content_list_footer {
         display: flex;
         justify-content: space-between;
+        align-items: flex-end;
       }
       #main_content_list h3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        font-weight: 500;
       }
       #main_content_list h2 {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         font-weight: bold;
       }
       #content_list_footer img {
         width: 100px;
         height: 100px;
+        cursor: pointer;
       }
-      #main_content_list {
+      #arrow_black {
+        display: block;
       }
-      /* #ff4eff #dfdfdf */
+      #arrow_white {
+        display: none;
+      }
+
+      #main_content_list h3:hover,
+      #main_content_list h2:hover {
+        color: #fff;
+      }
+
+      #content_list_btn {
+        width: 100px;
+        height: 15px;
+        display: flex;
+        position: absolute;
+        top: 15%;
+        right: -2%;
+        transform: rotate(90deg);
+      }
+      .list_btn {
+        width: 15px;
+        height: 15px;
+        border: rgba(0, 0, 0, 0.4) solid 1px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        margin: auto;
+      }
+      #content_list_btn div:first-child {
+        border: #000 solid 1px;
+        background-color: #fff;
+      }
+
+      /* main_flow_text */
+      #main_flow_text {
+        height: 50px;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.8rem;
+        white-space: nowrap;
+        overflow: hidden;
+        display: flex;
+      }
+      #main_flow_text div {
+        animation: scroll_ani 30s linear 0s infinite normal;
+      }
+      #main_flow_text span {
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      #main_flow_text span:nth-child(1) {
+        color: #0045ff;
+      }
+      #main_flow_text span:nth-child(2) {
+        color: #1cff59;
+      }
+      #main_flow_text span:nth-child(3) {
+        color: #ff4eff;
+      }
+      #main_flow_text:hover div {
+        animation-play-state: paused;
+      }
+
+      @keyframes scroll_ani {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      @keyframes scroll_ani_2 {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      /* main_work_list */
+      #main_work_list {
+        height: 50vh;
+        background-color: #ff4eff;
+      }
+      #main_work_list.breakingnews {
+        background-color: none;
+        background: url(./images/test1.jpg) no-repeat 50% 50% / cover;
+      }
+      #main_work_list.lushkorea {
+        background-color: none;
+        background: url(./images/test2.jpg) no-repeat 50% 50% / cover;
+      }
+      #main_work_list.more {
+        background-color: none;
+        background: url(./images/test3.jpg) no-repeat 50% 50% / cover;
+      }
+
+      #work_list_table {
+        width: 100%;
+      }
+      #work_list_table tr {
+        height: 10vh;
+      }
+      #work_list_table td {
+        border-bottom: #000 solid 1px;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+      #breakingnews.breakingnews td,
+      #lushkorea.lushkorea td,
+      #more.more td {
+        color: #fff;
+      }
+      #work_list_table td:first-child,
+      #work_list_table td:last-child {
+        font-size: 3.5rem;
+        font-weight: bold;
+      }
+      #work_list_table span {
+        font-size: 1.7rem;
+        font-weight: 600;
+      }
+      #work_list_table td:first-child {
+        width: 50%;
+        padding-left: 10px;
+      }
+      #work_list_table td:last-child {
+        text-align: center;
+      }
+
+      /* main_send_email */
+      #main_send_email {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+      }
+      #main_send_email h1 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        padding-left: 1vw;
+      }
+      #enter_email {
+        background-color: #dfdfdf;
+        line-height: 2;
+        width: 40%;
+        height: 50px;
+        border: none;
+        margin-left: 2vw;
+        text-indent: 10px;
+        font-size: 1.5rem;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      /* footer */
+      footer {
+        background-color: #000;
+        height: 20vh;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2vh 2vw;
+      }
+      #left_content {
+        font-size: 2.5rem;
+      }
+      #right_content {
+        font-size: 1.3rem;
+      }
+      #right_content h3 {
+        margin: 2vh;
+      }
     </style>
   </head>
   <body>
@@ -122,9 +301,15 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <div id="register">
-        <img src="./images/icons8-github-90.png" alt="github" />
-        <img src="./images/icons8-instagram-100.png" alt="instagram" />
-        <img src="./images/icons8-mail-100.png" alt="mail" />
+        <a href="https://github.com/CHOHYUNBEE" target="_blank"
+          ><img src="./images/icons8-github-90.png" alt="github"
+        /></a>
+        <a href="https://www.instagram.com/chohyeonbi/" target="_blank"
+          ><img src="./images/icons8-instagram-100.png" alt="instagram"
+        /></a>
+        <a href="mailto:vvv3349@naver.com" target="_blank"
+          ><img src="./images/icons8-mail-100.png" alt="mail"
+        /></a>
       </div>
     </header>
     <main>
@@ -146,20 +331,145 @@
               새로운 것을 좋아하며 꾸준한 노력과 <br />열정을 가진 프론트엔드
               개발자
             </h2>
-            <img src="./images/arrow.png" alt="arrow_black" />
+            <img id="arrow_black" src="./images/arrow.png" alt="arrow_black" />
+            <img
+              id="arrow_white"
+              src="./images/arrow_white.png"
+              alt="arrow_white"
+            />
+          </div>
+          <div id="content_list_btn">
+            <div class="list_btn"></div>
+            <div class="list_btn"></div>
+            <div class="list_btn"></div>
+            <div class="list_btn"></div>
           </div>
         </div>
       </div>
 
       <!-- flow text -->
-      <div></div>
+      <div id="main_flow_text">
+        <div>
+          <span> Introduce</span> 프론트엔드 개발자를 꿈꾸는 조현비입니다
+          <span>Platforms & Language</span> Java, JavaScript, jQuery, C, C#,
+          HTML5, CSS3, Oracle <span>Tools</span> VisualStudio, VisualStudioCode,
+          EclipseIDE, GitHub, JIRA, Adobe Photoshop, Adobe Illustator, Adobe XD
+        </div>
+        <div>
+          <span> Introduce</span> 프론트엔드 개발자를 꿈꾸는 조현비입니다
+          <span>Platforms & Language</span> Java, JavaScript, jQuery, C, C#,
+          HTML5, CSS3, Oracle <span>Tools</span> VisualStudio, VisualStudioCode,
+          EclipseIDE, GitHub, JIRA, Adobe Photoshop, Adobe Illustator, Adobe XD
+        </div>
+      </div>
 
       <!-- work List -->
-      <div></div>
+      <div id="main_work_list">
+        <table id="work_list_table">
+          <tr id="breakingnews">
+            <td>Breaking News</td>
+            <td>
+              <span>Application UX/UI Redesign & Develop <br /> </span
+              >#팀프로젝트 #XD #Illusrator # Photoshop #2022
+            </td>
+            <td>1</td>
+          </tr>
+          <tr id="lushkorea">
+            <td>Lush Korea</td>
+            <td>
+              <span>Responsive Web page Redesign<br /></span>#반응형웹
+              #JavaScript #CSS #리디자인 #2022
+            </td>
+            <td>2</td>
+          </tr>
+          <tr id="more">
+            <td>MORE..</td>
+            <td>
+              <span>추가 될 예정입니다.<br /></span>#To Be Continue #2022
+            </td>
+            <td>3</td>
+          </tr>
+          <tr id="more2">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="more3">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
 
       <!-- send Email -->
-      <div></div>
+      <div id="main_send_email">
+        <h1>Send Email</h1>
+        <div id="enter_email">Contact Me</div>
+      </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div id="left_content" class="wargate_font">
+        I AM A<br />
+        FRONT-END<br />
+        DEVELOPER
+      </div>
+      <div id="right_content">
+        <h3>Email : vvv3349@naver.com</h3>
+        <h3>© 2022 HyunBee CHO. all rights reserved.</h3>
+      </div>
+    </footer>
+
+    <script>
+      const work_list_table_tr = document.querySelectorAll(
+        "#work_list_table tbody tr"
+      );
+      const main_work_list = document.querySelector("#main_work_list");
+      const enter_email = document.querySelector("#enter_email");
+
+      work_list_table_tr.forEach((tr) => {
+        tr.addEventListener("mouseover", (e) => {
+          const work_list =
+            e.target.parentElement.parentElement.parentElement.parentElement;
+          work_list_table_tr.forEach((item) => {
+            item.removeAttribute("class");
+          });
+          if (e.currentTarget.id == "breakingnews") {
+            document
+              .querySelector(`#${work_list.id}`)
+              .setAttribute("class", "breakingnews");
+            document
+              .querySelector(`#${e.currentTarget.id}`)
+              .setAttribute("class", "breakingnews");
+          } else if (e.currentTarget.id == "lushkorea") {
+            document
+              .querySelector(`#${work_list.id}`)
+              .setAttribute("class", "lushkorea");
+            document
+              .querySelector(`#${e.currentTarget.id}`)
+              .setAttribute("class", "lushkorea");
+          } else {
+            // document.querySelector(`#${main_work_list.id}`).setAttribute('class','more')
+            // document.querySelector(`#${e.currentTarget.id}`).setAttribute('class','more')
+            document
+              .querySelector(`#${work_list.id}`)
+              .setAttribute("class", "more");
+            document.querySelector(`#more`).setAttribute("class", "more");
+            document.querySelector(`#more2`).setAttribute("class", "more");
+            document.querySelector(`#more3`).setAttribute("class", "more");
+          }
+        });
+      });
+      main_work_list.addEventListener("mouseout", () => {
+        console.log(main_work_list.id);
+        main_work_list.removeAttribute("class");
+        work_list_table_tr.forEach((item) => {
+          item.removeAttribute("class");
+        });
+      });
+      enter_email.addEventListener("click", () => {
+        window.location = "mailto:vvv3349@naver.com";
+      });
+    </script>
   </body>
 </html>
