@@ -46,7 +46,7 @@
         width: 60%;
       }
       #gnb li {
-        width: 12%;
+        width: 15%;
       }
       #gnb li a {
         display: block;
@@ -55,6 +55,18 @@
         font-weight: bold;
         color: #fff;
         text-align: center;
+      }
+      #gnb li:nth-child(1) a:hover {
+        color: #fed206;
+      }
+      #gnb li:nth-child(2) a:hover {
+        color: #1cff59;
+      }
+      #gnb li:nth-child(3) a:hover {
+        color: #ff4eff;
+      }
+      #gnb li:nth-child(4) a:hover {
+        color: #0045ff;
       }
       #register {
         width: 20%;
@@ -449,8 +461,6 @@
               .querySelector(`#${e.currentTarget.id}`)
               .setAttribute("class", "lushkorea");
           } else {
-            // document.querySelector(`#${main_work_list.id}`).setAttribute('class','more')
-            // document.querySelector(`#${e.currentTarget.id}`).setAttribute('class','more')
             document
               .querySelector(`#${work_list.id}`)
               .setAttribute("class", "more");
@@ -460,8 +470,7 @@
           }
         });
       });
-      main_work_list.addEventListener("mouseout", () => {
-        console.log(main_work_list.id);
+      main_work_list.addEventListener("mouseleave", () => {
         main_work_list.removeAttribute("class");
         work_list_table_tr.forEach((item) => {
           item.removeAttribute("class");
