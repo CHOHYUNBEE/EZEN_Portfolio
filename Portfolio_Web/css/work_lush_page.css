@@ -246,7 +246,12 @@
   border: #000 solid 15px;
   border-radius: 20px;
   height: 70vh;
-  background: url(../images/test1.jpg) no-repeat 50% / cover;
+  /* overflow: scroll; */
+  /* background: url(../images/test1.jpg) no-repeat 50% / cover; */
+}
+#preview_video iframe {
+  width: 100%;
+  height: 100%;
 }
 #view_website {
   width: 50%;
