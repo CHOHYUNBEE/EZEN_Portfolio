@@ -8,297 +8,29 @@
       content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
     />
     <title>Lush work page</title>
+    <!-- css -->
     <link rel="stylesheet" href="../common/minireset.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <style>
-      #header_content {
-        width: 80%;
-        height: 60vh;
-        border: 5px solid #000;
-        margin: 10vh auto;
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="./css/work_lush_page.css">
 
-        display: flex;
-      }
-      #site_img {
-        border: 5px solid red;
-        background-color: red;
-        width: 60%;
-
-        /* 꾸밈값 */
-        display: grid;
-        place-content: center;
-        font-size: 5rem;
-        color: #fff;
-        /* background: url(./images/LUSH_page_main_image.png) no-repeat 50% / cover; */
-      }
-      #site_info {
-        /* border: 5px solid orange; */
-        width: 40%;
-        padding-left: 3vw;
-
-        display: flex;
-        flex-wrap: wrap;
-
-        position: relative;
-      }
-      #line {
-        position: absolute;
-        top: 6rem;
-        width: 77%;
-        border-top: #000 solid 1px;
-      }
-      #site_info h1 {
-        font-size: 4.5rem;
-        font-weight: bold;
-      }
-      #site_info h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1.5vh;
-        font-weight: 500;
-      }
-      #site_info #overview,
-      #site_info #keyword {
-        width: 100%;
-      }
-      #site_info #overview h4 {
-        padding-left: 2vw;
-        font-weight: 200;
-      }
-      #site_info #overview h3 {
-        padding-left: 1vw;
-        font-weight: 300;
-      }
-      #site_info #keyword_list h3 {
-        padding-left: 1vw;
-        font-weight: 700;
-      }
-      #site_info #overview span {
-        font-weight: bold;
-      }
-      #site_info #overview h3 {
-        margin-top: 1vh;
-        margin-bottom: 1vh;
-      }
-      #keyword {
-        font-weight: bold;
-      }
-      #keyword_list {
-        display: grid;
-        grid: 35px 35px / repeat(3, minmax(100px, 150px));
-      }
-
-      /* style_content */
-      #style_content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      .title h1 {
-        width: 65%;
-        font-size: 5rem;
-        font-weight: bold;
-        z-index: 1;
-      }
-      .title img {
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 20px;
-        left: 0;
-        z-index: 0;
-      }
-      .title {
-        width: 65%;
-        display: flex;
-        position: relative;
-        margin-bottom: 5vh;
-      }
-      #style_content #style_guide_table {
-        width: 65%;
-      }
-      #style_content #style_guide_table td {
-        border-top: solid #000 1px;
-        padding-top: 5vh;
-        padding-bottom: 5vh;
-      }
-      #style_content #style_guide_table tr:last-child {
-        border-bottom: solid #000 1px;
-      }
-
-      #style_content #style_guide_table td:last-child {
-        width: 50%;
-      }
-      #style_guide_table td:first-child {
-        font-weight: bold;
-        font-size: 16px;
-      }
-      #style_guide_table tr td:nth-child(2) {
-        padding-left: 2vw;
-      }
-      #style_guide_table tr:first-child td:nth-child(2) {
-        font-size: 20px;
-        font-weight: bold;
-      }
-      #style_guide_table tr:nth-child(2) {
-      }
-      #style_guide_table tr:nth-child(2) td:nth-child(2),
-      #style_guide_table tr:nth-child(2) td:nth-child(3) {
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      /* Pretendard */
-      #style_guide_table tr:nth-child(2) td span {
-        font-size: 16px;
-        font-weight: bold;
-        font-family: "Pretendard";
-      }
-      #style_guide_table tr:nth-child(2) td span::after {
-        content: " / ";
-      }
-      #style_guide_table tr:nth-child(2) td span:last-child:after {
-        content: "";
-      }
-      #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(1) {
-        font-weight: 100;
-        margin-left: 1.5vw;
-      }
-      #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(2) {
-        font-weight: 300;
-      }
-      #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(3) {
-        font-weight: 400;
-      }
-      #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(4) {
-        font-weight: 600;
-      }
-      #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(5) {
-        font-weight: 900;
-      }
-
-      /* LUSH */
-      #style_guide_table tr:nth-child(2) td:nth-child(3) span {
-        font-family: "LUSH";
-        margin-left: 1.5vw;
-      }
-
-      #color_chart td:nth-child(2) {
-        display: flex;
-        
-      }
-      .color {
-        width: 60%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-        justify-content: center;
-        font-weight: bold;
-       
-      }
-      .color div {
-        width: 100px;
-        height: 100px;
-        border: #000 solid 1px;
-        border-radius: 50%;
-
-        display: grid;
-        place-content: center;
-        margin-right: 1vw;
-        
-      }
-      .color h3 {
-        width: 100%;
-        font-weight: bold;
-      }
-      #main_color div:nth-child(1) {
-        background-color: #fff;
-      }
-      #main_color div:nth-child(2) {
-        background-color: #000;
-        color: #fff;
-      }
-      #sub_color div:nth-child(1) {
-        background-color: #f8f9fa;
-        border: none;
-      }
-      #sub_color div:nth-child(2) {
-        background-color: #f7f7f7;
-        border: none;
-      }
-
-      /* Development Review */
-      #development_content,
-      #Review_content,
-      #Preview_content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      #development_content h1 {
-        width: 100%;
-      }
-      #development_content_title,
-      #Review_content_title,
-      #preview_content_title {
-        margin-top: 10vh;
-      }
-
-      .text_style {
-        width: 65%;
-      }
-      .text_style h3:first-child {
-        margin-top: 0;
-      }
-      .text_style h3 {
-        font-weight: bold;
-        font-size: 26px;
-        margin-top: 3vh;
-      }
-      .text_style p {
-        font-size: 16px;
-        margin-top: 1vh;
-        padding-left: 0.5vw;
-        line-height: 2;
-      }
-
-      /* preveiw */
-      #Preview_content {
-      }
-      #preview_video {
-        width: 60%;
-        border: #000 solid 15px;
-        border-radius: 20px;
-        height: 70vh;
-        background: url(./images/test1.jpg) no-repeat 50% / cover;
-      }
-      #view_website {
-        width: 50%;
-      }
-      #view_website_btn {
-        width: 20vw;
-        height: 8vh;
-        border: #000 solid 5px;
-        font-size: 2rem;
-        font-weight: bold;
-        line-height: 2;
-        text-align: center;
-        margin: 8vh auto;
-      }
-
-      /* main_send_email */
-      #main_send_email{
-        border-top: #000 solid 1px;
-      }
-    </style>
+    <!-- js -->
+    <script src="/common/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/common.js"></script>
   </head>
   <body>
     <header>
-      <div id="logo" class="wargate_font">Portfolio</div>
+      <div id="logo" class="wargate_font">
+        <a href="./index.html"> Portfolio</a>
+      </div>
       <ul id="gnb">
-        <li><a href="#">Work</a></li>
+        <li id="work_list">
+          <a href="#">Work</a>
+          <ul id="work_list_gnb">
+            <li><a href="./work_lush_page.html"> LUSH</a></li>
+            <li><a href="#">Breaking News</a></li>
+            <li><a href="#">more</a></li>
+          </ul>
+        </li>
         <li><a href="#">Skill</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -315,7 +47,7 @@
       </div>
     </header>
     <main>
-      <!-- header -->
+      <!-- header content-->
       <div id="header_content">
         <div id="site_img">img</div>
         <div id="site_info">
@@ -357,8 +89,8 @@
         <table id="style_guide_table">
           <tr>
             <td>Keyword</td>
-            <td>#깔끔한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#개성적인</td>
-            <td></td>
+            <td colspan="2">#깔끔한&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#개성적인</td>
+            
           </tr>
           <tr>
             <td>Typography</td>
@@ -370,12 +102,14 @@
           </tr>
           <tr id="color_chart">
             <td>Color</td>
-            <td colspan="0">
+            <td>
               <div class="color" id="main_color">
                 <div>#fff</div>
                 <div>#000</div>
                 <h3>main</h3>
               </div>
+            </td>
+            <td>
               <div class="color" id="sub_color">
                 <div>#f8f9fa</div>
                 <div>#f7f7f7</div>

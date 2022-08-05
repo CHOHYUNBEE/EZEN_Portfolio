@@ -26,10 +26,14 @@ header {
   padding-left: 1vw;
   text-transform: uppercase;
 }
+#logo a {
+  color: #fff;
+}
 #gnb {
   display: flex;
   width: 65%;
   justify-content: flex-end;
+  position: relative;
 }
 #gnb li {
   width: 18%;
@@ -42,15 +46,67 @@ header {
   color: #fff;
   text-align: center;
 }
-#gnb li:nth-child(1) a:hover {
+#gnb > li:nth-child(1) > a:hover {
   color: #fed206;
 }
-#gnb li:nth-child(2) a:hover {
+#gnb > li:nth-child(2) > a:hover {
   color: #1cff59;
 }
-#gnb li:nth-child(3) a:hover {
+#gnb > li:nth-child(3) > a:hover {
   color: #ff4eff;
 }
+
+#work_list_gnb {
+  display: none;
+}
+#work_list.line {
+  position: relative;
+}
+header.line::after {
+  content: "";
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  border-top: #fff solid 1px;
+  z-index: 1;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+#work_list_gnb.line {
+  display: block;
+  display: flex;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  height: 50px;
+  background-color: #000;
+  border-top: #fff solid 1px;
+  z-index: 2;
+}
+#work_list_gnb li.line {
+  width: 215px;
+  position: relative;
+}
+#work_list_gnb li a.line {
+  font-size: 1.5rem;
+  display: block;
+  color: #fed206;
+  line-height: 45px;
+}
+#work_list_gnb li.linestyle::after {
+  content: "";
+  width: 50%;
+  border: #fed206 solid 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#work_list_gnb li a.line:hover {
+  color: #fed206;
+}
+
 #register {
   width: 15%;
   padding-right: 1vw;
