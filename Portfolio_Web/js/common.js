@@ -7,7 +7,7 @@ enter_email.addEventListener("click", () => {
 // jQuery
 
 //  nav list
-$("#work_list").on("mouseover", function () {
+$("#work_list,#gnb li:nth-child(1)").on("mouseover", function () {
   $("#work_list_gnb").addClass("line");
   $("header").addClass("line");
   $("#work_list_gnb li").addClass("line");
@@ -20,7 +20,7 @@ $("#work_list_gnb li").on("mouseover", function () {
 $("#work_list_gnb li").on("mouseout", function () {
   $(this).removeClass("linestyle");
 });
-$("#work_list").on("mouseout", function () {
+$("#work_list,#gnb li:nth-child(1)").on("mouseout", function () {
   $("#work_list_gnb").removeClass("line");
   $("header").removeClass("line");
   $("#work_list_gnb li").removeClass("line");
