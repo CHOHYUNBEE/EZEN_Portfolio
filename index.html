@@ -7,8 +7,160 @@
       name="viewport"
       content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
     />
-    <title></title>
-    <style></style>
+    <title>Portfolio</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./common/minireset.css" />
+    <link rel="stylesheet" href="./common/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="Portfolio_Web/css/common.css" />
+    <link rel="stylesheet" href="Portfolio_Web/css/index.css" />
+
+    <!-- js -->
+    <script src="./common/jquery-3.6.0.min.js"></script>
+    <script src="./common/swiper-bundle.min.js"></script>
+    <script defer src="Portfolio_Web/js/common.js"></script>
+    <script defer src="Portfolio_Web/js/index.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div id="logo" class="wargate_font">
+        <a href="index.html"> Portfolio</a>
+      </div>
+      <ul id="gnb">
+        <li id="work_list">
+          <a href="#">Work</a>
+          <ul id="work_list_gnb">
+            <li><a href="Portfolio_Web/work_lush_page.html"> LUSH</a></li>
+            <li><a href="#">Breaking News</a></li>
+            <li><a href="#">more</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Skill</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div id="register">
+        <a href="https://github.com/CHOHYUNBEE" target="_blank"
+          ><img src="Portfolio_Web/images/icons8-github-90.png" alt="github"
+        /></a>
+        <a href="https://www.instagram.com/chohyeonbi/" target="_blank"
+          ><img
+            src="Portfolio_Web/images/icons8-instagram-100.png"
+            alt="instagram"
+        /></a>
+        <a href="mailto:vvv3349@naver.com" target="_blank"
+          ><img src="Portfolio_Web/images/icons8-mail-100.png" alt="mail"
+        /></a>
+      </div>
+    </header>
+    <main>
+      <!-- banner -->
+      <div id="main_banner">
+        <div id="main_logo" class="wargate_font">
+          I AM A<br />
+          FRONT-END<br />
+          DEVELOPER<br />
+          HYUNBEE CHO
+        </div>
+        <div id="main_content_list">
+          <div id="content_list_header">
+            <h3>INTRODUCE</h3>
+            <h2>자기소개</h2>
+          </div>
+          <div id="content_list_footer">
+            <h2>
+              새로운 것을 좋아하며 꾸준한 노력과 <br />열정을 가진 프론트엔드
+              개발자
+            </h2>
+            <img
+              id="arrow_black"
+              src="Portfolio_Web/images/arrow.png"
+              alt="arrow_black"
+            />
+            <img
+              id="arrow_white"
+              src="Portfolio_Web//images/arrow_white.png"
+              alt="arrow_white"
+            />
+          </div>
+          <div id="content_list_btn">
+            <div class="list_btn"></div>
+            <div class="list_btn"></div>
+            <div class="list_btn"></div>
+            <div class="list_btn"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- flow text -->
+      <div id="main_flow_text">
+        <div>
+          <span> Introduce</span> 프론트엔드 개발자를 꿈꾸는 조현비입니다
+          <span>Platforms & Language</span> Java, JavaScript, jQuery, C, C#,
+          HTML5, CSS3, Oracle <span>Tools</span> VisualStudio, VisualStudioCode,
+          EclipseIDE, GitHub, JIRA, Adobe Photoshop, Adobe Illustator, Adobe XD
+        </div>
+        <div>
+          <span> Introduce</span> 프론트엔드 개발자를 꿈꾸는 조현비입니다
+          <span>Platforms & Language</span> Java, JavaScript, jQuery, C, C#,
+          HTML5, CSS3, Oracle <span>Tools</span> VisualStudio, VisualStudioCode,
+          EclipseIDE, GitHub, JIRA, Adobe Photoshop, Adobe Illustator, Adobe XD
+        </div>
+      </div>
+
+      <!-- work List -->
+      <div id="main_work_list">
+        <table id="work_list_table">
+          <tr id="breakingnews">
+            <td>Breaking News</td>
+            <td>
+              <span>Application UX/UI Redesign & Develop <br /> </span
+              >#팀프로젝트 #XD #Illusrator # Photoshop #2022
+            </td>
+            <td>1</td>
+          </tr>
+          <tr id="lushkorea">
+            <td>Lush Korea</td>
+            <td>
+              <span>Responsive Web page Redesign<br /></span>#반응형웹
+              #JavaScript #CSS #리디자인 #2022
+            </td>
+            <td>2</td>
+          </tr>
+          <tr id="more">
+            <td>MORE..</td>
+            <td>
+              <span>추가 될 예정입니다.<br /></span>#To Be Continue #2022
+            </td>
+            <td>3</td>
+          </tr>
+          <tr id="more2">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="more3">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- send Email -->
+      <div id="main_send_email">
+        <h1>Send Email</h1>
+        <div id="enter_email">Contact Me</div>
+      </div>
+    </main>
+    <footer>
+      <div id="left_content" class="wargate_font">
+        I AM A<br />
+        FRONT-END<br />
+        DEVELOPER
+      </div>
+      <div id="right_content">
+        <h3>Email : vvv3349@naver.com</h3>
+        <h3>© 2022 HyunBee CHO. all rights reserved.</h3>
+      </div>
+    </footer>
+  </body>
 </html>
