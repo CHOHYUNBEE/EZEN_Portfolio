@@ -1,3 +1,9 @@
+// javascript
+const enter_email = document.querySelector("#enter_email");
+enter_email.addEventListener("click", () => {
+  window.location = "mailto:vvv3349@naver.com";
+});
+
 // jQuery
 
 //  nav list

@@ -1,26 +1,18 @@
 @charset "UTF-8";
 #header_content {
-  width: 80%;
-  height: 60vh;
-  border: 5px solid #000;
+  width: 70%;
+  height: 65vh;
+  /* border: 5px solid #000; */
   margin: 10vh auto;
 
   display: flex;
 }
 #site_img {
-  border: 5px solid red;
-  background-color: red;
-  width: 60%;
-
-  /* 꾸밈값 */
-  display: grid;
-  place-content: center;
-  font-size: 5rem;
-  color: #fff;
+  background: url(../images/lush_main_banner.png) no-repeat 50% / cover;
+  width: 55%;
 }
 #site_info {
-  /* border: 5px solid orange; */
-  width: 40%;
+  width: 45%;
   padding-left: 3vw;
 
   display: flex;
@@ -35,7 +27,7 @@
   border-top: #000 solid 1px;
 }
 #site_info h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   font-weight: bold;
 }
 #site_info h2 {
@@ -53,7 +45,7 @@
 }
 #site_info #overview h3 {
   padding-left: 1vw;
-  font-weight: 300;
+  font-weight: 400;
 }
 #site_info #keyword_list h3 {
   padding-left: 1vw;
@@ -254,7 +246,7 @@
   border: #000 solid 15px;
   border-radius: 20px;
   height: 70vh;
-  background: url(./images/test1.jpg) no-repeat 50% / cover;
+  background: url(../images/test1.jpg) no-repeat 50% / cover;
 }
 #view_website {
   width: 50%;
@@ -264,12 +256,20 @@
   height: 8vh;
   border: #000 solid 5px;
   font-size: 2rem;
-  font-weight: bold;
   line-height: 2;
   text-align: center;
   margin: 8vh auto;
 }
-
+#view_website_btn a {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+#view_website_btn a:hover {
+  background-color: #000;
+  color: #fff;
+}
 /* main_send_email */
 #main_send_email {
   border-top: #000 solid 1px;

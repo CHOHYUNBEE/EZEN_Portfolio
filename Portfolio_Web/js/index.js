@@ -2,7 +2,6 @@ const work_list_table_tr = document.querySelectorAll(
   "#work_list_table tbody tr"
 );
 const main_work_list = document.querySelector("#main_work_list");
-const enter_email = document.querySelector("#enter_email");
 
 work_list_table_tr.forEach((tr) => {
   tr.addEventListener("mouseover", (e) => {
@@ -38,7 +37,4 @@ main_work_list.addEventListener("mouseleave", () => {
   work_list_table_tr.forEach((item) => {
     item.removeAttribute("class");
   });
-});
-enter_email.addEventListener("click", () => {
-  window.location = "mailto:vvv3349@naver.com";
 });
