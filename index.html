@@ -19,6 +19,96 @@
     <script src="./common/swiper-bundle.min.js"></script>
     <script defer src="Portfolio_Web/js/common.js"></script>
     <script defer src="Portfolio_Web/js/index.js"></script>
+
+    <style>
+      /* html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      } */
+      /* body {
+        position: relative;
+      } */
+
+      .swiper {
+        width: 50%;
+        height: 100%;
+      }
+      .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-color: #1cff59;
+        height: 100%;
+        padding: 0;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        text-align: left;
+      }
+      .swiper-slide:nth-child(3) {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+      }
+      .swiper-slide:nth-child(4) {
+        width: 100%;
+        height: 100%;
+        background-color: pink;
+      }
+      .swiper-slide div {
+        padding: 2vw;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding-right: 4vw;
+      }
+      .swiper-pagination {
+        position: fixed;
+        top: 15%;
+        right: 1vw;
+        transform: rotate(90deg);
+        z-index: 10;
+      }
+      .swiper-pagination span {
+        width: 15px;
+        height: 15px;
+        margin: 5px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -26,6 +116,7 @@
         <a href="index.html"> Portfolio</a>
       </div>
       <ul id="gnb">
+        <li><a href="#">About Me</a></li>
         <li id="work_list">
           <a href="#">Work</a>
           <ul id="work_list_gnb">
@@ -60,32 +151,55 @@
           DEVELOPER<br />
           HYUNBEE CHO
         </div>
-        <div id="main_content_list">
-          <div id="content_list_header">
-            <h3>INTRODUCE</h3>
-            <h2>자기소개</h2>
-          </div>
-          <div id="content_list_footer">
-            <h2>
-              새로운 것을 좋아하며 꾸준한 노력과 <br />열정을 가진 프론트엔드
-              개발자
-            </h2>
-            <img
-              id="arrow_black"
-              src="Portfolio_Web/images/arrow.png"
-              alt="arrow_black"
-            />
-            <img
-              id="arrow_white"
-              src="Portfolio_Web//images/arrow_white.png"
-              alt="arrow_white"
-            />
-          </div>
-          <div id="content_list_btn">
-            <div class="list_btn"></div>
-            <div class="list_btn"></div>
-            <div class="list_btn"></div>
-            <div class="list_btn"></div>
+        <!-- <div id="main_content_list"> -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div id="content_list_header">
+                <h3>INTRODUCE</h3>
+                <h2>자기소개</h2>
+              </div>
+              <div id="content_list_footer">
+                <h2>
+                  새로운 것을 좋아하며 꾸준한 노력과 <br />열정을 가진
+                  프론트엔드 개발자
+                </h2>
+                <img
+                  id="arrow_black"
+                  src="Portfolio_Web/images/arrow.png"
+                  alt="arrow_black"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div id="content_list_header">
+                <h3>INTRODUCE</h3>
+                <h2>자기소개</h2>
+              </div>
+              <div id="content_list_footer">
+                <h2>
+                  새로운 것을 좋아하며 꾸준한 노력과 <br />열정을 가진
+                  프론트엔드 개발자
+                </h2>
+                <img
+                  id="arrow_black"
+                  src="Portfolio_Web/images/arrow.png"
+                  alt="arrow_black"
+                />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div id="content_list_header">
+                <h3>채워나갈 페이지</h3>
+                <h2>나의 경력</h2>
+              </div>
+              <div id="content_list_footer">
+                <h2>할 수 있는 언어 목록 <br />개발 툴들...</h2>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -162,5 +276,20 @@
         <h3>© 2022 HyunBee CHO. all rights reserved.</h3>
       </div>
     </footer>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        direction: "vertical",
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // autoplay: {
+        //   delay: 1500,
+        //   disableOnInteraction: false,
+        // },
+        // loop: true,
+      });
+    </script>
   </body>
 </html>

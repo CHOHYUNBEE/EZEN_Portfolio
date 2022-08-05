@@ -38,3 +38,16 @@ main_work_list.addEventListener("mouseleave", () => {
     item.removeAttribute("class");
   });
 });
+
+// jQuery
+$("#content_list_footer img").hover(
+  function () {
+    $(this).attr({
+      src: "Portfolio_Web/images/arrow_white.png",
+      alt: "arrow_white",
+    });
+  }, // 마우스를 올렸을 때
+  function () {
+    $(this).attr({ src: "Portfolio_Web/images/arrow.png", alt: "arrow_black" });
+  } // 마우스가 벗어났을 때
+);
