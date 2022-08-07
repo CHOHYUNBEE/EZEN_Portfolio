@@ -155,6 +155,9 @@
 }
 
 /* LUSH */
+#style_guide_table tr:nth-child(2) td:nth-child(3) {
+  padding-left: 4vw;
+}
 #style_guide_table tr:nth-child(2) td:nth-child(3) span {
   font-family: "LUSH";
   margin-left: 1.5vw;
@@ -195,11 +198,11 @@
 }
 #sub_color div:nth-child(1) {
   background-color: #f8f9fa;
-  border: none;
+  border: #ddd solid 1px;
 }
 #sub_color div:nth-child(2) {
   background-color: #f7f7f7;
-  border: none;
+  border: #ddd solid 1px;
 }
 
 /* Development Review */
