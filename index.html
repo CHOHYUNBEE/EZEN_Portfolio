@@ -96,17 +96,21 @@
         object-fit: cover;
         padding-right: 4vw;
       }
-      .swiper-pagination {
-        position: fixed;
+
+      .swiper-btn-list {
+        position: absolute;
         top: 15%;
         right: 1vw;
         transform: rotate(90deg);
-        z-index: 10;
+        display: flex;
+        z-index: 2;
       }
-      .swiper-pagination span {
+      .swiper-btn-list span {
         width: 15px;
         height: 15px;
         margin: 5px;
+        border: #000 solid 1px;
+        border-radius: 50%;
       }
     </style>
   </head>
@@ -197,11 +201,9 @@
                 <h2>할 수 있는 언어 목록 <br />개발 툴들...</h2>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-pagination"></div>
           </div>
         </div>
+        <div class="swiper-btn-list"></div>
       </div>
 
       <!-- flow text -->
@@ -281,14 +283,14 @@
       var swiper = new Swiper(".mySwiper", {
         direction: "vertical",
         pagination: {
-          el: ".swiper-pagination",
+          el: ".swiper-btn-list",
           clickable: true,
         },
-        // autoplay: {
-        //   delay: 1500,
-        //   disableOnInteraction: false,
-        // },
-        // loop: true,
+        autoplay: {
+          delay: 1500,
+          disableOnInteraction: false,
+        },
+        loop: true,
       });
     </script>
   </body>

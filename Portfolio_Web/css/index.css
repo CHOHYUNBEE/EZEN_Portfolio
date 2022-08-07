@@ -4,6 +4,8 @@
 #main_banner {
   display: flex;
   height: 50vh;
+
+  position: relative;
 }
 #main_logo {
   width: 50%;
@@ -14,16 +16,6 @@
   line-height: 1;
   padding: 1vw;
 }
-/* .swiper-slide {
-  width: 100%;
-  background-color: #1cff59;
-  display: flex;
-  flex-wrap: wrap;
-  flex-flow: column;
-  justify-content: space-between;
-  padding: 1vw;
-  position: relative;
-} */
 #content_list_header,
 #content_list_footer {
   width: 100%;
@@ -38,7 +30,7 @@
   font-weight: 500;
 }
 .swiper-slide h2 {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 #content_list_footer img {

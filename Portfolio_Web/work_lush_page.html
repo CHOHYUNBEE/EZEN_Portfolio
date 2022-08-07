@@ -15,6 +15,8 @@
 
     <!-- js -->
     <script src="../common/jquery-3.6.0.min.js"></script>
+    <script src="../common/jquery.fadethis.min.js"></script>
+    <script src="../common/typed.js"></script>
     <script defer src="./js/common.js"></script>
   </head>
   <body>
@@ -50,9 +52,15 @@
     <main>
       <!-- header content-->
       <div id="header_content">
-        <div id="site_img">img</div>
+        <div
+          id="site_img"
+          class="slide-top"
+          data-plugin-options='{"speed":800, "reverse":false}'
+        >
+          img
+        </div>
         <div id="site_info">
-          <h1>LUSH KOREA</h1>
+          <h1>L<span class="typed"></span></h1>
           <div id="line"></div>
           <div id="overview">
             <h2>Overview</h2>
@@ -69,7 +77,7 @@
           </div>
           <div id="keyword">
             <h2>Keyword</h2>
-            <div id="keyword_list">
+            <div class="text" id="keyword_list">
               <h3>#ResponsibleWeb</h3>
               <h3>#반응형웹</h3>
               <h3>#Redesign</h3>
@@ -82,7 +90,11 @@
       </div>
 
       <!-- style guide -->
-      <div id="style_content">
+      <div
+        class="slide-bottom"
+        data-plugin-options='{"speed":500, "reverse":false}'
+        id="style_content"
+      >
         <div class="title" id="style_content_title">
           <h1>Style Guide</h1>
           <img src="./images/style_guide_icon.png" alt="style_guide_icon" />
@@ -121,7 +133,11 @@
       </div>
 
       <!-- Development Review -->
-      <div id="development_content">
+      <div
+        class="slide-bottom"
+        data-plugin-options='{"speed":500, "reverse":false}'
+        id="development_content"
+      >
         <div class="title" id="development_content_title">
           <h1>Development Review</h1>
           <img
@@ -154,7 +170,11 @@
       </div>
 
       <!-- Review -->
-      <div id="Review_content">
+      <div
+        class="slide-bottom"
+        data-plugin-options='{"speed":500, "reverse":false}'
+        id="Review_content"
+      >
         <div class="title" id="Review_content_title">
           <h1>Review</h1>
           <img src="./images/Review_icon.png" alt="review_icon" />
@@ -237,17 +257,21 @@
     </footer>
 
     <script>
-      // async function fetchHtmlAsText(url) {
-      //   return await (await fetch(url)).text();
-      // }
+      // 슬라이드 콘텐츠 플러그인
+      $(window).fadeThis();
 
-      // async function importPage(target) {
-      //   document.querySelector("#" + "preview_video").innerHTML =
-      //     await fetchHtmlAsText(
-      //       "https://chohyunbee.github.io/EZEN_Portfolio/LUSH_Responsive_Web"
-      //     );
-      // }
-      // importPage("index");
+      // 타이핑 플러그인
+      $(function () {
+        var typed2 = new Typed(".typed", {
+          strings: ["USH KOREA", "USH KOREA"],
+          typeSpeed: 100,
+          backSpeed: 100,
+          fadeOut: false,
+          smartBackspace: true,
+          cursorChar: "|",
+          loop: true,
+        });
+      });
     </script>
   </body>
 </html>

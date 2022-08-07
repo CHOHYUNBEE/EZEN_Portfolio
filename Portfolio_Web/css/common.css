@@ -9,6 +9,7 @@ body {
   font-family: Noto Sans KR, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
+  overflow-x: hidden;
 }
 .wargate_font {
   font-family: wargate, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -61,6 +62,9 @@ header {
 #gnb > li:nth-child(3) > a:hover {
   color: #ff4eff;
 }
+#gnb > li:nth-child(4) > a:hover {
+  color: #0045ff;
+}
 
 #work_list_gnb {
   display: none;
@@ -74,7 +78,7 @@ header.line::after {
   height: 50px;
   background-color: #000;
   border-top: #fff solid 1px;
-  z-index: 1;
+  z-index: 3;
   position: absolute;
   top: 50px;
   left: 0;
@@ -88,7 +92,7 @@ header.line::after {
   height: 50px;
   background-color: #000;
   border-top: #fff solid 1px;
-  z-index: 2;
+  z-index: 4;
 }
 #work_list_gnb li.line {
   width: 215px;
@@ -97,20 +101,21 @@ header.line::after {
 #work_list_gnb li a.line {
   font-size: 1.5rem;
   display: block;
-  color: #fed206;
+  color: #1cff59;
   line-height: 45px;
 }
 #work_list_gnb li.linestyle::after {
   content: "";
   width: 50%;
-  border: #fed206 solid 3px;
+  border: #1cff59 solid 3px;
+  background-color: #1cff59;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 #work_list_gnb li a.line:hover {
-  color: #fed206;
+  color: #1cff59;
 }
 
 #register {
