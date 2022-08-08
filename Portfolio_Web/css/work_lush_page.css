@@ -10,6 +10,7 @@
 #site_img {
   background: url(../images/lush_main_banner.png) no-repeat 50% / cover;
   width: 55%;
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.3);
 }
 #site_info {
   width: 45%;
@@ -42,10 +43,12 @@
 #site_info #overview h4 {
   padding-left: 2vw;
   font-weight: 200;
+  margin-top: 1vh;
 }
 #site_info #overview h3 {
   padding-left: 1vw;
   font-weight: 400;
+  padding-top: 1.5vh;
 }
 #site_info #keyword_list h3 {
   padding-left: 1vw;
@@ -78,6 +81,9 @@
   font-size: 5rem;
   font-weight: bold;
   z-index: 1;
+}
+#style_content_title {
+  margin-top: 7vh;
 }
 .title img {
   width: 30px;
@@ -252,13 +258,9 @@
   border: #000 solid 15px;
   border-radius: 20px;
   height: 70vh;
-  /* overflow: scroll; */
-  /* background: url(../images/test1.jpg) no-repeat 50% / cover; */
+  overflow: hidden;
 }
-#preview_video iframe {
-  width: 100%;
-  height: 100%;
-}
+
 #view_website {
   width: 50%;
 }

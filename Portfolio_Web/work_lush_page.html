@@ -16,6 +16,7 @@
     <!-- js -->
     <script src="../common/jquery-3.6.0.min.js"></script>
     <script src="../common/jquery.fadethis.min.js"></script>
+    <script src="../common/jquery-ui.min.js"></script>
     <script src="../common/typed.js"></script>
     <script defer src="./js/common.js"></script>
   </head>
@@ -29,7 +30,7 @@
         <li id="work_list">
           <a href="#">Work</a>
           <ul id="work_list_gnb">
-            <li><a href="Portfolio_Web/work_lush_page.html"> LUSH</a></li>
+            <li><a href="./work_lush_page.html"> LUSH</a></li>
             <li><a href="#">Breaking News</a></li>
             <li><a href="#">more</a></li>
           </ul>
@@ -60,7 +61,7 @@
           img
         </div>
         <div id="site_info">
-          <h1>L<span class="typed"></span></h1>
+          <h1>LUSH KOREA</h1>
           <div id="line"></div>
           <div id="overview">
             <h2>Overview</h2>
@@ -92,7 +93,7 @@
       <!-- style guide -->
       <div
         class="slide-bottom"
-        data-plugin-options='{"speed":500, "reverse":false}'
+        data-plugin-options='{"speed":400, "reverse":false}'
         id="style_content"
       >
         <div class="title" id="style_content_title">
@@ -135,7 +136,7 @@
       <!-- Development Review -->
       <div
         class="slide-bottom"
-        data-plugin-options='{"speed":500, "reverse":false}'
+        data-plugin-options='{"speed":400, "reverse":false}'
         id="development_content"
       >
         <div class="title" id="development_content_title">
@@ -172,7 +173,7 @@
       <!-- Review -->
       <div
         class="slide-bottom"
-        data-plugin-options='{"speed":500, "reverse":false}'
+        data-plugin-options='{"speed":400, "reverse":false}'
         id="Review_content"
       >
         <div class="title" id="Review_content_title">
@@ -219,10 +220,7 @@
           <img src="./images/Preview_icon.png" alt="Preview_icon" />
         </div>
         <div id="preview_video">
-          <iframe
-            src="https://chohyunbee.github.io/EZEN_Portfolio/LUSH_Responsive_Web"
-            >LUSH</iframe
-          >
+          <img src="./images/LUSH-Responsive-Web.png" alt="lush_page" />
         </div>
         <div id="view_website">
           <div id="view_website_btn">
@@ -260,17 +258,14 @@
       // 슬라이드 콘텐츠 플러그인
       $(window).fadeThis();
 
-      // 타이핑 플러그인
-      $(function () {
-        var typed2 = new Typed(".typed", {
-          strings: ["USH KOREA", "USH KOREA"],
-          typeSpeed: 100,
-          backSpeed: 100,
-          fadeOut: false,
-          smartBackspace: true,
-          cursorChar: "|",
-          loop: true,
-        });
+      $("#preview_video img").on("mouseover", function () {
+        $("#preview_video img").animate({ marginTop: -4150 }, 12000, "linear");
+      });
+
+      $("#preview_video img").on("mouseleave", function () {
+        $("#preview_video img")
+          .stop()
+          .animate({ marginTop: 0 }, 1000, "linear");
       });
     </script>
   </body>

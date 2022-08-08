@@ -11,11 +11,11 @@
     <!-- css -->
     <link rel="stylesheet" href="../common/minireset.css" />
     <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="./css/about_me_page.css" />
 
     <!-- js -->
     <script src="../common/jquery-3.6.0.min.js"></script>
-    <!-- <script src="../common/jquery.fadethis.min.js"></script>
-    <script src="../common/typed.js"></script> -->
+    <script src="../common/jquery-ui.min.js"></script>
     <script defer src="js/common.js"></script>
   </head>
   <body>
@@ -50,13 +50,153 @@
     </header>
 
     <main>
-      <!-- send mail -->
-      <div id="main_send_email">
-        <h1>Send Email</h1>
-        <div id="enter_email">Contact Me</div>
+      <!-- About Me -->
+      <div id="abount_me_content">
+        <div id="abount_me_content_main">
+          <div class="title" id="about_me_title">
+            <img src="./images/Review_icon.png" alt="green_icon" />
+            <h1>ABOUT ME</h1>
+          </div>
+          <div id="about_me_text">
+            <div id="content_img">
+              <div id="circle_img">
+                <img src="./images/hyunbee_img.png" alt="me_img" />
+                <img
+                  id="rotate_img"
+                  src="./images/txt_rotate.png"
+                  alt="rotate_img"
+                />
+              </div>
+            </div>
+            <div id="content_text_list">
+              <table id="content_text_list_table">
+                <tr>
+                  <td>기본 정보</td>
+                  <td>
+                    <ul>
+                      <li>1997.11.13</li>
+                      <li>경기도 수원시 거주</li>
+                      <li>한신대학교 / 컴퓨터공학부</li>
+                      <li>vvv3349@naver.com</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>경력</td>
+                  <td>
+                    <ul>
+                      <li>2019.08 ~ 2020.03 : Drimsys 인턴</li>
+                      <li>
+                        2020.03 ~ 2021.03 : Drimsys 사원 <br />
+                        (SKHynix TTTM 시스템 개발 및 운영을 위해 Hynix 본사로
+                        출장 근무)
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>참여 프로젝트</td>
+                  <td>
+                    <ul>
+                      <li>
+                        2019.11 ~ 2020.03 : Drimsys 시리얼 통신 UI 디자인 업무
+                        및 동작 기능을 개발
+                      </li>
+                      <li>
+                        2020.04 ~ 2021.03 : SKHynix TTTM 시스템의 화면 및 기능
+                        개발 및 유지보수 업무
+                      </li>
+                      <li>
+                        2022.03 ~ 2022.09 : 이젠컴퓨터학원 반응형 웹퍼블리셔
+                        전문가 Studying
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td>자격증</td>
+                  <td>
+                    <ul>
+                      <li>2019.11.22 : 정보처리기사</li>
+                      <li>2022.04.08 : SQLD (SQL개발자)</li>
+                    </ul>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-    </main>
 
+      <!-- skill -->
+      <div id="skill_content">
+        <div id="skill_content_main">
+          <div class="title" id="skill_title">
+            <img src="./images/Preview_icon.png" alt="orange_icon" />
+            <h1>SKILL</h1>
+          </div>
+          <div id="skill_list">
+            <div class="skill">
+              <div class="line_event">
+                <h1>html5 & CSS3</h1>
+                <div class="line"></div>
+              </div>
+              <h4>웹 접근성과 웹 표준화에 맞춘 콘텐츠 제작</h4>
+              <h4>웹사이트 구축 및 디자인</h4>
+              <h4>미디어 쿼리를 이용한 반응형 웹 제작</h4>
+              <h4>flex, grid, position 사용</h4>
+              <h4>다양한 이벤트, 애니메이션 구현</h4>
+            </div>
+            <div class="skill">
+              <div class="line_event">
+                <h1>javaScript</h1>
+                <div class="line"></div>
+              </div>
+              <h4>웹사이트 구현</h4>
+              <h4>jQuery 사용</h4>
+              <h4>다양한 플러그인 사용 (swiper, typed, slide...)</h4>
+              <h4>Ajax & JSON</h4>
+              <h4>open API 사용</h4>
+            </div>
+            <div class="skill">
+              <div class="line_event">
+                <h1>Photoshop & Illustrator</h1>
+                <div class="line"></div>
+              </div>
+              <h4>이미지 편집 및 디자인</h4>
+              <h4>UX & UI 고려한 디자인</h4>
+              <h4>아이콘, 일러스트 제작</h4>
+              <h4>웹, 앱 프로토 타입 제작</h4>
+            </div>
+            <div class="skill">
+              <div class="line_event">
+                <h1>XD & Zeplin</h1>
+                <div class="line"></div>
+              </div>
+              <h4>XD를 활용한 공동 작업 공유</h4>
+              <h4>프로토 타입 제작</h4>
+              <h4>앱 스플래시 화면 디자인</h4>
+            </div>
+            <div class="skill">
+              <div class="line_event">
+                <h1>Git & GitHub</h1>
+                <div class="line"></div>
+              </div>
+              <h4>프로젝트 버전 관리</h4>
+              <h4>CLI 기반 GitBash</h4>
+              <h4>프로젝트 공유 및 협업</h4>
+              <h4>진행 사항 실시간 공유 및 수정</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- send mail -->
+    </main>
+    <div id="main_send_email">
+      <h1>Send Email</h1>
+      <div id="enter_email">Contact Me</div>
+    </div>
     <footer>
       <div id="left_content" class="wargate_font">
         I AM A<br />
@@ -68,6 +208,34 @@
         <h3>© 2022 HyunBee CHO. all rights reserved.</h3>
       </div>
     </footer>
-    <script></script>
+    <script>
+      // $(document).ready(function () {
+      //   $(".line_event ul").each(function () {
+      //     let count = $(this).text().split("\n")[1].length;
+      //     let txt_width = count * 10;
+
+      //     console.log($(this).text().split("\n")[1]);
+      //     console.log($(this).text().split("\n")[1].length);
+      //     $(this)
+      //       .parent()
+      //       .find(".line")
+      //       .css({ width: `${txt_width}`, height: 10, backgroundColor: "red" });
+      //   });
+      // });
+
+      $(".skill").on("mouseover", function () {
+        $(this)
+          .find(".line")
+          .stop()
+          .animate({ width: "100%", height: 10, backgroundColor: "red" }, 1000);
+      });
+
+      $(".skill").on("mouseleave", function () {
+        $(this)
+          .find(".line")
+          .stop()
+          .animate({ width: "0", height: 10, backgroundColor: "#ddd" }, 1000);
+      });
+    </script>
   </body>
 </html>
