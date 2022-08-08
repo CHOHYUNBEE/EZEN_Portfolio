@@ -16,6 +16,7 @@
     <!-- js -->
     <script src="../common/jquery-3.6.0.min.js"></script>
     <script src="../common/jquery-ui.min.js"></script>
+    <script src="../common/jquery.animate-shadow-min.js"></script>
     <script defer src="js/common.js"></script>
   </head>
   <body>
@@ -139,7 +140,8 @@
             <div class="skill">
               <div class="line_event">
                 <h1>html5 & CSS3</h1>
-                <div class="line"></div>
+                <div class="line hightlight"></div>
+                <div class="wrap_line"></div>
               </div>
               <h4>웹 접근성과 웹 표준화에 맞춘 콘텐츠 제작</h4>
               <h4>웹사이트 구축 및 디자인</h4>
@@ -150,7 +152,8 @@
             <div class="skill">
               <div class="line_event">
                 <h1>javaScript</h1>
-                <div class="line"></div>
+                <div class="line hightlight"></div>
+                <div class="wrap_line"></div>
               </div>
               <h4>웹사이트 구현</h4>
               <h4>jQuery 사용</h4>
@@ -161,7 +164,8 @@
             <div class="skill">
               <div class="line_event">
                 <h1>Photoshop & Illustrator</h1>
-                <div class="line"></div>
+                <div class="line hightlight"></div>
+                <div class="wrap_line"></div>
               </div>
               <h4>이미지 편집 및 디자인</h4>
               <h4>UX & UI 고려한 디자인</h4>
@@ -171,7 +175,8 @@
             <div class="skill">
               <div class="line_event">
                 <h1>XD & Zeplin</h1>
-                <div class="line"></div>
+                <div class="line hightlight"></div>
+                <div class="wrap_line"></div>
               </div>
               <h4>XD를 활용한 공동 작업 공유</h4>
               <h4>프로토 타입 제작</h4>
@@ -180,7 +185,8 @@
             <div class="skill">
               <div class="line_event">
                 <h1>Git & GitHub</h1>
-                <div class="line"></div>
+                <div class="line hightlight"></div>
+                <div class="wrap_line"></div>
               </div>
               <h4>프로젝트 버전 관리</h4>
               <h4>CLI 기반 GitBash</h4>
@@ -209,32 +215,12 @@
       </div>
     </footer>
     <script>
-      // $(document).ready(function () {
-      //   $(".line_event ul").each(function () {
-      //     let count = $(this).text().split("\n")[1].length;
-      //     let txt_width = count * 10;
-
-      //     console.log($(this).text().split("\n")[1]);
-      //     console.log($(this).text().split("\n")[1].length);
-      //     $(this)
-      //       .parent()
-      //       .find(".line")
-      //       .css({ width: `${txt_width}`, height: 10, backgroundColor: "red" });
-      //   });
-      // });
-
-      $(".skill").on("mouseover", function () {
-        $(this)
-          .find(".line")
-          .stop()
-          .animate({ width: "100%", height: 10, backgroundColor: "red" }, 1000);
+      $(".skill .line_event").on("mouseover", function () {
+        $(this).find(".wrap_line").addClass("hightlighton");
       });
 
-      $(".skill").on("mouseleave", function () {
-        $(this)
-          .find(".line")
-          .stop()
-          .animate({ width: "0", height: 10, backgroundColor: "#ddd" }, 1000);
+      $(".skill .line_event").on("mouseleave", function () {
+        $(this).find(".wrap_line").removeClass("hightlighton");
       });
     </script>
   </body>
