@@ -51,3 +51,10 @@ $("#content_list_footer img").hover(
     $(this).attr({ src: "Portfolio_Web/images/arrow.png", alt: "arrow_black" });
   } // 마우스가 벗어났을 때
 );
+
+$("#work_list_table tbody tr").on("click", function () {
+  const sitename = $(this).attr("id");
+  if (sitename === "lushkorea") {
+    location.href = "Portfolio_Web/work_lush_page.html";
+  }
+});
