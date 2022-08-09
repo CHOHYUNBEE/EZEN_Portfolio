@@ -40,6 +40,9 @@
 #site_info #keyword {
   width: 100%;
 }
+#site_info #overview {
+  margin-bottom: 3vh;
+}
 #site_info #overview h4 {
   padding-left: 2vw;
   font-weight: 200;
@@ -238,8 +241,9 @@
 .text_style h3 {
   font-weight: bold;
   font-size: 26px;
-  margin-top: 3vh;
+  margin-top: 7vh;
 }
+
 .text_style p {
   font-size: 16px;
   margin-top: 1vh;
