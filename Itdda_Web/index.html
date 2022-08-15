@@ -126,6 +126,8 @@
         position: relative;
         top: -40px;
         z-index: 3;
+
+        margin-top: 5vh;
       }
       #we_make_content{
         width: 100%;
@@ -265,14 +267,63 @@
         margin-top: 5vh;
       }
       #wemake_txt p:last-child{
-        padding-bottom:10vh ;
+        padding-bottom:20vh ;
       }
-      #test{
+
+      /* web_site_list */
+      #web_site_list_container{
+        margin-top: 15vh;
         width: 100%;
         height: 100vh;
-        background-color: red;
+        position: relative;
+        overflow: hidden;
+        /* background-color: red; */
       }
-  
+      #web_site ul li{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+      }
+      #web_site ul li .img{
+        width: 700px;
+        height: 370px;
+        background-color: red;
+        position: absolute;
+      }
+      #web_site ul li .img.img1{
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #web_site ul li .img.img2{
+        bottom: -15%;
+        left: -25%;
+      }
+      #web_site ul li .img.img3{
+        bottom: -20%;
+        right: -25%;
+      }
+
+
+
+      /* ink_concert */
+      #ink_concert{
+        background-color: #fff;
+      }
+      /* greenfoot */
+      #greenfoot{
+        background: url(./images/main_port_bg_green.jpg) no-repeat 50% / cover;
+      }
+      /* shinsegaelow */
+      #shinsegaelow{
+        background-color: #fff;
+      }
+      /* nexnine */
+      #nexnine{
+        background: url(./images/main_port_bg_nex.jpg) no-repeat 50% / cover;
+      }
     </style>
 
     <script src="../common/jquery-3.6.0.min.js"></script>
@@ -427,7 +478,55 @@
         </div>
       </div>
 
-      <div id="test"></div>
+      <!-- web_site list -->
+      <div id="web_site_list_container">
+        <div id="web_site">
+          <ul>
+            <li id="ink_concert">
+              <a href="#">
+                  <div class="img_list">
+                  <div class="img1 img"></div>
+                  <div class="img2 img"></div>
+                  <div class="img3 img"></div>
+                </div>
+              </a>
+            </li>
+            <!-- <li id="greenfoot">
+              <a href="#">
+                  <div class="img_list">
+                  <div class="img1 img"></div>
+                  <div class="img2 img"></div>
+                  <div class="img3 img"></div>
+                  <div class="img4 img"></div>
+                  <div class="img5 img"></div>
+                  <div class="img6 img"></div>
+                </div>
+              </a>
+            </li>
+            <li id="shinsegaelow">
+              <a href="#">
+                  <div class="img_list">
+                  <div class="img1 img"></div>
+                  <div class="img2 img"></div>
+                  <div class="img3 img"></div>
+                  <div class="img4 img"></div>
+                  <div class="img5 img"></div>
+                  <div class="img6 img"></div>
+                </div>
+              </a>
+            </li>
+            <li id="nexnine">
+              <a href="#">
+                  <div class="img_list">
+                  <div class="img1 img">1</div>
+                  <div class="img2 img">2</div>
+                  <div class="img3 img">3</div>
+                </div>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
