@@ -7,6 +7,17 @@
     <title>itdda</title>
     <link rel="stylesheet" href="../common/minireset.css" />
     <style>
+      @font-face {
+        font-family: "Recoleta_B";
+        src: url("./common/Recoleta-Bold.ttf") format("truetype");
+      }
+      @font-face {
+        font-family: "Recoleta_R";
+        src: url("./common/Recoleta-Regular.ttf") format("truetype");
+      }
+      html{
+        scroll-behavior: smooth; 
+      }
       body {
         font-family: Noto Sans KR, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
@@ -73,6 +84,12 @@
         height: 20%;
         background-color: #fff;
       }
+      .white_content:last-child{
+        height: 15%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
       #vertical_contents {
         /* width: 100%; */
         height: 100%;
@@ -98,7 +115,7 @@
         width: 40%;
         height: 100%;
         position: absolute;
-        top: 600px;
+        top: 510px;
         left: 0;
         z-index: 1;
       }
@@ -114,17 +131,18 @@
         z-index: 3;
       }
       #vertical_content_text_big img {
-        width: 180%;
+        /* width: 180%; */
         max-width: none;
+        height: 580px;
       }
 
 
       /* we make */
       #we_make_container{
-        background: linear-gradient(#fff 1%,#000 30%,#000 100%);
-        height: 300vh;
+        background: linear-gradient(#fff 1%,#000 10%,#000 100%);
+        height: 260vh;
         position: relative;
-        top: -40px;
+        top: -50px;
         z-index: 3;
 
         margin-top: 5vh;
@@ -135,7 +153,7 @@
       }
 
       #title{
-        padding-top: 70vh;
+        padding-top: 50vh;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -219,7 +237,7 @@
       #wemake_img,#wemake_txt{
         min-width: 60%;
         max-width: 100%;
-        width: 80%;
+        width: 70%;
         margin: 0 auto;
       }
       #wemake_img{
@@ -228,14 +246,15 @@
         top: 0;
         left: 0;
         z-index: 4;
+        /* margin-bottom: 10vh; */
       }
       #wemake_img img{
-        max-width: 110%;
+        /* max-width: 110%; */
         height: 100%;
       }
       #wemake_txt{
         position: sticky;
-        top: -200px;
+        top: -100px;
         left: 0;
         z-index: 5;
       }
@@ -274,26 +293,25 @@
       #web_site_list_container{
         margin-top: 15vh;
         width: 100%;
-        height: 100vh;
+        height: 400vh;
         position: relative;
         overflow: hidden;
         /* background-color: red; */
       }
       #web_site ul li{
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100vh;
+        position: relative;
+        /* overflow: hidden; */
       }
       #web_site ul li .img{
         width: 700px;
         height: 370px;
         background-color: red;
         position: absolute;
+        z-index: 3;
       }
       #web_site ul li .img.img1{
-        top: -5%;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -305,25 +323,120 @@
         bottom: -20%;
         right: -25%;
       }
-
-
+      #web_site ul li .img.img4{
+        top: -5%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #web_site ul li .img.img5{
+        top: -5%;
+        left: -25%;
+      }
+      #web_site ul li .img.img6{
+        top: -5%;
+        right: -25%;
+      }
 
       /* ink_concert */
       #ink_concert{
         background-color: #fff;
+        /* z-index: 3; */
+      }
+      #ink_concert .img1{
+        background: url(./images/img_ink_01.png) no-repeat 50% / cover;
+        top: -5vh;
+      }
+      #ink_concert .img2{
+        background: url(./images/img_ink_02.png) no-repeat 50% / cover;
+      }
+      #ink_concert .img3{
+        background: url(./images/img_ink_03.png) no-repeat 50% / cover;
       }
       /* greenfoot */
       #greenfoot{
         background: url(./images/main_port_bg_green.jpg) no-repeat 50% / cover;
       }
+      #greenfoot .img1{
+        background: url(./images/img_green_01.png) no-repeat 50% / cover;
+        top: -100vh;
+
+      }
+      #greenfoot .img2{
+        background: url(./images/img_green_02.png) no-repeat 50% / cover;
+      }
+      #greenfoot .img3{
+        background: url(./images/img_green_03.png) no-repeat 50% / cover;
+      }
+      #greenfoot .img4{
+        /* background: url(./images/img_green_01.png) no-repeat 50% / cover; */
+      }
+      #greenfoot .img5{
+        /* background: url(./images/img_green_02.png) no-repeat 50% / cover; */
+      }
+      #greenfoot .img6{
+        /* background: url(./images/img_green_03.png) no-repeat 50% / cover; */
+      }
       /* shinsegaelow */
       #shinsegaelow{
         background-color: #fff;
+      }
+      #shinsegaelow .img1{
+        background: url(./images/img_ssl_01.png) no-repeat 50% / cover;
+      }
+      #shinsegaelow .img2{
+        background: url(./images/img_ssl_02.png) no-repeat 50% / cover;
+      }
+      #shinsegaelow .img3{
+        background: url(./images/img_ssl_03.png) no-repeat 50% / cover;
       }
       /* nexnine */
       #nexnine{
         background: url(./images/main_port_bg_nex.jpg) no-repeat 50% / cover;
       }
+      #nexnine .img1{
+        background: url(./images/img_nexnine_01.png) no-repeat 50% / cover;
+      }
+      #nexnine .img2{
+        background: url(./images/img_nexnine_02.png) no-repeat 50% / cover;
+      }
+      #nexnine .img3{
+        background: url(./images/img_nexnine_03.png) no-repeat 50% / cover;
+      }
+
+      .web_list_txt{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+        color: #000;
+      }
+      .web_list_txt h1{
+        font-size: 6.2rem;
+        font-family: "Recoleta_B", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 3vh;
+      }
+      .web_list_txt p:nth-child(2){
+        font-family: "Recoleta_R", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      }
+      .web_list_txt p{
+        font-size: 1.3rem;
+        margin-top: 3vh;
+      }
+
+      #greenfoot .web_list_txt,#nexnine .web_list_txt{
+        color: #fff;
+      }
+      #nexnine .web_site_logo{
+        filter:brightness(0) invert(1) ;
+      }
+     
     </style>
 
     <script src="../common/jquery-3.6.0.min.js"></script>
@@ -441,6 +554,7 @@
               <img src="./images/iddaa_small_text.svg" alt="iddaa_small_text" />
             </div>
         </div>
+        <div class="white_content"></div>
       </div>
 
       <!-- we make from -->
@@ -481,49 +595,82 @@
       <!-- web_site list -->
       <div id="web_site_list_container">
         <div id="web_site">
-          <ul>
+          <ul id="web_site_list">
             <li id="ink_concert">
               <a href="#">
                   <div class="img_list">
-                  <div class="img1 img"></div>
-                  <div class="img2 img"></div>
-                  <div class="img3 img"></div>
-                </div>
+                    <div class="img1 img"></div>
+                    <div class="img2 img"></div>
+                    <div class="img3 img"></div>
+                    <div class="web_list_txt">
+                      <div class="web_site_logo">
+                        <img src="./images/main_port_logo_ink.png" alt="main_port_logo_ink">
+                      </div>
+                      <p>1/4</p>
+                      <h1>THE 12TH <br> INK CONCERT</h1>
+                      <p>제 12회 잉크콘서트 웹사이트 구축</p>
+                    </div>
+                  </div>
               </a>
             </li>
-            <!-- <li id="greenfoot">
+            <li id="greenfoot">
               <a href="#">
                   <div class="img_list">
-                  <div class="img1 img"></div>
-                  <div class="img2 img"></div>
-                  <div class="img3 img"></div>
-                  <div class="img4 img"></div>
-                  <div class="img5 img"></div>
-                  <div class="img6 img"></div>
-                </div>
+                    <div class="img1 img"></div>
+                    <div class="img2 img"></div>
+                    <div class="img3 img"></div>
+                    <!-- <div class="img4 img"></div>
+                    <div class="img5 img"></div>
+                    <div class="img6 img"></div> -->
+                    <div class="web_list_txt">
+                      <div class="web_site_logo">
+                        <img src="./images/main_port_logo_green.png" alt="main_port_logo_green">
+                      </div>
+                      <p>2/4</p>
+                      <h1>GREENFOOT</h1>
+                      <p>그린풋 웹사이트 구축</p>
+                    </div>
+                  </div>
               </a>
             </li>
+            
             <li id="shinsegaelow">
               <a href="#">
                   <div class="img_list">
-                  <div class="img1 img"></div>
-                  <div class="img2 img"></div>
-                  <div class="img3 img"></div>
-                  <div class="img4 img"></div>
+                    <div class="img1 img"></div>
+                    <div class="img2 img"></div>
+                    <div class="img3 img"></div>
+                  <!-- <div class="img4 img"></div>
                   <div class="img5 img"></div>
-                  <div class="img6 img"></div>
-                </div>
+                  <div class="img6 img"></div> -->
+                  <div class="web_list_txt">
+                    <div class="web_site_logo">
+                      <img src="./images/main_port_logo_shin.png" alt="main_port_logo_shin">
+                    </div>
+                    <p>3/4</p>
+                    <h1>SHINSEGAELAW</h1>
+                    <p>법무법인 신세계로 웹사이트 구축</p>
+                  </div>
+                  </div>
               </a>
             </li>
             <li id="nexnine">
               <a href="#">
                   <div class="img_list">
-                  <div class="img1 img">1</div>
-                  <div class="img2 img">2</div>
-                  <div class="img3 img">3</div>
-                </div>
+                    <div class="img1 img"></div>
+                    <div class="img2 img"></div>
+                    <div class="img3 img"></div>
+                    <div class="web_list_txt">
+                      <div class="web_site_logo">
+                        <img src="./images/main_port_logo_nex.png" alt="main_port_logo_nex">
+                      </div>
+                      <p>4/4</p>
+                      <h1>NEXNINE</h1>
+                      <p>넥스나인 웹사이트 구축</p>
+                    </div>
+                  </div>
               </a>
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>
@@ -537,11 +684,14 @@
       $(document).ready(function () {
         // 마우스 이벤트
         var vertical_content = $("#vertical_content_text_big img").width();
+        var offset_top = 10;
+        var offset_top2 = 5;
         $("html").on("wheel", function (e) { //mousewheel
           var _scrollTop = window.scrollY || document.documentElement.scrollTop; // 현재 스크롤 위치
           var img_width = $('#wemake_img').width();
-          // console.log(_scrollTop)
-
+          // 원페이지 레이아웃 위치
+          var web_site_list_height = $( '#web_site_list_container' ).offset(); // 3382
+          
           // 스크롤 이벤트
           // we make svg 그려지기 이벤튼
           if(_scrollTop >= 580){
@@ -553,15 +703,6 @@
             $('#layer1').removeClass('active');
             $('#layer2').removeClass('active');
             $('#layer3').removeClass('active');
-          }
-
-          // wemake line + 이미지 이벤트
-          if(_scrollTop>1700){
-            // $('#wemake_img').animate({width:'90%'},1000);
-    
-          }
-          else{
-            // $('#people span').animate({width:'30%'},1000);
           }
 
           // logo, gnb이벤트
@@ -582,20 +723,40 @@
             //   -wheelDelta + $("#vertical_content_text_big").scrollLeft()
             // );
             // we make 이미지 이벤트
-            console.log(`현재 스크롤 높이 올림 : ${_scrollTop}`)
-            if(_scrollTop<=2500){
-              // $('#wemake_img').animate({width:`${img_width*0.8}`},1000);
+            // console.log(_scrollTop);
+            if(_scrollTop<=2200){
               $('#people span').animate({width:'30%'},1000);
+            }
+            if(_scrollTop<=2600){
+              $('#wemake_img').animate({width:`${img_width*0.8}`},{duration:1000, easing:"linear"});
             }
           } else { // 마우스 내림
             // $("#vertical_content_text_big").scrollLeft(
             //   -wheelDelta + $("#vertical_content_text_big").scrollLeft()
             // );
+            // console.log(_scrollTop);
             if(_scrollTop>1800){
-              $('#wemake_img').animate({width:`${img_width-wheelDelta}`},1000);
+              $('#wemake_img').animate({width:`${img_width*1.2}`},{duration:1000, easing:"linear"});
+              
+            }
+            if(_scrollTop>2600){
+              // $('#wemake_img').animate({width:`110%`},1000);
             }
             if(_scrollTop>=2100){
               $('#people span').animate({width:0},2000);
+            }
+
+            if(_scrollTop>3300){
+              // console.log('도달')
+              $('#ink_concert').find('.img1').animate({ top:`${offset_top}vh`}, 1000);
+              $('#ink_concert').find('.img2').animate({ bottom:`${-15+offset_top}vh`}, 1000);
+              $('#ink_concert').find('.img3').animate({ bottom:`${-20+offset_top}vh`}, 1000);
+              offset_top += 5;
+              offset_top2 += 5;
+              $('#greenfoot').animate({ bottom:`${offset_top2}vh`}, 1000);
+              $('#greenfoot').find('.img1').animate({ top:`${-90+offset_top}vh`}, 1000);
+              $('#greenfoot').find('.img2').animate({ bottom:`${-15+offset_top}vh`}, 1000);
+              $('#greenfoot').find('.img3').animate({ bottom:`${-20+offset_top}vh`}, 1000);
             }
           }
         });
