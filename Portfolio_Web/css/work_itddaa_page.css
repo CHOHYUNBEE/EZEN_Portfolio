@@ -1,0 +1,284 @@
+@charset "UTF-8";
+#site_img {
+  background: url(../images/lush_main_banner.png) no-repeat 50% / cover;
+  width: 55%;
+  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.3);
+}
+#line {
+  position: absolute;
+  top: 6rem;
+  width: 77%;
+  border-top: #000 solid 1px;
+}
+#site_info h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+#site_info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5vh;
+  font-weight: 500;
+}
+#site_info #overview,
+#site_info #keyword {
+  width: 100%;
+}
+#site_info #overview {
+  margin-bottom: 3vh;
+}
+#site_info #overview h4 {
+  padding-left: 2vw;
+  font-weight: 200;
+  margin-top: 1vh;
+}
+#site_info #overview h3 {
+  padding-left: 1vw;
+  font-weight: 400;
+  padding-top: 1.5vh;
+}
+#site_info #keyword_list h3 {
+  padding-left: 1vw;
+  font-weight: 700;
+}
+#site_info #overview span {
+  font-weight: bold;
+}
+#site_info #overview h3 {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+#keyword {
+  font-weight: bold;
+}
+#keyword_list {
+  display: grid;
+  grid: 35px 35px / repeat(3, minmax(100px, 150px));
+}
+
+/* style_content */
+#style_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.title h1 {
+  width: 65%;
+  font-size: 5rem;
+  font-weight: bold;
+  z-index: 1;
+}
+#style_content_title {
+  margin-top: 7vh;
+}
+.title img {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 0;
+}
+.title {
+  width: 65%;
+  display: flex;
+  position: relative;
+  margin-bottom: 5vh;
+}
+#style_content #style_guide_table {
+  width: 65%;
+}
+#style_content #style_guide_table td {
+  border-top: solid #000 1px;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+#style_content #style_guide_table tr:last-child {
+  border-bottom: solid #000 1px;
+}
+
+#style_content #style_guide_table td:last-child {
+  width: 50%;
+}
+#style_guide_table td:first-child {
+  font-weight: bold;
+  font-size: 16px;
+}
+#style_guide_table tr td:nth-child(2) {
+  /* padding-left: 2vw; */
+}
+#style_guide_table tr:first-child td:nth-child(2) {
+  font-size: 20px;
+  font-weight: bold;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2),
+#style_guide_table tr:nth-child(2) td:nth-child(3) {
+  font-weight: bold;
+  font-size: 20px;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2) {
+  width: 25%;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(3) {
+  color: red;
+  width: 45%;
+}
+
+/* Pretendard */
+#style_guide_table tr:nth-child(2) td span {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Pretendard";
+}
+#style_guide_table tr:nth-child(2) td span::after {
+  content: " / ";
+}
+#style_guide_table tr:nth-child(2) td span:last-child:after {
+  content: "";
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(1) {
+  font-weight: 100;
+  margin-left: 1.5vw;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(2) {
+  font-weight: 300;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(3) {
+  font-weight: 400;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(4) {
+  font-weight: 600;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(5) {
+  font-weight: 900;
+}
+
+/* LUSH */
+#style_guide_table tr:nth-child(2) td:nth-child(3) {
+  padding-left: 1vw;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(3) span {
+  font-family: "re";
+  margin-left: 1.5vw;
+}
+
+#color_chart #color_list {
+  width: 100%;
+}
+.color {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.color div {
+  width: 100px;
+  height: 100px;
+  border: #000 solid 1px;
+  border-radius: 50%;
+
+  display: grid;
+  place-content: center;
+  margin-left: 0.5vw;
+}
+#sub_color > div {
+  margin: 0;
+}
+.color h3 {
+  width: 100%;
+  font-weight: bold;
+  margin-top: 10px;
+}
+#main_color div:nth-child(1) {
+  background-color: #fff;
+}
+#main_color div:nth-child(2) {
+  background-color: #000;
+  color: #fff;
+}
+#sub_color div:nth-child(1) {
+  background-color: #ff0000;
+  border: #ddd solid 1px;
+}
+
+/* Development Review */
+#development_content,
+#Review_content,
+#Preview_content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#development_content h1 {
+  width: 100%;
+}
+#development_content_title,
+#Review_content_title,
+#preview_content_title {
+  margin-top: 10vh;
+}
+
+.text_style {
+  width: 65%;
+}
+.text_style h3:first-child {
+  margin-top: 0;
+}
+.text_style h3 {
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 7vh;
+}
+
+.text_style p {
+  font-size: 16px;
+  margin-top: 1vh;
+  padding-left: 0.5vw;
+  line-height: 2;
+}
+
+/* review */
+#review_list span {
+  font-weight: bold;
+}
+
+/* preveiw */
+#preview_video {
+  width: 60%;
+  border: #000 solid 15px;
+  border-radius: 20px;
+  height: 70vh;
+  overflow: hidden;
+}
+
+#view_website {
+  width: 50%;
+}
+#view_website_btn {
+  width: 20vw;
+  height: 8vh;
+  border: #000 solid 5px;
+  font-size: 2rem;
+  line-height: 2;
+  text-align: center;
+  margin: 8vh auto;
+}
+#view_website_btn a {
+  display: block;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+#view_website_btn a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* main_send_email */
+#main_send_email {
+  border-top: #000 solid 1px;
+}
