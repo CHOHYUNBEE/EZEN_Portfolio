@@ -75,9 +75,13 @@
         mix-blend-mode: difference;
       }
 
+      main{
+        overflow: hidden;
+      }
       /* 가로 스크롤 영역 */
       #vertical_container {
         height: 100vh;
+        position: relative;
       }
       .white_content {
         width: 100%;
@@ -85,7 +89,7 @@
         background-color: #fff;
       }
       .white_content:last-child{
-        height: 10%;
+        height: 15%;
         position: absolute;
         left: 0;
         bottom: 0;
@@ -140,18 +144,15 @@
       /* we make */
       #we_make_container{
         background: linear-gradient(#fff 1%,#000 10%,#000 100%);
-        height: 260vh;
+        height: 280vh;
         position: relative;
         top: -50px;
         z-index: 3;
-
         margin-top: 5vh;
       }
       #we_make_content{
         width: 100%;
-        /* margin: 0 auto; */
       }
-
       #title{
         padding-top: 50vh;
         display: flex;
@@ -256,21 +257,18 @@
         margin: 0 auto;
       }
       #wemake_img{
-        overflow: hidden;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 4;
-        /* margin-bottom: 10vh; */
+        max-width: 100%;
+        /* z-index: 4; */
       }
       #wemake_img img{
-        /* max-width: 110%; */
         height: 100%;
       }
       #wemake_txt{
-        position: sticky;
-        top: -100px;
-        left: 0;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+        /* margin-top: 20vh; */
         z-index: 5;
       }
 
@@ -306,17 +304,10 @@
 
       /* web_site_list */
       #web_site_list_container{
-        margin-top: 15vh;
         width: 100%;
         height: 400vh;
         position: relative;
-        /* overflow: hidden; */
-        /* background-color: red; */
-
         scroll-behavior: smooth;
-      }
-      #web_site_list_container ul{
-        /* height: 400vh; */
       }
       #web_site_list_container ul li{
         width: 100%;
@@ -655,7 +646,7 @@
 
       #contact_container {
         width: 100%;
-        height: 20vh;
+        /* height: 20vh; */
         background-color: #000;
       }
       #contact_container #contact_content{
@@ -694,7 +685,7 @@
         width: 15%;
         height: 100%;
         position: relative;
-        padding-top: 20vh;
+        padding-top: 15vh;
 
       }
       #contact_container #contact_content #contact_us{
@@ -1237,95 +1228,84 @@
         $("html").on("wheel", function (e) { //mousewheel
           var _scrollTop = window.scrollY || document.documentElement.scrollTop; // 현재 스크롤 위치
           var img_width = $('#wemake_img').width();
-          // 원페이지 레이아웃 위치
-          var web_site_list_height = $( '#web_site_list_container' ).offset(); // 3382
           
           // 스크롤 이벤트
           // we make svg 그려지기 이벤튼
-          if(_scrollTop >= 580&&_scrollTop<=4400){
+          if(_scrollTop >= 1400&&_scrollTop<=2700){
             $('#layer1').addClass('active');
             $('#layer2').addClass('active');
             $('#layer3').addClass('active');
           }
-          else if(_scrollTop <= 580){
+          else if(_scrollTop <= 2700){
             $('#layer1').removeClass('active');
             $('#layer2').removeClass('active');
             $('#layer3').removeClass('active');
           }
-
-          if(_scrollTop<7000){
+          console.log(_scrollTop)
+          if(_scrollTop<8100){
             $('#itddaaSvg').removeClass('active');
             $('#arrowup').removeClass('active');
           }
-          else if(_scrollTop>=7000){
+          else if(_scrollTop>=8100){
             $('#itddaaSvg').addClass('active');
             $('#arrowup').addClass('active');
           }
-          if(_scrollTop>=7600){
+          if(_scrollTop>=8900){
       
             $('#creativesvg').addClass('active');
             $('#flowsvg').addClass('active');
           }
-          else if(_scrollTop<7600){
+          else if(_scrollTop<8900){
             $('#creativesvg').removeClass('active');
             $('#flowsvg').removeClass('active');
           }
 
-          if(_scrollTop>=9300){
+          if(_scrollTop>=10000){
             console.log(_scrollTop)
             $('#twistarrow').addClass('active');
           }
-          else if(_scrollTop<9300){
+          else if(_scrollTop<10000){
             $('#twistarrow').removeClass('active');
           }
           // logo, gnb이벤트
-          if(_scrollTop < 870){
+          if(_scrollTop < 1700){
             $('#logo_img *').css({fill:'#000'});
             $('#gnb li a').css({color:'#000'});
           }
-          else if(_scrollTop > 870){
+          else if(_scrollTop > 1700){
             $('#logo_img *').css({fill:'#fff'});
             $('#gnb li a').css({color:'#fff'});
           }
-          else if(_scrollTop>1800){
+
+          if(_scrollTop>4300){
             $('#logo_img *').css({fill:'#000'});
             $('#gnb li a').css({color:'#000'});
           }
+          if(_scrollTop>5300){
+            $('#logo_img *').css({fill:'#fff'});
+            $('#gnb li a').css({color:'#fff'});
+          }
+          if(_scrollTop>6300){
+            $('#logo_img *').css({fill:'#000'});
+            $('#gnb li a').css({color:'#000'});
+          }
+          if(_scrollTop>7300){
+            $('#logo_img *').css({fill:'#fff'});
+            $('#gnb li a').css({color:'#fff'});
+          }
 
-
+          console.log(_scrollTop)
           var wheelDelta = e.originalEvent.wheelDelta;
-          var scrollnum =  -wheelDelta + $("#vertical_content_text_big").scrollLeft();
-          var count_content = 1; // 1은 ink concert
           if (wheelDelta > 0) { //마우스 올림
-            $("#vertical_content_text_big").scrollLeft(
-              -wheelDelta + $("#vertical_content_text_big").scrollLeft()
-            );
-            if(_scrollTop<=2200){
+            if(_scrollTop<=3000){
               $('#people span').animate({width:'30%'},1000);
             }
-            if(_scrollTop<=2600){
-              $('#wemake_img').animate({width:`${img_width*0.8}`},{duration:1000, easing:"linear"});
-            }
           } else { // 마우스 내림
-            $("#vertical_content_text_big").scrollLeft(
-              -wheelDelta + $("#vertical_content_text_big").scrollLeft()
-            );
-            // console.log(_scrollTop);
-            if(_scrollTop>1800){
-              $('#wemake_img').animate({width:`${img_width*1.2}`},{duration:1000, easing:"linear"});
-              
-            }
-            if(_scrollTop>2600){
-              // $('#wemake_img').animate({width:`110%`},1000);
-            }
-            if(_scrollTop>=2100){
+            if(_scrollTop>=3000){
               $('#people span').animate({width:0},2000);
             }
           }
         });
-        showGradient();
-        $('#vertical_content_text_big').on('scroll',showGradient);
-
 
         $('#contact_circle').hover(function(){
           $('#contact_us').css({backgroundColor : 'red'});
@@ -1336,33 +1316,58 @@
           $('#contactme').css({fill : '#fff'});
         })
       });
-      function showGradient(){
-        if($(this).scrollLeft() == 0){
-          $('html').animate({scrollTop : 0});
-        }else if (Math.ceil($('#vertical_content_text_big').scrollLeft() + $(this).width()) >= $('#vertical_content_text_big img').width()) {
-          $('html').animate({scrollTop : '250vh'},500);
-        }else{
-          $('html').animate({scrollTop : 0});
-        }
-    }
 
     const web_list = () => {
         var liTimeLine;
+        var imgTimeLine;
+        var imgtxtTimeLine;
         ScrollTrigger.matchMedia({
             "(min-width: 1025px)": function() {
+
+              imgTimeLine = gsap.timeline({
+                    defaults: {
+                        ease: "power1.inOut" 
+                    },
+                    scrollTrigger : {
+                        trigger : 'main #vertical_container',
+                        start : 'top top',
+                        end : '+=100%',
+                        pin : true,
+                        scrub : 1,
+                    }
+
+                });
+
+                imgTimeLine
+              .to($('main #vertical_content_text_big img'),{xPercent:-28},'mylabel4')
+
+              imgtxtTimeLine = gsap.timeline({
+                    defaults: {
+                        ease: "power1.inOut" 
+                    },
+                    scrollTrigger : {
+                        trigger : 'main #we_make_container #wemake_img img',
+                        start : 'top top',
+                        end : '+=100%',
+                        pin : true,
+                        scrub : 1,
+                    }
+                });
+
+                imgtxtTimeLine
+              .to($('main #wemake_img img'),{scale:1.5})
 
                 liTimeLine = gsap.timeline({
                     defaults: {
                         ease: "power1.inOut" 
                     },
                     scrollTrigger : {
-                        trigger : 'main #web_site_list_container ul.port ',
+                        trigger : 'main #web_site_list_container ul.port',
                         start : 'top top',
                         end : '+=300%',
                         pin : true,
                         scrub : 1,
                     }
-
                 });
 
             liTimeLine
@@ -1378,11 +1383,9 @@
             .to($('main #web_site_list_container ul.port > li:nth-of-type(3) .img_list'),{yPercent:100},'mylabel3')
         },
     });
-
     }
 
       web_list();
-
 
       // li 이미지 커서 이벤트
       $('main #introduce_content ul#itroduce_list > li').mousemove(function(e){
