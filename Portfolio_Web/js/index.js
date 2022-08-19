@@ -24,6 +24,13 @@ work_list_table_tr.forEach((tr) => {
       document
         .querySelector(`#${e.currentTarget.id}`)
         .setAttribute("class", "lushkorea");
+    } else if (e.currentTarget.id == "itddaa") {
+      document
+        .querySelector(`#${work_list.id}`)
+        .setAttribute("class", "itddaa");
+      document
+        .querySelector(`#${e.currentTarget.id}`)
+        .setAttribute("class", "itddaa");
     } else {
       document.querySelector(`#${work_list.id}`).setAttribute("class", "more");
       document.querySelector(`#more`).setAttribute("class", "more");
@@ -57,4 +64,20 @@ $("#work_list_table tbody tr").on("click", function () {
   if (sitename === "lushkorea") {
     location.href = "Portfolio_Web/work_lush_page.html";
   }
+  // if (sitename === "itddaa") {
+  //   location.href = "Portfolio_Web/work_lush_page.html";
+  // }
+});
+
+var swiper = new Swiper(".mySwiper", {
+  direction: "vertical",
+  pagination: {
+    el: ".swiper-btn-list",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 1500,
+    disableOnInteraction: false,
+  },
+  loop: true,
 });

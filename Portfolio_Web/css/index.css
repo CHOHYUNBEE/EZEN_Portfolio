@@ -117,17 +117,25 @@
   height: 50vh;
   background-color: #ff4eff;
 }
+#main_work_list.itddaa {
+  background-color: none;
+  background: url(../images/test3.jpg) no-repeat 50% 50% / cover;
+  filter: grayscale(1);
+}
 #main_work_list.breakingnews {
   background-color: none;
   background: url(../images/test1.jpg) no-repeat 50% 50% / cover;
+  filter: grayscale(1);
 }
 #main_work_list.lushkorea {
   background-color: none;
   background: url(../images/test2.jpg) no-repeat 50% 50% / cover;
+  filter: grayscale(1);
 }
 #main_work_list.more {
   background-color: none;
   background: url(../images/test3.jpg) no-repeat 50% 50% / cover;
+  filter: grayscale(1);
 }
 
 #work_list_table {
@@ -135,6 +143,7 @@
 }
 #work_list_table tr {
   height: 10vh;
+  cursor: pointer;
 }
 #work_list_table td {
   border-bottom: #000 solid 1px;
@@ -143,6 +152,7 @@
 }
 #breakingnews.breakingnews td,
 #lushkorea.lushkorea td,
+#itddaa.itddaa td,
 #more.more td {
   color: #fff;
 }
@@ -186,4 +196,78 @@
   font-size: 1.5rem;
   color: #fff;
   font-weight: bold;
+}
+
+.swiper {
+  width: 50%;
+  height: 100%;
+}
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: #1cff59;
+  height: 100%;
+  padding: 0;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  text-align: left;
+}
+.swiper-slide:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+.swiper-slide:nth-child(4) {
+  width: 100%;
+  height: 100%;
+  background-color: pink;
+}
+.swiper-slide div {
+  padding: 2vw;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-right: 4vw;
+}
+
+.swiper-btn-list {
+  position: absolute;
+  top: 15%;
+  right: 1vw;
+  transform: rotate(90deg);
+  display: flex;
+  z-index: 2;
+}
+.swiper-btn-list span {
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  border: #000 solid 1px;
+  border-radius: 50%;
 }

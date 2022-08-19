@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
-    />
     <title>Portfolio</title>
     <!-- css -->
     <link rel="stylesheet" href="./common/minireset.css" />
@@ -20,99 +16,7 @@
     <script defer src="Portfolio_Web/js/common.js"></script>
     <script defer src="Portfolio_Web/js/index.js"></script>
 
-    <style>
-      /* html,
-      body {
-        position: relative;
-        height: 100%;
-      }
-
-      body {
-        background: #eee;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        color: #000;
-        margin: 0;
-        padding: 0;
-      } */
-      /* body {
-        position: relative;
-      } */
-
-      .swiper {
-        width: 50%;
-        height: 100%;
-      }
-      .swiper-wrapper {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-wrap: wrap;
-      }
-
-      .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        background-color: #1cff59;
-        height: 100%;
-        padding: 0;
-
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-flow: column;
-        flex-wrap: wrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: space-between;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
-
-        text-align: left;
-      }
-      .swiper-slide:nth-child(3) {
-        width: 100%;
-        height: 100%;
-        background-color: red;
-      }
-      .swiper-slide:nth-child(4) {
-        width: 100%;
-        height: 100%;
-        background-color: pink;
-      }
-      .swiper-slide div {
-        padding: 2vw;
-      }
-
-      .swiper-slide img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        padding-right: 4vw;
-      }
-
-      .swiper-btn-list {
-        position: absolute;
-        top: 15%;
-        right: 1vw;
-        transform: rotate(90deg);
-        display: flex;
-        z-index: 2;
-      }
-      .swiper-btn-list span {
-        width: 15px;
-        height: 15px;
-        margin: 5px;
-        border: #000 solid 1px;
-        border-radius: 50%;
-      }
-    </style>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -124,10 +28,9 @@
         <li id="work_list">
           <a href="#">Work</a>
           <ul id="work_list_gnb">
+            <li><a href="./Itdda_Web/index.html">ITDDAA</a></li>
             <li><a href="Portfolio_Web/work_lush_page.html"> LUSH</a></li>
             <li><a href="#">Breaking News</a></li>
-            <li><a href="./Itdda_Web/index.html">ITDDAA</a></li>
-            <!-- <li><a href="#">more</a></li> -->
           </ul>
         </li>
         <li><a href="#">Contact</a></li>
@@ -155,7 +58,6 @@
           DEVELOPER<br />
           HYUNBEE CHO
         </div>
-        <!-- <div id="main_content_list"> -->
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -225,13 +127,21 @@
       <!-- work List -->
       <div id="main_work_list">
         <table id="work_list_table">
+          <tr id="itddaa">
+            <td>itddaa</td>
+            <td>
+              <span>Web page Develop <br /> </span>#개인프로젝트 #JavaScript
+              #jQuery #2022
+            </td>
+            <td>1</td>
+          </tr>
           <tr id="breakingnews">
             <td>Breaking News</td>
             <td>
               <span>Application UX/UI Redesign & Develop <br /> </span
               >#팀프로젝트 #XD #Illusrator # Photoshop #2022
             </td>
-            <td>1</td>
+            <td>2</td>
           </tr>
           <tr id="lushkorea">
             <td>Lush Korea</td>
@@ -239,21 +149,16 @@
               <span>Responsive Web page Redesign<br /></span>#반응형웹
               #JavaScript #CSS #리디자인 #2022
             </td>
-            <td>2</td>
+            <td>3</td>
           </tr>
           <tr id="more">
             <td>MORE..</td>
             <td>
               <span>추가 될 예정입니다.<br /></span>#To Be Continue #2022
             </td>
-            <td>3</td>
+            <td>4</td>
           </tr>
           <tr id="more2">
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr id="more3">
             <td></td>
             <td></td>
             <td></td>
@@ -278,20 +183,5 @@
         <h3>© 2022 HyunBee CHO. all rights reserved.</h3>
       </div>
     </footer>
-
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        direction: "vertical",
-        pagination: {
-          el: ".swiper-btn-list",
-          clickable: true,
-        },
-        autoplay: {
-          delay: 1500,
-          disableOnInteraction: false,
-        },
-        loop: true,
-      });
-    </script>
   </body>
 </html>
