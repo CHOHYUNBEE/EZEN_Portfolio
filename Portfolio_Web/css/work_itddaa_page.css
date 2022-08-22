@@ -1,8 +1,33 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Recoleta_B";
+  src: url("../common/Recoleta-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Recoleta_R";
+  src: url("../common/Recoleta-Regular.ttf") format("truetype");
+}
+#header_content {
+  width: 70%;
+  height: 65vh;
+  /* border: 5px solid #000; */
+  margin: 10vh auto;
+
+  display: flex;
+}
 #site_img {
   background: url(../images/lush_main_banner.png) no-repeat 50% / cover;
   width: 55%;
   box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.3);
+}
+#site_info {
+  width: 45%;
+  padding-left: 3vw;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
 }
 #line {
   position: absolute;
@@ -105,30 +130,36 @@
   font-size: 16px;
 }
 #style_guide_table tr td:nth-child(2) {
-  /* padding-left: 2vw; */
+  padding-left: 2vw;
+}
+#style_guide_table tr td:nth-child(3) {
+  position: relative;
+  left: -15%;
 }
 #style_guide_table tr:first-child td:nth-child(2) {
   font-size: 20px;
   font-weight: bold;
 }
 #style_guide_table tr:nth-child(2) td:nth-child(2),
-#style_guide_table tr:nth-child(2) td:nth-child(3) {
+#style_guide_table tr:nth-child(2) td:nth-child(3),
+#style_guide_table tr:nth-child(2) td:nth-child(4) {
   font-weight: bold;
   font-size: 20px;
 }
 #style_guide_table tr:nth-child(2) td:nth-child(2) {
-  width: 25%;
+  width: 50%;
 }
 #style_guide_table tr:nth-child(2) td:nth-child(3) {
-  color: red;
-  width: 45%;
+  width: 25%;
 }
 
-/* Pretendard */
+/* Noto sans Ko */
 #style_guide_table tr:nth-child(2) td span {
   font-size: 16px;
   font-weight: bold;
-  font-family: "Pretendard";
+  font-family: Noto Sans KR, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 #style_guide_table tr:nth-child(2) td span::after {
   content: " / ";
@@ -137,28 +168,39 @@
   content: "";
 }
 #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(1) {
-  font-weight: 100;
   margin-left: 1.5vw;
+  font-weight: normal;
 }
 #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(2) {
-  font-weight: 300;
-}
-#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(3) {
-  font-weight: 400;
-}
-#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(4) {
-  font-weight: 600;
-}
-#style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(5) {
-  font-weight: 900;
+  font-weight: bold;
 }
 
-/* LUSH */
+/* Recoleta */
 #style_guide_table tr:nth-child(2) td:nth-child(3) {
   padding-left: 1vw;
 }
-#style_guide_table tr:nth-child(2) td:nth-child(3) span {
-  font-family: "re";
+#style_guide_table tr:nth-child(2) td:nth-child(3) span:nth-child(1) {
+  font-family: "Recoleta_R", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  margin-left: 1.5vw;
+  font-weight: normal;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(3) span:nth-child(2) {
+  font-family: "Recoleta_B", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+#style_guide_table tr:nth-child(2) td:nth-child(4) {
+  position: relative;
+  left: -10%;
+}
+#style_guide_table tr:nth-child(2) td:nth-child(4) span {
+  font-family: segoe Print, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: normal;
   margin-left: 1.5vw;
 }
 
@@ -166,7 +208,7 @@
   width: 100%;
 }
 .color {
-  width: 60%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
