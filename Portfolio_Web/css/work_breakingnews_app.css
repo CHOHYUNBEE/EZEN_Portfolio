@@ -9,9 +9,14 @@
   /* flex-wrap: wrap; */
 }
 #site_img {
-  background: url(../images/itddaa_main_banner.png) no-repeat 50% / cover;
+  background: url(../images/news_main_banner.png) no-repeat 50% / cover;
   width: 55%;
-  box-shadow: 15px 15px 15px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 #site_info {
   width: 45%;
@@ -256,7 +261,7 @@
   flex-wrap: wrap;
 }
 #Prototype_list img {
-  width: 33.3%;
+  width: 25%;
 }
 
 /* timeline */
@@ -279,7 +284,7 @@
 #Prototype_content_title,
 #Review_content_title,
 #preview_content_title {
-  margin-top: 10vh;
+  margin-top: 12vh;
 }
 
 .text_style {
@@ -292,6 +297,7 @@
   font-weight: bold;
   font-size: 26px;
   margin-top: 7vh;
+  margin-bottom: 3vh;
 }
 
 .text_style p {
