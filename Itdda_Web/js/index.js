@@ -18,7 +18,6 @@ $(document).ready(function () {
       $("#layer2").removeClass("active");
       $("#layer3").removeClass("active");
     }
-    console.log(_scrollTop);
     if (_scrollTop < 8100) {
       $("#itddaaSvg").removeClass("active");
       $("#arrowup").removeClass("active");
@@ -35,7 +34,6 @@ $(document).ready(function () {
     }
 
     if (_scrollTop >= 10000) {
-      console.log(_scrollTop);
       $("#twistarrow").addClass("active");
     } else if (_scrollTop < 10000) {
       $("#twistarrow").removeClass("active");
@@ -65,8 +63,6 @@ $(document).ready(function () {
       $("#logo_img *").css({ fill: "#fff" });
       $("#gnb li a").css({ color: "#fff" });
     }
-
-    console.log(_scrollTop);
     var wheelDelta = e.originalEvent.wheelDelta;
     if (wheelDelta > 0) {
       //마우스 올림
@@ -211,3 +207,17 @@ $("main #introduce_content ul#itroduce_list > li").mouseleave(function () {
     opacity: 0,
   });
 });
+// 커서 이벤트
+function corsorInit() {
+  $(window).mousemove(function (e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    $("#cusur_event").css({
+      top: y + "px",
+      left: x + "px",
+    });
+  });
+}
+
+// 스크립트 샐행
+corsorInit();
