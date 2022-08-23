@@ -1,7 +1,7 @@
 @charset "UTF-8";
 #header_content {
   width: 70%;
-  height: 65vh;
+  height: 70vh;
   /* border: 5px solid #000; */
   margin: 10vh auto;
 
@@ -20,7 +20,7 @@
 }
 #site_info {
   width: 45%;
-  padding-left: 3vw;
+  padding-left: 3.5vw;
 
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +39,7 @@
 }
 #site_info h2 {
   font-size: 1.8rem;
+  margin-top: 3vh;
   margin-bottom: 1.5vh;
   font-weight: 500;
 }
@@ -82,6 +83,13 @@
   width: 100%;
 }
 
+/* UX_vision_list */
+#UX_vision_list h3 {
+  margin: 3vh;
+}
+#UX_vision_list h3:first-of-type {
+  font-size: 1rem;
+}
 /* style_content */
 #style_content {
   width: 100%;
@@ -266,6 +274,7 @@
 
 /* timeline */
 #timeline_content,
+#UX_vision_content,
 #chargedtask_content,
 #Prototype_content,
 #Review_content,
@@ -280,6 +289,7 @@
   width: 100%;
 }
 #timeline_content_title,
+#UX_vision_content_title,
 #style_content_title,
 #chargedtask_content_title,
 #Prototype_content_title,
@@ -329,6 +339,11 @@
   border: #000 solid 10px;
   border-radius: 20px;
   margin: 0 auto;
+}
+#preview_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }
 
 .link {
