@@ -202,7 +202,7 @@
           <img src="./images/Preview_icon.png" alt="Preview_icon" />
         </div>
         <div id="preview_video">
-          <img src="./images/LUSH-Responsive-Web.png" alt="lush_page" />
+          <video src="./images/LUSH.mp4" muted loop autoplay></video>
         </div>
         <div id="view_website">
           <div id="view_website_btn">
@@ -235,20 +235,5 @@
         <h3>© 2022 HyunBee CHO. all rights reserved.</h3>
       </div>
     </footer>
-
-    <script>
-      // 슬라이드 콘텐츠 플러그인
-      $(window).fadeThis();
-
-      $("#preview_video img").on("mouseover", function () {
-        $("#preview_video img").animate({ marginTop: -4150 }, 12000, "linear");
-      });
-
-      $("#preview_video img").on("mouseleave", function () {
-        $("#preview_video img")
-          .stop()
-          .animate({ marginTop: 0 }, 1000, "linear");
-      });
-    </script>
   </body>
 </html>

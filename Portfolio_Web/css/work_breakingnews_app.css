@@ -269,6 +269,7 @@
 #chargedtask_content,
 #Prototype_content,
 #Review_content,
+#Review_content2,
 #Preview_content {
   width: 100%;
   display: flex;
@@ -283,6 +284,7 @@
 #chargedtask_content_title,
 #Prototype_content_title,
 #Review_content_title,
+#Review_content_title2,
 #preview_content_title {
   margin-top: 12vh;
 }
@@ -308,8 +310,12 @@
 }
 
 /* review */
-#review_list span {
+#review_list span,
+#review_list2 span {
   font-weight: bold;
+}
+#review_list p:last-child {
+  margin-top: 5vh;
 }
 
 /* preveiw */
@@ -325,10 +331,10 @@
   margin: 0 auto;
 }
 
-#view_website {
+.link {
   width: 50%;
 }
-#view_website_btn {
+.link_btn {
   width: 20vw;
   height: 8vh;
   border: #000 solid 5px;
@@ -337,18 +343,20 @@
   text-align: center;
   margin: 8vh auto;
 }
-#view_website_btn a {
+.link_btn a {
   display: block;
   color: #000;
   font-weight: bold;
   cursor: pointer;
 }
-#view_website_btn a:hover {
+
+.link_btn a:hover {
   background-color: #000;
   color: #fff;
 }
 
 /* main_send_email */
 #main_send_email {
+  width: 100%;
   border-top: #000 solid 1px;
 }
