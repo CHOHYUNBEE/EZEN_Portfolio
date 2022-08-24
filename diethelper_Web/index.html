@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
+    />
+    <title>Diet Helper</title>
+    <link rel="stylesheet" href="../common/minireset.css" />
+    <style>
+      body {
+        background-color: #76c6ff;
+        font-family: "pretendard";
+      }
+      header,
+      main {
+        width: 90%;
+        margin: 0 auto;
+      }
+      header h1 {
+        margin-top: 5vh;
+        font-size: 3rem;
+        font-weight: 900;
+      }
+      header p {
+        margin-top: 1vh;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+
+      /* main */
+      main {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 5vh;
+      }
+      .card {
+        width: 30%;
+        height: 700px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+        padding: 20px;
+        margin-top: 5vh;
+        color: #333333;
+        margin: 1vw;
+      }
+      .info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vh;
+      }
+      .input_box {
+        position: relative;
+      }
+      .info h1 {
+        text-align: right;
+        width: 12%;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .info p {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+        color: #b1b1b1;
+      }
+      .info input {
+        border: none;
+        background-color: #f0f0f0;
+        width: 250px;
+        height: 40px;
+        margin-left: 3vw;
+        text-indent: 10px;
+      }
+      .info .txt_box {
+        background-color: #f0f0f0;
+        width: 120px;
+        height: 40px;
+        text-align: center;
+        color: #b1b1b1;
+        line-height: 40px;
+        cursor: pointer;
+      }
+      .info .txt_box:first-of-type {
+        margin-left: 3vw;
+        margin-right: 10px;
+      }
+      .card h2,
+      .big_card h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+      .card #input_user_info {
+        margin-top: 10vh;
+      }
+      .card #user_info_btn {
+        width: 20%;
+        margin: 10vh auto;
+      }
+      .button_style {
+        background-color: #f0f0f0;
+        width: 100px;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "pretendard";
+      }
+
+      /* info_check_card */
+      #info_check_card #info_check {
+        width: 420px;
+        height: 580px;
+        background-color: #f0f0f0;
+        border-radius: 15px;
+        margin: 0 auto;
+        margin-top: 3vh;
+      }
+      #info_check_card #info_check h2 {
+        width: 100%;
+        text-align: center;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+      }
+      #info_check_card #info_check div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #info_check_card #info_check div p {
+        text-align: center;
+        margin-top: 2vh;
+        font-weight: 600;
+      }
+      #info_check_card #info_check div p:nth-of-type(2n + 1) {
+        width: 40%;
+        text-align: right;
+      }
+      #info_check_card #info_check div p:nth-of-type(2n) {
+        width: 60%;
+      }
+      .line {
+        width: 80%;
+        height: 3px;
+
+        background-color: #fff;
+        margin: 0 auto;
+        margin-top: 3vh;
+      }
+
+      /* select_option_card */
+      #select_store {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .store_box {
+        margin: 3vh 15px;
+        width: 25%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+        padding: 10px;
+        display: grid;
+        place-content: center;
+      }
+      #select_store h2,
+      #select_time h2,
+      #select_meal_type h2 {
+        margin-top: 3vh;
+        width: 100%;
+        text-align: center;
+      }
+      #select_time {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      .time_box {
+        width: 20%;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3vh 10px;
+      }
+      .time_box img {
+        width: 30px;
+      }
+      .time_box p {
+        margin-left: 10px;
+        font-weight: 600;
+      }
+      #radio_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #radio_list .radio {
+        width: 65%;
+        margin: 10px;
+      }
+      #radio_list .radio label {
+        margin-left: 15px;
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      #radio_list .radio label span,
+      #select_meal_type h2 span {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-left: 5px;
+      }
+      #select_meal_type h2 {
+        margin-bottom: 3vh;
+      }
+      #select_meal_btn {
+        width: 20%;
+        margin: 3vh auto;
+      }
+
+      /*  */
+      .big_card {
+        width: 95%;
+        height: 850px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+        padding: 20px;
+        margin-top: 5vh;
+        color: #333333;
+      }
+      #meal_card_list {
+        width: 30%;
+        height: 85%;
+        background-color: #f0f0f0;
+        border-radius: 15px;
+        margin-top: 5vh;
+      }
+      #meal_card_list .line {
+        width: 100%;
+      }
+      #meal_card_list .meal_card_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+      }
+      #meal_card_list .meal_card_title img {
+        width: 35px;
+      }
+      #meal_card_list h1 {
+        font-weight: 700;
+        margin-left: 1vw;
+        font-size: 1.2rem;
+      }
+      .meal_card_content_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .meal_card_content_list .meal_card_content {
+        width: 80%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 3vh;
+      }
+      .meal_card_content_list .meal_card_content label {
+        margin-left: 2vw;
+      }
+      .meal_card_content_list .meal_card_content label p {
+        margin-top: 5px;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      .meal_card_content_list .meal_card_content label p span {
+        font-weight: 900;
+        color: #3fa7f3;
+      }
+      .total_kcal {
+        margin-top: 8vh;
+        margin-bottom: 3vh;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-align: right;
+        margin-right: 1vw;
+      }
+      .meal_card_footer {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        position: relative;
+        text-align: center;
+      }
+      .meal_card .line {
+        margin-top: 0;
+      }
+      .meal_card_footer div {
+        width: 50%;
+      }
+      .meal_card_footer .h_line {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        height: 120%;
+        width: 3px;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>편의점 다이어트 식단 HELPER</h1>
+      <p>
+        자신에게 맞는 적절한 칼로리, 탄수화물, 단백질, 지방 비율에 맞는 편의점
+        식단을 추천해드려요!
+      </p>
+    </header>
+
+    <main>
+      <div class="card" id="info_card">
+        <h2>Step 1 - 정보입력</h2>
+        <div id="input_user_info">
+          <div class="info">
+            <h1>이름:</h1>
+            <input type="text" id="user_name" />
+          </div>
+          <div class="info">
+            <h1>성별:</h1>
+            <div class="txt_box">남</div>
+            <div class="txt_box">여</div>
+          </div>
+          <div class="info">
+            <h1>키:</h1>
+            <div class="input_box">
+              <input type="text" id="user_height" />
+              <p>cm</p>
+            </div>
+          </div>
+          <div class="info">
+            <h1>몸무게:</h1>
+            <div class="input_box">
+              <input type="text" id="user_weight" />
+              <p>kg</p>
+            </div>
+          </div>
+        </div>
+        <div id="user_info_btn">
+          <button class="button_style" type="button">입력</button>
+        </div>
+      </div>
+
+      <div class="card" id="info_check_card">
+        <h2>Step 2 - 적정 영양 섭취 정보 확인</h2>
+        <div id="info_check">
+          <div id="user_info">
+            <h2>기본 정보</h2>
+            <p>이름 :</p>
+            <p>조현비</p>
+            <p>성별 :</p>
+            <p>여자</p>
+            <p>키 :</p>
+            <p>167cm</p>
+            <p>몸무게 :</p>
+            <p>52kg</p>
+          </div>
+
+          <div id="nutrient_info">
+            <h2>영양 정보</h2>
+            <p>기초대사량 :</p>
+            <p>1344 kcal</p>
+            <p>BMI :</p>
+            <p>18.6</p>
+            <p>1일 적정량 :</p>
+            <p>1479 kcal</p>
+            <p>탄수화물 :</p>
+            <p>222g</p>
+            <p>단백질 :</p>
+            <p>92g</p>
+            <p>지방 :</p>
+            <p>49g</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" id="select_option_card">
+        <h2>Step 3 - 옵션 선택</h2>
+        <div id="select_store">
+          <h2>편의점 선택</h2>
+          <div class="store_box">
+            <img src="./images/cu.png" alt="cu" />
+          </div>
+          <div class="store_box">
+            <img src="./images/gs25.png" alt="gs25" />
+          </div>
+          <div class="store_box">
+            <img src="./images/emart24.png" alt="emart24" />
+          </div>
+        </div>
+        <div id="select_time">
+          <h2>추천받을 식사 시간 선택</h2>
+          <div class="time_box">
+            <img src="./images/sun.png" alt="sun" />
+            <p>아침</p>
+          </div>
+          <div class="time_box">
+            <img src="images/sunny.png" alt="sunny" />
+            <p>점심</p>
+          </div>
+          <div class="time_box">
+            <img src="./images/moon.png" alt="moon" />
+            <p>저녁</p>
+          </div>
+          <div class="time_box">
+            <img src="./images/snack.png" alt="snack" />
+            <p>간식</p>
+          </div>
+        </div>
+        <div id="select_meal_type">
+          <h2>식단 타입 선택 <span> (1끼 기준)</span></h2>
+          <div id="radio_list">
+            <div class="radio">
+              <input type="radio" name="meal" id="medium" /><label for="medium"
+                >최저 칼로리 식당 <span>(1가지 음식 추천)</span></label
+              >
+            </div>
+            <div class="radio">
+              <input type="radio" name="meal" id="low" /><label for="low"
+                >적정 칼로리 식당 <span>(1~2가지 음식 추천)</span></label
+              >
+            </div>
+            <div class="radio">
+              <input type="radio" name="meal" id="high" /><label for="high"
+                >증량 칼로리 식당 <span>(1~3가지 음식 추천)</span></label
+              >
+            </div>
+          </div>
+        </div>
+        <div id="select_meal_btn">
+          <button class="button_style" type="button">식단 생성</button>
+        </div>
+      </div>
+
+      <div class="big_card">
+        <h2>Step 4 - 식단 확인</h2>
+        <div id="meal_card_list">
+          <div class="meal_card">
+            <div class="meal_card_title">
+              <img src="./images/sunny.png" alt="sunny" />
+              <h1>점심</h1>
+            </div>
+            <div class="line"></div>
+            <div class="meal_card_content_list">
+              <div class="meal_card_content">
+                <input type="radio" name="meal" id="product" />
+                <label for="product">
+                  <p>제품명 : <span>1700 샌드위치</span></p>
+                  <p>중량 : 112g</p>
+                  <p>칼로리 : 248kcal</p>
+                  <p>중량 : 28g</p>
+                  <p>중량 : 6g</p>
+                  <p>중량 : 13g</p>
+                </label>
+              </div>
+              <div class="meal_card_content">
+                <input type="radio" name="meal" id="product2" />
+                <label for="product">
+                  <p>제품명 : <span>1700 샌드위치</span></p>
+                  <p>중량 : 112g</p>
+                  <p>칼로리 : 248kcal</p>
+                  <p>중량 : 28g</p>
+                  <p>중량 : 6g</p>
+                  <p>중량 : 13g</p>
+                </label>
+              </div>
+            </div>
+            <div class="total_kcal">총 섭취 칼로리 : 248kcal</div>
+            <div class="line"></div>
+            <div class="meal_card_footer">
+              <div>삭제</div>
+              <div class="h_line"></div>
+              <div>식단 재생성</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="big_card">
+        <h2>Step 5 - 섭취 영양소 확인</h2>
+        <div id="nutrient_gra">
+          <h2>영양소 그래프</h2>
+          <div class="graph_bar_content">
+            <p>칼로리 :</p>
+            <div class="graph_bar">
+              <div class="bar"></div>
+              <div class="color_bar">1021</div>
+            </div>
+            <p>1479kcal (적정칼로리)</p>
+          </div>
+          <div class="graph_bar_content">
+            <p>탄수화물 :</p>
+            <div class="graph_bar">
+              <div class="bar"></div>
+              <div class="color_bar">102</div>
+            </div>
+            <p>222g</p>
+          </div>
+          <div class="graph_bar_content">
+            <p>단백질 :</p>
+            <div class="graph_bar">
+              <div class="bar"></div>
+              <div class="color_bar">51</div>
+            </div>
+            <p>92g</p>
+          </div>
+          <div class="graph_bar_content">
+            <p>지방 :</p>
+            <div class="graph_bar">
+              <div class="bar"></div>
+              <div class="color_bar">12</div>
+            </div>
+            <p>49g</p>
+          </div>
+        </div>
+
+        <div id="nutrient_raito"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="left_content">
+        <p>Email : vvv3349@naver.com</p>
+        <p>COPYRIGHT © 2022 REDESIGNED BY HYUNBEE CHO ALL RIGHTS RESERVED.</p>
+      </div>
+      <div id="right_content">
+        <a href="#">깃허브 보러가기</a>
+        <a href="#">포트폴리오 더보기</a>
+      </div>
+    </footer>
+  </body>
+</html>
