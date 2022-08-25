@@ -9,6 +9,9 @@
     />
     <title>Diet Helper</title>
     <link rel="stylesheet" href="../common/minireset.css" />
+
+    <script src="../common/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
     <style>
       body {
         background-color: #76c6ff;
@@ -54,7 +57,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 5vh;
+        margin-top: 3vh;
       }
       .input_box {
         position: relative;
@@ -80,18 +83,72 @@
         margin-left: 3vw;
         text-indent: 10px;
       }
-      .info .txt_box {
-        background-color: #f0f0f0;
+      .gender {
+        position: relative;
+        margin-left: 3vw;
+      }
+      .gender label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #b1b1b1;
+      }
+      #gender_info input[type="radio"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
         width: 120px;
         height: 40px;
+        background-color: #f0f0f0;
         text-align: center;
         color: #b1b1b1;
         line-height: 40px;
         cursor: pointer;
+        margin: 0;
       }
-      .info .txt_box:first-of-type {
-        margin-left: 3vw;
-        margin-right: 10px;
+      #gender_info input[type="radio"]:checked {
+        background-color: #76c6ff;
+      }
+      #gender_info input[type="radio"]:checked + label {
+        color: #fff;
+      }
+      #gender_info .gender:last-of-type {
+        margin-left: 10px;
+      }
+      #active_list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #active_list #active_radio {
+        width: 65%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+      }
+      #active_list #active_radio .radio_list {
+        width: 33%;
+        text-align: center;
+        margin-top: 3vh;
+      }
+      #active_list h1 {
+        width: 15%;
+        text-align: center;
+      }
+      #active_list input[type="radio"] {
+        width: 15px;
+        height: 15px;
+        margin: 0;
+      }
+      #active_list input[type="radio"] + label {
+        width: 30%;
+        margin-left: 10px;
+        font-weight: 500;
+      }
+      #active_list input[type="radio"]:checked + label {
+        font-weight: 700;
       }
       .card h2,
       .big_card h2 {
@@ -99,11 +156,11 @@
         font-weight: 700;
       }
       .card #input_user_info {
-        margin-top: 10vh;
+        margin-top: 5vh;
       }
       .card #user_info_btn {
         width: 20%;
-        margin: 10vh auto;
+        margin: 5vh auto;
       }
       .button_style {
         background-color: #f0f0f0;
@@ -176,6 +233,9 @@
         display: grid;
         place-content: center;
       }
+      .store_box input {
+        display: none;
+      }
       #select_store h2,
       #select_time h2,
       #select_meal_type h2 {
@@ -194,10 +254,20 @@
         height: 50px;
         border-radius: 10px;
         box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+        margin: 3vh 10px;
+      }
+      .time_box label {
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 3vh 10px;
+      }
+      .time_box input {
+        display: none;
+      }
+      .time_box.active {
+        background-color: #76c6ff;
       }
       .time_box img {
         width: 30px;
@@ -331,7 +401,7 @@
 
       /* nutrient_content */
       #nutrient_content {
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
@@ -525,25 +595,108 @@
         <div id="input_user_info">
           <div class="info">
             <h1>이름:</h1>
-            <input type="text" id="user_name" />
+            <input type="text" id="user_name" required />
+          </div>
+          <div class="info" id="gender_info">
+            <h1>성별:</h1>
+            <div class="gender">
+              <input
+                type="radio"
+                name="gender"
+                id="man"
+                value="man"
+                required
+              /><label for="man">남</label>
+            </div>
+            <div class="gender">
+              <input
+                type="radio"
+                name="gender"
+                id="girl"
+                value="girl"
+                required
+              /><label for="girl">여</label>
+            </div>
           </div>
           <div class="info">
-            <h1>성별:</h1>
-            <div class="txt_box">남</div>
-            <div class="txt_box">여</div>
+            <h1>나이:</h1>
+            <div class="input_box">
+              <input
+                type="text"
+                id="user_age"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                step="0.1"
+              />
+              <p>세</p>
+            </div>
           </div>
           <div class="info">
             <h1>키:</h1>
             <div class="input_box">
-              <input type="text" id="user_height" />
+              <input
+                type="text"
+                id="user_height"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                step="0.1"
+              />
               <p>cm</p>
             </div>
           </div>
           <div class="info">
             <h1>몸무게:</h1>
             <div class="input_box">
-              <input type="text" id="user_weight" />
+              <input
+                type="text"
+                id="user_weight"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                step="0.1"
+              />
               <p>kg</p>
+            </div>
+          </div>
+          <div class="info" id="active_list">
+            <h1>활동량 :</h1>
+            <div id="active_radio">
+              <div class="radio_list">
+                <input
+                  type="radio"
+                  name="active"
+                  id="active_1"
+                  value="level1"
+                /><label for="active_1">거의 없음</label>
+              </div>
+              <div class="radio_list">
+                <input
+                  type="radio"
+                  name="active"
+                  id="active_2"
+                  value="level2"
+                /><label for="active_2">조금 있음</label>
+              </div>
+              <div class="radio_list">
+                <input
+                  type="radio"
+                  name="active"
+                  id="active_3"
+                  value="level3"
+                /><label for="active_3">보통</label>
+              </div>
+              <div class="radio_list">
+                <input
+                  type="radio"
+                  name="active"
+                  id="active_4"
+                  value="level4"
+                /><label for="active_4">조금 많음</label>
+              </div>
+              <div class="radio_list">
+                <input
+                  type="radio"
+                  name="active"
+                  id="active_5"
+                  value="level5"
+                /><label for="active_5">정말 많음</label>
+              </div>
             </div>
           </div>
         </div>
@@ -558,29 +711,31 @@
           <div id="user_info">
             <h2>기본 정보</h2>
             <p>이름 :</p>
-            <p>조현비</p>
+            <p id="info_name"></p>
             <p>성별 :</p>
-            <p>여자</p>
+            <p id="info_gender"></p>
+            <p>나이 :</p>
+            <p id="info_age"></p>
             <p>키 :</p>
-            <p>167cm</p>
+            <p id="info_height"></p>
             <p>몸무게 :</p>
-            <p>52kg</p>
+            <p id="info_weight"></p>
           </div>
 
           <div id="nutrient_info">
             <h2>영양 정보</h2>
             <p>기초대사량 :</p>
-            <p>1344 kcal</p>
+            <p id="info_kcal"></p>
             <p>BMI :</p>
-            <p>18.6</p>
+            <p id="info_bmi"></p>
             <p>1일 적정량 :</p>
-            <p>1479 kcal</p>
+            <p id="info_ad_kcal"></p>
             <p>탄수화물 :</p>
-            <p>222g</p>
+            <p id="info_car_kcal"></p>
             <p>단백질 :</p>
-            <p>92g</p>
+            <p id="info_pro_kcal"></p>
             <p>지방 :</p>
-            <p>49g</p>
+            <p id="info_fat_kcal"></p>
           </div>
         </div>
       </div>
@@ -590,50 +745,83 @@
         <div id="select_store">
           <h2>편의점 선택</h2>
           <div class="store_box">
-            <img src="./images/cu.png" alt="cu" />
+            <input type="radio" name="store" id="cu_store" value="cu" />
+            <label for="cu_store">
+              <img src="./images/cu.png" alt="cu" />
+            </label>
           </div>
           <div class="store_box">
-            <img src="./images/gs25.png" alt="gs25" />
+            <input type="radio" name="store" id="gs25_store" value="gs25" />
+            <label for="gs25_store">
+              <img src="./images/gs25.png" alt="gs25" />
+            </label>
           </div>
           <div class="store_box">
-            <img src="./images/emart24.png" alt="emart24" />
+            <input
+              type="radio"
+              name="store"
+              id="emart24_store"
+              value="emart24"
+            />
+            <label for="emart24_store">
+              <img src="./images/emart24.png" alt="emart24" />
+            </label>
           </div>
         </div>
         <div id="select_time">
           <h2>추천받을 식사 시간 선택</h2>
           <div class="time_box">
-            <img src="./images/sun.png" alt="sun" />
-            <p>아침</p>
+            <input type="checkbox" name="time" id="morning" value="morning" />
+            <label for="morning">
+              <img src="./images/sun.png" alt="sun" />
+              <p>아침</p></label
+            >
           </div>
           <div class="time_box">
-            <img src="images/sunny.png" alt="sunny" />
-            <p>점심</p>
+            <input type="checkbox" name="time" id="lunch" value="lunch" />
+            <label for="lunch">
+              <img src="images/sunny.png" alt="sunny" />
+              <p>점심</p></label
+            >
           </div>
           <div class="time_box">
-            <img src="./images/moon.png" alt="moon" />
-            <p>저녁</p>
+            <input type="checkbox" name="time" id="moon" value="moon" />
+            <label for="moon">
+              <img src="./images/moon.png" alt="moon" />
+              <p>저녁</p>
+            </label>
           </div>
           <div class="time_box">
-            <img src="./images/snack.png" alt="snack" />
-            <p>간식</p>
+            <input type="checkbox" name="time" id="snack" value="snack" />
+            <label for="snack">
+              <img src="./images/snack.png" alt="snack" />
+              <p>간식</p>
+            </label>
           </div>
         </div>
         <div id="select_meal_type">
           <h2>식단 타입 선택 <span> (1끼 기준)</span></h2>
           <div id="radio_list">
             <div class="radio">
-              <input type="radio" name="meal" id="medium" /><label for="medium"
-                >최저 칼로리 식당 <span>(1가지 음식 추천)</span></label
+              <input type="radio" name="meal" id="low" value="low" /><label
+                for="low"
+                >감량 칼로리 식단 <span>(1가지 음식 추천)</span></label
               >
             </div>
             <div class="radio">
-              <input type="radio" name="meal" id="low" /><label for="low"
-                >적정 칼로리 식당 <span>(1~2가지 음식 추천)</span></label
+              <input
+                type="radio"
+                name="meal"
+                id="medium"
+                value="medium"
+              /><label for="medium"
+                >적정 칼로리 식단 <span>(1~2가지 음식 추천)</span></label
               >
             </div>
             <div class="radio">
-              <input type="radio" name="meal" id="high" /><label for="high"
-                >증량 칼로리 식당 <span>(1~3가지 음식 추천)</span></label
+              <input type="radio" name="meal" id="high" value="high" /><label
+                for="high"
+                >증량 칼로리 식단 <span>(1~3가지 음식 추천)</span></label
               >
             </div>
           </div>
@@ -696,28 +884,28 @@
             <div class="graph_bar">
               <div class="color_bar">1021</div>
             </div>
-            <p>1479kcal (적정칼로리)</p>
+            <p></p>
           </div>
           <div class="graph_bar_content">
             <p>탄수화물 :</p>
             <div class="graph_bar">
               <div class="color_bar">102</div>
             </div>
-            <p>222g</p>
+            <p></p>
           </div>
           <div class="graph_bar_content">
             <p>단백질 :</p>
             <div class="graph_bar">
               <div class="color_bar">51</div>
             </div>
-            <p>92g</p>
+            <p></p>
           </div>
           <div class="graph_bar_content">
             <p>지방 :</p>
             <div class="graph_bar">
               <div class="color_bar">12</div>
             </div>
-            <p>49g</p>
+            <p></p>
           </div>
         </div>
         <div id="nutrient_raito">
