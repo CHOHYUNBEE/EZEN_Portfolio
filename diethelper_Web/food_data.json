@@ -1,0 +1,33 @@
+[
+  {
+    "store": "CU",
+    "food_list": [
+      {
+        "food_name": "test1",
+        "weight": "600",
+        "kcal": "234",
+        "carbohydrate": "13",
+        "protein": "23",
+        "fat": "5"
+      },
+      {
+        "food_name": "반숙계란 ",
+        "weight": "50",
+        "kcal": "64",
+        "carbohydrate": "3.60",
+        "protein": "1.00",
+        "fat": "7.00"
+      },
+      {
+        "food_name": "test3",
+        "weight": "110",
+        "kcal": "523",
+        "carbohydrate": "54",
+        "protein": "4",
+        "fat": "23"
+      }
+    ]
+  },
+  { "store": "GS25" },
+  { "store": "EMART24" }
+]

@@ -81,6 +81,65 @@ $(window).ready(function () {
     $("#select_store .store_box").css({ backgroundColor: "#fff" });
     $(this).css({ backgroundColor: "#76c6ff" });
     $(this).find("input").prop("checked", true);
+
+    var meal_type = "low";
+    var store = $("input[name='store']:checked").val();
+    var data_url = "";
+    var make_kcal = 1479;
+    var make_carbohydrate = 222;
+    var make_protein = 92;
+    var make_fat = 49;
+    var select_meal = [];
+    var random_num = Math.random();
+    var command_num = 1; // 추천 음식 가지수
+    var meal_len = 0; // 식단 갯수
+    var make_food_list = []; // 적합한 식단 목록
+
+    if (store == "cu") {
+      data_url = "./cu.json";
+    } else if (store == "gs25") {
+      data_url = "./gs25.json";
+    } else {
+      data_url = "./emart24.json";
+    }
+
+    fetch(data_url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((jsondata) => {
+        $.each(jsondata, function (key, value) {
+          $.each(value, function (key, value_kcal) {
+            if (key == "kcal" && value_kcal <= make_kcal / 3) {
+              $.each(value, function (key, value_car) {
+                if (
+                  key == "carbohydrate" &&
+                  value_car <= make_carbohydrate / 3
+                ) {
+                  $.each(value, function (key, value_pro) {
+                    if (key == "protein" && value_pro <= make_protein / 3) {
+                      $.each(value, function (key, value_fat) {
+                        if (key == "fat" && value_fat <= make_fat / 3) {
+                          make_food_list.push(value);
+                        }
+                      });
+                    }
+                  });
+                }
+              });
+            }
+          });
+        });
+        meal_len = make_food_list.length;
+        // 식단 랜덤 뽑기
+        // 감량 식단 선택 시
+        if (meal_type == "low") {
+          var low_random_num = Math.floor(random_num * meal_len + 1);
+          select_meal = make_food_list[low_random_num];
+        }
+      });
+
+    console.log(make_food_list);
   });
 
   //  추천받을 식사 시간 선택 이벤트
@@ -91,6 +150,14 @@ $(window).ready(function () {
   //  식단 생성 버튼
   $("#select_meal_btn").click(function () {
     if (check_option() != false) {
+      // 편의점 선택
+      var store = $("input[name='store']:checked").val();
+      var data_url = "";
+      var select_meal = [];
+      var random_num = Math.random();
+      var command_num = 0; // 추천 음식 가지수
+      var meal_len = 0; // 식단 갯수
+
       // 식사 시간 선택
       $("input[name='time']:checked").each(function (e) {
         meal_time_arr.push($(this).val());
@@ -99,32 +166,88 @@ $(window).ready(function () {
       //  식단 타입 선택
       var meal_type = $("input[name='meal']:checked").val();
       var diet_kcal = 0; // 타입에 따라 먹어야하는 칼로리량
-      var diet_txt = ""; // 타입에 따라 먹어야하는 칼로리량
+      var diet_txt = "";
       if (meal_type == "low") {
         diet_kcal = ad_kcal * 0.9;
         diet_txt = "감량 칼로리";
+        command_num = 1;
       } else if (meal_type == "medium") {
         diet_kcal = ad_kcal;
         diet_txt = "적정 칼로리";
+        command_num = 2;
       } else {
         diet_kcal = ad_kcal * 1.1;
         diet_txt = "증량 칼로리";
+        command_num = 3;
       }
 
       //   섭취 영양소 확인 영역
       //   영양소 그래프 데이터
+      var make_kcal = diet_kcal.toFixed(0);
+      var make_carbohydrate = ((diet_kcal * 0.5) / 4).toFixed(0);
+      var make_protein = ((diet_kcal * 0.3) / 4).toFixed(0);
+      var make_fat = ((diet_kcal * 0.2) / 9).toFixed(0);
+
       $(".graph_bar_content:nth-child(2) p:last-child").text(
-        `${diet_kcal.toFixed(0)}` + `kcal (${diet_txt})`
+        make_kcal + `kcal (${diet_txt})`
       );
       $(".graph_bar_content:nth-child(3) p:last-child").text(
-        `${((diet_kcal * 0.5) / 4).toFixed(0)}` + "g"
+        make_carbohydrate + "g"
       );
       $(".graph_bar_content:nth-child(4) p:last-child").text(
-        `${((diet_kcal * 0.3) / 4).toFixed(0)}` + "g"
+        make_protein + "g"
       );
-      $(".graph_bar_content:nth-child(5) p:last-child").text(
-        `${((diet_kcal * 0.2) / 9).toFixed(0)}` + "g"
-      );
+      $(".graph_bar_content:nth-child(5) p:last-child").text(make_fat + "g");
+
+      // 식단 생성
+      if (store == "cu") {
+        data_url = "./cu.json";
+      } else if (store == "gs25") {
+        data_url = "./gs25.json";
+      } else {
+        data_url = "./emart24.json";
+      }
+
+      fetch(data_url)
+        .then((response) => {
+          return response.json();
+        })
+        .then((jsondata) => {
+          var make_food_list = []; // 적합한 식단 목록
+          $.each(jsondata, function (key, value) {
+            $.each(value, function (key, value_kcal) {
+              if (key == "kcal" && value_kcal <= make_kcal / 3) {
+                $.each(value, function (key, value_car) {
+                  if (
+                    key == "carbohydrate" &&
+                    value_car <= make_carbohydrate / 3
+                  ) {
+                    $.each(value, function (key, value_pro) {
+                      if (key == "protein" && value_pro <= make_protein / 3) {
+                        $.each(value, function (key, value_fat) {
+                          if (key == "fat" && value_fat <= make_fat / 3) {
+                            make_food_list.push(value);
+                          }
+                        });
+                      }
+                    });
+                  }
+                });
+              }
+            });
+          });
+        });
+      meal_len = make_food_list.length;
+      console.log(meal_len);
+      // 식단 랜덤 뽑기
+      // 감량 식단 선택 시
+      if (meal_type == "low") {
+        var low_random_num = Math.floor(random_num * meal_len + 1);
+        console.log(low_random_num);
+
+        select_meal = make_food_list[random_num];
+        console.log(select_meal);
+      }
     }
   });
 });
