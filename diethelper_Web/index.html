@@ -57,7 +57,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 3vh;
+        margin-top: 2vh;
       }
       .input_box {
         position: relative;
@@ -152,7 +152,7 @@
       }
       .card h2,
       .big_card h2 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
       }
       .card #input_user_info {
@@ -176,7 +176,7 @@
 
       /* info_check_card */
       #info_check_card #info_check {
-        width: 420px;
+        width: 95%;
         height: 580px;
         background-color: #f0f0f0;
         border-radius: 15px;
@@ -239,7 +239,7 @@
       #select_store h2,
       #select_time h2,
       #select_meal_type h2 {
-        margin-top: 3vh;
+        margin-top: 2.5vh;
         width: 100%;
         text-align: center;
       }
@@ -283,12 +283,12 @@
         align-items: center;
       }
       #radio_list .radio {
-        width: 65%;
+        width: 80%;
         margin: 10px;
       }
       #radio_list .radio label {
         margin-left: 15px;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-weight: 600;
       }
       #radio_list .radio label span,
@@ -305,7 +305,6 @@
         margin: 3vh auto;
       }
 
-      /*  */
       .big_card {
         width: 95%;
         height: 850px;
@@ -317,11 +316,16 @@
         color: #333333;
       }
       #meal_card_list {
+        width: 100%;
+        display: flex;
+      }
+      #meal_card_list .meal_card {
         width: 30%;
-        height: 85%;
         background-color: #f0f0f0;
         border-radius: 15px;
         margin-top: 5vh;
+        margin-right: 2vw;
+        position: relative;
       }
       #meal_card_list .line {
         width: 100%;
@@ -343,8 +347,9 @@
       .meal_card_content_list {
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-content: flex-start;
         flex-wrap: wrap;
+        height: 600px;
       }
       .meal_card_content_list .meal_card_content {
         width: 80%;
@@ -372,6 +377,9 @@
         font-weight: 700;
         text-align: right;
         margin-right: 1vw;
+        position: absolute;
+        bottom: 80px;
+        right: 5px;
       }
       .meal_card_footer {
         width: 100%;
@@ -381,8 +389,11 @@
         align-items: center;
         font-weight: 700;
         font-size: 1.2rem;
-        position: relative;
+        position: absolute;
+        bottom: 0;
+        left: 0;
         text-align: center;
+        border-top: 3px solid #fff;
       }
       .meal_card .line {
         margin-top: 0;
@@ -436,8 +447,8 @@
         position: relative;
       }
       .graph_bar_content .color_bar {
-        width: 50%;
-        background-color: #76c6ff;
+        /* width: 50%;
+        background-color: #76c6ff; */
         height: 30px;
         border-radius: 15px;
         text-align: right;
@@ -488,11 +499,6 @@
         transform: translateX(-50%);
         width: 350px;
         height: 350px;
-        background: conic-gradient(
-          #8b22ff 0% 25%,
-          #ffc33b 25% 56%,
-          #21f3d6 56% 100%
-        );
         border-radius: 50%;
         box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
       }
@@ -791,13 +797,6 @@
               <p>저녁</p>
             </label>
           </div>
-          <div class="time_box">
-            <input type="checkbox" name="time" id="snack" value="snack" />
-            <label for="snack">
-              <img src="./images/snack.png" alt="snack" />
-              <p>간식</p>
-            </label>
-          </div>
         </div>
         <div id="select_meal_type">
           <h2>식단 타입 선택 <span> (1끼 기준)</span></h2>
@@ -821,7 +820,7 @@
             <div class="radio">
               <input type="radio" name="meal" id="high" value="high" /><label
                 for="high"
-                >증량 칼로리 식단 <span>(1~3가지 음식 추천)</span></label
+                >증량 칼로리 식단 <span>(2가지 음식 추천)</span></label
               >
             </div>
           </div>
@@ -833,46 +832,7 @@
 
       <div class="big_card">
         <h2>Step 4 - 식단 확인</h2>
-        <div id="meal_card_list">
-          <div class="meal_card">
-            <div class="meal_card_title">
-              <img src="./images/sunny.png" alt="sunny" />
-              <h1>점심</h1>
-            </div>
-            <div class="line"></div>
-            <div class="meal_card_content_list">
-              <div class="meal_card_content">
-                <input type="radio" name="meal" id="product" />
-                <label for="product">
-                  <p>제품명 : <span>1700 샌드위치</span></p>
-                  <p>중량 : 112g</p>
-                  <p>칼로리 : 248kcal</p>
-                  <p>중량 : 28g</p>
-                  <p>중량 : 6g</p>
-                  <p>중량 : 13g</p>
-                </label>
-              </div>
-              <div class="meal_card_content">
-                <input type="radio" name="meal" id="product2" />
-                <label for="product">
-                  <p>제품명 : <span>1700 샌드위치</span></p>
-                  <p>중량 : 112g</p>
-                  <p>칼로리 : 248kcal</p>
-                  <p>중량 : 28g</p>
-                  <p>중량 : 6g</p>
-                  <p>중량 : 13g</p>
-                </label>
-              </div>
-            </div>
-            <div class="total_kcal">총 섭취 칼로리 : 248kcal</div>
-            <div class="line"></div>
-            <div class="meal_card_footer">
-              <div>삭제</div>
-              <div class="h_line"></div>
-              <div>식단 재생성</div>
-            </div>
-          </div>
-        </div>
+        <div id="meal_card_list"></div>
       </div>
 
       <div class="big_card" id="nutrient_content">
@@ -882,28 +842,28 @@
           <div class="graph_bar_content">
             <p>칼로리 :</p>
             <div class="graph_bar">
-              <div class="color_bar">1021</div>
+              <div class="color_bar"></div>
             </div>
             <p></p>
           </div>
           <div class="graph_bar_content">
             <p>탄수화물 :</p>
             <div class="graph_bar">
-              <div class="color_bar">102</div>
+              <div class="color_bar"></div>
             </div>
             <p></p>
           </div>
           <div class="graph_bar_content">
             <p>단백질 :</p>
             <div class="graph_bar">
-              <div class="color_bar">51</div>
+              <div class="color_bar"></div>
             </div>
             <p></p>
           </div>
           <div class="graph_bar_content">
             <p>지방 :</p>
             <div class="graph_bar">
-              <div class="color_bar">12</div>
+              <div class="color_bar"></div>
             </div>
             <p></p>
           </div>
@@ -928,11 +888,11 @@
             </div>
           </div>
           <div id="nutrient_ratio_txt">
-            <p>2</p>
+            <p></p>
             <p>:</p>
-            <p>1</p>
+            <p></p>
             <p>:</p>
-            <p>1</p>
+            <p></p>
           </div>
         </div>
       </div>

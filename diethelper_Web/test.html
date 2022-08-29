@@ -8,10 +8,6 @@
     <script src="../common/jquery-3.6.0.min.js"></script>
 
     <style>
-      #textarea {
-        width: 50%;
-        height: 600px;
-      }
       #btn {
         width: 100px;
         height: 50px;
@@ -19,86 +15,94 @@
         text-align: center;
         line-height: 50px;
         color: #fff;
+        margin: 0 auto;
       }
     </style>
   </head>
   <body>
-    <input type="text" name="text" id="textarea" />
     <div id="btn">변환</div>
     <script>
       $("#btn").click(function () {
-        const text = $("input[name='text']").val();
-        var food_list = text.split("비슷한");
-        var food_list_2 = [];
-        var html_text = "[";
-        var len = food_list.length;
-        var len_2 = 0;
-        var food_name = "";
-        var weight = "";
-        var kcal = "";
-        var carbohydrate = "";
-        var protein = "";
-        var fat = "";
-
-        $.each(food_list, function (key, value) {
-          if (key != len - 1) {
-            var now_value = value.split(" (CU) ");
-            food_list_2.push(now_value); // 0 : 제품이름 1 : 영양성분
-          }
-        });
-        len_2 = food_list_2.length;
-        $.each(food_list_2, function (key, value) {
-          food_name = value[0].replace(" ", "");
-          if (value[1].indexOf(")") != -1) {
-            if (value[1].split(")")[0].indexOf("g") != -1) {
-              weight = value[1].split(")")[0].split("g")[0].split("(")[1];
-            } else {
-              weight = value[1].split(")")[0].split("ml")[0].split("(")[1];
+        $.get("dist/gs25.txt", function (data) {
+          var food_list = data.split("비슷한");
+          var food_list_2 = [];
+          var html_text = "[";
+          var len = food_list.length;
+          var len_2 = 0;
+          var food_name = "";
+          var weight = "";
+          var kcal = "";
+          var carbohydrate = "";
+          var protein = "";
+          var fat = "";
+          $.each(food_list, function (key, value) {
+            if (key != len - 1) {
+              var now_value = value.split(" (GS25)");
+              now_value[0] = now_value[0].replace("\n", " ").replace("\r", " ");
+              now_value[1] = now_value[1].replace("\n", " ").replace("\r", " ");
+              food_list_2.push(now_value); // 0 : 제품이름 1 : 영양성분
             }
-            kcal = value[1].split("(")[1].split("kcal")[0].split("칼로리: ")[1];
-            fat = value[1]
-              .split("(")[1]
-              .split("|")[1]
-              .split(": ")[1]
-              .split("g")[0]; //지방
-            carbohydrate = value[1]
-              .split("(")[1]
-              .split("|")[2]
-              .split(": ")[1]
-              .split("g")[0]; //탄수화물
-            protein = value[1]
-              .split("(")[1]
-              .split("|")[3]
-              .split(": ")[1]
-              .split("g")[0]; //단백질
-          } else {
-            if (value[1].split("당")[0].indexOf("g") != -1) {
-              weight = value[1].split("당")[0].split("g")[0];
-            } else {
-              weight = value[1].split("당")[0].split("ml")[0];
-            }
+          });
+          len_2 = food_list_2.length;
 
-            kcal = value[1]
-              .split("당")[1]
-              .split("kcal")[0]
-              .split("칼로리: ")[1];
-            fat = value[1]
-              .split("당")[1]
-              .split("|")[1]
-              .split(": ")[1]
-              .split("g")[0];
-            carbohydrate = value[1]
-              .split("당")[1]
-              .split("|")[2]
-              .split(": ")[1]
-              .split("g")[0];
-            protein = value[1]
-              .split("당")[1]
-              .split("|")[3]
-              .split(": ")[1]
-              .split("g")[0];
-          }
-          html_text += `
+          $.each(food_list_2, function (key, value) {
+            food_name = value[0].replace(" ", "");
+            if (value[1].indexOf(")") != -1) {
+              if (value[1].split(")")[0].indexOf("g") != -1) {
+                weight = value[1].split(")")[0].split("g")[0].split("(")[1];
+              } else {
+                weight = value[1].split(")")[0].split("ml")[0].split("(")[1];
+              }
+              kcal = value[1]
+                .split("(")[1]
+                .split("kcal")[0]
+                .split("칼로리: ")[1];
+              console.log(value[1]);
+              console.log(value[1].split("|")[1]);
+              console.log(value[1].split("|")[1].split(":")[1].split("g")[0]);
+              fat = value[1]
+                .split("(")[1]
+                .split("|")[1]
+                .split(":")[1]
+                .split("g")[0]; //지방
+              carbohydrate = value[1]
+                .split("(")[1]
+                .split("|")[2]
+                .split(":")[1]
+                .split("g")[0]; //탄수화물
+              protein = value[1]
+                .split("(")[1]
+                .split("|")[3]
+                .split(":")[1]
+                .split("g")[0]; //단백질
+            } else {
+              if (value[1].split("당")[0].indexOf("g") != -1) {
+                weight = value[1].split("당")[0].split("g")[0];
+              } else {
+                weight = value[1].split("당")[0].split("ml")[0];
+              }
+
+              kcal = value[1]
+                .split("당")[1]
+                .split("kcal")[0]
+                .split("칼로리: ")[1];
+              fat = value[1]
+                .split("당")[1]
+                .split("|")[1]
+                .split(":")[1]
+                .split("g")[0];
+              carbohydrate = value[1]
+                .split("당")[1]
+                .split("|")[2]
+                .split(":")[1]
+                .split("g")[0];
+              protein = value[1]
+                .split("당")[1]
+                .split("|")[3]
+                .split(":")[1]
+                .split("g")[0];
+            }
+            html_text += `
                           {
                           "food_name": "${food_name}",
                           "weight": "${weight}",
@@ -108,12 +112,13 @@
                           "fat": "${fat}"
                           }
                           `;
-          if (key != len_2 - 1) {
-            html_text += ",";
-          }
+            if (key != len_2 - 1) {
+              html_text += ",";
+            }
+          });
+          html_text += "]";
+          saveAsFile(html_text, "gs25.json");
         });
-        html_text += "]";
-        saveAsFile(html_text, "cu.json");
       });
       function saveAsFile(str, filename) {
         var hiddenElement = document.createElement("a");

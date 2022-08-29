@@ -1,6 +1,5 @@
 $(window).ready(function () {
   var ad_kcal = 0; // 1일 적정 칼로리량
-  var meal_time_arr = [];
 
   $("#user_info_btn").click(function () {
     var gender = $("input[name='gender']:checked").val();
@@ -81,65 +80,6 @@ $(window).ready(function () {
     $("#select_store .store_box").css({ backgroundColor: "#fff" });
     $(this).css({ backgroundColor: "#76c6ff" });
     $(this).find("input").prop("checked", true);
-
-    var meal_type = "low";
-    var store = $("input[name='store']:checked").val();
-    var data_url = "";
-    var make_kcal = 1479;
-    var make_carbohydrate = 222;
-    var make_protein = 92;
-    var make_fat = 49;
-    var select_meal = [];
-    var random_num = Math.random();
-    var command_num = 1; // 추천 음식 가지수
-    var meal_len = 0; // 식단 갯수
-    var make_food_list = []; // 적합한 식단 목록
-
-    if (store == "cu") {
-      data_url = "./cu.json";
-    } else if (store == "gs25") {
-      data_url = "./gs25.json";
-    } else {
-      data_url = "./emart24.json";
-    }
-
-    fetch(data_url)
-      .then((response) => {
-        return response.json();
-      })
-      .then((jsondata) => {
-        $.each(jsondata, function (key, value) {
-          $.each(value, function (key, value_kcal) {
-            if (key == "kcal" && value_kcal <= make_kcal / 3) {
-              $.each(value, function (key, value_car) {
-                if (
-                  key == "carbohydrate" &&
-                  value_car <= make_carbohydrate / 3
-                ) {
-                  $.each(value, function (key, value_pro) {
-                    if (key == "protein" && value_pro <= make_protein / 3) {
-                      $.each(value, function (key, value_fat) {
-                        if (key == "fat" && value_fat <= make_fat / 3) {
-                          make_food_list.push(value);
-                        }
-                      });
-                    }
-                  });
-                }
-              });
-            }
-          });
-        });
-        meal_len = make_food_list.length;
-        // 식단 랜덤 뽑기
-        // 감량 식단 선택 시
-        if (meal_type == "low") {
-          var low_random_num = Math.floor(random_num * meal_len + 1);
-          select_meal = make_food_list[low_random_num];
-        }
-      });
-
-    console.log(make_food_list);
   });
 
   //  추천받을 식사 시간 선택 이벤트
@@ -149,14 +89,16 @@ $(window).ready(function () {
 
   //  식단 생성 버튼
   $("#select_meal_btn").click(function () {
+    var meal_time_arr = [];
     if (check_option() != false) {
       // 편의점 선택
       var store = $("input[name='store']:checked").val();
       var data_url = "";
       var select_meal = [];
       var random_num = Math.random();
-      var command_num = 0; // 추천 음식 가지수
       var meal_len = 0; // 식단 갯수
+      var make_food_list = []; // 적합한 식단 목록
+      var final_food_list = []; // 최종 식단 목록
 
       // 식사 시간 선택
       $("input[name='time']:checked").each(function (e) {
@@ -201,11 +143,11 @@ $(window).ready(function () {
 
       // 식단 생성
       if (store == "cu") {
-        data_url = "./cu.json";
+        data_url = "dist/cu.json";
       } else if (store == "gs25") {
-        data_url = "./gs25.json";
+        data_url = "dist/gs25.json";
       } else {
-        data_url = "./emart24.json";
+        data_url = "dist/emart24.json";
       }
 
       fetch(data_url)
@@ -213,7 +155,6 @@ $(window).ready(function () {
           return response.json();
         })
         .then((jsondata) => {
-          var make_food_list = []; // 적합한 식단 목록
           $.each(jsondata, function (key, value) {
             $.each(value, function (key, value_kcal) {
               if (key == "kcal" && value_kcal <= make_kcal / 3) {
@@ -236,18 +177,185 @@ $(window).ready(function () {
               }
             });
           });
-        });
-      meal_len = make_food_list.length;
-      console.log(meal_len);
-      // 식단 랜덤 뽑기
-      // 감량 식단 선택 시
-      if (meal_type == "low") {
-        var low_random_num = Math.floor(random_num * meal_len + 1);
-        console.log(low_random_num);
+          meal_len = make_food_list.length;
 
-        select_meal = make_food_list[random_num];
-        console.log(select_meal);
-      }
+          // 식단 랜덤 뽑기
+          // 감량 식단 선택 시
+          console.log(meal_time_arr);
+          for (let j = 0; j < meal_time_arr.length; j++) {
+            var check_select_meal = "";
+            select_meal = [];
+            var low_random_num = Math.floor(random_num * meal_len + 1);
+            //2가지
+            for (let i = 0; i < 2; i++) {
+              random_num = Math.random();
+              low_random_num = Math.floor(random_num * meal_len + 1);
+              select_meal.push(make_food_list[low_random_num]);
+            }
+            check_select_meal = check_kcal(
+              make_kcal,
+              make_carbohydrate,
+              make_protein,
+              make_fat,
+              make_food_list,
+              meal_len,
+              select_meal
+            );
+            final_food_list.push(check_select_meal);
+          }
+          var card_list = "";
+          var total_kcal = 0;
+          var img_url = "";
+          var img_alt = "";
+          var title = "";
+
+          // 섭취영양소 데이터
+          var final_total_kcal = 0;
+          var final_total_carbohydrate = 0;
+          var final_total_protein = 0;
+          var final_total_fat = 0;
+
+          $.each(final_food_list, function (key, value) {
+            total_kcal = 0;
+            if (meal_time_arr[key] == "morning") {
+              img_url = "./images/sun.png";
+              img_alt = "sun";
+              title = "아침";
+            } else if (meal_time_arr[key] == "lunch") {
+              img_url = "./images/sunny.png";
+              img_alt = "sunny";
+              title = "점심";
+            } else {
+              img_url = "./images/moon.png";
+              img_alt = "moon";
+              title = "저녁";
+            }
+            card_list += `<div class="meal_card">
+              <div class="meal_card_title">
+                <img src="${img_url}" alt="${img_alt}" />
+                <h1>${title}</h1>
+              </div>
+              <div class="line"></div>
+              <div class="meal_card_content_list">
+              `;
+            $.each(value, function (key, value) {
+              total_kcal += Number(value.kcal);
+              final_total_kcal += Number(value.kcal);
+              final_total_carbohydrate += Number(value.carbohydrate);
+              final_total_protein += Number(value.protein);
+              final_total_fat += Number(value.fat);
+              card_list += `
+                <div class="meal_card_content">
+                  <input type="radio" name="meal" id="${meal_time_arr[key]}product${key}" />
+                  <label for="${meal_time_arr[key]}product${key}">
+                    <p>제품명 : <span>${value.food_name}</span></p>
+                    <p>중량 : ${value.weight}g</p>
+                    <p>칼로리 : ${value.kcal}kcal</p>
+                    <p>탄수화물 : ${value.carbohydrate}g</p>
+                    <p>단백질 : ${value.protein}g</p>
+                    <p>지방 : ${value.fat}g</p>
+                  </label>
+                </div>
+            `;
+            });
+            card_list += `
+            </div>
+              <div class="total_kcal">총 섭취 칼로리 : ${total_kcal}kcal</div>
+              <div class="meal_card_footer">
+                <div>삭제</div>
+                <div class="h_line"></div>
+                <div>식단 재생성</div>
+              </div>
+            </div>`;
+          });
+          $("#meal_card_list").html(card_list);
+
+          //  섭취 영양소 그래프
+          // 칼로리
+          $(".graph_bar_content:nth-child(2) .color_bar").text(
+            final_total_kcal.toFixed(0)
+          );
+          $(".graph_bar_content:nth-child(2) .color_bar").css({
+            width: `${((final_total_kcal / make_kcal) * 100).toFixed(0)}%`,
+            backgroundColor: "#76c6ff",
+          });
+          // 탄수화물
+          $(".graph_bar_content:nth-child(3) .color_bar").text(
+            final_total_carbohydrate.toFixed(0)
+          );
+          $(".graph_bar_content:nth-child(3) .color_bar").css({
+            width: `${(
+              (final_total_carbohydrate / make_carbohydrate) *
+              100
+            ).toFixed(0)}%`,
+            backgroundColor: "#76c6ff",
+          });
+          // 단백질
+          $(".graph_bar_content:nth-child(4) .color_bar").text(
+            final_total_protein.toFixed(0)
+          );
+          $(".graph_bar_content:nth-child(4) .color_bar").css({
+            width: `${((final_total_protein / make_protein) * 100).toFixed(
+              0
+            )}%`,
+            backgroundColor: "#76c6ff",
+          });
+          // 지방
+          $(".graph_bar_content:nth-child(5) .color_bar").text(
+            final_total_fat.toFixed(0)
+          );
+          $(".graph_bar_content:nth-child(5) .color_bar").css({
+            width: `${((final_total_fat / make_fat) * 100).toFixed(0)}%`,
+            backgroundColor: "#76c6ff",
+          });
+
+          // 섭취 영양소 탄단지 비율
+          // 칼로리 기준 탄단지 비율
+          var ratio_carbohydrate = (
+            ((final_total_carbohydrate.toFixed(0) * 4) /
+              final_total_kcal.toFixed(0)) *
+            100
+          ).toFixed(0);
+          var ratio_protein = (
+            ((final_total_protein.toFixed(0) * 4) /
+              final_total_kcal.toFixed(0)) *
+            100
+          ).toFixed(0);
+          var ratio_fat = (
+            ((final_total_fat.toFixed(0) * 9) / final_total_kcal.toFixed(0)) *
+            100
+          ).toFixed(0);
+
+          $("#nutrient_ratio_txt p:nth-child(1)").text(ratio_carbohydrate);
+          $("#nutrient_ratio_txt p:nth-child(3)").text(ratio_protein);
+          $("#nutrient_ratio_txt p:nth-child(5)").text(ratio_fat);
+
+          var min_num = Math.min(ratio_carbohydrate, ratio_protein, ratio_fat);
+          var max_num = Math.max(ratio_carbohydrate, ratio_protein, ratio_fat);
+          var ratio_list = [ratio_carbohydrate, ratio_protein, ratio_fat];
+
+          if (
+            ratio_carbohydrate == ratio_protein ||
+            ratio_carbohydrate == ratio_fat ||
+            ratio_fat == ratio_protein
+          ) {
+            // 중복된 값 찾기
+            ratio_list = ratio_list.filter(
+              (item, index) => ratio_list.indexOf(item) !== index
+            );
+          } else {
+            ratio_list = ratio_list.filter(function (item) {
+              return Number(item) !== min_num && Number(item) !== max_num;
+            });
+          }
+
+          $("#nutrient_raito .pie-chart").css({
+            background: `conic-gradient(
+              #8b22ff 0% ${min_num}%,
+              #ffc33b ${min_num}% ${Number(min_num) + Number(ratio_list)}%,
+              #21f3d6 ${Number(min_num) + Number(ratio_list)}% 100%`,
+          });
+        });
     }
   });
 });
@@ -289,5 +397,63 @@ function check_option() {
     return false;
   } else {
     return true;
+  }
+}
+
+// 최소 칼로리 체크 함수
+function check_kcal(
+  make_kcal,
+  make_carbohydrate,
+  make_protein,
+  make_fat,
+  data_list,
+  meal_len,
+  data
+) {
+  var random_num = Math.random();
+  var low_random_num = Math.floor(random_num * meal_len + 1);
+  var sum_kcal = 0;
+  var sum_carbohydrate = 0;
+  var sum_protein = 0;
+  var sum_fat = 0;
+  var meal_list = data;
+
+  for (let i = 0; i < data.length; i++) {
+    sum_kcal += Number(data[i].kcal);
+    sum_carbohydrate += Number(data[i].carbohydrate);
+    sum_protein += Number(data[i].protein);
+    sum_fat += Number(data[i].fat);
+  }
+  if (
+    (sum_kcal > (make_kcal / 3) * 1.1 && sum_kcal < (make_kcal / 3) * 0.9) ||
+    sum_kcal < 800 / 3 ||
+    sum_carbohydrate > make_carbohydrate / 3 ||
+    sum_protein > make_protein / 3 ||
+    sum_fat > make_fat / 3
+  ) {
+    meal_list = [];
+    for (let i = 0; i < data.length; i++) {
+      random_num = Math.random();
+      low_random_num = Math.floor(random_num * meal_len + 1);
+      if (data_list[low_random_num] != undefined) {
+        meal_list.push(data_list[low_random_num]);
+      } else {
+        random_num = Math.random();
+        low_random_num = Math.floor(random_num * meal_len + 1);
+        meal_list.push(data_list[low_random_num]);
+      }
+    }
+    meal_list = check_kcal(
+      make_kcal,
+      make_carbohydrate,
+      make_protein,
+      make_fat,
+      data_list,
+      meal_len,
+      meal_list
+    );
+    return meal_list;
+  } else {
+    return meal_list;
   }
 }

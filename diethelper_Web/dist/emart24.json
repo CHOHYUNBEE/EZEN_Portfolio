@@ -1,0 +1,2882 @@
+[
+  {
+    "food_name": "구운계란",
+    "weight": "35",
+    "kcal": "55",
+    "carbohydrate": "1.00",
+    "protein": "6.00",
+    "fat": "3.40"
+  },
+  {
+    "food_name": " 감동란 ",
+    "weight": "50",
+    "kcal": "66",
+    "carbohydrate": "2.00",
+    "protein": "6.00",
+    "fat": "3.60"
+  },
+  {
+    "food_name": " 반숙계란 ",
+    "weight": "50",
+    "kcal": "64",
+    "carbohydrate": "1.00",
+    "protein": "7.00",
+    "fat": "3.60"
+  },
+  {
+    "food_name": " 훈제계란 ",
+    "weight": "35",
+    "kcal": "54",
+    "carbohydrate": "0.00",
+    "protein": "5.00",
+    "fat": "3.00"
+  },
+  {
+    "food_name": " 타코야끼 ",
+    "weight": "163",
+    "kcal": "332",
+    "carbohydrate": "26.00",
+    "protein": "13.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 레드크랩 ",
+    "weight": "  100",
+    "kcal": "95",
+    "carbohydrate": "11.00",
+    "protein": "11.00",
+    "fat": "0.80"
+  },
+  {
+    "food_name": " 에그스크램블 ",
+    "weight": "385",
+    "kcal": "595",
+    "carbohydrate": "71.00",
+    "protein": "19.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 지금인기인가요 샌드위치 ",
+    "weight": "154",
+    "kcal": "380",
+    "carbohydrate": "36.00",
+    "protein": "19.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 치킨햄샌드위치 ",
+    "weight": "140",
+    "kcal": "318",
+    "carbohydrate": "36.00",
+    "protein": "12.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 단호박샐러드 ",
+    "weight": "150",
+    "kcal": "275",
+    "carbohydrate": "26.00",
+    "protein": "2.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 카야토스트 샌드 ",
+    "weight": "95",
+    "kcal": "220",
+    "carbohydrate": "32.00",
+    "protein": "3.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 빅참치마요 삼각김밥 ",
+    "weight": "153",
+    "kcal": "284",
+    "carbohydrate": "42.00",
+    "protein": "9.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 더블베이컨치즈샌드위치 ",
+    "weight": "124",
+    "kcal": "272",
+    "carbohydrate": "24.00",
+    "protein": "12.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 돈까스카레덮밥 ",
+    "weight": "339",
+    "kcal": "553",
+    "carbohydrate": "89.00",
+    "protein": "16.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 뉴전주비빔 삼각김밥 ",
+    "weight": "105",
+    "kcal": "177",
+    "carbohydrate": "31.00",
+    "protein": "8.00",
+    "fat": "2.60"
+  },
+  {
+    "food_name": " 스팸김치볶음 ",
+    "weight": "105",
+    "kcal": "170",
+    "carbohydrate": "26.00",
+    "protein": "3.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 명란아보카도 삼각김밥 ",
+    "weight": "110",
+    "kcal": "215",
+    "carbohydrate": "25.00",
+    "protein": "3.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 소불고기김밥 ",
+    "weight": "197",
+    "kcal": "242",
+    "carbohydrate": "43.00",
+    "protein": "8.00",
+    "fat": "4.30"
+  },
+  {
+    "food_name": " 참치김치김밥 ",
+    "weight": "223",
+    "kcal": "465",
+    "carbohydrate": "54.00",
+    "protein": "10.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 도란도란 즐기는 구운란 ",
+    "weight": "35",
+    "kcal": "55",
+    "carbohydrate": "1.00",
+    "protein": "6.00",
+    "fat": "3.40"
+  },
+  {
+    "food_name": " 베이컨치즈샌드위치 ",
+    "weight": "120",
+    "kcal": "347",
+    "carbohydrate": "27.00",
+    "protein": "8.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 추억의 도시락 ",
+    "weight": "330",
+    "kcal": "485",
+    "carbohydrate": "81.00",
+    "protein": "16.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 블랙페퍼 치킨새우강정 ",
+    "weight": "191",
+    "kcal": "462",
+    "carbohydrate": "42.00",
+    "protein": "23.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 뉴베이컨에그샌드위치 ",
+    "weight": "137",
+    "kcal": "314",
+    "carbohydrate": "26.00",
+    "protein": "12.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 민생라면컵 ",
+    "weight": "80",
+    "kcal": "350",
+    "carbohydrate": "53.00",
+    "protein": "7.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 햄감자샐러드샌드위치 ",
+    "weight": "150",
+    "kcal": "314",
+    "carbohydrate": "25.00",
+    "protein": "11.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 참치김치삼각김밥 ",
+    "weight": "  100",
+    "kcal": "208",
+    "carbohydrate": "39.00",
+    "protein": "5.00",
+    "fat": "3.40"
+  },
+  {
+    "food_name": " 캐슈듬뿍 하루견과 ",
+    "weight": "30",
+    "kcal": "197",
+    "carbohydrate": "6.00",
+    "protein": "5.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 뉴참치마요김밥 ",
+    "weight": "217",
+    "kcal": "384",
+    "carbohydrate": "52.00",
+    "protein": "11.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 햄참치마요 삼각김밥 ",
+    "weight": "104",
+    "kcal": "200",
+    "carbohydrate": "32.00",
+    "protein": "4.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 맛있는 군밤 ",
+    "weight": "80",
+    "kcal": "155",
+    "carbohydrate": "33.00",
+    "protein": "3.00",
+    "fat": "1.00"
+  },
+  {
+    "food_name": " 치킨&햄 샌드위치 ",
+    "weight": "140",
+    "kcal": "318",
+    "carbohydrate": "36.00",
+    "protein": "12.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 맵땡제육김밥 ",
+    "weight": "212",
+    "kcal": "311",
+    "carbohydrate": "48.00",
+    "protein": "10.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 불고기 전주비빔 김밥 ",
+    "weight": "194",
+    "kcal": "293",
+    "carbohydrate": "48.00",
+    "protein": "12.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 뿌링클 팝콘 ",
+    "weight": "90",
+    "kcal": "485",
+    "carbohydrate": "57.00",
+    "protein": "4.00",
+    "fat": "27.00"
+  },
+  {
+    "food_name": " 베이컨 참치마요 김밥 ",
+    "weight": "211",
+    "kcal": "367",
+    "carbohydrate": "44.00",
+    "protein": "9.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 춘천식 닭갈비 김밥 ",
+    "weight": "216",
+    "kcal": "282",
+    "carbohydrate": "49.00",
+    "protein": "9.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 그릴 닭가슴살 ",
+    "weight": "  100",
+    "kcal": "110",
+    "carbohydrate": "1.00",
+    "protein": "24.00",
+    "fat": "1.00"
+  },
+  {
+    "food_name": " 뉴 전주비빔 삼각김밥 ",
+    "weight": "105",
+    "kcal": "195",
+    "carbohydrate": "33.00",
+    "protein": "7.00",
+    "fat": "3.70"
+  },
+  {
+    "food_name": " 아삭햄야채샐러드 ",
+    "weight": "127",
+    "kcal": "283",
+    "carbohydrate": "34.00",
+    "protein": "11.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 불고기전주비빔김밥 ",
+    "weight": "190",
+    "kcal": "265",
+    "carbohydrate": "33.00",
+    "protein": "9.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 열무보리비빔밥 ",
+    "weight": "309",
+    "kcal": "440",
+    "carbohydrate": "82.00",
+    "protein": "11.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 전주비빔참치마요 ",
+    "weight": "105",
+    "kcal": "176",
+    "carbohydrate": "26.00",
+    "protein": "3.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 트러플 ",
+    "weight": "16",
+    "kcal": "90",
+    "carbohydrate": "8.00",
+    "protein": "1.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 클럽샌드위치 ",
+    "weight": "114",
+    "kcal": "231",
+    "carbohydrate": "21.00",
+    "protein": "8.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 속이꽉찬 참치마요 삼각김밥 ",
+    "weight": "109",
+    "kcal": "195",
+    "carbohydrate": "40.00",
+    "protein": "5.00",
+    "fat": "1.70"
+  },
+  {
+    "food_name": " 열무비빔밥 ",
+    "weight": "373",
+    "kcal": "506",
+    "carbohydrate": "92.00",
+    "protein": "12.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 뉴베이컨에그 샌드위치 ",
+    "weight": "137",
+    "kcal": "314",
+    "carbohydrate": "26.00",
+    "protein": "12.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 푸짐한 제육 정찬 도시락 ",
+    "weight": "327",
+    "kcal": "588",
+    "carbohydrate": "85.00",
+    "protein": "25.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 새콤달콤 유부초밥 ",
+    "weight": "184",
+    "kcal": "345",
+    "carbohydrate": "59.00",
+    "protein": "11.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 속이꽉찬참치마요김밥 ",
+    "weight": "216",
+    "kcal": "368",
+    "carbohydrate": "46.00",
+    "protein": "10.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 뿌링클 볶음면 ",
+    "weight": "105",
+    "kcal": "455",
+    "carbohydrate": "74.00",
+    "protein": "8.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 프리미엄 햄에그 샌드위치 ",
+    "weight": "165",
+    "kcal": "454",
+    "carbohydrate": "44.00",
+    "protein": "11.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 통스팸 김치볶음 삼각김밥 ",
+    "weight": "104",
+    "kcal": "167",
+    "carbohydrate": "27.00",
+    "protein": "4.00",
+    "fat": "4.60"
+  },
+  {
+    "food_name": " 촉촉에그몰랑샌드위치 ",
+    "weight": "124",
+    "kcal": "345",
+    "carbohydrate": "23.00",
+    "protein": "10.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 매콤돈까스 삼각김밥 ",
+    "weight": "105",
+    "kcal": "188",
+    "carbohydrate": "34.00",
+    "protein": "5.00",
+    "fat": "3.80"
+  },
+  {
+    "food_name": " 햄에그머핀 ",
+    "weight": "104",
+    "kcal": "225",
+    "carbohydrate": "23.00",
+    "protein": "10.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 대왕유부초밥 ",
+    "weight": "257",
+    "kcal": "507",
+    "carbohydrate": "73.00",
+    "protein": "18.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 뉴숯불갈비맛 삼각김밥 ",
+    "weight": "105",
+    "kcal": "200",
+    "carbohydrate": "34.00",
+    "protein": "6.00",
+    "fat": "4.00"
+  },
+  {
+    "food_name": " 스테이크버거 ",
+    "weight": "190",
+    "kcal": "457",
+    "carbohydrate": "54.50",
+    "protein": "20.00",
+    "fat": "17.70"
+  },
+  {
+    "food_name": " 치즈김치볶음밥 도시락 ",
+    "weight": "300",
+    "kcal": "490",
+    "carbohydrate": "71.00",
+    "protein": "13.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 초코썸 ",
+    "weight": "76",
+    "kcal": "437",
+    "carbohydrate": "41.00",
+    "protein": "3.00",
+    "fat": "29.00"
+  },
+  {
+    "food_name": " 스팸계란 삼각김밥 ",
+    "weight": "  100",
+    "kcal": "203",
+    "carbohydrate": "27.00",
+    "protein": "4.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 뿌링클 프레첼 오리지널 ",
+    "weight": "85",
+    "kcal": "447",
+    "carbohydrate": "48.00",
+    "protein": "11.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 양념치킨김밥 ",
+    "weight": "223",
+    "kcal": "329",
+    "carbohydrate": "51.00",
+    "protein": "10.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 뉴참치마요 삼각김밥 ",
+    "weight": "  100",
+    "kcal": "190",
+    "carbohydrate": "30.00",
+    "protein": "4.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 서울시스터즈 햄에그김치김밥 ",
+    "weight": "215",
+    "kcal": "486",
+    "carbohydrate": "41.00",
+    "protein": "10.00",
+    "fat": "31.00"
+  },
+  {
+    "food_name": " 치킨클럽샌드위치 ",
+    "weight": "136",
+    "kcal": "280",
+    "carbohydrate": "25.00",
+    "protein": "9.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 매콤제주흑돈 삼각김밥 ",
+    "weight": "105",
+    "kcal": "157",
+    "carbohydrate": "22.00",
+    "protein": "4.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 뉴참치마요덮밥 ",
+    "weight": "370",
+    "kcal": "720",
+    "carbohydrate": "101.00",
+    "protein": "22.00",
+    "fat": "25.00"
+  },
+  {
+    "food_name": " 제육&치즈불고기 김밥 ",
+    "weight": "252",
+    "kcal": "302",
+    "carbohydrate": "50.00",
+    "protein": "9.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 아삭햄야채샐러드샌드위치 ",
+    "weight": "127",
+    "kcal": "283",
+    "carbohydrate": "34.00",
+    "protein": "11.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 육쌈김밥 ",
+    "weight": "227",
+    "kcal": "343",
+    "carbohydrate": "61.00",
+    "protein": "13.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 불고기 삼각밥 ",
+    "weight": "124",
+    "kcal": "184",
+    "carbohydrate": "34.00",
+    "protein": "6.00",
+    "fat": "2.70"
+  },
+  {
+    "food_name": " 통스팸참치마요 ",
+    "weight": "105",
+    "kcal": "201",
+    "carbohydrate": "33.00",
+    "protein": "6.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 숯불맛소불고기김밥 ",
+    "weight": "197",
+    "kcal": "318",
+    "carbohydrate": "52.00",
+    "protein": "11.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 비빔참치마요 삼각김밥 ",
+    "weight": "105",
+    "kcal": "270",
+    "carbohydrate": "27.00",
+    "protein": "7.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 고기고기고기 도시락 ",
+    "weight": "362",
+    "kcal": "577",
+    "carbohydrate": "83.00",
+    "protein": "19.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 숯불갈비맛&김치제육 더블삼각김밥 ",
+    "weight": "211",
+    "kcal": "329",
+    "carbohydrate": "60.00",
+    "protein": "7.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 순삭크림롤 ",
+    "weight": "120",
+    "kcal": "395",
+    "carbohydrate": "34.00",
+    "protein": "6.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 패스츄리샌드위치 ",
+    "weight": "160",
+    "kcal": "415",
+    "carbohydrate": "42.00",
+    "protein": "11.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 생크림 품은 브리오쉬 ",
+    "weight": "90",
+    "kcal": "315",
+    "carbohydrate": "22.00",
+    "protein": "5.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 바삭 새우 샌드위치 ",
+    "weight": "151",
+    "kcal": "373",
+    "carbohydrate": "45.00",
+    "protein": "10.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " BLT샌드위치 ",
+    "weight": "153",
+    "kcal": "310",
+    "carbohydrate": "42.00",
+    "protein": "9.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 빅햄치즈&참치샌드위치 ",
+    "weight": "154",
+    "kcal": "434",
+    "carbohydrate": "38.00",
+    "protein": "12.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 강냉이스낵 ",
+    "weight": "70",
+    "kcal": "320",
+    "carbohydrate": "58.00",
+    "protein": "4.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 치즈오므라이스 ",
+    "weight": "393",
+    "kcal": "522",
+    "carbohydrate": "68.00",
+    "protein": "18.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 로제치킨미니샐러드 ",
+    "weight": "157",
+    "kcal": "160",
+    "carbohydrate": "13.00",
+    "protein": "9.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 제육치즈불고기김밥 ",
+    "weight": "252",
+    "kcal": "302",
+    "carbohydrate": "50.00",
+    "protein": "9.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 치킨찹찹 미니샐러드 ",
+    "weight": "144",
+    "kcal": "153",
+    "carbohydrate": "7.00",
+    "protein": "11.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 간장불고기덮밥 ",
+    "weight": "332",
+    "kcal": "645",
+    "carbohydrate": "89.00",
+    "protein": "22.00",
+    "fat": "22.00"
+  },
+  {
+    "food_name": " 햄맛살샌드위치 ",
+    "weight": "150",
+    "kcal": "324",
+    "carbohydrate": "35.00",
+    "protein": "11.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 고구마말랭이 ",
+    "weight": "70",
+    "kcal": "220",
+    "carbohydrate": "53.00",
+    "protein": "3.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 하루e한컵우유 ",
+    "weight": "  100",
+    "kcal": "70",
+    "carbohydrate": "5.00",
+    "protein": "3.00",
+    "fat": "4.00"
+  },
+  {
+    "food_name": " 통스팸마요&김치반반김밥 ",
+    "weight": "207",
+    "kcal": "361",
+    "carbohydrate": "41.00",
+    "protein": "9.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 상하이스파이시버거 ",
+    "weight": "200",
+    "kcal": "548",
+    "carbohydrate": "59.00",
+    "protein": "15.00",
+    "fat": "28.00"
+  },
+  {
+    "food_name": " 말은사막 치즈불닭김밥 ",
+    "weight": "240",
+    "kcal": "371",
+    "carbohydrate": "52.00",
+    "protein": "19.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 한돈불고기비빔밥 ",
+    "weight": "310",
+    "kcal": "458",
+    "carbohydrate": "75.00",
+    "protein": "13.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 진한 티라미수케익 ",
+    "weight": "80",
+    "kcal": "247",
+    "carbohydrate": "23.00",
+    "protein": "5.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 로우슈가 아몬드 초코볼 ",
+    "weight": "45",
+    "kcal": "235",
+    "carbohydrate": "21.00",
+    "protein": "5.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 빅참치마요삼각김밥 ",
+    "weight": "153",
+    "kcal": "284",
+    "carbohydrate": "42.00",
+    "protein": "9.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 스팸김치볶음&매콤제육볶음 ",
+    "weight": "211",
+    "kcal": "334",
+    "carbohydrate": "59.00",
+    "protein": "5.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 대만식 블루베리&햄치즈 샌드위치 ",
+    "weight": "135",
+    "kcal": "398",
+    "carbohydrate": "48.00",
+    "protein": "6.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 춘천식 닭갈비 삼각김밥 ",
+    "weight": "105",
+    "kcal": "190",
+    "carbohydrate": "36.00",
+    "protein": "4.00",
+    "fat": "2.40"
+  },
+  {
+    "food_name": " 에그쉬림프 샌드위치 ",
+    "weight": "109",
+    "kcal": "203",
+    "carbohydrate": "21.00",
+    "protein": "8.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 통스팸김치볶음삼각김밥 ",
+    "weight": "104",
+    "kcal": "167",
+    "carbohydrate": "27.00",
+    "protein": "4.00",
+    "fat": "4.60"
+  },
+  {
+    "food_name": " 알도넛 ",
+    "weight": "40",
+    "kcal": "135",
+    "carbohydrate": "18.00",
+    "protein": "2.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 빅불고기전주비빔 삼각김밥 ",
+    "weight": "148",
+    "kcal": "289",
+    "carbohydrate": "52.00",
+    "protein": "12.00",
+    "fat": "3.90"
+  },
+  {
+    "food_name": " 하루e한컵우유 ",
+    "weight": "300",
+    "kcal": "205",
+    "carbohydrate": "14.50",
+    "protein": "9.90",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 베이컨참치마요주먹밥 ",
+    "weight": "183",
+    "kcal": "332",
+    "carbohydrate": "50.00",
+    "protein": "6.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 불닭치킨마요삼각김밥 ",
+    "weight": "105",
+    "kcal": "208",
+    "carbohydrate": "30.00",
+    "protein": "3.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 치킨가라아게 유부초밥 ",
+    "weight": "232",
+    "kcal": "490",
+    "carbohydrate": "66.00",
+    "protein": "19.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 묵은지참치김밥 ",
+    "weight": "204",
+    "kcal": "315",
+    "carbohydrate": "42.00",
+    "protein": "8.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 빅참치&햄에그샌드위치 ",
+    "weight": "187",
+    "kcal": "560",
+    "carbohydrate": "30.00",
+    "protein": "11.00",
+    "fat": "44.00"
+  },
+  {
+    "food_name": " 속이꽉찬참치마요삼각김밥 ",
+    "weight": "109",
+    "kcal": "195",
+    "carbohydrate": "40.00",
+    "protein": "5.00",
+    "fat": "1.70"
+  },
+  {
+    "food_name": " 통새우버거 ",
+    "weight": "145",
+    "kcal": "295",
+    "carbohydrate": "46.00",
+    "protein": "8.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 이천쌀콘 ",
+    "weight": "150",
+    "kcal": "269",
+    "carbohydrate": "34.00",
+    "protein": "4.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 뉴불고기버거 ",
+    "weight": "143",
+    "kcal": "400",
+    "carbohydrate": "37.00",
+    "protein": "10.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 닭갈비 삼각김밥 ",
+    "weight": "105",
+    "kcal": "190",
+    "carbohydrate": "28.00",
+    "protein": "4.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 에그빵빵샌드위치 ",
+    "weight": "107",
+    "kcal": "268",
+    "carbohydrate": "23.00",
+    "protein": "8.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 더블 베이컨 치즈 샌드위치 ",
+    "weight": "124",
+    "kcal": "272",
+    "carbohydrate": "24.00",
+    "protein": "12.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 통스팸 참치마요 삼각김밥 ",
+    "weight": "105",
+    "kcal": "201",
+    "carbohydrate": "33.00",
+    "protein": "6.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 빅더블불고기치즈버거 ",
+    "weight": "  100",
+    "kcal": "503",
+    "carbohydrate": "42.00",
+    "protein": "12.00",
+    "fat": "32.00"
+  },
+  {
+    "food_name": " 크랜베리치킨샌드 ",
+    "weight": "142",
+    "kcal": "313",
+    "carbohydrate": "32.00",
+    "protein": "10.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 블랙츄러스 ",
+    "weight": "20",
+    "kcal": "115",
+    "carbohydrate": "10.00",
+    "protein": "1.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 빅 매콤제육 삼각김밥 ",
+    "weight": "158",
+    "kcal": "225",
+    "carbohydrate": "42.00",
+    "protein": "6.00",
+    "fat": "4.10"
+  },
+  {
+    "food_name": " 다크초콜릿 ",
+    "weight": "  100",
+    "kcal": "495",
+    "carbohydrate": "62.00",
+    "protein": "5.00",
+    "fat": "25.00"
+  },
+  {
+    "food_name": " 빅통살치킨버거 ",
+    "weight": "202",
+    "kcal": "466",
+    "carbohydrate": "51.00",
+    "protein": "17.00",
+    "fat": "22.00"
+  },
+  {
+    "food_name": " 베이컨에그샌드위치 ",
+    "weight": "155",
+    "kcal": "318",
+    "carbohydrate": "29.00",
+    "protein": "10.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 푸짐한 제육&불고기 ",
+    "weight": "420",
+    "kcal": "700",
+    "carbohydrate": "110.00",
+    "protein": "24.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 민생단커피 (500ml) ",
+    "weight": "500",
+    "kcal": "200",
+    "carbohydrate": "39.00",
+    "protein": "4.00",
+    "fat": "3.30"
+  },
+  {
+    "food_name": " 언양식불고기김밥 ",
+    "weight": "208",
+    "kcal": "383",
+    "carbohydrate": "69.00",
+    "protein": "14.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 치킨마요덮밥 ",
+    "weight": "333",
+    "kcal": "555",
+    "carbohydrate": "80.00",
+    "protein": "20.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 스팸계란삼각김밥 ",
+    "weight": "  100",
+    "kcal": "197",
+    "carbohydrate": "26.00",
+    "protein": "3.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 닭갈비&돈까스 도시락 ",
+    "weight": "420",
+    "kcal": "671",
+    "carbohydrate": "106.00",
+    "protein": "25.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 베리듬뿍 하루견과 ",
+    "weight": "30",
+    "kcal": "177",
+    "carbohydrate": "11.00",
+    "protein": "4.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 민생 쓴커피 ",
+    "weight": "500",
+    "kcal": "17",
+    "carbohydrate": "3.00",
+    "protein": "1.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 스파이시더블치킨버거 ",
+    "weight": "160",
+    "kcal": "363",
+    "carbohydrate": "43.00",
+    "protein": "14.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 민생 감자칩 ",
+    "weight": "45",
+    "kcal": "230",
+    "carbohydrate": "25.00",
+    "protein": "2.70",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 뉴 참치마요 김밥 ",
+    "weight": "223",
+    "kcal": "335",
+    "carbohydrate": "49.00",
+    "protein": "8.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 콰트로 믹스 샌드위치 ",
+    "weight": "181",
+    "kcal": "447",
+    "carbohydrate": "52.00",
+    "protein": "11.00",
+    "fat": "21.00"
+  },
+  {
+    "food_name": " 에그&베이컨 토스트 샌드위치 ",
+    "weight": "117",
+    "kcal": "401",
+    "carbohydrate": "25.00",
+    "protein": "10.00",
+    "fat": "29.00"
+  },
+  {
+    "food_name": " 에그&참치샐러드 샌드 ",
+    "weight": "145",
+    "kcal": "340",
+    "carbohydrate": "36.00",
+    "protein": "11.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 에그불고기버거 ",
+    "weight": "158",
+    "kcal": "397",
+    "carbohydrate": "37.00",
+    "protein": "14.00",
+    "fat": "22.00"
+  },
+  {
+    "food_name": " 검은콩두유 ",
+    "weight": "320",
+    "kcal": "215",
+    "carbohydrate": "24.00",
+    "protein": "10.00",
+    "fat": "8.80"
+  },
+  {
+    "food_name": " 버터갈릭 스크램블 샌드위치 ",
+    "weight": "  1인분",
+    "kcal": "403",
+    "carbohydrate": "35.00",
+    "protein": "14.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 플랜트 햄 야채 샌드위치 ",
+    "weight": "148",
+    "kcal": "232",
+    "carbohydrate": "31.00",
+    "protein": "12.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 정성가득 제육정찬 ",
+    "weight": "362",
+    "kcal": "568",
+    "carbohydrate": "87.00",
+    "protein": "17.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 양념치킨맛 삼각김밥 ",
+    "weight": "110",
+    "kcal": "251",
+    "carbohydrate": "58.00",
+    "protein": "10.00",
+    "fat": "4.70"
+  },
+  {
+    "food_name": " 에그&참치김치덮밥 ",
+    "weight": "380",
+    "kcal": "677",
+    "carbohydrate": "87.00",
+    "protein": "17.00",
+    "fat": "29.00"
+  },
+  {
+    "food_name": " 르곤졸라 소프트콘 & 까망베르맛 ",
+    "weight": "145",
+    "kcal": "975",
+    "carbohydrate": "57.00",
+    "protein": "4.00",
+    "fat": "81.00"
+  },
+  {
+    "food_name": " 반반고기정찬 ",
+    "weight": "383",
+    "kcal": "635",
+    "carbohydrate": "86.00",
+    "protein": "27.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 포테이토&햄샌드위치 ",
+    "weight": "170",
+    "kcal": "315",
+    "carbohydrate": "43.00",
+    "protein": "13.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 흑임자 이천쌀콘 ",
+    "weight": "150",
+    "kcal": "254",
+    "carbohydrate": "36.00",
+    "protein": "5.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 뉴 숯불갈비맛 삼각김밥 ",
+    "weight": "105",
+    "kcal": "200",
+    "carbohydrate": "42.00",
+    "protein": "6.00",
+    "fat": "0.80"
+  },
+  {
+    "food_name": " 달고나밀크티 ",
+    "weight": "250",
+    "kcal": "204",
+    "carbohydrate": "37.00",
+    "protein": "6.00",
+    "fat": "3.50"
+  },
+  {
+    "food_name": " 스팸김치마요덮밥 ",
+    "weight": "379",
+    "kcal": "698",
+    "carbohydrate": "96.00",
+    "protein": "17.00",
+    "fat": "28.00"
+  },
+  {
+    "food_name": " 참치마요고추김밥 ",
+    "weight": "255",
+    "kcal": "346",
+    "carbohydrate": "38.00",
+    "protein": "10.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 일품한식반상 도시락 시즌2 ",
+    "weight": "371",
+    "kcal": "605",
+    "carbohydrate": "99.00",
+    "protein": "23.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 블랙페퍼와규버거 ",
+    "weight": "155",
+    "kcal": "363",
+    "carbohydrate": "36.00",
+    "protein": "12.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 플랜트 튜나마요 삼각김밥 ",
+    "weight": "105",
+    "kcal": "174",
+    "carbohydrate": "28.00",
+    "protein": "4.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 남도식 떡갈비 도시락 ",
+    "weight": "382",
+    "kcal": "625",
+    "carbohydrate": "93.00",
+    "protein": "24.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 뿌링클 프레첼 스파이시 ",
+    "weight": "85",
+    "kcal": "421",
+    "carbohydrate": "55.00",
+    "protein": "10.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 떡갈비버거 ",
+    "weight": "138",
+    "kcal": "380",
+    "carbohydrate": "42.00",
+    "protein": "11.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 진한뉴욕치즈케익 ",
+    "weight": "90",
+    "kcal": "300",
+    "carbohydrate": "19.00",
+    "protein": "4.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 뉴반반 고구마 닭강정 ",
+    "weight": "462",
+    "kcal": "855",
+    "carbohydrate": "108.00",
+    "protein": "38.00",
+    "fat": "30.00"
+  },
+  {
+    "food_name": " 치킨랩샌드&샐러드박스 ",
+    "weight": "196",
+    "kcal": "264",
+    "carbohydrate": "41.00",
+    "protein": "5.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 매콤닭강정 ",
+    "weight": "220",
+    "kcal": "354",
+    "carbohydrate": "28.00",
+    "protein": "18.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 검은삼각 블랙페퍼치킨 ",
+    "weight": "110",
+    "kcal": "204",
+    "carbohydrate": "32.00",
+    "protein": "5.00",
+    "fat": "6.40"
+  },
+  {
+    "food_name": " 구운스팸마요김밥 ",
+    "weight": "210",
+    "kcal": "399",
+    "carbohydrate": "41.00",
+    "protein": "7.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 매콤닭갈비&돈까스 도시락 ",
+    "weight": "429",
+    "kcal": "805",
+    "carbohydrate": "106.00",
+    "protein": "28.00",
+    "fat": "30.00"
+  },
+  {
+    "food_name": " 빅스팸김치볶음삼각김밥 ",
+    "weight": "  100",
+    "kcal": "339",
+    "carbohydrate": "46.00",
+    "protein": "7.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 민생 단-커피 ",
+    "weight": "500",
+    "kcal": "200",
+    "carbohydrate": "39.00",
+    "protein": "4.00",
+    "fat": "3.30"
+  },
+  {
+    "food_name": " 구운아몬드 ",
+    "weight": "30",
+    "kcal": "176",
+    "carbohydrate": "10.00",
+    "protein": "7.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 밀크브레드 ",
+    "weight": "32",
+    "kcal": "131",
+    "carbohydrate": "17.60",
+    "protein": "2.90",
+    "fat": "5.40"
+  },
+  {
+    "food_name": " 뉴참치마요삼각김밥 ",
+    "weight": "  100",
+    "kcal": "228",
+    "carbohydrate": "38.00",
+    "protein": "6.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 소불고기&표고버섯 덮밥 ",
+    "weight": "333",
+    "kcal": "480",
+    "carbohydrate": "76.00",
+    "protein": "17.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 빅베이컨참치마요 삼각김밥 ",
+    "weight": "153",
+    "kcal": "297",
+    "carbohydrate": "38.00",
+    "protein": "7.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 나마늘 위한 광양식 불고기 정찬 ",
+    "weight": "333",
+    "kcal": "585",
+    "carbohydrate": "91.00",
+    "protein": "21.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 크랜베리 아몬드 믹스 시리얼 ",
+    "weight": "30",
+    "kcal": "125",
+    "carbohydrate": "24.00",
+    "protein": "2.00",
+    "fat": "2.20"
+  },
+  {
+    "food_name": " 송정식당 직화불꼬지김밥 ",
+    "weight": "263",
+    "kcal": "366",
+    "carbohydrate": "56.00",
+    "protein": "13.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 스테이크 버거 ",
+    "weight": "190",
+    "kcal": "388",
+    "carbohydrate": "51.50",
+    "protein": "17.40",
+    "fat": "12.50"
+  },
+  {
+    "food_name": " 더블치즈팝콘 ",
+    "weight": "85",
+    "kcal": "445",
+    "carbohydrate": "47.00",
+    "protein": "7.00",
+    "fat": "27.00"
+  },
+  {
+    "food_name": " 스팸&계란말이 도시락 ",
+    "weight": "325",
+    "kcal": "497",
+    "carbohydrate": "64.00",
+    "protein": "18.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 트리플믹스 샌드위치 ",
+    "weight": "178",
+    "kcal": "425",
+    "carbohydrate": "51.00",
+    "protein": "16.00",
+    "fat": "17.40"
+  },
+  {
+    "food_name": " 주꾸미 삼각김밥 ",
+    "weight": "105",
+    "kcal": "144",
+    "carbohydrate": "28.00",
+    "protein": "3.00",
+    "fat": "2.00"
+  },
+  {
+    "food_name": " 뉴베이컨치즈 샌드위치 ",
+    "weight": "126",
+    "kcal": "313",
+    "carbohydrate": "32.00",
+    "protein": "10.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 빅매콤제육삼각김밥 ",
+    "weight": "158",
+    "kcal": "225",
+    "carbohydrate": "42.00",
+    "protein": "6.00",
+    "fat": "4.10"
+  },
+  {
+    "food_name": " 고구마무스맛 팝콘 ",
+    "weight": "120",
+    "kcal": "655",
+    "carbohydrate": "72.00",
+    "protein": "6.00",
+    "fat": "38.00"
+  },
+  {
+    "food_name": " 체다치즈볼 ",
+    "weight": "  100",
+    "kcal": "510",
+    "carbohydrate": "60.00",
+    "protein": "5.00",
+    "fat": "28.00"
+  },
+  {
+    "food_name": " 참나무훈제삼겹살 ",
+    "weight": "150",
+    "kcal": "450",
+    "carbohydrate": "13.00",
+    "protein": "11.00",
+    "fat": "25.00"
+  },
+  {
+    "food_name": " 콘치즈샐러드 ",
+    "weight": "150",
+    "kcal": "380",
+    "carbohydrate": "17.00",
+    "protein": "8.00",
+    "fat": "31.00"
+  },
+  {
+    "food_name": " 뉴 빅케이준치킨햄 샌드위치 ",
+    "weight": "180",
+    "kcal": "479",
+    "carbohydrate": "54.00",
+    "protein": "14.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 소고기고추장 김밥 ",
+    "weight": "198",
+    "kcal": "251",
+    "carbohydrate": "46.00",
+    "protein": "6.00",
+    "fat": "4.70"
+  },
+  {
+    "food_name": " 콘쏙쏙포테이토햄 ",
+    "weight": "163",
+    "kcal": "396",
+    "carbohydrate": "49.00",
+    "protein": "11.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 오리지널치킨버거 ",
+    "weight": "143",
+    "kcal": "359",
+    "carbohydrate": "38.00",
+    "protein": "12.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 치즈고구마돈까스김밥 ",
+    "weight": "218",
+    "kcal": "418",
+    "carbohydrate": "58.00",
+    "protein": "12.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 땡초불고기 김밥 ",
+    "weight": "205",
+    "kcal": "244",
+    "carbohydrate": "41.00",
+    "protein": "9.00",
+    "fat": "4.90"
+  },
+  {
+    "food_name": " 김치제육볶음 주먹밥 ",
+    "weight": "183",
+    "kcal": "280",
+    "carbohydrate": "54.00",
+    "protein": "7.00",
+    "fat": "3.70"
+  },
+  {
+    "food_name": " 깍두기카레 삼각김밥 ",
+    "weight": "105",
+    "kcal": "164",
+    "carbohydrate": "32.00",
+    "protein": "4.00",
+    "fat": "2.50"
+  },
+  {
+    "food_name": " 서울시스터즈 햄에그김치 삼각김밥 ",
+    "weight": "148",
+    "kcal": "271",
+    "carbohydrate": "36.00",
+    "protein": "5.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 매콤달콤 바삭닭강정 ",
+    "weight": "195",
+    "kcal": "484",
+    "carbohydrate": "30.00",
+    "protein": "24.00",
+    "fat": "30.00"
+  },
+  {
+    "food_name": " 달고나 라떼 ",
+    "weight": "250",
+    "kcal": "220",
+    "carbohydrate": "38.00",
+    "protein": "3.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 빅참치&햄에그 샌드위치 ",
+    "weight": "187",
+    "kcal": "480",
+    "carbohydrate": "47.00",
+    "protein": "16.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 스팸&치킨 도시락 ",
+    "weight": "353",
+    "kcal": "634",
+    "carbohydrate": "87.00",
+    "protein": "22.00",
+    "fat": "22.00"
+  },
+  {
+    "food_name": " 딥치즈버거 ",
+    "weight": "160",
+    "kcal": "393",
+    "carbohydrate": "42.00",
+    "protein": "18.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 속찬소불고기김밥 ",
+    "weight": "223",
+    "kcal": "332",
+    "carbohydrate": "48.00",
+    "protein": "8.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 햄참치샐러드김밥 ",
+    "weight": "203",
+    "kcal": "370",
+    "carbohydrate": "35.00",
+    "protein": "7.00",
+    "fat": "22.00"
+  },
+  {
+    "food_name": " 베이컨 소시지 핫도그 ",
+    "weight": "124",
+    "kcal": "301",
+    "carbohydrate": "32.00",
+    "protein": "14.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 떡갈비 밥버거 ",
+    "weight": "168",
+    "kcal": "308",
+    "carbohydrate": "44.00",
+    "protein": "9.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 왓챠팝콘 ",
+    "weight": "65",
+    "kcal": "330",
+    "carbohydrate": "42.00",
+    "protein": "4.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 맛밤떡갈비옆고추장불고기 ",
+    "weight": "  100",
+    "kcal": "685",
+    "carbohydrate": "89.00",
+    "protein": "29.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 3단콤보 샌드위치 ",
+    "weight": "127",
+    "kcal": "335",
+    "carbohydrate": "32.00",
+    "protein": "8.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 베트남 즉석 쌀국수 포포 ",
+    "weight": "70",
+    "kcal": "256",
+    "carbohydrate": "50.00",
+    "protein": "5.00",
+    "fat": "4.00"
+  },
+  {
+    "food_name": " 카프레제 샌드위치 ",
+    "weight": "125",
+    "kcal": "267",
+    "carbohydrate": "22.00",
+    "protein": "11.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 간장버터계란 ",
+    "weight": "105",
+    "kcal": "201",
+    "carbohydrate": "28.00",
+    "protein": "2.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 에너지 솟솟바 ",
+    "weight": "46",
+    "kcal": "240",
+    "carbohydrate": "18.00",
+    "protein": "10.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 간장불고기 삼각김밥 ",
+    "weight": "105",
+    "kcal": "177",
+    "carbohydrate": "31.00",
+    "protein": "4.00",
+    "fat": "3.30"
+  },
+  {
+    "food_name": " 민트초코 팝콘 ",
+    "weight": "75",
+    "kcal": "405",
+    "carbohydrate": "45.00",
+    "protein": "4.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 보성녹차연유팥컵 ",
+    "weight": "140",
+    "kcal": "221",
+    "carbohydrate": "39.00",
+    "protein": "5.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 검은삼각 불닭치킨마요 ",
+    "weight": "105",
+    "kcal": "208",
+    "carbohydrate": "30.00",
+    "protein": "3.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 부드러운 치즈스콘 ",
+    "weight": "85",
+    "kcal": "380",
+    "carbohydrate": "36.00",
+    "protein": "5.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 마카베리넛 ",
+    "weight": "25",
+    "kcal": "147",
+    "carbohydrate": "10.00",
+    "protein": "2.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 빠다팝콘 ",
+    "weight": "  100",
+    "kcal": "575",
+    "carbohydrate": "51.00",
+    "protein": "9.00",
+    "fat": "37.00"
+  },
+  {
+    "food_name": " 빠다쿠키 ",
+    "weight": "110",
+    "kcal": "600",
+    "carbohydrate": "65.00",
+    "protein": "7.00",
+    "fat": "34.00"
+  },
+  {
+    "food_name": " 봄잔치국수 ",
+    "weight": "284",
+    "kcal": "312",
+    "carbohydrate": "63.00",
+    "protein": "10.00",
+    "fat": "2.20"
+  },
+  {
+    "food_name": " 뉴새우버거 ",
+    "weight": "153",
+    "kcal": "278",
+    "carbohydrate": "44.00",
+    "protein": "8.00",
+    "fat": "7.50"
+  },
+  {
+    "food_name": " 콘샐러드 ",
+    "weight": "150",
+    "kcal": "225",
+    "carbohydrate": "30.00",
+    "protein": "4.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 모짜치즈불닭 김밥 ",
+    "weight": "205",
+    "kcal": "260",
+    "carbohydrate": "52.00",
+    "protein": "6.00",
+    "fat": "3.20"
+  },
+  {
+    "food_name": " 팔도비빔장불고기김밥 ",
+    "weight": "210",
+    "kcal": "265",
+    "carbohydrate": "49.00",
+    "protein": "8.00",
+    "fat": "4.10"
+  },
+  {
+    "food_name": " 해물철판볶음밥 ",
+    "weight": "248",
+    "kcal": "331",
+    "carbohydrate": "66.00",
+    "protein": "11.00",
+    "fat": "2.30"
+  },
+  {
+    "food_name": " 나쵸큐브콤보 ",
+    "weight": "95",
+    "kcal": "317",
+    "carbohydrate": "37.00",
+    "protein": "4.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 5F파르페 초코 ",
+    "weight": "320",
+    "kcal": "374",
+    "carbohydrate": "48.00",
+    "protein": "7.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 크렌베리크림치즈샌드위치 ",
+    "weight": "130",
+    "kcal": "305",
+    "carbohydrate": "22.00",
+    "protein": "9.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 치즈소시지김밥&유부초밥 ",
+    "weight": "251",
+    "kcal": "404",
+    "carbohydrate": "55.00",
+    "protein": "10.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 에그스크램블덮밥 ",
+    "weight": "385",
+    "kcal": "595",
+    "carbohydrate": "71.00",
+    "protein": "19.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 치킨&에그 샌드위치 ",
+    "weight": "143",
+    "kcal": "339",
+    "carbohydrate": "38.00",
+    "protein": "13.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 플랜트 튜나마요 김밥 ",
+    "weight": "210",
+    "kcal": "321",
+    "carbohydrate": "45.00",
+    "protein": "7.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 오븐구이통소시지김밥 ",
+    "weight": "219",
+    "kcal": "517",
+    "carbohydrate": "62.00",
+    "protein": "14.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 크러쉬 밀크초코볼 ",
+    "weight": "40",
+    "kcal": "200",
+    "carbohydrate": "25.00",
+    "protein": "3.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 핑크핑크 치즈쿠키 ",
+    "weight": "70",
+    "kcal": "370",
+    "carbohydrate": "45.00",
+    "protein": "3.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 맛초킹치킨김밥 ",
+    "weight": "211",
+    "kcal": "287",
+    "carbohydrate": "49.00",
+    "protein": "10.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 매콤제육김밥 ",
+    "weight": "175",
+    "kcal": "280",
+    "carbohydrate": "43.00",
+    "protein": "9.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 빅불고기전주비빔삼각김밥 ",
+    "weight": "148",
+    "kcal": "289",
+    "carbohydrate": "52.00",
+    "protein": "12.00",
+    "fat": "3.90"
+  },
+  {
+    "food_name": " 푸짐한 간장불고기 도시락 ",
+    "weight": "351",
+    "kcal": "553",
+    "carbohydrate": "94.00",
+    "protein": "25.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 따닥불고기 도시락 ",
+    "weight": "414",
+    "kcal": "746",
+    "carbohydrate": "87.00",
+    "protein": "26.00",
+    "fat": "33.00"
+  },
+  {
+    "food_name": " 댕기김밥 ",
+    "weight": "256",
+    "kcal": "362",
+    "carbohydrate": "50.00",
+    "protein": "9.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 소불고기정찬도시락 ",
+    "weight": "324",
+    "kcal": "449",
+    "carbohydrate": "88.00",
+    "protein": "12.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " BIG 떡갈비 전주비빔 ",
+    "weight": "162",
+    "kcal": "280",
+    "carbohydrate": "49.00",
+    "protein": "8.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 더빅전주비빔삼각김밥 ",
+    "weight": "148",
+    "kcal": "289",
+    "carbohydrate": "52.00",
+    "protein": "12.00",
+    "fat": "3.90"
+  },
+  {
+    "food_name": " 뉴참치마요 ",
+    "weight": "105",
+    "kcal": "190",
+    "carbohydrate": "30.00",
+    "protein": "4.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 민생짜장 ",
+    "weight": "115",
+    "kcal": "485",
+    "carbohydrate": "77.00",
+    "protein": "10.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 통살치킨버거 ",
+    "weight": "178",
+    "kcal": "400",
+    "carbohydrate": "53.00",
+    "protein": "21.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 에너지워터 블루레몬 ",
+    "weight": "  100",
+    "kcal": "120",
+    "carbohydrate": "30.00",
+    "protein": "0.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 4단햄치즈&맛살샌드 ",
+    "weight": "190",
+    "kcal": "466",
+    "carbohydrate": "68.00",
+    "protein": "14.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 칩스아호이 초코딜라잇 ",
+    "weight": "84",
+    "kcal": "378",
+    "carbohydrate": "17.00",
+    "protein": "1.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 간장&매콤제육반반김밥 ",
+    "weight": "240",
+    "kcal": "388",
+    "carbohydrate": "55.00",
+    "protein": "15.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 자몽머스켓에이드 ",
+    "weight": "230",
+    "kcal": "100",
+    "carbohydrate": "25.00",
+    "protein": "0.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 모짜렐라치즈콘 샌드위치 ",
+    "weight": "140",
+    "kcal": "302",
+    "carbohydrate": "41.00",
+    "protein": "12.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 도라에몽 옥수수콘 ",
+    "weight": "150",
+    "kcal": "336",
+    "carbohydrate": "48.00",
+    "protein": "5.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 커피빈 초콜릿  ",
+    "weight": "38",
+    "kcal": "195",
+    "carbohydrate": "24.00",
+    "protein": "2.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 달고나 타르트 ",
+    "weight": "38",
+    "kcal": "205",
+    "carbohydrate": "24.00",
+    "protein": "2.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 떡이솟솟 녹차팥크림샌드 ",
+    "weight": "127",
+    "kcal": "365",
+    "carbohydrate": "52.00",
+    "protein": "8.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 에구에그샌드위치 ",
+    "weight": "133",
+    "kcal": "309",
+    "carbohydrate": "34.00",
+    "protein": "14.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 초계샌드위치 ",
+    "weight": "147",
+    "kcal": "267",
+    "carbohydrate": "29.00",
+    "protein": "9.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 빅반숙란장조림삼각김밥 ",
+    "weight": "146",
+    "kcal": "203",
+    "carbohydrate": "40.00",
+    "protein": "4.00",
+    "fat": "3.00"
+  },
+  {
+    "food_name": " 맛초킹더빅치킨삼각김밥 ",
+    "weight": "146",
+    "kcal": "216",
+    "carbohydrate": "39.00",
+    "protein": "6.00",
+    "fat": "4.00"
+  },
+  {
+    "food_name": " 콘치즈닭갈비 삼각김밥 ",
+    "weight": "105",
+    "kcal": "185",
+    "carbohydrate": "26.00",
+    "protein": "5.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 콘치즈닭갈비볶음 ",
+    "weight": "105",
+    "kcal": "185",
+    "carbohydrate": "26.00",
+    "protein": "5.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 참치빵빵샌드위치 ",
+    "weight": "120",
+    "kcal": "320",
+    "carbohydrate": "30.00",
+    "protein": "9.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 로제치킨주먹밥 ",
+    "weight": "188",
+    "kcal": "255",
+    "carbohydrate": "41.00",
+    "protein": "6.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 매콤참치김밥 ",
+    "weight": "  100",
+    "kcal": "277",
+    "carbohydrate": "51.00",
+    "protein": "7.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 빅초코칩머핀 ",
+    "weight": "150",
+    "kcal": "640",
+    "carbohydrate": "61.00",
+    "protein": "6.00",
+    "fat": "41.00"
+  },
+  {
+    "food_name": " 육실한 도시락 ",
+    "weight": "375",
+    "kcal": "590",
+    "carbohydrate": "45.00",
+    "protein": "71.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 이천쌀 미니약과 ",
+    "weight": "85",
+    "kcal": "430",
+    "carbohydrate": "51.00",
+    "protein": "5.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 햄빵빵샌드위치 ",
+    "weight": "  100",
+    "kcal": "220",
+    "carbohydrate": "18.00",
+    "protein": "8.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 간장버터 장조림 삼각김밥 ",
+    "weight": "105",
+    "kcal": "245",
+    "carbohydrate": "32.00",
+    "protein": "4.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 뉴토스트피자샌드 ",
+    "weight": "160",
+    "kcal": "305",
+    "carbohydrate": "41.00",
+    "protein": "14.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 떠먹는 쿠키 티라미수 ",
+    "weight": "125",
+    "kcal": "360",
+    "carbohydrate": "38.00",
+    "protein": "4.00",
+    "fat": "21.00"
+  },
+  {
+    "food_name": " 애플체리에이드 ",
+    "weight": "230",
+    "kcal": "110",
+    "carbohydrate": "27.00",
+    "protein": "0.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 프로틴 바닐라라떼 크리머 ",
+    "weight": "32",
+    "kcal": "135",
+    "carbohydrate": "20.00",
+    "protein": "6.00",
+    "fat": "3.10"
+  },
+  {
+    "food_name": " 빅블루베리머핀 ",
+    "weight": "150",
+    "kcal": "600",
+    "carbohydrate": "57.00",
+    "protein": "6.00",
+    "fat": "39.00"
+  },
+  {
+    "food_name": " 카레포테이토링 ",
+    "weight": "  100",
+    "kcal": "558",
+    "carbohydrate": "57.00",
+    "protein": "6.00",
+    "fat": "34.00"
+  },
+  {
+    "food_name": " 핫뿌링클삼각김밥 ",
+    "weight": "105",
+    "kcal": "232",
+    "carbohydrate": "30.00",
+    "protein": "4.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 핫베이컨칩 ",
+    "weight": "  100",
+    "kcal": "488",
+    "carbohydrate": "69.00",
+    "protein": "8.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 더 커진 참치마요 ",
+    "weight": "440",
+    "kcal": "825",
+    "carbohydrate": "122.00",
+    "protein": "24.00",
+    "fat": "26.00"
+  },
+  {
+    "food_name": " 에그반란샌드위치 ",
+    "weight": "147",
+    "kcal": "425",
+    "carbohydrate": "27.00",
+    "protein": "10.00",
+    "fat": "31.00"
+  },
+  {
+    "food_name": " 속이꽉찬 참치마요 김밥 ",
+    "weight": "216",
+    "kcal": "386",
+    "carbohydrate": "57.00",
+    "protein": "11.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 치킨햄&토마토 샌드위치 ",
+    "weight": "152",
+    "kcal": "282",
+    "carbohydrate": "38.00",
+    "protein": "10.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 트리플마카롱 ",
+    "weight": "69",
+    "kcal": "328",
+    "carbohydrate": "42.00",
+    "protein": "4.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 송정식당직화불꼬지삼각김밥 ",
+    "weight": "105",
+    "kcal": "153",
+    "carbohydrate": "27.00",
+    "protein": "5.00",
+    "fat": "3.00"
+  },
+  {
+    "food_name": " 햄&튜나샐러드샌드위치 ",
+    "weight": "140",
+    "kcal": "320",
+    "carbohydrate": "30.00",
+    "protein": "9.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 서울시스터즈 돈까스김치버거 ",
+    "weight": "190",
+    "kcal": "469",
+    "carbohydrate": "44.00",
+    "protein": "18.00",
+    "fat": "25.00"
+  },
+  {
+    "food_name": " 뉴더블고기 도시락 ",
+    "weight": "  100",
+    "kcal": "800",
+    "carbohydrate": "101.00",
+    "protein": "27.00",
+    "fat": "32.00"
+  },
+  {
+    "food_name": " 땡초불고기삼각김밥 ",
+    "weight": "105",
+    "kcal": "151",
+    "carbohydrate": "28.00",
+    "protein": "7.00",
+    "fat": "1.60"
+  },
+  {
+    "food_name": " 빠다포테이토링 ",
+    "weight": "  100",
+    "kcal": "550",
+    "carbohydrate": "55.00",
+    "protein": "6.00",
+    "fat": "34.00"
+  },
+  {
+    "food_name": " 잠봉햄치즈 치아바타 ",
+    "weight": "140",
+    "kcal": "378",
+    "carbohydrate": "33.00",
+    "protein": "12.00",
+    "fat": "22.00"
+  },
+  {
+    "food_name": " 언양식소불고기삼각김밥 ",
+    "weight": "105",
+    "kcal": "177",
+    "carbohydrate": "29.00",
+    "protein": "4.00",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 더커진참치마요덮밥 ",
+    "weight": "440",
+    "kcal": "831",
+    "carbohydrate": "94.00",
+    "protein": "17.00",
+    "fat": "43.00"
+  },
+  {
+    "food_name": " 따닥불고기 ",
+    "weight": "414",
+    "kcal": "746",
+    "carbohydrate": "87.00",
+    "protein": "26.00",
+    "fat": "33.00"
+  },
+  {
+    "food_name": " 얼큰김치햄라면 ",
+    "weight": "214",
+    "kcal": "676",
+    "carbohydrate": "109.00",
+    "protein": "15.00",
+    "fat": "20.00"
+  },
+  {
+    "food_name": " 단짠유부김밥 ",
+    "weight": "197",
+    "kcal": "256",
+    "carbohydrate": "44.00",
+    "protein": "7.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 일품한식반상 ",
+    "weight": "370",
+    "kcal": "652",
+    "carbohydrate": "83.00",
+    "protein": "26.00",
+    "fat": "24.00"
+  },
+  {
+    "food_name": " 모닝떡갈비샌드 ",
+    "weight": "156",
+    "kcal": "308",
+    "carbohydrate": "40.00",
+    "protein": "11.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 시저치킨샐러드샌드위치 ",
+    "weight": "132",
+    "kcal": "266",
+    "carbohydrate": "29.00",
+    "protein": "11.00",
+    "fat": "12.10"
+  },
+  {
+    "food_name": " 뉴매콤참치 ",
+    "weight": "201",
+    "kcal": "341",
+    "carbohydrate": "66.00",
+    "protein": "11.00",
+    "fat": "4.00"
+  },
+  {
+    "food_name": " 더블에그치즈 샌드위치 ",
+    "weight": "150",
+    "kcal": "389",
+    "carbohydrate": "39.00",
+    "protein": "11.00",
+    "fat": "21.00"
+  },
+  {
+    "food_name": " 불고기쌈 김밥 ",
+    "weight": "221",
+    "kcal": "315",
+    "carbohydrate": "51.00",
+    "protein": "12.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 발사믹드레싱을 곁들인 로스트치킨 샐러드 ",
+    "weight": "149",
+    "kcal": "85",
+    "carbohydrate": "6.00",
+    "protein": "14.00",
+    "fat": "1.00"
+  },
+  {
+    "food_name": " 깻잎고추장불고기 ",
+    "weight": "  100",
+    "kcal": "185",
+    "carbohydrate": "36.00",
+    "protein": "3.00",
+    "fat": "3.00"
+  },
+  {
+    "food_name": " 양념치킨버거 ",
+    "weight": "170",
+    "kcal": "424",
+    "carbohydrate": "44.00",
+    "protein": "19.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 단짠불고기김밥 ",
+    "weight": "210",
+    "kcal": "306",
+    "carbohydrate": "54.00",
+    "protein": "12.00",
+    "fat": "4.70"
+  },
+  {
+    "food_name": " 불닭맛참치마요 ",
+    "weight": "101",
+    "kcal": "213",
+    "carbohydrate": "34.00",
+    "protein": "7.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 속찬참치김치삼각김밥 ",
+    "weight": "105",
+    "kcal": "179",
+    "carbohydrate": "30.00",
+    "protein": "4.00",
+    "fat": "4.80"
+  },
+  {
+    "food_name": " 에그&멜팅치즈 토스트 샌드위치 ",
+    "weight": "110",
+    "kcal": "295",
+    "carbohydrate": "30.00",
+    "protein": "8.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 빅바싹불고기삼각김밥 ",
+    "weight": "153",
+    "kcal": "222",
+    "carbohydrate": "43.00",
+    "protein": "6.00",
+    "fat": "2.50"
+  },
+  {
+    "food_name": " 간징버터장조림 ",
+    "weight": "105",
+    "kcal": "245",
+    "carbohydrate": "32.00",
+    "protein": "4.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 소프트워터 상큼한 복숭아 ",
+    "weight": "500",
+    "kcal": "140",
+    "carbohydrate": "14.00",
+    "protein": "0.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 초코쏙녹차팝콘 ",
+    "weight": "50",
+    "kcal": "270",
+    "carbohydrate": "31.00",
+    "protein": "3.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 바나나에 반하나 ",
+    "weight": "130",
+    "kcal": "155",
+    "carbohydrate": "34.00",
+    "protein": "1.00",
+    "fat": "1.50"
+  },
+  {
+    "food_name": " 비타민채봄비빔밥 ",
+    "weight": "308",
+    "kcal": "418",
+    "carbohydrate": "84.00",
+    "protein": "10.00",
+    "fat": "4.40"
+  },
+  {
+    "food_name": " 햄빵빵샌드위치 ",
+    "weight": "130",
+    "kcal": "320",
+    "carbohydrate": "35.00",
+    "protein": "10.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 1700샌드위치 ",
+    "weight": "112",
+    "kcal": "248",
+    "carbohydrate": "28.00",
+    "protein": "6.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 이색떡갈비김밥 ",
+    "weight": "212",
+    "kcal": "300",
+    "carbohydrate": "46.00",
+    "protein": "10.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 상큼딸기 샌드위치 ",
+    "weight": "124",
+    "kcal": "250",
+    "carbohydrate": "29.00",
+    "protein": "4.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 유부멸치마요삼각김밥 ",
+    "weight": "105",
+    "kcal": "196",
+    "carbohydrate": "27.00",
+    "protein": "3.00",
+    "fat": "8.00"
+  },
+  {
+    "food_name": " 까르보불닭 삼각김밥 ",
+    "weight": "105",
+    "kcal": "160",
+    "carbohydrate": "25.00",
+    "protein": "4.00",
+    "fat": "4.00"
+  },
+  {
+    "food_name": " 바다에서 왔닥 ",
+    "weight": "  100",
+    "kcal": "85",
+    "carbohydrate": "9.60",
+    "protein": "12.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 그때그맛경양식돈까스버거 ",
+    "weight": "200",
+    "kcal": "513",
+    "carbohydrate": "52.00",
+    "protein": "9.00",
+    "fat": "30.00"
+  },
+  {
+    "food_name": " 속타는라면 ",
+    "weight": "105",
+    "kcal": "445",
+    "carbohydrate": "66.00",
+    "protein": "9.00",
+    "fat": "16.00"
+  },
+  {
+    "food_name": " 뉴매콤참치김밥 ",
+    "weight": "209",
+    "kcal": "330",
+    "carbohydrate": "58.00",
+    "protein": "9.00",
+    "fat": "7.00"
+  },
+  {
+    "food_name": " 뉴함박스테이크김밥 ",
+    "weight": "230",
+    "kcal": "344",
+    "carbohydrate": "51.00",
+    "protein": "8.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 뉴우삼겹김밥 ",
+    "weight": "250",
+    "kcal": "318",
+    "carbohydrate": "49.00",
+    "protein": "10.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 트리플육해공도시락 ",
+    "weight": "385",
+    "kcal": "721",
+    "carbohydrate": "124.00",
+    "protein": "23.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 크랜베리브레드 ",
+    "weight": "32",
+    "kcal": "127",
+    "carbohydrate": "17.60",
+    "protein": "2.90",
+    "fat": "5.00"
+  },
+  {
+    "food_name": " 옛날소시지&볶음김치 삼각김밥 ",
+    "weight": "107",
+    "kcal": "180",
+    "carbohydrate": "32.00",
+    "protein": "5.00",
+    "fat": "3.60"
+  },
+  {
+    "food_name": " 고기쿡쿡샌드위치 ",
+    "weight": "116",
+    "kcal": "276",
+    "carbohydrate": "25.00",
+    "protein": "10.00",
+    "fat": "15.00"
+  },
+  {
+    "food_name": " 기찬도시락 ",
+    "weight": "389",
+    "kcal": "480",
+    "carbohydrate": "78.00",
+    "protein": "22.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 빅맨 요구르트 ",
+    "weight": "  100",
+    "kcal": "35",
+    "carbohydrate": "8.00",
+    "protein": "1.00",
+    "fat": "0.00"
+  },
+  {
+    "food_name": " 자색고구마 웨이퍼롤 ",
+    "weight": "115",
+    "kcal": "565",
+    "carbohydrate": "82.00",
+    "protein": "7.00",
+    "fat": "23.00"
+  },
+  {
+    "food_name": " 이천쌀로 만든 미니약과 ",
+    "weight": "  100",
+    "kcal": "455",
+    "carbohydrate": "68.00",
+    "protein": "5.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 속이 꽉 찬 참치마요 김밥 ",
+    "weight": "221",
+    "kcal": "425",
+    "carbohydrate": "57.00",
+    "protein": "11.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 달달e커피 ",
+    "weight": "500",
+    "kcal": "185",
+    "carbohydrate": "37.00",
+    "protein": "4.00",
+    "fat": "2.40"
+  },
+  {
+    "food_name": " 땡큐베리딸기샌드 ",
+    "weight": "144",
+    "kcal": "255",
+    "carbohydrate": "33.00",
+    "protein": "4.00",
+    "fat": "12.00"
+  },
+  {
+    "food_name": " 맵부심돈까스김밥 ",
+    "weight": "206",
+    "kcal": "325",
+    "carbohydrate": "52.00",
+    "protein": "10.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 원핸드스낵 콘버터맛 ",
+    "weight": "70",
+    "kcal": "355",
+    "carbohydrate": "43.00",
+    "protein": "3.00",
+    "fat": "19.00"
+  },
+  {
+    "food_name": " 곱창돌김&제주흑돈매콤맛 ",
+    "weight": "105",
+    "kcal": "157",
+    "carbohydrate": "22.00",
+    "protein": "4.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 더블소떡소떡 ",
+    "weight": "247",
+    "kcal": "847",
+    "carbohydrate": "89.00",
+    "protein": "45.00",
+    "fat": "35.00"
+  },
+  {
+    "food_name": " 올뉴기찬도시락 ",
+    "weight": "380",
+    "kcal": "650",
+    "carbohydrate": "99.00",
+    "protein": "24.00",
+    "fat": "18.00"
+  },
+  {
+    "food_name": " 1700 샌드위치 ",
+    "weight": "112",
+    "kcal": "248",
+    "carbohydrate": "28.00",
+    "protein": "6.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 뉴치즈소시지김밥&유부초밥 ",
+    "weight": "236",
+    "kcal": "413",
+    "carbohydrate": "57.00",
+    "protein": "14.00",
+    "fat": "14.00"
+  },
+  {
+    "food_name": " 고기쿡쿡김밥 ",
+    "weight": "207",
+    "kcal": "286",
+    "carbohydrate": "49.00",
+    "protein": "10.00",
+    "fat": "6.00"
+  },
+  {
+    "food_name": " 소시지콘치즈그라탕 ",
+    "weight": "194",
+    "kcal": "560",
+    "carbohydrate": "27.00",
+    "protein": "12.00",
+    "fat": "45.00"
+  },
+  {
+    "food_name": " 트레저 초코프로틴바 ",
+    "weight": "41",
+    "kcal": "195",
+    "carbohydrate": "20.00",
+    "protein": "8.00",
+    "fat": "9.00"
+  },
+  {
+    "food_name": " 딥치즈&치킨 미니샐러드 ",
+    "weight": "137",
+    "kcal": "163",
+    "carbohydrate": "7.00",
+    "protein": "9.00",
+    "fat": "11.00"
+  },
+  {
+    "food_name": " 치즈듬뿍핫도그 ",
+    "weight": "140",
+    "kcal": "434",
+    "carbohydrate": "32.00",
+    "protein": "10.00",
+    "fat": "30.00"
+  },
+  {
+    "food_name": " 볼로네즈소시지핫도그 ",
+    "weight": "136",
+    "kcal": "324",
+    "carbohydrate": "30.00",
+    "protein": "12.00",
+    "fat": "17.00"
+  },
+  {
+    "food_name": " 넘버원김밥 ",
+    "weight": "245",
+    "kcal": "360",
+    "carbohydrate": "51.00",
+    "protein": "10.00",
+    "fat": "13.00"
+  },
+  {
+    "food_name": " 직화너비아니라이스샌드 ",
+    "weight": "204",
+    "kcal": "340",
+    "carbohydrate": "53.00",
+    "protein": "9.00",
+    "fat": "10.00"
+  },
+  {
+    "food_name": " 쌉쌀e커피 ",
+    "weight": "500",
+    "kcal": "20",
+    "carbohydrate": "4.00",
+    "protein": "1.00",
+    "fat": "0.00"
+  }
+]
