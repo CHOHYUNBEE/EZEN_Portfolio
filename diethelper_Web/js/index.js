@@ -1,6 +1,6 @@
 $(window).ready(function () {
   var ad_kcal = 0; // 1일 적정 칼로리량
-
+  var make_food_list = [];
   $("#user_info_btn").click(function () {
     var gender = $("input[name='gender']:checked").val();
     var height = $(".info #user_height").val();
@@ -85,6 +85,7 @@ $(window).ready(function () {
   //  추천받을 식사 시간 선택 이벤트
   $("#select_time .time_box label").click(function () {
     $(this).parent().toggleClass("active");
+    $(this).prop("checked", true);
   });
 
   //  식단 생성 버튼
@@ -97,7 +98,7 @@ $(window).ready(function () {
       var select_meal = [];
       var random_num = Math.random();
       var meal_len = 0; // 식단 갯수
-      var make_food_list = []; // 적합한 식단 목록
+      // var make_food_list = []; // 적합한 식단 목록/
       var final_food_list = []; // 최종 식단 목록
 
       // 식사 시간 선택
@@ -106,7 +107,7 @@ $(window).ready(function () {
       });
 
       //  식단 타입 선택
-      var meal_type = $("input[name='meal']:checked").val();
+      var meal_type = $("input[name='meal_type']:checked").val();
       var diet_kcal = 0; // 타입에 따라 먹어야하는 칼로리량
       var diet_txt = "";
       if (meal_type == "low") {
@@ -179,9 +180,10 @@ $(window).ready(function () {
           });
           meal_len = make_food_list.length;
 
+          $("#loading").removeClass("nonactive"); // 로딩 중
+
           // 식단 랜덤 뽑기
           // 감량 식단 선택 시
-          console.log(meal_time_arr);
           for (let j = 0; j < meal_time_arr.length; j++) {
             var check_select_meal = "";
             select_meal = [];
@@ -203,6 +205,7 @@ $(window).ready(function () {
             );
             final_food_list.push(check_select_meal);
           }
+
           var card_list = "";
           var total_kcal = 0;
           var img_url = "";
@@ -217,6 +220,7 @@ $(window).ready(function () {
 
           $.each(final_food_list, function (key, value) {
             total_kcal = 0;
+            var count = key;
             if (meal_time_arr[key] == "morning") {
               img_url = "./images/sun.png";
               img_alt = "sun";
@@ -245,9 +249,9 @@ $(window).ready(function () {
               final_total_protein += Number(value.protein);
               final_total_fat += Number(value.fat);
               card_list += `
-                <div class="meal_card_content">
-                  <input type="radio" name="meal" id="${meal_time_arr[key]}product${key}" />
-                  <label for="${meal_time_arr[key]}product${key}">
+                <div class="meal_card_content" id="${meal_time_arr[count]}product${key}${key}">
+                  <input type="radio" name="meal" value="${meal_time_arr[count]}product${key}" id="${meal_time_arr[count]}product${key}" />
+                  <label for="${meal_time_arr[count]}product${key}">
                     <p>제품명 : <span>${value.food_name}</span></p>
                     <p>중량 : ${value.weight}g</p>
                     <p>칼로리 : ${value.kcal}kcal</p>
@@ -262,14 +266,14 @@ $(window).ready(function () {
             </div>
               <div class="total_kcal">총 섭취 칼로리 : ${total_kcal}kcal</div>
               <div class="meal_card_footer">
-                <div>삭제</div>
+                <div class="delete_meal">삭제</div>
                 <div class="h_line"></div>
-                <div>식단 재생성</div>
+                <div class="new_meal">식단 재생성</div>
               </div>
             </div>`;
           });
           $("#meal_card_list").html(card_list);
-
+          $("#loading").addClass("nonactive"); // 로딩 중
           //  섭취 영양소 그래프
           // 칼로리
           $(".graph_bar_content:nth-child(2) .color_bar").text(
@@ -358,6 +362,134 @@ $(window).ready(function () {
         });
     }
   });
+
+  // 삭제 버튼 클릭시 이벤트
+  $(document).on("click", ".delete_meal", function () {
+    var element = $("input[name='meal']");
+    var moring_cnt = 0;
+    var lunch_cnt = 0;
+    var dinner_cnt = 0;
+    // 현재 식단 개수 구하기
+    $.each(element, function (key, value) {
+      if (value.value.startsWith("morning")) {
+        moring_cnt++;
+      } else if (value.value.startsWith("lunch")) {
+        lunch_cnt++;
+      } else {
+        dinner_cnt++;
+      }
+    });
+    var select_element = $("input[name='meal']:checked");
+    var select_element_parent = $("input[name='meal']:checked").parent()[0].id;
+    if (select_element.length != 0) {
+      var select_element_name = select_element[0].defaultValue;
+
+      if (select_element_name.startsWith("morning")) {
+        if (moring_cnt < 2) {
+          // 식단이 1개만 존재할 때
+          alert(
+            "최소 1개의 식단은 필요합니다. \n새로운 식단을 희망하신다면 식단 재생성을 눌러주세요."
+          );
+        } else {
+          // 식단이 2개 일때
+          var delConfirm = confirm(
+            "식단 삭제 시 하루 필요 칼로리 및 영양소가 부족할 수 있습니다.\n그래도 삭제하시겠습니까?"
+          );
+          if (delConfirm) {
+            $(`#${select_element_parent}`).remove();
+            alert("식단이 삭제되었습니다.");
+          } else {
+            alert("식단 삭제가 취소되었습니다.");
+          }
+        }
+      } else if (select_element_name.startsWith("lunch")) {
+        if (lunch_cnt < 2) {
+          // 식단이 1개만 존재할 때
+          alert(
+            "최소 1개의 식단은 필요합니다. \n새로운 식단을 희망하신다면 식단 재생성을 눌러주세요."
+          );
+        } else {
+          // 식단이 2개 일때
+          var delConfirm = confirm(
+            "식단 삭제 시 하루 필요 칼로리 및 영양소가 부족할 수 있습니다.\n그래도 삭제하시겠습니까?"
+          );
+          if (delConfirm) {
+            $(`#${select_element_parent}`).remove();
+            alert("식단이 삭제되었습니다.");
+            lunch_cnt--;
+          } else {
+            alert("식단 삭제가 취소되었습니다.");
+          }
+        }
+      } else {
+        if (dinner_cnt < 2) {
+          // 식단이 1개만 존재할 때
+          alert(
+            "최소 1개의 식단은 필요합니다. \n새로운 식단을 희망하신다면 식단 재생성을 눌러주세요."
+          );
+        } else {
+          // 식단이 2개 일때
+          var delConfirm = confirm(
+            "식단 삭제 시 하루 필요 칼로리 및 영양소가 부족할 수 있습니다.\n그래도 삭제하시겠습니까?"
+          );
+          if (delConfirm) {
+            $(`#${select_element_parent}`).remove();
+            alert("식단이 삭제되었습니다.");
+            dinner_cnt--;
+          } else {
+            alert("식단 삭제가 취소되었습니다.");
+          }
+        }
+      }
+    } else {
+      alert("삭제 할 식단을 선택해주세요");
+    }
+  });
+  // 메뉴 재생성
+
+  $(document).on("click", ".new_meal", function () {
+    console.log("재생성");
+    var element = $("input[name='meal']");
+    var select_element = $("input[name='meal']:checked"); // 현재 선택된 식단
+    var select_element_parent = $("input[name='meal']:checked").parent()[0].id; // 선택 된 식단의 부모 id
+    var moring_cnt = 0;
+    var lunch_cnt = 0;
+    var dinner_cnt = 0;
+
+    // 현재 식단 개수 구하기
+    $.each(element, function (key, value) {
+      if (value.value.startsWith("morning")) {
+        moring_cnt++;
+      } else if (value.value.startsWith("lunch")) {
+        lunch_cnt++;
+      } else {
+        dinner_cnt++;
+      }
+    });
+
+    if (select_element.length != 0) {
+      var select_element_name = select_element[0].defaultValue;
+
+      if (select_element_name.startsWith("morning")) {
+        if (moring_cnt < 2) {
+        } else {
+          // 식단이 2개인 경우
+          // 선택된 식단 이외의 칼로리 구하기
+          remake_meal(select_element_parent);
+        }
+      } else if (select_element_name.startsWith("lunch")) {
+        if (lunch_cnt < 2) {
+        } else {
+          remake_meal(select_element_parent);
+        }
+      } else {
+        if (dinner_cnt < 2) {
+        } else {
+          remake_meal(select_element_parent);
+        }
+      }
+    }
+  });
 });
 
 // 정보 입력 입력값 체크 함수
@@ -392,7 +524,7 @@ function check_option() {
   } else if ($("input[name='time']:checked").val() == "") {
     alert("추천 식사 시간을 1개 이상 선택해주세요.");
     return false;
-  } else if ($("input[name='meal']:checked").val() == "") {
+  } else if ($("input[name='meal_type']:checked").val() == "") {
     alert("식단 타입을 선택해주세요.");
     return false;
   } else {
@@ -425,11 +557,15 @@ function check_kcal(
     sum_fat += Number(data[i].fat);
   }
   if (
-    (sum_kcal > (make_kcal / 3) * 1.1 && sum_kcal < (make_kcal / 3) * 0.9) ||
+    sum_kcal > make_kcal / 3 ||
+    sum_kcal < (make_kcal / 3) * 0.8 ||
     sum_kcal < 800 / 3 ||
     sum_carbohydrate > make_carbohydrate / 3 ||
+    sum_carbohydrate < (make_carbohydrate / 3) * 0.8 ||
     sum_protein > make_protein / 3 ||
-    sum_fat > make_fat / 3
+    sum_protein < (make_protein / 3) * 0.8 ||
+    sum_fat > make_fat / 3 ||
+    sum_fat < (make_fat / 3) * 0.8
   ) {
     meal_list = [];
     for (let i = 0; i < data.length; i++) {
@@ -456,4 +592,63 @@ function check_kcal(
   } else {
     return meal_list;
   }
+}
+
+function remake_meal(select_element_parent) {
+  var sub_txt = "";
+  var sub_kcal = 0;
+  var sub_car = 0; // 탄수화물
+  var sub_pro = 0; // 단백질
+  var sub_fat = 0; // 지방
+
+  var main_kcal = $(".graph_bar_content:nth-child(2) .color_bar").text(); //칼로리
+  var main_car = $(".graph_bar_content:nth-child(3) .color_bar").text(); //탄수화물
+  var main_pro = $(".graph_bar_content:nth-child(4) .color_bar").text(); //단백질
+  var main_fat = $(".graph_bar_content:nth-child(5) .color_bar").text(); //지방
+
+  var kcal = 0;
+  var car = 0;
+  var pro = 0;
+  var fat = 0;
+
+  var meal_len = make_food_list.length;
+  var check_select_meal = "";
+  var random_num = Math.random();
+  var low_random_num = Math.floor(random_num * meal_len + 1);
+  var select_meal = [];
+
+  sub_txt = $(`#${select_element_parent}`).siblings().children("label").text();
+
+  sub_kcal = sub_txt.split("칼로리 :")[1].split("kcal")[0];
+  sub_car = sub_txt.split("탄수화물 :")[1].split("g")[0];
+  sub_pro = sub_txt.split("단백질 :")[1].split("g")[0];
+  sub_fat = sub_txt.split("지방 :")[1].split("g")[0];
+
+  kcal = Number(main_kcal) - Number(sub_kcal);
+  car = Number(main_car) - Number(sub_car);
+  pro = Number(main_pro) - Number(sub_pro);
+  fat = Number(main_fat) - Number(sub_fat);
+
+  console.log(kcal);
+  console.log(car);
+  console.log(pro);
+  console.log(fat);
+  console.log(make_food_list);
+
+  select_meal.push(make_food_list[low_random_num]);
+
+  console.log(random_num);
+  console.log(low_random_num);
+  console.log(select_meal);
+
+  check_select_meal = check_kcal(
+    kcal,
+    car,
+    pro,
+    make_fat,
+    fat,
+    meal_len,
+    select_meal
+  );
+  console.log(check_select_meal);
 }

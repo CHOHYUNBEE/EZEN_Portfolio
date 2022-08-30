@@ -16,6 +16,7 @@
       body {
         background-color: #76c6ff;
         font-family: "pretendard";
+        position: relative;
       }
       header,
       main {
@@ -400,6 +401,9 @@
       }
       .meal_card_footer div {
         width: 50%;
+        height: 100%;
+        cursor: pointer;
+        line-height: 4;
       }
       .meal_card_footer .h_line {
         position: absolute;
@@ -583,6 +587,107 @@
         margin: 1vw;
         text-decoration: underline;
         text-align: center;
+      }
+
+      /* 로딩 */
+      /** BEGIN CSS **/
+      @keyframes rotate-loading {
+        0% {
+          transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes rotate-loading {
+        0% {
+          transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+          -webkit-transform: rotate(0deg);
+          -o-transform: rotate(0deg);
+          -moz-transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          -webkit-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes loading-text-opacity {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .loading {
+        height: 100px;
+        position: relative;
+        width: 100px;
+        border-radius: 100%;
+      }
+      #loading.nonactive {
+        display: none;
+      }
+      #loading {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+      .loading-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .loading {
+        border: 2px solid transparent;
+        border-color: transparent #fff transparent #fff;
+        animation: rotate-loading 1.5s linear 0s infinite normal;
+        transform-origin: 50% 50%;
+      }
+
+      .loading-container:hover .loading,
+      .loading-container .loading {
+        transition: all 0.5s ease-in-out;
+      }
+
+      #loading-text {
+        animation: loading-text-opacity 2s linear 0s infinite normal;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 45px;
+        opacity: 0;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 0;
+        width: 100px;
       }
     </style>
   </head>
@@ -802,7 +907,7 @@
           <h2>식단 타입 선택 <span> (1끼 기준)</span></h2>
           <div id="radio_list">
             <div class="radio">
-              <input type="radio" name="meal" id="low" value="low" /><label
+              <input type="radio" name="meal_type" id="low" value="low" /><label
                 for="low"
                 >감량 칼로리 식단 <span>(1가지 음식 추천)</span></label
               >
@@ -810,7 +915,7 @@
             <div class="radio">
               <input
                 type="radio"
-                name="meal"
+                name="meal_type"
                 id="medium"
                 value="medium"
               /><label for="medium"
@@ -818,8 +923,12 @@
               >
             </div>
             <div class="radio">
-              <input type="radio" name="meal" id="high" value="high" /><label
-                for="high"
+              <input
+                type="radio"
+                name="meal_type"
+                id="high"
+                value="high"
+              /><label for="high"
                 >증량 칼로리 식단 <span>(2가지 음식 추천)</span></label
               >
             </div>
@@ -908,5 +1017,11 @@
         <a href="#">포트폴리오 더보기</a>
       </div>
     </footer>
+    <div id="loading" class="nonactive">
+      <div class="loading-container">
+        <div class="loading"></div>
+        <div id="loading-text">생성 중</div>
+      </div>
+    </div>
   </body>
 </html>
