@@ -274,91 +274,17 @@ $(window).ready(function () {
           });
           $("#meal_card_list").html(card_list);
           $("#loading").addClass("nonactive"); // 로딩 중
-          //  섭취 영양소 그래프
-          // 칼로리
-          $(".graph_bar_content:nth-child(2) .color_bar").text(
-            final_total_kcal.toFixed(0)
+
+          make_nutri_content(
+            final_total_kcal,
+            make_kcal,
+            final_total_carbohydrate,
+            make_carbohydrate,
+            final_total_protein,
+            make_protein,
+            final_total_fat,
+            make_fat
           );
-          $(".graph_bar_content:nth-child(2) .color_bar").css({
-            width: `${((final_total_kcal / make_kcal) * 100).toFixed(0)}%`,
-            backgroundColor: "#76c6ff",
-          });
-          // 탄수화물
-          $(".graph_bar_content:nth-child(3) .color_bar").text(
-            final_total_carbohydrate.toFixed(0)
-          );
-          $(".graph_bar_content:nth-child(3) .color_bar").css({
-            width: `${(
-              (final_total_carbohydrate / make_carbohydrate) *
-              100
-            ).toFixed(0)}%`,
-            backgroundColor: "#76c6ff",
-          });
-          // 단백질
-          $(".graph_bar_content:nth-child(4) .color_bar").text(
-            final_total_protein.toFixed(0)
-          );
-          $(".graph_bar_content:nth-child(4) .color_bar").css({
-            width: `${((final_total_protein / make_protein) * 100).toFixed(
-              0
-            )}%`,
-            backgroundColor: "#76c6ff",
-          });
-          // 지방
-          $(".graph_bar_content:nth-child(5) .color_bar").text(
-            final_total_fat.toFixed(0)
-          );
-          $(".graph_bar_content:nth-child(5) .color_bar").css({
-            width: `${((final_total_fat / make_fat) * 100).toFixed(0)}%`,
-            backgroundColor: "#76c6ff",
-          });
-
-          // 섭취 영양소 탄단지 비율
-          // 칼로리 기준 탄단지 비율
-          var ratio_carbohydrate = (
-            ((final_total_carbohydrate.toFixed(0) * 4) /
-              final_total_kcal.toFixed(0)) *
-            100
-          ).toFixed(0);
-          var ratio_protein = (
-            ((final_total_protein.toFixed(0) * 4) /
-              final_total_kcal.toFixed(0)) *
-            100
-          ).toFixed(0);
-          var ratio_fat = (
-            ((final_total_fat.toFixed(0) * 9) / final_total_kcal.toFixed(0)) *
-            100
-          ).toFixed(0);
-
-          $("#nutrient_ratio_txt p:nth-child(1)").text(ratio_carbohydrate);
-          $("#nutrient_ratio_txt p:nth-child(3)").text(ratio_protein);
-          $("#nutrient_ratio_txt p:nth-child(5)").text(ratio_fat);
-
-          var min_num = Math.min(ratio_carbohydrate, ratio_protein, ratio_fat);
-          var max_num = Math.max(ratio_carbohydrate, ratio_protein, ratio_fat);
-          var ratio_list = [ratio_carbohydrate, ratio_protein, ratio_fat];
-
-          if (
-            ratio_carbohydrate == ratio_protein ||
-            ratio_carbohydrate == ratio_fat ||
-            ratio_fat == ratio_protein
-          ) {
-            // 중복된 값 찾기
-            ratio_list = ratio_list.filter(
-              (item, index) => ratio_list.indexOf(item) !== index
-            );
-          } else {
-            ratio_list = ratio_list.filter(function (item) {
-              return Number(item) !== min_num && Number(item) !== max_num;
-            });
-          }
-
-          $("#nutrient_raito .pie-chart").css({
-            background: `conic-gradient(
-              #8b22ff 0% ${min_num}%,
-              #ffc33b ${min_num}% ${Number(min_num) + Number(ratio_list)}%,
-              #21f3d6 ${Number(min_num) + Number(ratio_list)}% 100%`,
-          });
         });
     }
   });
@@ -449,6 +375,7 @@ $(window).ready(function () {
 
   $(document).on("click", ".new_meal", function () {
     console.log("재생성");
+
     var element = $("input[name='meal']");
     var select_element = $("input[name='meal']:checked"); // 현재 선택된 식단
     var select_element_parent = $("input[name='meal']:checked").parent()[0].id; // 선택 된 식단의 부모 id
@@ -472,20 +399,41 @@ $(window).ready(function () {
 
       if (select_element_name.startsWith("morning")) {
         if (moring_cnt < 2) {
+          make_meal_content(
+            remake_meal(select_element_parent, make_food_list, "1"),
+            select_element_parent
+          );
         } else {
           // 식단이 2개인 경우
-          // 선택된 식단 이외의 칼로리 구하기
-          remake_meal(select_element_parent);
+          // 식단 새로 만들기
+          make_meal_content(
+            remake_meal(select_element_parent, make_food_list, "2"),
+            select_element_parent
+          );
         }
       } else if (select_element_name.startsWith("lunch")) {
         if (lunch_cnt < 2) {
+          make_meal_content(
+            remake_meal(select_element_parent, make_food_list, "1"),
+            select_element_parent
+          );
         } else {
-          remake_meal(select_element_parent);
+          make_meal_content(
+            remake_meal(select_element_parent, make_food_list, "2"),
+            select_element_parent
+          );
         }
       } else {
         if (dinner_cnt < 2) {
+          make_meal_content(
+            remake_meal(select_element_parent, make_food_list, "1"),
+            select_element_parent
+          );
         } else {
-          remake_meal(select_element_parent);
+          make_meal_content(
+            remake_meal(select_element_parent, make_food_list, "2"),
+            select_element_parent
+          );
         }
       }
     }
@@ -556,6 +504,7 @@ function check_kcal(
     sum_protein += Number(data[i].protein);
     sum_fat += Number(data[i].fat);
   }
+
   if (
     sum_kcal > make_kcal / 3 ||
     sum_kcal < (make_kcal / 3) * 0.8 ||
@@ -579,32 +528,46 @@ function check_kcal(
         meal_list.push(data_list[low_random_num]);
       }
     }
-    meal_list = check_kcal(
-      make_kcal,
-      make_carbohydrate,
-      make_protein,
-      make_fat,
-      data_list,
-      meal_len,
-      meal_list
-    );
-    return meal_list;
+
+    try {
+      meal_list = check_kcal(
+        make_kcal,
+        make_carbohydrate,
+        make_protein,
+        make_fat,
+        data_list,
+        meal_len,
+        meal_list
+      );
+
+      return meal_list;
+    } catch (error) {
+      alert("변경 할 수 있는 식단이 없습니다.");
+    }
   } else {
     return meal_list;
   }
 }
 
-function remake_meal(select_element_parent) {
+function remake_meal(select_element_parent, make_food_list, type) {
   var sub_txt = "";
   var sub_kcal = 0;
   var sub_car = 0; // 탄수화물
   var sub_pro = 0; // 단백질
   var sub_fat = 0; // 지방
 
-  var main_kcal = $(".graph_bar_content:nth-child(2) .color_bar").text(); //칼로리
-  var main_car = $(".graph_bar_content:nth-child(3) .color_bar").text(); //탄수화물
-  var main_pro = $(".graph_bar_content:nth-child(4) .color_bar").text(); //단백질
-  var main_fat = $(".graph_bar_content:nth-child(5) .color_bar").text(); //지방
+  var main_kcal = $(".graph_bar_content:nth-child(2) p:last-child")
+    .text()
+    .split("kcal")[0]; //칼로리
+  var main_car = $(".graph_bar_content:nth-child(3) p:last-child")
+    .text()
+    .split("g")[0]; //탄수화물
+  var main_pro = $(".graph_bar_content:nth-child(4) p:last-child")
+    .text()
+    .split("g")[0]; //단백질
+  var main_fat = $(".graph_bar_content:nth-child(5) p:last-child")
+    .text()
+    .split("g")[0]; //지방
 
   var kcal = 0;
   var car = 0;
@@ -616,39 +579,168 @@ function remake_meal(select_element_parent) {
   var random_num = Math.random();
   var low_random_num = Math.floor(random_num * meal_len + 1);
   var select_meal = [];
+  main_txt = $(`#${select_element_parent}`).children("label").text();
 
-  sub_txt = $(`#${select_element_parent}`).siblings().children("label").text();
+  if (type == "1") {
+    //식단 하나일때
+    kcal = Number(main_txt.split("칼로리 :")[1].split("kcal")[0]) * 3;
+    car = Number(main_txt.split("탄수화물 :")[1].split("g")[0]) * 3;
+    pro = Number(main_txt.split("단백질 :")[1].split("g")[0]) * 3;
+    fat = Number(main_txt.split("지방 :")[1].split("g")[0]) * 3;
+  } else {
+    // 식단 2개일때
+    sub_txt = $(`#${select_element_parent}`)
+      .siblings()
+      .children("label")
+      .text();
 
-  sub_kcal = sub_txt.split("칼로리 :")[1].split("kcal")[0];
-  sub_car = sub_txt.split("탄수화물 :")[1].split("g")[0];
-  sub_pro = sub_txt.split("단백질 :")[1].split("g")[0];
-  sub_fat = sub_txt.split("지방 :")[1].split("g")[0];
+    main_name = main_txt.split("제품명 :")[1].split("중량")[0];
+    sub_name = sub_txt.split("제품명 :")[1].split("중량")[0];
 
-  kcal = Number(main_kcal) - Number(sub_kcal);
-  car = Number(main_car) - Number(sub_car);
-  pro = Number(main_pro) - Number(sub_pro);
-  fat = Number(main_fat) - Number(sub_fat);
+    sub_kcal = sub_txt.split("칼로리 :")[1].split("kcal")[0];
+    sub_car = sub_txt.split("탄수화물 :")[1].split("g")[0];
+    sub_pro = sub_txt.split("단백질 :")[1].split("g")[0];
+    sub_fat = sub_txt.split("지방 :")[1].split("g")[0];
 
-  console.log(kcal);
-  console.log(car);
-  console.log(pro);
-  console.log(fat);
-  console.log(make_food_list);
+    kcal = (Number(main_kcal) / 3 - Number(sub_kcal)) * 3;
+    car = (Number(main_car) / 3 - Number(sub_car)) * 3;
+    pro = (Number(main_pro) / 3 - Number(sub_pro)) * 3;
+    fat = (Number(main_fat) / 3 - Number(sub_fat)) * 3;
+  }
 
   select_meal.push(make_food_list[low_random_num]);
-
-  console.log(random_num);
-  console.log(low_random_num);
-  console.log(select_meal);
 
   check_select_meal = check_kcal(
     kcal,
     car,
     pro,
-    make_fat,
     fat,
+    make_food_list,
     meal_len,
     select_meal
   );
-  console.log(check_select_meal);
+  if (check_select_meal != undefined) {
+    if (
+      check_select_meal[0].food_name != main_name &&
+      check_select_meal[0].food_name != sub_name
+    ) {
+      return check_select_meal;
+    } else {
+      check_select_meal = check_kcal(
+        kcal,
+        car,
+        pro,
+        fat,
+        make_food_list,
+        meal_len,
+        select_meal
+      );
+    }
+  }
+}
+
+function make_meal_content(data, select_element_parent) {
+  var card_list = "";
+  try {
+    card_list += `
+    <p>제품명 : <span>${data[0].food_name}</span></p>
+    <p>중량 : ${data[0].weight}g</p>
+    <p>칼로리 : ${data[0].kcal}kcal</p>
+    <p>탄수화물 : ${data[0].carbohydrate}g</p>
+    <p>단백질 : ${data[0].protein}g</p>
+    <p>지방 : ${data[0].fat}g</p>`;
+    $(`#${select_element_parent} label`).html(card_list);
+  } catch (error) {}
+}
+
+function make_nutri_content(
+  final_total_kcal,
+  make_kcal,
+  final_total_carbohydrate,
+  make_carbohydrate,
+  final_total_protein,
+  make_protein,
+  final_total_fat,
+  make_fat
+) {
+  //  섭취 영양소 그래프
+  // 칼로리
+  $(".graph_bar_content:nth-child(2) .color_bar").text(
+    final_total_kcal.toFixed(0)
+  );
+  $(".graph_bar_content:nth-child(2) .color_bar").css({
+    width: `${((final_total_kcal / make_kcal) * 100).toFixed(0)}%`,
+    backgroundColor: "#76c6ff",
+  });
+  // 탄수화물
+  $(".graph_bar_content:nth-child(3) .color_bar").text(
+    final_total_carbohydrate.toFixed(0)
+  );
+  $(".graph_bar_content:nth-child(3) .color_bar").css({
+    width: `${((final_total_carbohydrate / make_carbohydrate) * 100).toFixed(
+      0
+    )}%`,
+    backgroundColor: "#76c6ff",
+  });
+  // 단백질
+  $(".graph_bar_content:nth-child(4) .color_bar").text(
+    final_total_protein.toFixed(0)
+  );
+  $(".graph_bar_content:nth-child(4) .color_bar").css({
+    width: `${((final_total_protein / make_protein) * 100).toFixed(0)}%`,
+    backgroundColor: "#76c6ff",
+  });
+  // 지방
+  $(".graph_bar_content:nth-child(5) .color_bar").text(
+    final_total_fat.toFixed(0)
+  );
+  $(".graph_bar_content:nth-child(5) .color_bar").css({
+    width: `${((final_total_fat / make_fat) * 100).toFixed(0)}%`,
+    backgroundColor: "#76c6ff",
+  });
+
+  // 섭취 영양소 탄단지 비율
+  // 칼로리 기준 탄단지 비율
+  var ratio_carbohydrate = (
+    ((final_total_carbohydrate.toFixed(0) * 4) / final_total_kcal.toFixed(0)) *
+    100
+  ).toFixed(0);
+  var ratio_protein = (
+    ((final_total_protein.toFixed(0) * 4) / final_total_kcal.toFixed(0)) *
+    100
+  ).toFixed(0);
+  var ratio_fat = (
+    ((final_total_fat.toFixed(0) * 9) / final_total_kcal.toFixed(0)) *
+    100
+  ).toFixed(0);
+
+  $("#nutrient_ratio_txt p:nth-child(1)").text(ratio_carbohydrate);
+  $("#nutrient_ratio_txt p:nth-child(3)").text(ratio_protein);
+  $("#nutrient_ratio_txt p:nth-child(5)").text(ratio_fat);
+
+  var min_num = Math.min(ratio_carbohydrate, ratio_protein, ratio_fat);
+  var max_num = Math.max(ratio_carbohydrate, ratio_protein, ratio_fat);
+  var ratio_list = [ratio_carbohydrate, ratio_protein, ratio_fat];
+
+  if (
+    ratio_carbohydrate == ratio_protein ||
+    ratio_carbohydrate == ratio_fat ||
+    ratio_fat == ratio_protein
+  ) {
+    // 중복된 값 찾기
+    ratio_list = ratio_list.filter(
+      (item, index) => ratio_list.indexOf(item) !== index
+    );
+  } else {
+    ratio_list = ratio_list.filter(function (item) {
+      return Number(item) !== min_num && Number(item) !== max_num;
+    });
+  }
+
+  $("#nutrient_raito .pie-chart").css({
+    background: `conic-gradient(
+              #8b22ff 0% ${min_num}%,
+              #ffc33b ${min_num}% ${Number(min_num) + Number(ratio_list)}%,
+              #21f3d6 ${Number(min_num) + Number(ratio_list)}% 100%`,
+  });
 }
