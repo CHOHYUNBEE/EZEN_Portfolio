@@ -1,0 +1,777 @@
+@charset "UTF-8";
+
+body {
+  background-color: #76c6ff;
+  font-family: "pretendard";
+  position: relative;
+}
+header,
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header #header_txt {
+  width: 50%;
+}
+header #header_txt h1 {
+  margin-top: 5vh;
+  font-size: 3rem;
+  font-weight: 900;
+}
+header #header_txt p {
+  margin-top: 1vh;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+header #header_info {
+  width: 50%;
+  height: 100%;
+  margin-top: auto;
+}
+
+header #header_info #info_btn {
+  margin-left: auto;
+  width: 25%;
+  height: 50px;
+  background-color: #fff;
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+button {
+  cursor: pointer;
+}
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+}
+.card {
+  width: 30%;
+  height: 700px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+  padding: 20px;
+  margin-top: 5vh;
+  color: #333333;
+  margin: 1vw;
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+.input_box {
+  position: relative;
+}
+.info h1 {
+  text-align: right;
+  width: 12%;
+  font-weight: 500;
+  font-size: 18px;
+}
+.info p {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #b1b1b1;
+}
+.info input {
+  border: none;
+  background-color: #f0f0f0;
+  width: 250px;
+  height: 40px;
+  margin-left: 3vw;
+  text-indent: 10px;
+}
+.gender {
+  position: relative;
+  margin-left: 3vw;
+}
+.gender label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #b1b1b1;
+}
+#gender_info input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 120px;
+  height: 40px;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: #b1b1b1;
+  line-height: 40px;
+  cursor: pointer;
+  margin: 0;
+}
+#gender_info input[type="radio"]:checked {
+  background-color: #76c6ff;
+}
+#gender_info input[type="radio"]:checked + label {
+  color: #fff;
+}
+#gender_info .gender:last-of-type {
+  margin-left: 10px;
+}
+#active_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#active_list #active_radio {
+  width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#active_list #active_radio .radio_list {
+  width: 33%;
+  text-align: center;
+  margin-top: 3vh;
+}
+#active_list h1 {
+  width: 15%;
+  text-align: center;
+}
+#active_list input[type="radio"] {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+#active_list input[type="radio"] + label {
+  width: 30%;
+  margin-left: 10px;
+  font-weight: 500;
+}
+#active_list input[type="radio"]:checked + label {
+  font-weight: 700;
+}
+.card h2,
+.big_card h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.card #input_user_info {
+  margin-top: 5vh;
+}
+.card #user_info_btn {
+  width: 20%;
+  margin: 5vh auto;
+}
+.button_style {
+  background-color: #f0f0f0;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "pretendard";
+}
+
+/* info_check_card */
+#info_check_card #info_check {
+  width: 95%;
+  height: 580px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+#info_check_card #info_check h2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+#info_check_card #info_check div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#info_check_card #info_check div p {
+  text-align: center;
+  margin-top: 2vh;
+  font-weight: 600;
+}
+#info_check_card #info_check div p:nth-of-type(2n + 1) {
+  width: 40%;
+  text-align: right;
+}
+#info_check_card #info_check div p:nth-of-type(2n) {
+  width: 60%;
+}
+.line {
+  width: 80%;
+  height: 3px;
+
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 3vh;
+}
+
+/* select_option_card */
+#select_store {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.store_box {
+  margin: 3vh 15px;
+  width: 25%;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+  padding: 10px;
+  display: grid;
+  place-content: center;
+}
+.store_box input {
+  display: none;
+}
+#select_store h2,
+#select_time h2,
+#select_meal_type h2 {
+  margin-top: 2.5vh;
+  width: 100%;
+  text-align: center;
+}
+#select_time {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.time_box {
+  width: 20%;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+  margin: 3vh 10px;
+}
+.time_box label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time_box input {
+  display: none;
+}
+.time_box.active {
+  background-color: #76c6ff;
+}
+.time_box img {
+  width: 30px;
+}
+.time_box p {
+  margin-left: 10px;
+  font-weight: 600;
+}
+#radio_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#radio_list .radio {
+  width: 80%;
+  margin: 10px;
+  text-align: center;
+}
+#radio_list .radio label {
+  margin-left: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+#radio_list .radio label span,
+#select_meal_type h2 span {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 5px;
+}
+#select_meal_type h2 {
+  margin-bottom: 3vh;
+}
+#select_meal_btn {
+  width: 20%;
+  margin: 3vh auto;
+}
+
+.big_card {
+  width: 95%;
+  height: 850px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+  padding: 20px 50px;
+  margin-top: 5vh;
+  color: #333333;
+}
+#meal_card_list {
+  width: 100%;
+  display: flex;
+}
+#meal_card_list .meal_card {
+  width: 30%;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  margin-top: 5vh;
+  margin-right: 2vw;
+  position: relative;
+}
+#meal_card_list .line {
+  width: 100%;
+}
+#meal_card_list .meal_card_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#meal_card_list .meal_card_title img {
+  width: 35px;
+}
+#meal_card_list h1 {
+  font-weight: 700;
+  margin-left: 1vw;
+  font-size: 1.2rem;
+}
+.meal_card_content_list {
+  display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  height: 600px;
+}
+.meal_card_content_list .meal_card_content {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3vh;
+}
+.meal_card_content_list .meal_card_content label {
+  margin-left: 2vw;
+}
+.meal_card_content_list .meal_card_content label p {
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.meal_card_content_list .meal_card_content label p span {
+  font-weight: 900;
+  color: #3fa7f3;
+}
+.total_kcal {
+  margin-top: 8vh;
+  margin-bottom: 3vh;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: right;
+  margin-right: 1vw;
+  position: absolute;
+  bottom: 80px;
+  right: 5px;
+}
+.meal_card_footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  border-top: 3px solid #fff;
+}
+.meal_card .line {
+  margin-top: 0;
+}
+.meal_card_footer div {
+  width: 50%;
+  height: 100%;
+  cursor: pointer;
+  line-height: 4;
+}
+.meal_card_footer .h_line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 120%;
+  width: 3px;
+  background-color: #fff;
+}
+
+/* nutrient_content */
+#nutrient_content {
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#nutrient_content h2 {
+  width: 100%;
+  height: 5%;
+}
+#nutrient_content h3:first-of-type {
+  margin-top: 10vh;
+}
+#nutrient_content h3 {
+  margin-top: 1vh;
+}
+#nutrient_content h3 span {
+  font-weight: bold;
+  color: rgb(212, 55, 55);
+}
+#nutrient_gra {
+  width: 57%;
+  margin-top: 10vh;
+  margin-left: 2vw;
+  height: 95%;
+}
+.graph_bar_content {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5vh;
+  font-size: 1.1rem;
+}
+.graph_bar_content p {
+  font-weight: 500;
+}
+.graph_bar_content .graph_bar {
+  width: 60%;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ddd;
+  margin-left: 2vw;
+  position: relative;
+}
+.graph_bar_content .color_bar {
+  /* width: 50%;
+    background-color: #76c6ff; */
+  height: 30px;
+  border-radius: 15px;
+  text-align: right;
+  color: #fff;
+  padding-right: 10px;
+  line-height: 30px;
+}
+.graph_bar_content p:first-of-type {
+  width: 12%;
+  text-align: right;
+}
+.graph_bar_content p:last-of-type {
+  width: 30%;
+  margin-left: 1vw;
+  font-weight: 600;
+}
+.graph_bar_content:first-of-type {
+  margin-top: 10vh;
+}
+
+/* 원형 그래프 */
+#nutrient_raito {
+  margin-top: 5vh;
+  width: 40%;
+  background-color: #f0f0f0;
+  height: 80%;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+#nutrient_raito h2 {
+  width: 100%;
+  margin-top: 5vh;
+  margin-left: 2vw;
+}
+#chart {
+  width: 100%;
+  height: 45%;
+  position: relative;
+}
+.pie-chart {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px 0px rgb(196, 196, 196);
+}
+.pie-chart .center {
+  position: absolute;
+  width: 175px;
+  height: 175px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  top: 90px;
+  left: 90px;
+}
+#nutrient_color_txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+.nutrient_txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2vw;
+}
+.nutrient_txt:last-of-type {
+  margin-right: 0;
+}
+.nutrient_txt p {
+  margin-left: 0.5vw;
+}
+.nutrient_color {
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+}
+.nutrient_txt:first-child .nutrient_color {
+  background-color: #21f3d6;
+}
+.nutrient_txt:nth-child(2) .nutrient_color {
+  background-color: #8b22ff;
+}
+.nutrient_txt:nth-child(3) .nutrient_color {
+  background-color: #ffc33b;
+}
+#nutrient_ratio_txt {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+#nutrient_ratio_txt p {
+  margin: 1vw;
+  margin-top: 0;
+}
+
+/* footer */
+footer {
+  width: 90%;
+  height: 10vh;
+  margin: 5vh auto;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+footer #left_content,
+footer #right_content {
+  width: 100%;
+}
+footer #left_content p {
+  margin: 1vw;
+}
+footer #right_content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer #right_content a {
+  width: 40%;
+  color: #000;
+  margin: 1vw;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* 로딩 */
+/** BEGIN CSS **/
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-loading {
+  0% {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-text-opacity {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading {
+  height: 100px;
+  position: relative;
+  width: 100px;
+  border-radius: 100%;
+}
+#loading.nonactive {
+  display: none;
+}
+#loading {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.loading-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading {
+  border: 2px solid transparent;
+  border-color: transparent #fff transparent #fff;
+  animation: rotate-loading 1.5s linear 0s infinite normal;
+  transform-origin: 50% 50%;
+}
+
+.loading-container:hover .loading,
+.loading-container .loading {
+  transition: all 0.5s ease-in-out;
+}
+
+#loading-text {
+  animation: loading-text-opacity 2s linear 0s infinite normal;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 45px;
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100px;
+}
+
+/* health_info */
+#health_info {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#health_info .health_info-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 80vh;
+  background-color: #fff;
+  border: #3fa7f3 solid 5px;
+  border-radius: 15px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+}
+#health_info.nonactive {
+  display: none;
+}
+#health_info .health_info-container #info {
+  background-color: #76c6ff;
+  border-radius: 5px;
+}
+#health_info .health_info-container #info h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#health_info .health_info-container div h2 {
+  text-align: center;
+  margin-bottom: 2vh;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#health_info .health_info-container div p {
+  font-size: 1.1rem;
+  margin-top: 1.5vh;
+}
+#btn {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#info_line {
+  width: 100%;
+  border: #ddd solid 1px;
+  margin: 0 auto;
+}
