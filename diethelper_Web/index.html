@@ -3,10 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no"
-    />
     <title>Diet Helper</title>
     <link rel="stylesheet" href="../common/minireset.css" />
 
@@ -310,7 +306,7 @@
           </h3>
         </div>
         <div id="nutrient_raito">
-          <h2>탄단지 비율</h2>
+          <h2>탄단지 비율 (칼로리 기준)</h2>
           <div id="chart">
             <div class="pie-chart"><span class="center"></span></div>
           </div>
@@ -363,24 +359,29 @@
         <div id="info_line"></div>
         <div id="Basal_info">
           <h2>기초 대사량 산출 방법</h2>
-          <p>남자 : 66.47 + (13.75 x 체중) + (5 x 키) - (6.76 x 나이)</p>
-          <p>여자 : 655.1 + (9.56 x 체중) + (1.85 x 키) - (4.68 x 나이)</p>
+          <p>- 남자 : 66.47 + (13.75 x 체중) + (5 x 키) - (6.76 x 나이)</p>
+          <p>- 여자 : 655.1 + (9.56 x 체중) + (1.85 x 키) - (4.68 x 나이)</p>
         </div>
         <div id="active_info">
           <h2>활동량 선택</h2>
-          <p>1. 거의 없음 : 활동이 적거나 운동을 안하는 경우</p>
-          <p>2. 조금 있음 : 가벼운 활동 및 운동을 하는 경우 (1~3일/1주)</p>
-          <p>3. 보통 : 보통의 활동 및 운동을 하는 경우 (3~5일/1주)</p>
-          <p>4. 조금 많음 : 적극적인 활동 및 운동을 하는 경우 (6~7일/1주)</p>
-          <p>
-            5. 정말 많음 : 매우 적극적인 활동 및 운동, 운동 선수 (1~3일/1주)
-          </p>
+          <p>- 거의 없음 : 활동이 적거나 운동을 안하는 경우</p>
+          <p>- 조금 있음 : 가벼운 활동 및 운동을 하는 경우 (1~3일/1주)</p>
+          <p>- 보통 : 보통의 활동 및 운동을 하는 경우 (3~5일/1주)</p>
+          <p>- 조금 많음 : 적극적인 활동 및 운동을 하는 경우 (6~7일/1주)</p>
+          <p>- 정말 많음 : 매우 적극적인 활동 및 운동, 운동 선수</p>
+        </div>
+        <div id="nutri_info">
+          <h2>영양 정보 계산법</h2>
+          <p>- 1일 적정량 : 기초 대사량 * 활동량 계수</p>
+          <p>- 탄수화물량 : 1일 적정량 * 0.5 / 4</p>
+          <p>- 단백질량 : 1일 적정량 * 0.3 / 4</p>
+          <p>- 지방량 : 1일 적정량 * 0.2 / 9</p>
         </div>
         <div id="meal_type_info">
           <h2>식단 타입 선택</h2>
-          <p>1. 감량 칼로리 식단 : (적정 칼로리 * 0.8)kcal</p>
-          <p>2. 적정 칼로리 식단 : (적정 칼로리)kcal</p>
-          <p>3. 증량 칼로리 식단 : (적정 칼로리 * 1.2)kcal</p>
+          <p>- 감량 칼로리 식단 : (적정 칼로리 * 0.8)kcal</p>
+          <p>- 적정 칼로리 식단 : (적정 칼로리)kcal</p>
+          <p>- 증량 칼로리 식단 : (적정 칼로리 * 1.2)kcal</p>
         </div>
         <div id="btn">닫기</div>
       </div>

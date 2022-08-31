@@ -329,6 +329,7 @@
   color: #000;
   font-weight: bold;
   cursor: pointer;
+  height: 100%;
 }
 #view_website_btn a:hover {
   background-color: #000;

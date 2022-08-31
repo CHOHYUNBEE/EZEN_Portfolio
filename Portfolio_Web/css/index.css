@@ -123,6 +123,11 @@
   height: 50vh;
   background-color: #ff4eff;
 }
+#main_work_list.ditehelper {
+  background-color: none;
+  background: url(../images/test1.jpg) no-repeat 50% 50% / cover;
+  filter: grayscale(1);
+}
 #main_work_list.itddaa {
   background-color: none;
   background: url(../images/test3.jpg) no-repeat 50% 50% / cover;
@@ -156,6 +161,7 @@
   font-size: 1.2rem;
   font-weight: 500;
 }
+#ditehelper.ditehelper td,
 #breakingnews.breakingnews td,
 #lushkorea.lushkorea td,
 #itddaa.itddaa td,

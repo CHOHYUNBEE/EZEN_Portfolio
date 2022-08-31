@@ -625,6 +625,9 @@ function check_info() {
   } else if ($("input[name='gender']:checked").val() == undefined) {
     alert("성별을 선택해주세요.");
     return false;
+  } else if ($(".info #user_age").val() == "") {
+    alert("나이를 입력해주세요.");
+    return false;
   } else if ($(".info #user_height").val() == "") {
     alert("키를 입력해주세요.");
     return false;

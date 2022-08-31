@@ -729,7 +729,7 @@ footer #right_content a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 30vw;
+  width: 60vw;
   height: 80vh;
   background-color: #fff;
   border: #3fa7f3 solid 5px;
@@ -737,32 +737,43 @@ footer #right_content a {
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: space-evenly;
 }
 #health_info.nonactive {
   display: none;
 }
 #health_info .health_info-container #info {
+  width: 20%;
   background-color: #76c6ff;
   border-radius: 5px;
+  color: #fff;
 }
 #health_info .health_info-container #info h1 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
-
+#health_info .health_info-container #Basal_info,
+#health_info .health_info-container #active_info,
+#health_info .health_info-container #nutri_info,
+#health_info .health_info-container #meal_type_info {
+  width: 40%;
+}
 #health_info .health_info-container div h2 {
   text-align: center;
   margin-bottom: 2vh;
   font-size: 1.2rem;
   font-weight: bold;
+  background-color: #76c6ff;
+  border-radius: 5px;
+  color: #fff;
 }
 #health_info .health_info-container div p {
-  font-size: 1.1rem;
   margin-top: 1.5vh;
+  text-indent: 10px;
 }
+
 #btn {
   width: 100%;
   text-align: center;

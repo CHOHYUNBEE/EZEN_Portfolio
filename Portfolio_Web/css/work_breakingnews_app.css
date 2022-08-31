@@ -363,6 +363,7 @@
   color: #000;
   font-weight: bold;
   cursor: pointer;
+  height: 100%;
 }
 
 .link_btn a:hover {

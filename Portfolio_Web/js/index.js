@@ -31,10 +31,16 @@ work_list_table_tr.forEach((tr) => {
       document
         .querySelector(`#${e.currentTarget.id}`)
         .setAttribute("class", "itddaa");
+    } else if (e.currentTarget.id == "ditehelper") {
+      document
+        .querySelector(`#${work_list.id}`)
+        .setAttribute("class", "ditehelper");
+      document
+        .querySelector(`#${e.currentTarget.id}`)
+        .setAttribute("class", "ditehelper");
     } else {
       document.querySelector(`#${work_list.id}`).setAttribute("class", "more");
       document.querySelector(`#more`).setAttribute("class", "more");
-      document.querySelector(`#more2`).setAttribute("class", "more");
     }
   });
 });
@@ -68,6 +74,9 @@ $("#work_list_table tbody tr").on("click", function () {
   }
   if (sitename === "breakingnews") {
     location.href = "Portfolio_Web/work_breakingnews_app.html";
+  }
+  if (sitename === "ditehelper") {
+    location.href = "Portfolio_Web/work_diethelper_page.html";
   }
 });
 
