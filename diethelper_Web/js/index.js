@@ -534,7 +534,6 @@ $(window).ready(function () {
 
       if (select_element.length != 0) {
         var select_element_name = select_element[0].defaultValue;
-        console.log(select_element_name);
 
         if (select_element_name.startsWith("morning")) {
           if (moring_cnt < 2) {
@@ -610,6 +609,7 @@ $(window).ready(function () {
       alert("재생성 할 식단을 선택해주세요.");
     }
   });
+
   $("#btn").on("click", function () {
     $("#health_info").addClass("nonactive"); // 설명서 안보이기
   });
@@ -822,7 +822,6 @@ function remake_meal(
     fat = Number(main_fat);
   } else {
     // 식단 2개일때
-
     kcal = (Number(main_kcal) / 3 - Number(sub_kcal)) * 3;
     car = (Number(main_car) / 3 - Number(sub_car)) * 3;
     pro = (Number(main_pro) / 3 - Number(sub_pro)) * 3;
@@ -936,6 +935,7 @@ function remake_meal(
 
 function make_meal_content(data, select_element_parent) {
   var card_list = "";
+
   try {
     card_list += `
     <p>제품명 : <span>${data[0].food_name}</span></p>
@@ -945,7 +945,9 @@ function make_meal_content(data, select_element_parent) {
     <p>단백질 : ${data[0].protein}g</p>
     <p>지방 : ${data[0].fat}g</p>`;
     $(`#${select_element_parent} label`).html(card_list);
-  } catch (error) {}
+  } catch (error) {
+    alert("변경 가능한 식단이 없습니다.");
+  }
 }
 
 function make_nutri_content(
