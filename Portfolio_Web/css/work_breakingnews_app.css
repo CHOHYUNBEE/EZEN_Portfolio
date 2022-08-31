@@ -2,11 +2,9 @@
 #header_content {
   width: 70%;
   height: 70vh;
-  /* border: 5px solid #000; */
   margin: 10vh auto;
 
   display: flex;
-  /* flex-wrap: wrap; */
 }
 #site_img {
   background: url(../images/news_main_banner.png) no-repeat 50% / cover;

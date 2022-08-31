@@ -10,9 +10,7 @@
 #header_content {
   width: 70%;
   height: 65vh;
-  /* border: 5px solid #000; */
   margin: 10vh auto;
-
   display: flex;
 }
 #site_img {
