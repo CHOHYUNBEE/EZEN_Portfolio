@@ -85,7 +85,6 @@ $(window).ready(function () {
   //  추천받을 식사 시간 선택 이벤트
   $("#select_time .time_box label").click(function () {
     $(this).parent().toggleClass("active");
-    $(this).prop("checked", true);
   });
 
   //  식단 생성 버튼
@@ -520,6 +519,7 @@ $(window).ready(function () {
     var dinner_cnt = 0;
     var check_radio = $("input[name='meal']:checked").length;
 
+    console.log(check_radio);
     if (check_radio != 0) {
       // 현재 식단 개수 구하기
       $.each(element, function (key, value) {
@@ -534,6 +534,7 @@ $(window).ready(function () {
 
       if (select_element.length != 0) {
         var select_element_name = select_element[0].defaultValue;
+        console.log(select_element_name);
 
         if (select_element_name.startsWith("morning")) {
           if (moring_cnt < 2) {
@@ -846,9 +847,7 @@ function remake_meal(
       check_select_meal[0].food_name != sub_name
     ) {
       new_kcal = Number(sub_kcal) + Number(check_select_meal[0].kcal);
-      // new_car = Number(sub_car) + Number(check_select_meal[0].carbohydrate);
-      // new_pro = Number(sub_pro) + Number(check_select_meal[0].protein);
-      // new_fat = Number(sub_fat) + Number(check_select_meal[0].fat);
+
       $(`#${select_element_parent}`)
         .parent()
         .siblings(".total_kcal")
@@ -892,39 +891,44 @@ function remake_meal(
         meal_len,
         select_meal
       );
-      new_kcal = Number(sub_kcal) + Number(check_select_meal[0].kcal);
+      if (check_select_meal[0].food_name == main_name) {
+        alert("해당 식단 이외 변경가능한 식단이 없습니다.");
+      } else {
+        new_kcal = Number(sub_kcal) + Number(check_select_meal[0].kcal);
 
-      $(`#${select_element_parent}`)
-        .parent()
-        .siblings(".total_kcal")
-        .text(`총 섭취 칼로리 : ${new_kcal}kcal`);
+        $(`#${select_element_parent}`)
+          .parent()
+          .siblings(".total_kcal")
+          .text(`총 섭취 칼로리 : ${new_kcal}kcal`);
 
-      new_nutri_kcal =
-        Number(now_nutri_kcal) -
-        Number(ex_kcal) +
-        Number(check_select_meal[0].kcal);
-      new_nutri_car =
-        Number(now_nutri_car) -
-        Number(ex_car) +
-        Number(check_select_meal[0].carbohydrate);
-      new_nutri_pro =
-        Number(now_nutri_pro) -
-        Number(ex_pro) +
-        Number(check_select_meal[0].protein);
-      new_nutri_fat =
-        Number(now_nutri_fat) -
-        Number(ex_fat) +
-        Number(check_select_meal[0].fat);
-      make_nutri_content(
-        new_nutri_kcal,
-        main_kcal,
-        new_nutri_car,
-        main_car,
-        new_nutri_pro,
-        main_pro,
-        new_nutri_fat,
-        main_fat
-      );
+        new_nutri_kcal =
+          Number(now_nutri_kcal) -
+          Number(ex_kcal) +
+          Number(check_select_meal[0].kcal);
+        new_nutri_car =
+          Number(now_nutri_car) -
+          Number(ex_car) +
+          Number(check_select_meal[0].carbohydrate);
+        new_nutri_pro =
+          Number(now_nutri_pro) -
+          Number(ex_pro) +
+          Number(check_select_meal[0].protein);
+        new_nutri_fat =
+          Number(now_nutri_fat) -
+          Number(ex_fat) +
+          Number(check_select_meal[0].fat);
+        make_nutri_content(
+          new_nutri_kcal,
+          main_kcal,
+          new_nutri_car,
+          main_car,
+          new_nutri_pro,
+          main_pro,
+          new_nutri_fat,
+          main_fat
+        );
+      }
+
       return check_select_meal;
     }
   }
