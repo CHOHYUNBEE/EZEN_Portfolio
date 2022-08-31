@@ -9,7 +9,7 @@
 }
 #site_img {
   background: url(../images/lush_main_banner.png) no-repeat 50% / cover;
-  width: 55%;
+  width: 50%;
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
     6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
     12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
@@ -18,8 +18,8 @@
     100px 100px 80px rgba(0, 0, 0, 0.07);
 }
 #site_info {
-  width: 45%;
-  padding-left: 3vw;
+  width: 50%;
+  padding-left: 5vw;
 
   display: flex;
   flex-wrap: wrap;

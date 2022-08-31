@@ -840,7 +840,7 @@ function remake_meal(
     select_meal
   );
 
-  if (check_select_meal != undefined) {
+  if (check_select_meal != undefined && sub_txt.length != 0) {
     if (
       check_select_meal[0].food_name != main_name &&
       check_select_meal[0].food_name != sub_name
