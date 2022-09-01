@@ -52,17 +52,6 @@ main_work_list.addEventListener("mouseleave", () => {
 });
 
 // jQuery
-$("#content_list_footer img").hover(
-  function () {
-    $(this).attr({
-      src: "Portfolio_Web/images/arrow_white.png",
-      alt: "arrow_white",
-    });
-  }, // 마우스를 올렸을 때
-  function () {
-    $(this).attr({ src: "Portfolio_Web/images/arrow.png", alt: "arrow_black" });
-  } // 마우스가 벗어났을 때
-);
 
 $("#work_list_table tbody tr").on("click", function () {
   const sitename = $(this).attr("id");
@@ -87,7 +76,7 @@ var swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
   autoplay: {
-    delay: 1500,
+    delay: 3000,
     disableOnInteraction: false,
   },
   loop: true,

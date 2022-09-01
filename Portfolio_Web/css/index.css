@@ -16,11 +16,11 @@
   line-height: 1;
   padding: 1vw;
 }
-#content_list_header,
-#content_list_footer {
+.content_list_header,
+.content_list_footer {
   width: 100%;
 }
-#content_list_footer {
+.content_list_footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -33,11 +33,7 @@
   font-size: 2.5rem;
   font-weight: bold;
 }
-#content_list_footer img {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
+
 .swiper-slide h3:hover,
 .swiper-slide h2:hover {
   color: #fff;
@@ -282,4 +278,9 @@
   margin: 5px;
   border: #000 solid 1px;
   border-radius: 50%;
+}
+
+#diet_web {
+  background: url(../images/diethelper_main_banner.png) no-repeat 50% / cover;
+  color: #000;
 }
