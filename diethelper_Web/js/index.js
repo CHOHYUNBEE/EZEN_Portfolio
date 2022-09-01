@@ -289,6 +289,8 @@ $(window).ready(function () {
           );
         });
     }
+    $(".big_card").removeClass("nonactive");
+    $("#nutrient_content").removeClass("nonactive");
   });
 
   // 삭제 버튼 클릭시 이벤트
