@@ -1,12 +1,5 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Recoleta_B";
-  src: url("../common/Recoleta-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Recoleta_R";
-  src: url("../common/Recoleta-Regular.ttf") format("truetype");
-}
+
 #header_content {
   width: 70%;
   height: 65vh;
@@ -160,9 +153,7 @@
 #style_guide_table tr:nth-child(2) td span {
   font-size: 16px;
   font-weight: bold;
-  font-family: Noto Sans KR, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Pretendard";
 }
 #style_guide_table tr:nth-child(2) td span::after {
   content: " / ";
@@ -171,40 +162,11 @@
   content: "";
 }
 #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(1) {
-  margin-left: 1.5vw;
+  margin-left: 2vw;
   font-weight: normal;
 }
 #style_guide_table tr:nth-child(2) td:nth-child(2) span:nth-child(2) {
   font-weight: bold;
-}
-
-/* Recoleta */
-#style_guide_table tr:nth-child(2) td:nth-child(3) {
-  padding-left: 1vw;
-}
-#style_guide_table tr:nth-child(2) td:nth-child(3) span:nth-child(1) {
-  font-family: "Recoleta_R", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  margin-left: 1.5vw;
-  font-weight: normal;
-}
-#style_guide_table tr:nth-child(2) td:nth-child(3) span:nth-child(2) {
-  font-family: "Recoleta_B", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-}
-
-#style_guide_table tr:nth-child(2) td:nth-child(4) {
-  position: relative;
-  left: -10%;
-}
-#style_guide_table tr:nth-child(2) td:nth-child(4) span {
-  font-family: segoe Print, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-  font-weight: normal;
-  margin-left: 1.5vw;
 }
 
 #color_chart #color_list {
@@ -229,24 +191,33 @@
   place-content: center;
   margin-left: 0.5vw;
 }
-#sub_color > div {
+/* #sub_color > div {
   margin: 0;
-}
+} */
 .color h3 {
   width: 100%;
   font-weight: bold;
   margin-top: 10px;
 }
 #main_color div:nth-child(1) {
-  background-color: #fff;
+  background-color: #76c6ff;
+  /* color: #fff; */
+  border: none;
 }
 #main_color div:nth-child(2) {
-  background-color: #000;
-  color: #fff;
+  background-color: #3fa7f3;
+  /* color: #fff; */
+  border: none;
 }
 #sub_color div:nth-child(1) {
-  background-color: #ff0000;
+  background-color: #f0f0f0;
+  /* border: #ddd solid 1px; */
+  border: none;
+}
+#sub_color div:nth-child(2) {
+  background-color: #333333;
   border: #ddd solid 1px;
+  color: #fff;
 }
 
 /* Development Review */
